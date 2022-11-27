@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF75E44529341212005B249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44429341212005B249E /* AppDelegate.swift */; };
+		DF75E44729341212005B249E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44629341212005B249E /* SceneDelegate.swift */; };
+		DF75E44929341212005B249E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44829341212005B249E /* ViewController.swift */; };
+		DF75E44C29341212005B249E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF75E44A29341212005B249E /* Main.storyboard */; };
+		DF75E44E29341214005B249E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF75E44D29341214005B249E /* Assets.xcassets */; };
+		DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF75E44F29341214005B249E /* LaunchScreen.storyboard */; };
+		DF75E45C29341214005B249E /* SkylabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E45B29341214005B249E /* SkylabTests.swift */; };
+		DF75E46629341214005B249E /* SkylabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E46529341214005B249E /* SkylabUITests.swift */; };
+		DF75E46829341214005B249E /* SkylabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E46729341214005B249E /* SkylabUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF75E45829341214005B249E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF75E43929341212005B249E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF75E44029341212005B249E;
+			remoteInfo = Skylab;
+		};
+		DF75E46229341214005B249E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF75E43929341212005B249E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF75E44029341212005B249E;
+			remoteInfo = Skylab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF75E44129341212005B249E /* Skylab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF75E44429341212005B249E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF75E44629341212005B249E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DF75E44829341212005B249E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF75E44B29341212005B249E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF75E44D29341214005B249E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF75E45029341214005B249E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF75E45229341214005B249E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF75E45729341214005B249E /* SkylabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkylabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF75E45B29341214005B249E /* SkylabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylabTests.swift; sourceTree = "<group>"; };
+		DF75E46129341214005B249E /* SkylabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkylabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF75E46529341214005B249E /* SkylabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylabUITests.swift; sourceTree = "<group>"; };
+		DF75E46729341214005B249E /* SkylabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF75E43E29341212005B249E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF75E45429341214005B249E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF75E45E29341214005B249E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF75E43829341212005B249E = {
+			isa = PBXGroup;
+			children = (
+				DF75E44329341212005B249E /* Skylab */,
+				DF75E45A29341214005B249E /* SkylabTests */,
+				DF75E46429341214005B249E /* SkylabUITests */,
+				DF75E44229341212005B249E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF75E44229341212005B249E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF75E44129341212005B249E /* Skylab.app */,
+				DF75E45729341214005B249E /* SkylabTests.xctest */,
+				DF75E46129341214005B249E /* SkylabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF75E44329341212005B249E /* Skylab */ = {
+			isa = PBXGroup;
+			children = (
+				DF75E44429341212005B249E /* AppDelegate.swift */,
+				DF75E44629341212005B249E /* SceneDelegate.swift */,
+				DF75E44829341212005B249E /* ViewController.swift */,
+				DF75E44A29341212005B249E /* Main.storyboard */,
+				DF75E44D29341214005B249E /* Assets.xcassets */,
+				DF75E44F29341214005B249E /* LaunchScreen.storyboard */,
+				DF75E45229341214005B249E /* Info.plist */,
+			);
+			path = Skylab;
+			sourceTree = "<group>";
+		};
+		DF75E45A29341214005B249E /* SkylabTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF75E45B29341214005B249E /* SkylabTests.swift */,
+			);
+			path = SkylabTests;
+			sourceTree = "<group>";
+		};
+		DF75E46429341214005B249E /* SkylabUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF75E46529341214005B249E /* SkylabUITests.swift */,
+				DF75E46729341214005B249E /* SkylabUITestsLaunchTests.swift */,
+			);
+			path = SkylabUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF75E44029341212005B249E /* Skylab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF75E46B29341214005B249E /* Build configuration list for PBXNativeTarget "Skylab" */;
+			buildPhases = (
+				DF75E43D29341212005B249E /* Sources */,
+				DF75E43E29341212005B249E /* Frameworks */,
+				DF75E43F29341212005B249E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skylab;
+			productName = Skylab;
+			productReference = DF75E44129341212005B249E /* Skylab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF75E45629341214005B249E /* SkylabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF75E46E29341214005B249E /* Build configuration list for PBXNativeTarget "SkylabTests" */;
+			buildPhases = (
+				DF75E45329341214005B249E /* Sources */,
+				DF75E45429341214005B249E /* Frameworks */,
+				DF75E45529341214005B249E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF75E45929341214005B249E /* PBXTargetDependency */,
+			);
+			name = SkylabTests;
+			productName = SkylabTests;
+			productReference = DF75E45729341214005B249E /* SkylabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF75E46029341214005B249E /* SkylabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF75E47129341214005B249E /* Build configuration list for PBXNativeTarget "SkylabUITests" */;
+			buildPhases = (
+				DF75E45D29341214005B249E /* Sources */,
+				DF75E45E29341214005B249E /* Frameworks */,
+				DF75E45F29341214005B249E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF75E46329341214005B249E /* PBXTargetDependency */,
+			);
+			name = SkylabUITests;
+			productName = SkylabUITests;
+			productReference = DF75E46129341214005B249E /* SkylabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF75E43929341212005B249E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					DF75E44029341212005B249E = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					DF75E45629341214005B249E = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = DF75E44029341212005B249E;
+					};
+					DF75E46029341214005B249E = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = DF75E44029341212005B249E;
+					};
+				};
+			};
+			buildConfigurationList = DF75E43C29341212005B249E /* Build configuration list for PBXProject "Skylab" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF75E43829341212005B249E;
+			productRefGroup = DF75E44229341212005B249E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF75E44029341212005B249E /* Skylab */,
+				DF75E45629341214005B249E /* SkylabTests */,
+				DF75E46029341214005B249E /* SkylabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF75E43F29341212005B249E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
+				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
+				DF75E44C29341212005B249E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF75E45529341214005B249E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF75E45F29341214005B249E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF75E43D29341212005B249E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF75E44929341212005B249E /* ViewController.swift in Sources */,
+				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
+				DF75E44729341212005B249E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF75E45329341214005B249E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF75E45C29341214005B249E /* SkylabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF75E45D29341214005B249E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF75E46829341214005B249E /* SkylabUITestsLaunchTests.swift in Sources */,
+				DF75E46629341214005B249E /* SkylabUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF75E45929341214005B249E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF75E44029341212005B249E /* Skylab */;
+			targetProxy = DF75E45829341214005B249E /* PBXContainerItemProxy */;
+		};
+		DF75E46329341214005B249E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF75E44029341212005B249E /* Skylab */;
+			targetProxy = DF75E46229341214005B249E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF75E44A29341212005B249E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF75E44B29341212005B249E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF75E44F29341214005B249E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF75E45029341214005B249E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF75E46929341214005B249E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF75E46A29341214005B249E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF75E46C29341214005B249E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Skylab/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "skylab-main.Skylab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF75E46D29341214005B249E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Skylab/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "skylab-main.Skylab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF75E46F29341214005B249E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "skylab-main.SkylabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Skylab";
+			};
+			name = Debug;
+		};
+		DF75E47029341214005B249E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "skylab-main.SkylabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Skylab";
+			};
+			name = Release;
+		};
+		DF75E47229341214005B249E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "skylab-main.SkylabUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Skylab;
+			};
+			name = Debug;
+		};
+		DF75E47329341214005B249E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "skylab-main.SkylabUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Skylab;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF75E43C29341212005B249E /* Build configuration list for PBXProject "Skylab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF75E46929341214005B249E /* Debug */,
+				DF75E46A29341214005B249E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF75E46B29341214005B249E /* Build configuration list for PBXNativeTarget "Skylab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF75E46C29341214005B249E /* Debug */,
+				DF75E46D29341214005B249E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF75E46E29341214005B249E /* Build configuration list for PBXNativeTarget "SkylabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF75E46F29341214005B249E /* Debug */,
+				DF75E47029341214005B249E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF75E47129341214005B249E /* Build configuration list for PBXNativeTarget "SkylabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF75E47229341214005B249E /* Debug */,
+				DF75E47329341214005B249E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF75E43929341212005B249E /* Project object */;
+}
