@@ -37,8 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: Authors
 
 // Alex. Git: alexdneprin
+<<<<<<< HEAD
+// Serhii. Git: SerhiiMolodets
+=======
 // ...
 
 
 // Serhii. Git: dorogobid
-// Serhii. Git: SerhiiMolodets
+>>>>>>> main
