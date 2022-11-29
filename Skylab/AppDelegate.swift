@@ -38,3 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // Alex. Git: alexdneprin
 // ...
+
+
+// Serhii. Git: dorogobid
