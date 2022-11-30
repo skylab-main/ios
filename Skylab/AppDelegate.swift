@@ -41,3 +41,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 // Serhii. Git: dorogobid
+// Serhii. Git: SerhiiMolodets
