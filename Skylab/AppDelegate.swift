@@ -37,8 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: Authors
 
 // Alex. Git: alexdneprin
-// ...
+// ..
 
 // Serhii. Git: dorogobid
 // Serhii. Git: SerhiiMolodets
 // Artem Bilyy: artembilyy
+// Vasilii. Git: vasiario
