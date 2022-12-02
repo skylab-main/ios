@@ -43,3 +43,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // Serhii. Git: SerhiiMolodets
 // Artem Bilyy: artembilyy
 // Vasilii. Git: vasiario
+// Artem Tkachenko. Git: tk4chenko
