@@ -47,3 +47,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // Artem Tkachenko. Git: tk4chenko
 // Misha. Git: ZhutovMisha
 
+// Mikhail. Git: slepom
