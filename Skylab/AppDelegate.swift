@@ -48,3 +48,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // Misha. Git: ZhutovMisha
 // Liza. Git: Liizza
 
+// Mikhail. Git: slepom
