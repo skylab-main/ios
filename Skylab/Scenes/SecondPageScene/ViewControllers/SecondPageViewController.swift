@@ -8,9 +8,17 @@
 import UIKit
 
 class SecondPageViewController: BaseViewController, Storyboarded {
+    
+    var viewModel: SecondPageViewModel?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func openFirstSubcontroller(_ sender: Any) {
+        viewModel?.openFirstSubcontroller()
+    }
+    
 }

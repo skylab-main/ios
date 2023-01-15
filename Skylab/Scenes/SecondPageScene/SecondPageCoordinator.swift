@@ -17,9 +17,22 @@ class SecondPageCoordinator: Coordinator {
 
     override func start() {
         let viewController = SecondPageViewController.instantiate(coordinator: self)
+        viewController.viewModel = SecondPageViewModel()
+        viewController.viewModel?.coordinatorDelegate = self
         rootController.tabBarItem = UITabBarItem(title: "Second",
                                                  image: nil,
                                                  selectedImage: nil)
         rootController.pushViewController(viewController, animated: false)
+    }
+    
+    func openFirstSubcontroller() {
+
+    }
+}
+
+extension SecondPageCoordinator: SecondPageViewModelCoordinatorDelegate {
+
+    func openFirstSubControllerDelegate() {
+        self.openFirstSubcontroller()
     }
 }
