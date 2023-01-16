@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080321CD297551CD00B7FE33 /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080321CC297551CD00B7FE33 /* ThirdPageViewModel.swift */; };
 		DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */; };
 		DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */; };
 		DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		080321CC297551CD00B7FE33 /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
 		DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -120,11 +122,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		080321CB297551AD00B7FE33 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				080321CC297551CD00B7FE33 /* ThirdPageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		DF3D3C202969C95700CFCE49 /* ThirdPageScene */ = {
 			isa = PBXGroup;
 			children = (
 				DF3D3C45296A042F00CFCE49 /* ThirdPageCoordinator.swift */,
-				DF3D3C42296A040400CFCE49 /* ViewModels */,
+				080321CB297551AD00B7FE33 /* ViewModels */,
 				DF3D3C41296A03FD00CFCE49 /* ViewControllers */,
 			);
 			path = ThirdPageScene;
@@ -244,13 +254,6 @@
 				DF3D3C4D296A052000CFCE49 /* ThirdPageViewController.storyboard */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DF3D3C42296A040400CFCE49 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		DF3E2E8E296A0E4900810694 /* TabBar */ = {
@@ -507,6 +510,7 @@
 			files = (
 				DF3D3C2E2969FE1700CFCE49 /* AuthorizationViewController.swift in Sources */,
 				DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */,
+				080321CD297551CD00B7FE33 /* ThirdPageViewModel.swift in Sources */,
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,

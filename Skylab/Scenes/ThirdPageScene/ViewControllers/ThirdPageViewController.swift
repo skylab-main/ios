@@ -8,9 +8,16 @@
 import UIKit
 
 class ThirdPageViewController: BaseViewController, Storyboarded {
+    
+    var viewModel: ThirdPageViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    
+    @IBAction func openFirstSubController(_ sender: UIButton) {
+        viewModel?.openFirstSubcontroller()
     }
 }

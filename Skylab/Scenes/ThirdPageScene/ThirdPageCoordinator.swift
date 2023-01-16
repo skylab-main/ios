@@ -17,9 +17,24 @@ class ThirdPageCoordinator: Coordinator {
 
     override func start() {
         let viewController = ThirdPageViewController.instantiate(coordinator: self)
+        viewController.viewModel = ThirdPageViewModel()
+        viewController.viewModel?.coordinatorDelegate = self
         rootController.tabBarItem = UITabBarItem(title: "Third",
                                                  image: nil,
                                                  selectedImage: nil)
         rootController.pushViewController(viewController, animated: false)
     }
+    
+    func openFirstSubcontroller() {
+        
+    }
+    
+}
+
+extension ThirdPageCoordinator: ThirdPageViewModelCoordinatorDelegate {
+    func openFirstSubControllerDelegate() {
+        self.openFirstSubcontroller()
+    }
+    
+    
 }
