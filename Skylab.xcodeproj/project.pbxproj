@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		080321CD297551CD00B7FE33 /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080321CC297551CD00B7FE33 /* ThirdPageViewModel.swift */; };
+		1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */; };
+		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
 		DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */; };
 		DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */; };
 		DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */; };
@@ -59,7 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		080321CC297551CD00B7FE33 /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
+		1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewModel.swift; sourceTree = "<group>"; };
+		DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
 		DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -122,10 +124,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080321CB297551AD00B7FE33 /* ViewModels */ = {
+		1537A4AC2974718A007402D5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				080321CC297551CD00B7FE33 /* ThirdPageViewModel.swift */,
+				1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF0C6D1D297D836200DE84AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -133,8 +143,8 @@
 		DF3D3C202969C95700CFCE49 /* ThirdPageScene */ = {
 			isa = PBXGroup;
 			children = (
+				DF0C6D1D297D836200DE84AB /* ViewModels */,
 				DF3D3C45296A042F00CFCE49 /* ThirdPageCoordinator.swift */,
-				080321CB297551AD00B7FE33 /* ViewModels */,
 				DF3D3C41296A03FD00CFCE49 /* ViewControllers */,
 			);
 			path = ThirdPageScene;
@@ -153,8 +163,8 @@
 		DF3D3C222969C99900CFCE49 /* SecondPageScene */ = {
 			isa = PBXGroup;
 			children = (
+				1537A4AC2974718A007402D5 /* ViewModels */,
 				DF3D3C43296A042000CFCE49 /* SecondPageCoordinator.swift */,
-				DF3D3C40296A03F700CFCE49 /* ViewModels */,
 				DF3D3C3F296A03EE00CFCE49 /* ViewControllers */,
 			);
 			path = SecondPageScene;
@@ -238,13 +248,6 @@
 				DF3D3C49296A048500CFCE49 /* SecondPageViewController.storyboard */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DF3D3C40296A03F700CFCE49 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		DF3D3C41296A03FD00CFCE49 /* ViewControllers */ = {
@@ -510,7 +513,6 @@
 			files = (
 				DF3D3C2E2969FE1700CFCE49 /* AuthorizationViewController.swift in Sources */,
 				DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */,
-				080321CD297551CD00B7FE33 /* ThirdPageViewModel.swift in Sources */,
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
@@ -520,6 +522,7 @@
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
+				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
 				DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */,
@@ -529,6 +532,7 @@
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
 				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,
+				1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

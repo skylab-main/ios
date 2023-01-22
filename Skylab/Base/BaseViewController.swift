@@ -9,9 +9,6 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    // MARK: - Public variables
-    var coordinator: Coordinator?
-
     // MARK: - Constructors
     required init?(coder: NSCoder) {
         super.init(coder: coder)

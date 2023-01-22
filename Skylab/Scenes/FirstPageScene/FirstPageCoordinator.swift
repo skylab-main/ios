@@ -33,6 +33,7 @@ class FirstPageCoordinator: Coordinator {
     func openFirstSubcontroller() {
         let viewController = FirstPageSubViewController.instantiate(coordinator: self)
         viewController.viewModel = FirstPageSubViewControllerViewModel()
+        viewController.hidesBottomBarWhenPushed = true
         rootController.pushViewController(viewController, animated: false)
     }
 
