@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */; };
+		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
 		DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */; };
 		DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */; };
 		DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewModel.swift; sourceTree = "<group>"; };
+		DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
 		DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -130,11 +132,19 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		DF0C6D1D297D836200DE84AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		DF3D3C202969C95700CFCE49 /* ThirdPageScene */ = {
 			isa = PBXGroup;
 			children = (
+				DF0C6D1D297D836200DE84AB /* ViewModels */,
 				DF3D3C45296A042F00CFCE49 /* ThirdPageCoordinator.swift */,
-				DF3D3C42296A040400CFCE49 /* ViewModels */,
 				DF3D3C41296A03FD00CFCE49 /* ViewControllers */,
 			);
 			path = ThirdPageScene;
@@ -247,13 +257,6 @@
 				DF3D3C4D296A052000CFCE49 /* ThirdPageViewController.storyboard */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DF3D3C42296A040400CFCE49 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		DF3E2E8E296A0E4900810694 /* TabBar */ = {
@@ -519,6 +522,7 @@
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
+				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
 				DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */,
