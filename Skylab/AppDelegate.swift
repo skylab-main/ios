@@ -35,3 +35,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // Liza. Git: Liizza
 // Mikhail. Git: slepom
 // Roman Golub. Git: glbrom
+// Stanislav Burian. Git: 4050

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */; };
 		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
+		DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D21297D85E300DE84AB /* Alamofire */; };
 		DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */; };
 		DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */; };
 		DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */; };
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +140,20 @@
 				DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF0C6D23297D865800DE84AB /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
+		DF0C6D24297D86B000DE84AB /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		DF3D3C202969C95700CFCE49 /* ThirdPageScene */ = {
@@ -277,11 +293,13 @@
 			path = FirstPageSubcontroller;
 			sourceTree = "<group>";
 		};
-		DF4D3E222966004600070D79 /* Examples */ = {
+		DF4D3E222966004600070D79 /* TUTORIALS */ = {
 			isa = PBXGroup;
 			children = (
+				DF0C6D24297D86B000DE84AB /* RxSwift */,
+				DF0C6D23297D865800DE84AB /* Swinject */,
 			);
-			path = Examples;
+			path = TUTORIALS;
 			sourceTree = "<group>";
 		};
 		DF4D3E24296600A000070D79 /* Base */ = {
@@ -315,11 +333,11 @@
 		DF75E44329341212005B249E /* Skylab */ = {
 			isa = PBXGroup;
 			children = (
+				DF4D3E222966004600070D79 /* TUTORIALS */,
 				DFF2364E294F6E650009AF47 /* Scenes */,
 				DFF2364B294F6D4F0009AF47 /* Extensions */,
 				DF4D3E24296600A000070D79 /* Base */,
 				DFF23643294F6A4C0009AF47 /* Common */,
-				DF4D3E222966004600070D79 /* Examples */,
 				DF75E44429341212005B249E /* AppDelegate.swift */,
 				DF75E44D29341214005B249E /* Assets.xcassets */,
 				DF75E45229341214005B249E /* Info.plist */,
@@ -391,6 +409,9 @@
 			dependencies = (
 			);
 			name = Skylab;
+			packageProductDependencies = (
+				DF0C6D21297D85E300DE84AB /* Alamofire */,
+			);
 			productName = Skylab;
 			productReference = DF75E44129341212005B249E /* Skylab.app */;
 			productType = "com.apple.product-type.application";
@@ -463,6 +484,9 @@
 				Base,
 			);
 			mainGroup = DF75E43829341212005B249E;
+			packageReferences = (
+				DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DF75E44229341212005B249E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -864,6 +888,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF0C6D21297D85E300DE84AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF75E43929341212005B249E /* Project object */;
 }
