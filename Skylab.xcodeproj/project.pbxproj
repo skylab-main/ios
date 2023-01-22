@@ -7,16 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF0C6D19297D78C000DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D18297D78C000DE84AB /* Alamofire */; };
+		1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */; };
+		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
+		DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D21297D85E300DE84AB /* Alamofire */; };
+		DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */; };
+		DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */; };
+		DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */; };
+		DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3D3C2B2969FD8A00CFCE49 /* OnboardingViewController.storyboard */; };
+		DF3D3C2E2969FE1700CFCE49 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C2D2969FE1700CFCE49 /* AuthorizationViewController.swift */; };
+		DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3D3C2F2969FE2B00CFCE49 /* AuthorizationViewController.storyboard */; };
+		DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C312969FF7B00CFCE49 /* AuthorizationCoordinator.swift */; };
+		DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C3B296A036700CFCE49 /* FirstPageViewController.swift */; };
+		DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3D3C3D296A036F00CFCE49 /* FirstPageViewController.storyboard */; };
+		DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C43296A042000CFCE49 /* SecondPageCoordinator.swift */; };
+		DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C45296A042F00CFCE49 /* ThirdPageCoordinator.swift */; };
+		DF3D3C4A296A048500CFCE49 /* SecondPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3D3C49296A048500CFCE49 /* SecondPageViewController.storyboard */; };
+		DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C4B296A051400CFCE49 /* ThirdPageViewController.swift */; };
+		DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3D3C4D296A052000CFCE49 /* ThirdPageViewController.storyboard */; };
+		DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C37296A031F00CFCE49 /* FirstPageCoordinator.swift */; };
+		DF3E2E90296A0E7800810694 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E2E8F296A0E7800810694 /* MainTabBarController.swift */; };
+		DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C47296A045B00CFCE49 /* SecondPageViewController.swift */; };
+		DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E2E92296A15E500810694 /* FirstPageViewModel.swift */; };
+		DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E2E95296B237C00810694 /* FirstPageSubViewController.swift */; };
+		DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3E2E97296B238D00810694 /* FirstPageSubViewController.storyboard */; };
+		DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E2E99296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift */; };
+		DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4D3E2C29660FEB00070D79 /* AppCoordinator.swift */; };
 		DF75E44529341212005B249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44429341212005B249E /* AppDelegate.swift */; };
-		DF75E44729341212005B249E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44629341212005B249E /* SceneDelegate.swift */; };
-		DF75E44929341212005B249E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44829341212005B249E /* ViewController.swift */; };
-		DF75E44C29341212005B249E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF75E44A29341212005B249E /* Main.storyboard */; };
 		DF75E44E29341214005B249E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF75E44D29341214005B249E /* Assets.xcassets */; };
 		DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF75E44F29341214005B249E /* LaunchScreen.storyboard */; };
 		DF75E45C29341214005B249E /* SkylabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E45B29341214005B249E /* SkylabTests.swift */; };
 		DF75E46629341214005B249E /* SkylabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E46529341214005B249E /* SkylabUITests.swift */; };
 		DF75E46829341214005B249E /* SkylabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E46729341214005B249E /* SkylabUITestsLaunchTests.swift */; };
+		DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF23641294F69EE0009AF47 /* Coordinator.swift */; };
+		DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2364F294F6ED00009AF47 /* Storyboarded.swift */; };
+		DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2365D294F73180009AF47 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +61,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewModel.swift; sourceTree = "<group>"; };
+		DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
+		DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DF3D3C2B2969FD8A00CFCE49 /* OnboardingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingViewController.storyboard; sourceTree = "<group>"; };
+		DF3D3C2D2969FE1700CFCE49 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		DF3D3C2F2969FE2B00CFCE49 /* AuthorizationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationViewController.storyboard; sourceTree = "<group>"; };
+		DF3D3C312969FF7B00CFCE49 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		DF3D3C37296A031F00CFCE49 /* FirstPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageCoordinator.swift; sourceTree = "<group>"; };
+		DF3D3C3B296A036700CFCE49 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		DF3D3C3D296A036F00CFCE49 /* FirstPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstPageViewController.storyboard; sourceTree = "<group>"; };
+		DF3D3C43296A042000CFCE49 /* SecondPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageCoordinator.swift; sourceTree = "<group>"; };
+		DF3D3C45296A042F00CFCE49 /* ThirdPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageCoordinator.swift; sourceTree = "<group>"; };
+		DF3D3C47296A045B00CFCE49 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
+		DF3D3C49296A048500CFCE49 /* SecondPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondPageViewController.storyboard; sourceTree = "<group>"; };
+		DF3D3C4B296A051400CFCE49 /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
+		DF3D3C4D296A052000CFCE49 /* ThirdPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdPageViewController.storyboard; sourceTree = "<group>"; };
+		DF3E2E8F296A0E7800810694 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		DF3E2E92296A15E500810694 /* FirstPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewModel.swift; sourceTree = "<group>"; };
+		DF3E2E95296B237C00810694 /* FirstPageSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageSubViewController.swift; sourceTree = "<group>"; };
+		DF3E2E97296B238D00810694 /* FirstPageSubViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstPageSubViewController.storyboard; sourceTree = "<group>"; };
+		DF3E2E99296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageSubViewControllerViewModel.swift; sourceTree = "<group>"; };
+		DF4D3E2C29660FEB00070D79 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DF75E44129341212005B249E /* Skylab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF75E44429341212005B249E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF75E44629341212005B249E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF75E44829341212005B249E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF75E44B29341212005B249E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF75E44D29341214005B249E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF75E45029341214005B249E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF75E45229341214005B249E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +95,9 @@
 		DF75E46129341214005B249E /* SkylabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkylabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF75E46529341214005B249E /* SkylabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylabUITests.swift; sourceTree = "<group>"; };
 		DF75E46729341214005B249E /* SkylabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DFF23641294F69EE0009AF47 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DFF2364F294F6ED00009AF47 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		DFF2365D294F73180009AF47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF0C6D19297D78C000DE84AB /* Alamofire in Frameworks */,
+				DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,27 +126,188 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DF0C6D1A297D78DE00DE84AB /* TUTORIALS */ = {
+		1537A4AC2974718A007402D5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				DF0C6D1C297D78F200DE84AB /* RXSwift */,
-				DF0C6D1B297D78E900DE84AB /* Swinject */,
+				1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */,
 			);
-			path = TUTORIALS;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		DF0C6D1B297D78E900DE84AB /* Swinject */ = {
+		DF0C6D1D297D836200DE84AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF0C6D23297D865800DE84AB /* Swinject */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Swinject;
 			sourceTree = "<group>";
 		};
-		DF0C6D1C297D78F200DE84AB /* RXSwift */ = {
+		DF0C6D24297D86B000DE84AB /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = RXSwift;
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		DF3D3C202969C95700CFCE49 /* ThirdPageScene */ = {
+			isa = PBXGroup;
+			children = (
+				DF0C6D1D297D836200DE84AB /* ViewModels */,
+				DF3D3C45296A042F00CFCE49 /* ThirdPageCoordinator.swift */,
+				DF3D3C41296A03FD00CFCE49 /* ViewControllers */,
+			);
+			path = ThirdPageScene;
+			sourceTree = "<group>";
+		};
+		DF3D3C212969C96D00CFCE49 /* FirstPageScene */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C37296A031F00CFCE49 /* FirstPageCoordinator.swift */,
+				DF3D3C3A296A034C00CFCE49 /* ViewModels */,
+				DF3D3C39296A033A00CFCE49 /* ViewControllers */,
+			);
+			path = FirstPageScene;
+			sourceTree = "<group>";
+		};
+		DF3D3C222969C99900CFCE49 /* SecondPageScene */ = {
+			isa = PBXGroup;
+			children = (
+				1537A4AC2974718A007402D5 /* ViewModels */,
+				DF3D3C43296A042000CFCE49 /* SecondPageCoordinator.swift */,
+				DF3D3C3F296A03EE00CFCE49 /* ViewControllers */,
+			);
+			path = SecondPageScene;
+			sourceTree = "<group>";
+		};
+		DF3D3C252969F59A00CFCE49 /* AuthorizationScene */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C312969FF7B00CFCE49 /* AuthorizationCoordinator.swift */,
+				DF3D3C342969FF8F00CFCE49 /* ViewControllers */,
+				DF3D3C332969FF8600CFCE49 /* ViewModels */,
+			);
+			path = AuthorizationScene;
+			sourceTree = "<group>";
+		};
+		DF3D3C282969F62A00CFCE49 /* OnboardingScene */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */,
+				DF3D3C362969FFAF00CFCE49 /* ViewControllers */,
+				DF3D3C352969FFA800CFCE49 /* ViewModels */,
+			);
+			path = OnboardingScene;
+			sourceTree = "<group>";
+		};
+		DF3D3C332969FF8600CFCE49 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF3D3C342969FF8F00CFCE49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C2D2969FE1700CFCE49 /* AuthorizationViewController.swift */,
+				DF3D3C2F2969FE2B00CFCE49 /* AuthorizationViewController.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF3D3C352969FFA800CFCE49 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF3D3C362969FFAF00CFCE49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C292969FD5F00CFCE49 /* OnboardingViewController.swift */,
+				DF3D3C2B2969FD8A00CFCE49 /* OnboardingViewController.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF3D3C39296A033A00CFCE49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF3E2E94296B234800810694 /* FirstPageSubcontroller */,
+				DF3D3C3B296A036700CFCE49 /* FirstPageViewController.swift */,
+				DF3D3C3D296A036F00CFCE49 /* FirstPageViewController.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF3D3C3A296A034C00CFCE49 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF3E2E92296A15E500810694 /* FirstPageViewModel.swift */,
+				DF3E2E99296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF3D3C3F296A03EE00CFCE49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C47296A045B00CFCE49 /* SecondPageViewController.swift */,
+				DF3D3C49296A048500CFCE49 /* SecondPageViewController.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF3D3C41296A03FD00CFCE49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C4B296A051400CFCE49 /* ThirdPageViewController.swift */,
+				DF3D3C4D296A052000CFCE49 /* ThirdPageViewController.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF3E2E8E296A0E4900810694 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */,
+				DF3E2E8F296A0E7800810694 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		DF3E2E94296B234800810694 /* FirstPageSubcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				DF3E2E95296B237C00810694 /* FirstPageSubViewController.swift */,
+				DF3E2E97296B238D00810694 /* FirstPageSubViewController.storyboard */,
+			);
+			path = FirstPageSubcontroller;
+			sourceTree = "<group>";
+		};
+		DF4D3E222966004600070D79 /* TUTORIALS */ = {
+			isa = PBXGroup;
+			children = (
+				DF0C6D24297D86B000DE84AB /* RxSwift */,
+				DF0C6D23297D865800DE84AB /* Swinject */,
+			);
+			path = TUTORIALS;
+			sourceTree = "<group>";
+		};
+		DF4D3E24296600A000070D79 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DFF2365D294F73180009AF47 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		DF75E43829341212005B249E = {
@@ -124,13 +333,13 @@
 		DF75E44329341212005B249E /* Skylab */ = {
 			isa = PBXGroup;
 			children = (
-				DF0C6D1A297D78DE00DE84AB /* TUTORIALS */,
+				DF4D3E222966004600070D79 /* TUTORIALS */,
+				DFF2364E294F6E650009AF47 /* Scenes */,
+				DFF2364B294F6D4F0009AF47 /* Extensions */,
+				DF4D3E24296600A000070D79 /* Base */,
+				DFF23643294F6A4C0009AF47 /* Common */,
 				DF75E44429341212005B249E /* AppDelegate.swift */,
-				DF75E44629341212005B249E /* SceneDelegate.swift */,
-				DF75E44829341212005B249E /* ViewController.swift */,
-				DF75E44A29341212005B249E /* Main.storyboard */,
 				DF75E44D29341214005B249E /* Assets.xcassets */,
-				DF75E44F29341214005B249E /* LaunchScreen.storyboard */,
 				DF75E45229341214005B249E /* Info.plist */,
 			);
 			path = Skylab;
@@ -153,6 +362,37 @@
 			path = SkylabUITests;
 			sourceTree = "<group>";
 		};
+		DFF23643294F6A4C0009AF47 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DFF2364F294F6ED00009AF47 /* Storyboarded.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DFF2364B294F6D4F0009AF47 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DFF2364E294F6E650009AF47 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DF75E44F29341214005B249E /* LaunchScreen.storyboard */,
+				DFF23641294F69EE0009AF47 /* Coordinator.swift */,
+				DF4D3E2C29660FEB00070D79 /* AppCoordinator.swift */,
+				DF3E2E8E296A0E4900810694 /* TabBar */,
+				DF3D3C282969F62A00CFCE49 /* OnboardingScene */,
+				DF3D3C252969F59A00CFCE49 /* AuthorizationScene */,
+				DF3D3C212969C96D00CFCE49 /* FirstPageScene */,
+				DF3D3C222969C99900CFCE49 /* SecondPageScene */,
+				DF3D3C202969C95700CFCE49 /* ThirdPageScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,7 +410,7 @@
 			);
 			name = Skylab;
 			packageProductDependencies = (
-				DF0C6D18297D78C000DE84AB /* Alamofire */,
+				DF0C6D21297D85E300DE84AB /* Alamofire */,
 			);
 			productName = Skylab;
 			productReference = DF75E44129341212005B249E /* Skylab.app */;
@@ -245,7 +485,7 @@
 			);
 			mainGroup = DF75E43829341212005B249E;
 			packageReferences = (
-				DF0C6D17297D78C000DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DF75E44229341212005B249E /* Products */;
 			projectDirPath = "";
@@ -263,9 +503,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */,
+				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
+				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
+				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
-				DF75E44C29341212005B249E /* Main.storyboard in Resources */,
+				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
+				DF3D3C4A296A048500CFCE49 /* SecondPageViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +535,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF75E44929341212005B249E /* ViewController.swift in Sources */,
+				DF3D3C2E2969FE1700CFCE49 /* AuthorizationViewController.swift in Sources */,
+				DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */,
+				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
+				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
+				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
+				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
+				DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */,
+				DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */,
+				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
+				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
+				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
+				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
-				DF75E44729341212005B249E /* SceneDelegate.swift in Sources */,
+				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
+				DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */,
+				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
+				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
+				DF3E2E90296A0E7800810694 /* MainTabBarController.swift in Sources */,
+				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
+				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
+				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,
+				1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,14 +593,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DF75E44A29341212005B249E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF75E44B29341212005B249E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF75E44F29341214005B249E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -474,9 +730,8 @@
 				INFOPLIST_FILE = Skylab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,9 +757,8 @@
 				INFOPLIST_FILE = Skylab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,7 +890,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF0C6D17297D78C000DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -647,9 +901,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DF0C6D18297D78C000DE84AB /* Alamofire */ = {
+		DF0C6D21297D85E300DE84AB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF0C6D17297D78C000DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
