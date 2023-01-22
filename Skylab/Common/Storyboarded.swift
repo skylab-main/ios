@@ -10,8 +10,6 @@ import UIKit
 protocol Storyboarded: AnyObject {
 
     static func instantiate(coordinator: Coordinator, bundle: Bundle?) -> Self
-
-    var coordinator: Coordinator? { get set }
 }
 
 extension Storyboarded where Self: UIViewController {
@@ -20,7 +18,6 @@ extension Storyboarded where Self: UIViewController {
         let board = UIStoryboard(name: String(describing: self), bundle: bundle)
         let vc = board.instantiateInitialViewController()
         let controller = vc as! Self
-        controller.coordinator = coordinator
         return controller
     }
 }
