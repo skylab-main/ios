@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0C6D19297D78C000DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D18297D78C000DE84AB /* Alamofire */; };
 		DF75E44529341212005B249E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44429341212005B249E /* AppDelegate.swift */; };
 		DF75E44729341212005B249E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44629341212005B249E /* SceneDelegate.swift */; };
 		DF75E44929341212005B249E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75E44829341212005B249E /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0C6D19297D78C000DE84AB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0C6D1A297D78DE00DE84AB /* TUTORIALS */ = {
+			isa = PBXGroup;
+			children = (
+				DF0C6D1C297D78F200DE84AB /* RXSwift */,
+				DF0C6D1B297D78E900DE84AB /* Swinject */,
+			);
+			path = TUTORIALS;
+			sourceTree = "<group>";
+		};
+		DF0C6D1B297D78E900DE84AB /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
+		DF0C6D1C297D78F200DE84AB /* RXSwift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RXSwift;
+			sourceTree = "<group>";
+		};
 		DF75E43829341212005B249E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +124,7 @@
 		DF75E44329341212005B249E /* Skylab */ = {
 			isa = PBXGroup;
 			children = (
+				DF0C6D1A297D78DE00DE84AB /* TUTORIALS */,
 				DF75E44429341212005B249E /* AppDelegate.swift */,
 				DF75E44629341212005B249E /* SceneDelegate.swift */,
 				DF75E44829341212005B249E /* ViewController.swift */,
@@ -143,6 +169,9 @@
 			dependencies = (
 			);
 			name = Skylab;
+			packageProductDependencies = (
+				DF0C6D18297D78C000DE84AB /* Alamofire */,
+			);
 			productName = Skylab;
 			productReference = DF75E44129341212005B249E /* Skylab.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +244,9 @@
 				Base,
 			);
 			mainGroup = DF75E43829341212005B249E;
+			packageReferences = (
+				DF0C6D17297D78C000DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DF75E44229341212005B249E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +634,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF0C6D17297D78C000DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF0C6D18297D78C000DE84AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF0C6D17297D78C000DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF75E43929341212005B249E /* Project object */;
 }
