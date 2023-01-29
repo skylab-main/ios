@@ -30,6 +30,7 @@ class AppCoordinator: Coordinator {
          openAuthorization()
 //         openOnboarding()
 //        openTabBar()
+//        openSwinjectTutorial()
     }
 
     func openOnboarding() {
@@ -51,6 +52,13 @@ class AppCoordinator: Coordinator {
         window.rootViewController = tabBarCoordinator.rootTabBarController
         tabBarCoordinator.start()
         addChildCoordinator(tabBarCoordinator)
+    }
+    
+    func openSwinjectTutorial() {
+        let coordinator = SwinjectTestPageCoordinator(UINavigationController())
+        coordinator.start()
+        window.rootViewController = coordinator.rootController
+        addChildCoordinator(coordinator)
     }
 
     override func finish() { }
