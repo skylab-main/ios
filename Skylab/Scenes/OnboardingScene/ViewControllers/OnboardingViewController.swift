@@ -8,9 +8,10 @@
 import UIKit
 
 class OnboardingViewController: BaseViewController, Storyboarded {
-
+    var viewModel: OnboardingViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel?.openAuthorizationController()
     }
 }
