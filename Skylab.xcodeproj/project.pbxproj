@@ -41,7 +41,7 @@
 		DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF23641294F69EE0009AF47 /* Coordinator.swift */; };
 		DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2364F294F6ED00009AF47 /* Storyboarded.swift */; };
 		DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2365D294F73180009AF47 /* BaseViewController.swift */; };
-		ED0BAF97299ECA9D00B76AF3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAF96299ECA9D00B76AF3 /* OnboardingViewModel.swift */; };
+		ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,7 @@
 		DFF23641294F69EE0009AF47 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DFF2364F294F6ED00009AF47 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		DFF2365D294F73180009AF47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		ED0BAF96299ECA9D00B76AF3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewModel.swift; path = ../../../../../Dice/DiceSwiftUI/DiceSwiftUI/OnboardingViewModel.swift; sourceTree = "<group>"; };
+		ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,7 +391,7 @@
 		ED0BAF95299ECA5D00B76AF3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				ED0BAF96299ECA9D00B76AF3 /* OnboardingViewModel.swift */,
+				ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -552,11 +552,11 @@
 				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
-				ED0BAF97299ECA9D00B76AF3 /* OnboardingViewModel.swift in Sources */,
 				DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */,
 				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* MainTabBarController.swift in Sources */,
+				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
 				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,
