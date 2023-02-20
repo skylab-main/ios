@@ -12,6 +12,5 @@ class OnboardingViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.openAuthorizationController()
     }
 }
