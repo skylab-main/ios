@@ -19,7 +19,7 @@ class FirstPageViewModel {
     let didOpenSecondSubController: Observable<Void>
     
     init() {
-//        Connection between input and output
+        // Connection between input and output
         let openFirstSubControllerRX = PublishSubject<Void>()
         self.openFirstSubController = openFirstSubControllerRX.asObserver()
         self.didOpenFirstSubController = openFirstSubControllerRX.asObservable()
@@ -28,20 +28,6 @@ class FirstPageViewModel {
         self.openSecondSubController = openSecondSubControllerRX.asObserver()
         self.didOpenSecondSubController = openSecondSubControllerRX.asObservable()
     }
-    
 
-//    var coordinatorDelegate: FirstPageViewModelCoordinatorDelegate?
-
-//    func openFirstSubcontroller() {
-//        coordinatorDelegate?.openFirstSubControllerDelegate()
-//    }
-//
-//    func openSecondSubcontroller() {
-//        coordinatorDelegate?.openSecondSubControllerDelegate()
-//    }
 }
 
-//protocol FirstPageViewModelCoordinatorDelegate {
-//    func openFirstSubControllerDelegate()
-//    func openSecondSubControllerDelegate()
-//}

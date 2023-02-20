@@ -11,11 +11,8 @@ import RxSwift
 
 class FirstPageViewController: BaseViewController, Storyboarded {
     
-    
     @IBOutlet weak var openFirstSubControllerButton: UIButton!
     @IBOutlet weak var openSecondSubControllerButton: UIButton!
-    
-    let bag = DisposeBag()
     
     var viewModel: FirstPageViewModel!
 
@@ -33,14 +30,5 @@ class FirstPageViewController: BaseViewController, Storyboarded {
             .bind(to: viewModel.openSecondSubController)
             .disposed(by: bag)
     }
-    
-
-//    @IBAction func openFirstSubcontroller(_ sender: Any) {
-//        viewModel?.openFirstSubcontroller()
-//    }
-//
-//    @IBAction func openSecondSubcontroller(_ sender: Any) {
-//        viewModel?.openSecondSubcontroller()
-//    }
 
 }

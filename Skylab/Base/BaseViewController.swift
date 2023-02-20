@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    let bag = DisposeBag()
 
     // MARK: - Constructors
     required init?(coder: NSCoder) {

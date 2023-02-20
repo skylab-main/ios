@@ -14,7 +14,7 @@ class FirstPageCoordinator: Coordinator {
     // MARK: Properties
     
     let rootController: UINavigationController
-    let bag = DisposeBag()
+
     
     // MARK: Coordinator
     
@@ -27,8 +27,8 @@ class FirstPageCoordinator: Coordinator {
         let viewController = FirstPageViewController.instantiate(coordinator: self)
         let viewModel = FirstPageViewModel()
         viewController.viewModel = viewModel
-        //        viewController.viewModel?.coordinatorDelegate = self
-        //        MARK: - Observe to viewModel and call to func openFirstSubcontroller
+
+        // MARK: - Observe to viewModel and call to func openFirstSubcontroller
         viewModel.didOpenFirstSubController
             .subscribe(onNext: { [weak self] in self?.openFirstSubcontroller()} )
             .disposed(by: bag)
@@ -55,16 +55,6 @@ class FirstPageCoordinator: Coordinator {
     }
 }
 
-//extension FirstPageCoordinator: FirstPageViewModelCoordinatorDelegate {
-//
-//    func openFirstSubControllerDelegate() {
-//        self.openFirstSubcontroller()
-//    }
-//
-//    func openSecondSubControllerDelegate() {
-//        self.openSecondSubController()
-//    }
-//}
 
 
 
