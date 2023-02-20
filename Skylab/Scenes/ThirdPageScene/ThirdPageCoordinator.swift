@@ -26,7 +26,7 @@ class ThirdPageCoordinator: Coordinator {
     }
     
     func openFirstSubcontroller() {
-        print("openFirstSubcontroller")
+        
     }
     
 }
