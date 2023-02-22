@@ -128,14 +128,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04D51F0829A6C97F0006676B /* Custom elements */ = {
-			isa = PBXGroup;
-			children = (
-				04C60CFC29A6B22A00BACDC0 /* CustomView.swift */,
-			);
-			path = "Custom elements";
-			sourceTree = "<group>";
-		};
 		1537A4AC2974718A007402D5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,7 +338,6 @@
 				DF4D3E222966004600070D79 /* TUTORIALS */,
 				DFF2364E294F6E650009AF47 /* Scenes */,
 				DFF2364B294F6D4F0009AF47 /* Extensions */,
-				04D51F0829A6C97F0006676B /* Custom elements */,
 				DF4D3E24296600A000070D79 /* Base */,
 				DFF23643294F6A4C0009AF47 /* Common */,
 				DF75E44429341212005B249E /* AppDelegate.swift */,
@@ -393,6 +384,7 @@
 			children = (
 				DF75E44F29341214005B249E /* LaunchScreen.storyboard */,
 				DFF23641294F69EE0009AF47 /* Coordinator.swift */,
+				04C60CFC29A6B22A00BACDC0 /* CustomView.swift */,
 				DF4D3E2C29660FEB00070D79 /* AppCoordinator.swift */,
 				DF3E2E8E296A0E4900810694 /* TabBar */,
 				DF3D3C282969F62A00CFCE49 /* OnboardingScene */,
