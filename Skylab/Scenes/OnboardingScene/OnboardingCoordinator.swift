@@ -17,6 +17,7 @@ class OnboardingCoordinator: Coordinator {
 
     override func start() {
         let viewController = OnboardingViewController.instantiate(coordinator: self)
+        viewController.viewModel = OnboardingViewModel()
         rootController.pushViewController(viewController, animated: false)
     }
 }

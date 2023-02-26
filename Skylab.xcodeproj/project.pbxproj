@@ -42,6 +42,7 @@
 		DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF23641294F69EE0009AF47 /* Coordinator.swift */; };
 		DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2364F294F6ED00009AF47 /* Storyboarded.swift */; };
 		DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2365D294F73180009AF47 /* BaseViewController.swift */; };
+		ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		DFF23641294F69EE0009AF47 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DFF2364F294F6ED00009AF47 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		DFF2365D294F73180009AF47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,9 +203,9 @@
 		DF3D3C282969F62A00CFCE49 /* OnboardingScene */ = {
 			isa = PBXGroup;
 			children = (
+				ED0BAF95299ECA5D00B76AF3 /* ViewModels */,
 				DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */,
 				DF3D3C362969FFAF00CFCE49 /* ViewControllers */,
-				DF3D3C352969FFA800CFCE49 /* ViewModels */,
 			);
 			path = OnboardingScene;
 			sourceTree = "<group>";
@@ -223,13 +225,6 @@
 				DF3D3C2F2969FE2B00CFCE49 /* AuthorizationViewController.storyboard */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DF3D3C352969FFA800CFCE49 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		DF3D3C362969FFAF00CFCE49 /* ViewControllers */ = {
@@ -396,6 +391,14 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		ED0BAF95299ECA5D00B76AF3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -557,6 +560,7 @@
 				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* MainTabBarController.swift in Sources */,
+				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
 				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,
