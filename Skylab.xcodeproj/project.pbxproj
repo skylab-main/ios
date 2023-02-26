@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */; };
 		1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */; };
 		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
 		DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D21297D85E300DE84AB /* Alamofire */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewModel.swift; sourceTree = "<group>"; };
 		DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
 		DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		DF3D3C332969FF8600CFCE49 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
 				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
 				DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */,
+				04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */,
 				DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */,
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,

@@ -8,9 +8,12 @@
 import UIKit
 
 class AuthorizationViewController: BaseViewController, Storyboarded {
+    
+    var viewModel: AuthorizationViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 }
+
