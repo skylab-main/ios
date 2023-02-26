@@ -7,17 +7,17 @@
 
 import UIKit
 
-@IBDesignable class CustomView: UIView {
+@IBDesignable class BaseBackgroundView: UIView {
     
-    @IBInspectable var borderWidth: CGFloat = 1.0 {
+    @IBInspectable var borderWidth: CGFloat = 0 {
         didSet { self.layer.borderWidth = borderWidth }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 1.0 {
+    @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet { self.layer.cornerRadius = cornerRadius }
     }
     
-    @IBInspectable var distance: CGFloat = 1.0
+    @IBInspectable var distance: CGFloat = 0
     
     @IBInspectable var borderColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0) {
         didSet { self.layer.borderColor = borderColor.cgColor }
@@ -29,7 +29,7 @@ import UIKit
     }
     
     func addDoubleBorder() {
-        let bottomView = UIView(frame: CGRect(x: 0 + distance, y: 0 + distance, width: self.frame.width, height: self.frame.height))
+        let bottomView = UIView(frame: CGRect(x: distance, y: distance, width: self.frame.width, height: self.frame.height))
         bottomView.layer.borderWidth = borderWidth
         bottomView.layer.borderColor = borderColor.cgColor
         bottomView.layer.cornerRadius = cornerRadius
@@ -40,7 +40,6 @@ import UIKit
         path.append(maskPath)
         maskLayer.path = path.cgPath
         maskLayer.fillRule = .evenOdd
-        
         bottomView.layer.mask = maskLayer
         
         self.addSubview(bottomView)
