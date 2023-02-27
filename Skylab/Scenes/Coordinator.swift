@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class Coordinator {
 
     private(set) var childCoordinators: [Coordinator] = []
+    let bag = DisposeBag()
 
     func start() {
         preconditionFailure("This method needs to be overriden by concrete subclass.")
