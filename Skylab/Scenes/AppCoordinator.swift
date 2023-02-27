@@ -27,9 +27,9 @@ class AppCoordinator: Coordinator {
 
         // Here we choose what is going to be open, depending on data we have
 
-         openAuthorization()
+//         openAuthorization()
 //         openOnboarding()
-//        openTabBar()
+        openTabBar()
     }
 
     func openOnboarding() {
