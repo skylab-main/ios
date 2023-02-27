@@ -6,22 +6,29 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class FirstPageViewController: BaseViewController, Storyboarded {
-
-    var viewModel: FirstPageViewModel?
+    
+    @IBOutlet weak var openFirstSubControllerButton: UIButton!
+    @IBOutlet weak var openSecondSubControllerButton: UIButton!
+    
+    var viewModel: FirstPageViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupBindings()
     }
-
-    @IBAction func openFirstSubcontroller(_ sender: Any) {
-        viewModel?.openFirstSubcontroller()
-    }
-
-    @IBAction func openSecondSubcontroller(_ sender: Any) {
-        viewModel?.openSecondSubcontroller()
+    
+    private func setupBindings() {
+        openFirstSubControllerButton.rx.tap
+            .bind(to: viewModel.openFirstSubController)
+            .disposed(by: bag)
+        
+        openSecondSubControllerButton.rx.tap
+            .bind(to: viewModel.openSecondSubController)
+            .disposed(by: bag)
     }
 
 }
