@@ -42,6 +42,11 @@
                                     <action selector="openSecondSubcontroller:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eHf-zR-C6m"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cjU-5b-pcP" customClass="BaseBackgroundView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="75" y="171" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
