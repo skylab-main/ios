@@ -15,18 +15,10 @@ struct SecondPageSwiftUIView: View {
         VStack {
             Text("Second Page SwiftUI View")
                 .font(.title)
-            
             Button("Open Second SubController", action: {
-//                Binding tap to viewmoedl
-                viewModel.openSecondSubControllerDidTap.onNext(())}) // make an empty emit
-                .padding()
-        }
-//        Just for lifecycle info
-        .onDisappear {
-            print("disappear")
-        }
-        .onAppear {
-            print("appear")
+                // MARK: - Binding tap to viewModel, make an empty emit
+                viewModel.openSecondSubControllerDidTap.onNext(())})
+            .padding()
         }
     }
 }

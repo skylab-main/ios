@@ -13,7 +13,6 @@ class SecondPageCoordinator: Coordinator {
     
     let rootController: UINavigationController
     
-//    Resource managment RxSwift
     let bag = DisposeBag()
     
     init(_ rootController: UINavigationController) {
@@ -24,18 +23,14 @@ class SecondPageCoordinator: Coordinator {
         
         let viewModel = SecondPageSwiftUIViewModel()
         
-//        Observe on viewModel emits
+        // MARK: - Observe on viewModel emits
         viewModel.openSecondSubControllerDidTap.asObservable()
             .subscribe(onNext: { [weak self] in self?.openFirstSubcontroller() })
             .disposed(by: bag)
-          
-//        integrate SwiftUI view into a UIKit view hierarchy
+        
+        // MARK: integrate SwiftUI view into a UIKit view hierarchy
         let swiftUIController = UIHostingController(rootView: SecondPageSwiftUIView(viewModel: viewModel))
         
-//        changed to RxSwift
-        //        let viewController = SecondPageViewController.instantiate(coordinator: self)
-        //        viewController.viewModel = SecondPageViewModel()
-        //        viewController.viewModel?.coordinatorDelegate = self
         rootController.tabBarItem = UITabBarItem(title: "Second",
                                                  image: nil,
                                                  selectedImage: nil)
@@ -49,11 +44,3 @@ class SecondPageCoordinator: Coordinator {
         rootController.pushViewController(viewController, animated: false)
     }
 }
-
-//        changed to RxSwift
-//extension SecondPageCoordinator: SecondPageViewModelCoordinatorDelegate {
-//
-//    func openFirstSubControllerDelegate() {
-//        self.openFirstSubcontroller()
-//    }
-//}
