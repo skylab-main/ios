@@ -8,6 +8,7 @@
 import UIKit
 
 class TestMenuViewCoordinator: Coordinator {
+    
     let rootController: UINavigationController
 
     init(_ rootController: UINavigationController) {
@@ -15,7 +16,7 @@ class TestMenuViewCoordinator: Coordinator {
     }
 
     override func start() {
-        let viewController = TestMenuViewController.instantiate(coordinator: self)
+        let viewController = TestMenuViewController.instantiate(coordinator: self, bundle: nil)
         rootController.pushViewController(viewController, animated: false)
     }
 }

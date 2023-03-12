@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */; };
+		045D3FD629BE7D0100456DEC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FD529BE7D0100456DEC /* MenuCell.swift */; };
+		045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FDF29BE808600456DEC /* TestMenuViewController.swift */; };
+		045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */; };
+		045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */; };
 		04C60CFD29A6B22A00BACDC0 /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */; };
+		04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
 		08697119298430B600E4CA00 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08697118298430B600E4CA00 /* RxRelay */; };
 		0869711B298430B600E4CA00 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711A298430B600E4CA00 /* RxSwift */; };
 		086971202986D8E200E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711F2986D8E200E4CA00 /* RxCocoa */; };
-		04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */; };
 		1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */; };
 		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
 		DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D21297D85E300DE84AB /* Alamofire */; };
@@ -68,6 +73,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableMenuView.swift; sourceTree = "<group>"; };
+		045D3FD529BE7D0100456DEC /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		045D3FDF29BE808600456DEC /* TestMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuViewController.swift; sourceTree = "<group>"; };
+		045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMenuViewCoordinator.swift; sourceTree = "<group>"; };
+		045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestMenuViewController.storyboard; sourceTree = "<group>"; };
 		04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		1537A4AD297471A5007402D5 /* SecondPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewModel.swift; sourceTree = "<group>"; };
@@ -140,13 +150,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045D3FDE29BE807E00456DEC /* TestMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				045D3FDF29BE808600456DEC /* TestMenuViewController.swift */,
+				045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */,
+				045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */,
+			);
+			path = TestMenuView;
+			sourceTree = "<group>";
+		};
 		04D51F0829A6C97F0006676B /* Custom elements */ = {
 			isa = PBXGroup;
 			children = (
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
+				045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */,
+				045D3FD529BE7D0100456DEC /* MenuCell.swift */,
 			);
 			path = "Custom elements";
-      sourceTree = "<group>";
+			sourceTree = "<group>";
 		};
 		0869711E2986D8E200E4CA00 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -408,6 +430,7 @@
 				DF75E44F29341214005B249E /* LaunchScreen.storyboard */,
 				DFF23641294F69EE0009AF47 /* Coordinator.swift */,
 				DF4D3E2C29660FEB00070D79 /* AppCoordinator.swift */,
+				045D3FDE29BE807E00456DEC /* TestMenuView */,
 				DF3E2E8E296A0E4900810694 /* TabBar */,
 				DF3D3C282969F62A00CFCE49 /* OnboardingScene */,
 				DF3D3C252969F59A00CFCE49 /* AuthorizationScene */,
@@ -545,6 +568,7 @@
 			files = (
 				DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
+				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
@@ -577,6 +601,7 @@
 			files = (
 				DF3D3C2E2969FE1700CFCE49 /* AuthorizationViewController.swift in Sources */,
 				DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */,
+				045D3FD629BE7D0100456DEC /* MenuCell.swift in Sources */,
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
@@ -589,13 +614,16 @@
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
 				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
+				045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
+				045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
 				DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */,
 				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* MainTabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
+				045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
 				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,

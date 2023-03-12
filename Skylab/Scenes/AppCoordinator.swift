@@ -27,7 +27,8 @@ class AppCoordinator: Coordinator {
 
         // Here we choose what is going to be open, depending on data we have
 
-         openAuthorization()
+        testScrollableMenuView()
+//         openAuthorization()
 //         openOnboarding()
 //        openTabBar()
     }
@@ -51,6 +52,13 @@ class AppCoordinator: Coordinator {
         window.rootViewController = tabBarCoordinator.rootTabBarController
         tabBarCoordinator.start()
         addChildCoordinator(tabBarCoordinator)
+    }
+
+    func testScrollableMenuView() {
+        let coordinator = TestMenuViewCoordinator(UINavigationController())
+        coordinator.start()
+        window.rootViewController = coordinator.rootController
+        addChildCoordinator(coordinator)
     }
 
     override func finish() { }
