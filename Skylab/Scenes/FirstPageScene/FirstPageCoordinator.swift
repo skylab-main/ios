@@ -51,7 +51,10 @@ class FirstPageCoordinator: Coordinator {
     }
     
     func openSecondSubController() {
-        debugPrint("Here will be second navigation func")
+        let viewController = SecondPageSubViewController.instantiate(coordinator: self)
+        viewController.viewModel = SecondPageSubViewControllerViewModel()
+        viewController.hidesBottomBarWhenPushed = true
+        rootController.pushViewController(viewController, animated: false)
     }
 }
 
