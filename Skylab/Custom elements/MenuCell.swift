@@ -38,7 +38,7 @@ class MenuCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             baseBackgroundView.topAnchor.constraint(equalTo: self.topAnchor),
             baseBackgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            baseBackgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            baseBackgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -baseBackgroundView.distance),
             baseBackgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             titleLabel.topAnchor.constraint(equalTo: baseBackgroundView.topAnchor),

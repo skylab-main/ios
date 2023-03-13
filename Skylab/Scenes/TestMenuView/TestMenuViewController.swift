@@ -11,14 +11,17 @@ class TestMenuViewController: BaseViewController, Storyboarded, ScrollableMenuVi
     
     @IBOutlet weak var scrollableMenuView: ScrollableMenuView!
     
-    func changeColor(index: Int) {
-        view.backgroundColor = scrollableMenuView.colors[index]
+    func getIndex(_ index: Int) {
+        view.backgroundColor = colors[index]
     }
+    
+    var colors = [UIColor.systemRed, .systemBrown, .systemTeal, .systemOrange, .systemBlue]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollableMenuView.delegate = self
-        view.backgroundColor = scrollableMenuView.colors[0]
+        scrollableMenuView.colors = self.colors
+        view.backgroundColor = colors[0]
     }
 
 }

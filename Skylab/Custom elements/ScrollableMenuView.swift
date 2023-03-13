@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ScrollableMenuViewDelegate: AnyObject {
-    func changeColor(index: Int)
+    func getIndex(_ index: Int)
 }
 
 @IBDesignable
@@ -16,12 +16,13 @@ final class ScrollableMenuView: UIView {
     
     weak var delegate: ScrollableMenuViewDelegate?
     
-    var colors = [UIColor.systemRed, .systemTeal, .systemYellow, .systemBlue]
+    var colors = [UIColor]()
     
-    var currentIndex = 0 {
+    private var currentIndex = 0 {
         didSet {
-            delegate?.changeColor(index: currentIndex)
+            delegate?.getIndex(currentIndex)
             pageControl.currentPage = currentIndex
+            collectionView.scrollToItem(at: IndexPath(row: currentIndex, section: 0), at: .centeredHorizontally, animated: true)
         }
     }
     
@@ -75,8 +76,6 @@ final class ScrollableMenuView: UIView {
         } else if sender.direction == .right {
             currentIndex = (currentIndex + colors.count - 1) % colors.count
         }
-        collectionView.scrollToItem(at: IndexPath(row: currentIndex, section: 0), at: .centeredHorizontally, animated: true)
-        pageControl.currentPage = currentIndex
     }
     
     private func setupLayout() -> UICollectionViewLayout {
@@ -84,11 +83,10 @@ final class ScrollableMenuView: UIView {
         flowLayout.scrollDirection = .horizontal
         flowLayout.itemSize = CGSize(width: 300, height: 80)
         flowLayout.minimumInteritemSpacing = 0
-        flowLayout.minimumLineSpacing = 0
+        flowLayout.minimumLineSpacing = 16
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         return flowLayout
     }
-    
     
     private func setupConstraints() {
         addSubview(collectionView)
@@ -97,11 +95,11 @@ final class ScrollableMenuView: UIView {
             collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 100),
+            collectionView.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -4),
             
-            pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 4),
             pageControl.leadingAnchor.constraint(equalTo: leadingAnchor),
-            pageControl.trailingAnchor.constraint(equalTo: trailingAnchor)
+            pageControl.trailingAnchor.constraint(equalTo: trailingAnchor),
+            pageControl.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
@@ -120,9 +118,7 @@ extension ScrollableMenuView: UICollectionViewDataSource {
 }
 
 extension ScrollableMenuView: UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         currentIndex = indexPath.row
     }
 }
