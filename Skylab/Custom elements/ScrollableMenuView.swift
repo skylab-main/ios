@@ -37,10 +37,11 @@ final class ScrollableMenuView: UIView {
     private lazy var pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.isUserInteractionEnabled = false
+        pageControl.isUserInteractionEnabled = true
         pageControl.currentPageIndicatorTintColor = .white
         pageControl.pageIndicatorTintColor = UIColor(white: 1, alpha: 0.5)
         pageControl.numberOfPages = colors.count
+        pageControl.addTarget(self, action: #selector(pageControlDidChange(_:)), for: .valueChanged)
         return pageControl
     }()
     
@@ -68,6 +69,10 @@ final class ScrollableMenuView: UIView {
         collectionView.addGestureRecognizer(swipeLeft)
         collectionView.addGestureRecognizer(swipeRight)
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: MenuCell.identifier)
+    }
+    
+    @objc func pageControlDidChange(_ sender: UIPageControl) {
+        currentIndex = sender.currentPage
     }
     
     @objc func viewSwiped(_ sender: UISwipeGestureRecognizer) {
