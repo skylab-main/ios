@@ -20,7 +20,7 @@ class AppCoordinator: Coordinator {
         }
         self.window = window
     }
-    
+   
     override func start() {
         
         window.makeKeyAndVisible()
@@ -28,9 +28,10 @@ class AppCoordinator: Coordinator {
         // Here we choose what is going to be open, depending on data we have
         
         testScrollableMenuView()
-//                 openAuthorization()
-        //         openOnboarding()
-        //        openTabBar()
+//        openAuthorization()
+//        openOnboarding()
+//        openTabBar()
+//        openSwinjectTutorial()
     }
     
     func openOnboarding() {
@@ -56,6 +57,13 @@ class AppCoordinator: Coordinator {
     
     func testScrollableMenuView() {
         let coordinator = TestMenuViewCoordinator(UINavigationController())
+        coordinator.start()
+        window.rootViewController = coordinator.rootController
+        addChildCoordinator(coordinator)
+    }
+        
+    func openSwinjectTutorial() {
+        let coordinator = SwinjectTestPageCoordinator(UINavigationController())
         coordinator.start()
         window.rootViewController = coordinator.rootController
         addChildCoordinator(coordinator)
