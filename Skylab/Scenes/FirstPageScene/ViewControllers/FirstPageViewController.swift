@@ -21,6 +21,11 @@ class FirstPageViewController: BaseViewController, Storyboarded {
         setupBindings()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .default
+    }
+    
     private func setupBindings() {
         openFirstSubControllerButton.rx.tap
             .bind(to: viewModel.openFirstSubController)
@@ -30,5 +35,4 @@ class FirstPageViewController: BaseViewController, Storyboarded {
             .bind(to: viewModel.openSecondSubController)
             .disposed(by: bag)
     }
-
 }
