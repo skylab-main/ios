@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */; };
+		045D3FD629BE7D0100456DEC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FD529BE7D0100456DEC /* MenuCell.swift */; };
+		045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FDF29BE808600456DEC /* TestMenuViewController.swift */; };
+		045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */; };
+		045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */; };
 		04C60CFD29A6B22A00BACDC0 /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */; };
 		04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
@@ -30,6 +35,9 @@
 		1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */; };
 		1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689C29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift */; };
 		1550689F29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689E29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift */; };
+		8625B5A829BFB2BF00F4A78C /* SecondPageSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8625B5A729BFB2BF00F4A78C /* SecondPageSubViewController.swift */; };
+		8625B5AA29BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8625B5A929BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift */; };
+		8625B5AE29BFB5A700F4A78C /* SecondPageSubViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8625B5AD29BFB5A700F4A78C /* SecondPageSubViewController.storyboard */; };
 		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
 		DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D21297D85E300DE84AB /* Alamofire */; };
 		DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */; };
@@ -84,6 +92,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableMenuView.swift; sourceTree = "<group>"; };
+		045D3FD529BE7D0100456DEC /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		045D3FDF29BE808600456DEC /* TestMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuViewController.swift; sourceTree = "<group>"; };
+		045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMenuViewCoordinator.swift; sourceTree = "<group>"; };
+		045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestMenuViewController.storyboard; sourceTree = "<group>"; };
 		04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -102,6 +115,9 @@
 		1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerSwinjectTutorialProtocol.swift; sourceTree = "<group>"; };
 		1550689C29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextLoggerSwinjectTutorial.swift; sourceTree = "<group>"; };
 		1550689E29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoggerSwinjectTutorial.swift; sourceTree = "<group>"; };
+		8625B5A729BFB2BF00F4A78C /* SecondPageSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSubViewController.swift; sourceTree = "<group>"; };
+		8625B5A929BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSubViewControllerViewModel.swift; sourceTree = "<group>"; };
+		8625B5AD29BFB5A700F4A78C /* SecondPageSubViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondPageSubViewController.storyboard; sourceTree = "<group>"; };
 		DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
 		DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -172,10 +188,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045D3FDE29BE807E00456DEC /* TestMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				045D3FDF29BE808600456DEC /* TestMenuViewController.swift */,
+				045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */,
+				045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */,
+			);
+			path = TestMenuView;
+			sourceTree = "<group>";
+		};
 		04D51F0829A6C97F0006676B /* Custom elements */ = {
 			isa = PBXGroup;
 			children = (
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
+				045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */,
+				045D3FD529BE7D0100456DEC /* MenuCell.swift */,
 			);
 			path = "Custom elements";
 			sourceTree = "<group>";
@@ -195,6 +223,7 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+
 		1513AF2129BE562F00CD6387 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +305,15 @@
 				1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8625B5A629BFB27F00F4A78C /* SecondPageSubcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				8625B5A729BFB2BF00F4A78C /* SecondPageSubViewController.swift */,
+				8625B5AD29BFB5A700F4A78C /* SecondPageSubViewController.storyboard */,
+			);
+			path = SecondPageSubcontroller;
 			sourceTree = "<group>";
 		};
 		DF0C6D1D297D836200DE84AB /* ViewModels */ = {
@@ -382,6 +420,7 @@
 		DF3D3C39296A033A00CFCE49 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8625B5A629BFB27F00F4A78C /* SecondPageSubcontroller */,
 				DF3E2E94296B234800810694 /* FirstPageSubcontroller */,
 				DF3D3C3B296A036700CFCE49 /* FirstPageViewController.swift */,
 				DF3D3C3D296A036F00CFCE49 /* FirstPageViewController.storyboard */,
@@ -394,6 +433,7 @@
 			children = (
 				DF3E2E92296A15E500810694 /* FirstPageViewModel.swift */,
 				DF3E2E99296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift */,
+				8625B5A929BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -527,6 +567,7 @@
 				DF75E44F29341214005B249E /* LaunchScreen.storyboard */,
 				DFF23641294F69EE0009AF47 /* Coordinator.swift */,
 				DF4D3E2C29660FEB00070D79 /* AppCoordinator.swift */,
+				045D3FDE29BE807E00456DEC /* TestMenuView */,
 				DF3E2E8E296A0E4900810694 /* TabBar */,
 				DF3D3C282969F62A00CFCE49 /* OnboardingScene */,
 				DF3D3C252969F59A00CFCE49 /* AuthorizationScene */,
@@ -668,6 +709,7 @@
 				08E66EEC29BFC5500013B80A /* AnonymousPro-Bold.ttf in Resources */,
 				DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
+				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
 				152E04CB2984718B00ABCEA2 /* SwinjectTestPageSubViewController.storyboard in Resources */,
@@ -675,6 +717,7 @@
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
 				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
 				DF3D3C4A296A048500CFCE49 /* SecondPageViewController.storyboard in Resources */,
+				8625B5AE29BFB5A700F4A78C /* SecondPageSubViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,15 +742,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8625B5A829BFB2BF00F4A78C /* SecondPageSubViewController.swift in Sources */,
 				1513AF2729BE62B400CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift in Sources */,
 				DF3D3C2E2969FE1700CFCE49 /* AuthorizationViewController.swift in Sources */,
 				DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */,
+				045D3FD629BE7D0100456DEC /* MenuCell.swift in Sources */,
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */,
 				152E04CD298471BD00ABCEA2 /* SwinjectPageViewModel.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
 				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
+				8625B5AA29BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift in Sources */,
 				DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */,
 				04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */,
 				DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */,
@@ -719,9 +765,11 @@
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
 				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
+				045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */,
 				1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */,
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
+				045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
 				1544EC7329846C8D0080C429 /* SwinjectTestPageViewController.swift in Sources */,
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
@@ -731,6 +779,7 @@
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* MainTabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
+				045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
 				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,
