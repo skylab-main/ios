@@ -29,6 +29,9 @@
 		1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */; };
 		1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689C29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift */; };
 		1550689F29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689E29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift */; };
+		6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA0BEC929C0DD2C0066B9BC /* GoogleService-Info.plist */; };
+		6EA0BED529C25F4A0066B9BC /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 6EA0BED429C25F4A0066B9BC /* FirebaseRemoteConfig */; };
+		6EA0BED729C2F23D0066B9BC /* FeatureToggleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0BED629C2F23D0066B9BC /* FeatureToggleProvider.swift */; };
 		DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */; };
 		DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0C6D21297D85E300DE84AB /* Alamofire */; };
 		DF3D3C242969D01300CFCE49 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */; };
@@ -100,6 +103,8 @@
 		1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerSwinjectTutorialProtocol.swift; sourceTree = "<group>"; };
 		1550689C29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextLoggerSwinjectTutorial.swift; sourceTree = "<group>"; };
 		1550689E29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoggerSwinjectTutorial.swift; sourceTree = "<group>"; };
+		6EA0BEC929C0DD2C0066B9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6EA0BED629C2F23D0066B9BC /* FeatureToggleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureToggleProvider.swift; sourceTree = "<group>"; };
 		DF0C6D1E297D839300DE84AB /* ThirdPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPageViewModel.swift; sourceTree = "<group>"; };
 		DF3D3C232969D01300CFCE49 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		DF3D3C262969F61700CFCE49 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 				08697119298430B600E4CA00 /* RxRelay in Frameworks */,
 				08697117298430B600E4CA00 /* RxCocoa in Frameworks */,
 				0869711B298430B600E4CA00 /* RxSwift in Frameworks */,
+				6EA0BED529C25F4A0066B9BC /* FirebaseRemoteConfig in Frameworks */,
 				DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */,
 				152E04D2298474EC00ABCEA2 /* Swinject in Frameworks */,
 			);
@@ -266,6 +272,14 @@
 				1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6EA0822929C374930087F7E0 /* FeatureToggle */ = {
+			isa = PBXGroup;
+			children = (
+				6EA0BED629C2F23D0066B9BC /* FeatureToggleProvider.swift */,
+			);
+			path = FeatureToggle;
 			sourceTree = "<group>";
 		};
 		DF0C6D1D297D836200DE84AB /* ViewModels */ = {
@@ -465,6 +479,7 @@
 		DF75E44329341212005B249E /* Skylab */ = {
 			isa = PBXGroup;
 			children = (
+				6EA0822929C374930087F7E0 /* FeatureToggle */,
 				DF4D3E222966004600070D79 /* TUTORIALS */,
 				DFF2364E294F6E650009AF47 /* Scenes */,
 				DFF2364B294F6D4F0009AF47 /* Extensions */,
@@ -474,6 +489,7 @@
 				DF75E44429341212005B249E /* AppDelegate.swift */,
 				DF75E44D29341214005B249E /* Assets.xcassets */,
 				DF75E45229341214005B249E /* Info.plist */,
+				6EA0BEC929C0DD2C0066B9BC /* GoogleService-Info.plist */,
 			);
 			path = Skylab;
 			sourceTree = "<group>";
@@ -556,6 +572,7 @@
 				08697118298430B600E4CA00 /* RxRelay */,
 				0869711A298430B600E4CA00 /* RxSwift */,
 				152E04D1298474EC00ABCEA2 /* Swinject */,
+				6EA0BED429C25F4A0066B9BC /* FirebaseRemoteConfig */,
 			);
 			productName = Skylab;
 			productReference = DF75E44129341212005B249E /* Skylab.app */;
@@ -636,6 +653,7 @@
 				DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */,
 				08697115298430B600E4CA00 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				152E04D0298474EC00ABCEA2 /* XCRemoteSwiftPackageReference "Swinject" */,
+				6EA0BED329C25F4A0066B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = DF75E44229341212005B249E /* Products */;
 			projectDirPath = "";
@@ -661,6 +679,7 @@
 				152E04CB2984718B00ABCEA2 /* SwinjectTestPageSubViewController.storyboard in Resources */,
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
+				6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */,
 				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
 				DF3D3C4A296A048500CFCE49 /* SecondPageViewController.storyboard in Resources */,
 			);
@@ -700,6 +719,7 @@
 				04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */,
 				DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */,
 				04C60CFD29A6B22A00BACDC0 /* BaseBackgroundView.swift in Sources */,
+				6EA0BED729C2F23D0066B9BC /* FeatureToggleProvider.swift in Sources */,
 				15506898298696D600A81F04 /* ContainerSwinjectTutorial.swift in Sources */,
 				1544EC6F29846B590080C429 /* SwinjectTestPageCoordinator.swift in Sources */,
 				1550689F29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift in Sources */,
@@ -1073,6 +1093,14 @@
 				kind = branch;
 			};
 		};
+		6EA0BED329C25F4A0066B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		DF0C6D20297D85E300DE84AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1108,6 +1136,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 152E04D0298474EC00ABCEA2 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		6EA0BED429C25F4A0066B9BC /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EA0BED329C25F4A0066B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
 		};
 		DF0C6D21297D85E300DE84AB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class FirstPageViewModel {
     
@@ -18,6 +19,9 @@ class FirstPageViewModel {
     let didOpenFirstSubController: Observable<Void>
     let didOpenSecondSubController: Observable<Void>
     
+    private let firebasePovider = FirebaseFeatureToggleProvider.shared
+    let toggleLabelIsHidden = BehaviorRelay<Bool>(value:true)
+    
     init() {
         // Connection between input and output
         let openFirstSubControllerRX = PublishSubject<Void>()
@@ -27,7 +31,17 @@ class FirstPageViewModel {
         let openSecondSubControllerRX = PublishSubject<Void>()
         self.openSecondSubController = openSecondSubControllerRX.asObserver()
         self.didOpenSecondSubController = openSecondSubControllerRX.asObservable()
+        
+        setFeatures()
     }
+    func setFeatures(){
+        if firebasePovider.isEnabled(.toggleLabel){
+            toggleLabelIsHidden.accept(false)
+        } else {
+            toggleLabelIsHidden.accept(true)
+        }
+    }
+    
 
 }
 

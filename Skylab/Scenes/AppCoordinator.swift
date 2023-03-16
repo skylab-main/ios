@@ -27,14 +27,14 @@ class AppCoordinator: Coordinator {
 
         // Here we choose what is going to be open, depending on data we have
 
-         openAuthorization()
-//         openOnboarding()
+//         openAuthorization()
+         openOnboarding()
 //        openTabBar()
 //        openSwinjectTutorial()
     }
 
     func openOnboarding() {
-        let coordinator = OnboardingCoordinator(UINavigationController())
+        let coordinator = OnboardingCoordinator(UINavigationController(), parentCoordinatoor: self)
         coordinator.start()
         window.rootViewController = coordinator.rootController
         addChildCoordinator(coordinator)

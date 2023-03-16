@@ -11,6 +11,7 @@ import RxSwift
 
 class FirstPageViewController: BaseViewController, Storyboarded {
     
+    @IBOutlet weak var toggleLabel: UILabel!
     @IBOutlet weak var openFirstSubControllerButton: UIButton!
     @IBOutlet weak var openSecondSubControllerButton: UIButton!
     
@@ -29,6 +30,9 @@ class FirstPageViewController: BaseViewController, Storyboarded {
         openSecondSubControllerButton.rx.tap
             .bind(to: viewModel.openSecondSubController)
             .disposed(by: bag)
+        
+        viewModel.toggleLabelIsHidden.asDriver().drive(toggleLabel.rx.isHidden).disposed(by: bag)
+        
     }
 
 }
