@@ -1,14 +1,14 @@
 //
-//  OnboardingCoordinator.swift
+//  TestMenuViewCoordinator.swift
 //  Skylab
 //
-//  Created by Oleksandr Slobodianiuk on 07.01.2023.
+//  Created by Artem Tkachenko on 12.03.2023.
 //
 
 import UIKit
 
-class OnboardingCoordinator: Coordinator {
-
+class TestMenuViewCoordinator: Coordinator {
+    
     let rootController: UINavigationController
 
     init(_ rootController: UINavigationController) {
@@ -16,9 +16,7 @@ class OnboardingCoordinator: Coordinator {
     }
 
     override func start() {
-        let viewController = OnboardingViewController.instantiate(coordinator: self)
-        viewController.viewModel = OnboardingViewModel()
+        let viewController = TestMenuViewController.instantiate(coordinator: self, bundle: nil)
         rootController.pushViewController(viewController, animated: false)
     }
 }
-

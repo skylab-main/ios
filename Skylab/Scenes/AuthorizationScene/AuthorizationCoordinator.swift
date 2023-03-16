@@ -17,6 +17,7 @@ class AuthorizationCoordinator: Coordinator {
 
     override func start() {
         let viewController = AuthorizationViewController.instantiate(coordinator: self)
+        viewController.viewModel = AuthorizationViewModel()
         rootController.pushViewController(viewController, animated: false)
     }
 }
