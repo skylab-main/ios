@@ -9,6 +9,6 @@ import Foundation
 import RxSwift
 
 class SecondPageSwiftUIViewModel {
-//    RxBinding to openSecondSubController button
+    // RxBinding to openSecondSubController button
     let openSecondSubControllerDidTap = PublishSubject<Void>()
 }
