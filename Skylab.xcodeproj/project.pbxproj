@@ -213,6 +213,8 @@
 			children = (
 				0419071029C5EC990037F8FC /* ScrollableMenuView */,
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
+				045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */,
+				045D3FD529BE7D0100456DEC /* MenuCell.swift */,
 			);
 			path = "Custom elements";
 			sourceTree = "<group>";
