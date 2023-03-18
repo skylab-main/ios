@@ -92,8 +92,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableMenuView.swift; sourceTree = "<group>"; };
-		045D3FD529BE7D0100456DEC /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollableMenuView.swift; path = "Skylab/Custom elements/ScrollableMenuView.swift"; sourceTree = SOURCE_ROOT; };
+		045D3FD529BE7D0100456DEC /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCell.swift; path = ../MenuCell.swift; sourceTree = "<group>"; };
 		045D3FDF29BE808600456DEC /* TestMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuViewController.swift; sourceTree = "<group>"; };
 		045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMenuViewCoordinator.swift; sourceTree = "<group>"; };
 		045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestMenuViewController.storyboard; sourceTree = "<group>"; };
@@ -191,9 +191,9 @@
 		0419071029C5EC990037F8FC /* ScrollableMenuView */ = {
 			isa = PBXGroup;
 			children = (
+				0466127929C5E9FB002CAC3E /* ScrollableMenuLayout.swift */,
 				045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */,
 				045D3FD529BE7D0100456DEC /* MenuCell.swift */,
-				0466127929C5E9FB002CAC3E /* ScrollableMenuLayout.swift */,
 			);
 			path = ScrollableMenuView;
 			sourceTree = "<group>";
@@ -213,8 +213,6 @@
 			children = (
 				0419071029C5EC990037F8FC /* ScrollableMenuView */,
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
-				045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */,
-				045D3FD529BE7D0100456DEC /* MenuCell.swift */,
 			);
 			path = "Custom elements";
 			sourceTree = "<group>";
