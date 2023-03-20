@@ -11,7 +11,7 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Properties
     let window: UIWindow
-    
+    let featureToggleProvider = FirebaseFeatureToggleProvider()
     // MARK: - Coordinator
     
     init(window: UIWindow?) {
@@ -27,15 +27,15 @@ class AppCoordinator: Coordinator {
         
         // Here we choose what is going to be open, depending on data we have
         
-        testScrollableMenuView()
+//        testScrollableMenuView()
 //        openAuthorization()
-//        openOnboarding()
+        openOnboarding()
 //        openTabBar()
 //        openSwinjectTutorial()
     }
     
     func openOnboarding() {
-        let coordinator = OnboardingCoordinator(UINavigationController(), parentCoordinatoor: self)
+        let coordinator = OnboardingCoordinator(UINavigationController(), parentCoordinatoor: self, featureToggleProvider: featureToggleProvider)
         coordinator.start()
         window.rootViewController = coordinator.rootController
         addChildCoordinator(coordinator)
@@ -49,7 +49,7 @@ class AppCoordinator: Coordinator {
     }
     
     func openTabBar() {
-        let tabBarCoordinator = MainTabBarCoordinator(MainTabBarController())
+        let tabBarCoordinator = MainTabBarCoordinator(MainTabBarController(), featureToggleProvider: featureToggleProvider)
         window.rootViewController = tabBarCoordinator.rootTabBarController
         tabBarCoordinator.start()
         addChildCoordinator(tabBarCoordinator)

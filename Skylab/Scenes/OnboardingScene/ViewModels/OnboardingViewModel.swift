@@ -10,12 +10,12 @@ import RxSwift
 class OnboardingViewModel {
 
     var coordinatorDelegate: OnboardingCoordinatorDelegate?
-    private let firebaseProvider = FirebaseFeatureToggleProvider.shared
+    let featureToggleProvider:FeatureToggleProvider
     
     var didFetchValues = PublishSubject<Void>()
     
-    init(){
-        
+    init(featureToggleProvider:FeatureToggleProvider) {
+        self.featureToggleProvider = featureToggleProvider
         fetchFeatureToggleValue()
     }
 
@@ -23,8 +23,8 @@ class OnboardingViewModel {
         coordinatorDelegate?.openAuthorizationControllerDelegate()
     }
     
-    func fetchFeatureToggleValue(){
-        firebaseProvider.fetchValues{ [weak self] in
+    func fetchFeatureToggleValue() {
+        featureToggleProvider.fetchValues{ [weak self] in
             guard let self = self else{
                 return
             }

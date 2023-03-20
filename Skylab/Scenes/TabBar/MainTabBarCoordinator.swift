@@ -12,11 +12,14 @@ class MainTabBarCoordinator: Coordinator {
     // MARK: - Properties
 
     let rootTabBarController: UITabBarController
+    let featureToggleProvider: FeatureToggleProvider
 
     // MARK: - Coordinator
 
-    init(_ rootTabBarController: UITabBarController) {
+    init(_ rootTabBarController: UITabBarController, featureToggleProvider:FeatureToggleProvider) {
         self.rootTabBarController = rootTabBarController
+        self.featureToggleProvider = featureToggleProvider
+        
     }
 
     override func start() {
@@ -28,7 +31,7 @@ class MainTabBarCoordinator: Coordinator {
 
     func addFirstPage() {
         let coordinator = FirstPageCoordinator(UINavigationController(),
-                                               parentCoordinator: self)
+                                               parentCoordinator: self, featureToggleProvider: featureToggleProvider)
         rootTabBarController.viewControllers?.append(coordinator.rootController)
         addChildCoordinator(coordinator)
         coordinator.start()

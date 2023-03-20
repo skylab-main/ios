@@ -19,10 +19,11 @@ class FirstPageViewModel {
     let didOpenFirstSubController: Observable<Void>
     let didOpenSecondSubController: Observable<Void>
     
-    private let firebasePovider = FirebaseFeatureToggleProvider.shared
+    let featureToggleProvider:FeatureToggleProvider
     let toggleLabelIsHidden = BehaviorRelay<Bool>(value:true)
     
-    init() {
+    init(featureToggleProvider:FeatureToggleProvider) {
+        self.featureToggleProvider = featureToggleProvider
         // Connection between input and output
         let openFirstSubControllerRX = PublishSubject<Void>()
         self.openFirstSubController = openFirstSubControllerRX.asObserver()
@@ -34,8 +35,8 @@ class FirstPageViewModel {
         
         setFeatures()
     }
-    func setFeatures(){
-        if firebasePovider.isEnabled(.toggleLabel){
+    func setFeatures() {
+        if featureToggleProvider.isEnabled(.toggleLabel) {
             toggleLabelIsHidden.accept(false)
         } else {
             toggleLabelIsHidden.accept(true)
