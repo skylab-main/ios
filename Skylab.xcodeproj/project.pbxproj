@@ -12,6 +12,7 @@
 		045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FDF29BE808600456DEC /* TestMenuViewController.swift */; };
 		045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */; };
 		045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */; };
+		0466127A29C5E9FB002CAC3E /* ScrollableMenuLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466127929C5E9FB002CAC3E /* ScrollableMenuLayout.swift */; };
 		04C60CFD29A6B22A00BACDC0 /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */; };
 		04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
@@ -92,11 +93,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableMenuView.swift; sourceTree = "<group>"; };
-		045D3FD529BE7D0100456DEC /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollableMenuView.swift; path = "Skylab/Custom elements/ScrollableMenuView.swift"; sourceTree = SOURCE_ROOT; };
+		045D3FD529BE7D0100456DEC /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCell.swift; path = ../MenuCell.swift; sourceTree = "<group>"; };
 		045D3FDF29BE808600456DEC /* TestMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuViewController.swift; sourceTree = "<group>"; };
 		045D3FE129BE808700456DEC /* TestMenuViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMenuViewCoordinator.swift; sourceTree = "<group>"; };
 		045D3FE329BE80EC00456DEC /* TestMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestMenuViewController.storyboard; sourceTree = "<group>"; };
+		0466127929C5E9FB002CAC3E /* ScrollableMenuLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableMenuLayout.swift; sourceTree = "<group>"; };
 		04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -188,6 +190,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0419071029C5EC990037F8FC /* ScrollableMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				0466127929C5E9FB002CAC3E /* ScrollableMenuLayout.swift */,
+				045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */,
+				045D3FD529BE7D0100456DEC /* MenuCell.swift */,
+			);
+			path = ScrollableMenuView;
+			sourceTree = "<group>";
+		};
 		045D3FDE29BE807E00456DEC /* TestMenuView */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,9 +213,8 @@
 		04D51F0829A6C97F0006676B /* Custom elements */ = {
 			isa = PBXGroup;
 			children = (
+				0419071029C5EC990037F8FC /* ScrollableMenuView */,
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
-				045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */,
-				045D3FD529BE7D0100456DEC /* MenuCell.swift */,
 			);
 			path = "Custom elements";
 			sourceTree = "<group>";
@@ -750,6 +761,7 @@
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */,
+				0466127A29C5E9FB002CAC3E /* ScrollableMenuLayout.swift in Sources */,
 				152E04CD298471BD00ABCEA2 /* SwinjectPageViewModel.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
 				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
@@ -953,7 +965,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Skylab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -980,7 +992,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 62VCSAZRF3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Skylab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

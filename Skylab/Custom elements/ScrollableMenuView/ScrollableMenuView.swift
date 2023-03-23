@@ -12,12 +12,12 @@ protocol ScrollableMenuViewDelegate: AnyObject {
 }
 
 @IBDesignable
-final class ScrollableMenuView: UIView {
+class ScrollableMenuView: UIView {
     
     weak var delegate: ScrollableMenuViewDelegate?
     
     var items = [UIColor]()
-
+    
     let layout = SrollableMenuLayout()
     
     private lazy var collectionView: UICollectionView = {
@@ -27,7 +27,7 @@ final class ScrollableMenuView: UIView {
         layout.minimumLineSpacing = 16
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.decelerationRate = .normal
+        collectionView.decelerationRate = .fast
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
         collectionView.isScrollEnabled = true
@@ -85,16 +85,11 @@ extension ScrollableMenuView: UICollectionViewDataSource {
         cell.titleLabel.text = items[indexPath.row].accessibilityName.capitalized
         return cell
     }
-    
-    
 }
 
 extension ScrollableMenuView: UICollectionViewDelegate {
-    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         delegate?.getIndex(layout.currentPage)
         pageControl.currentPage = layout.currentPage
     }
 }
-
-

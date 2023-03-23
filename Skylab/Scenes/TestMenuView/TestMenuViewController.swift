@@ -20,7 +20,7 @@ class TestMenuViewController: BaseViewController, Storyboarded, ScrollableMenuVi
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollableMenuView.delegate = self
-        scrollableMenuView.colors = self.colors
+        scrollableMenuView.items = self.colors
         view.backgroundColor = colors[0]
     }
 
