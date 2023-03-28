@@ -17,8 +17,4 @@ class SecondPageViewController: BaseViewController, Storyboarded {
 
     }
     
-    @IBAction func openFirstSubcontroller(_ sender: Any) {
-        viewModel?.openFirstSubcontroller()
-    }
-    
 }
