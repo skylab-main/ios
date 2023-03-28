@@ -27,10 +27,10 @@ class AppCoordinator: Coordinator {
         
         // Here we choose what is going to be open, depending on data we have
 
-        testScrollableMenuView()
+//        testScrollableMenuView()
 //        openAuthorization()
 //        openOnboarding()
-//        openTabBar()
+        openTabBar()
 //        openSwinjectTutorial()
     }
     

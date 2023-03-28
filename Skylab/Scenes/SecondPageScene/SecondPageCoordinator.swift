@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SecondPageCoordinator: Coordinator {
 
@@ -16,23 +17,26 @@ class SecondPageCoordinator: Coordinator {
     }
 
     override func start() {
-        let viewController = SecondPageViewController.instantiate(coordinator: self)
-        viewController.viewModel = SecondPageViewModel()
-        viewController.viewModel?.coordinatorDelegate = self
+        
+        let viewModel = SecondPageSwiftUIViewModel()
+        // MARK: - Observe on viewModel emits
+        viewModel.openSecondSubControllerDidTap.asObservable()
+            .subscribe(onNext: { [weak self] in self?.openFirstSubcontroller() })
+            .disposed(by: bag)
+        
+        // MARK: integrate SwiftUI view into a UIKit view hierarchy
+        let swiftUIController = UIHostingController(rootView: SecondPageSwiftUIView(viewModel: viewModel))
+        
         rootController.tabBarItem = UITabBarItem(title: "Second",
                                                  image: nil,
                                                  selectedImage: nil)
-        rootController.pushViewController(viewController, animated: false)
+        rootController.pushViewController(swiftUIController, animated: false)
     }
     
     func openFirstSubcontroller() {
-
-    }
-}
-
-extension SecondPageCoordinator: SecondPageViewModelCoordinatorDelegate {
-
-    func openFirstSubControllerDelegate() {
-        self.openFirstSubcontroller()
+        let viewController = SecondPageViewController.instantiate(coordinator: self)
+        viewController.viewModel = SecondPageViewModel()
+        viewController.hidesBottomBarWhenPushed = true
+        rootController.pushViewController(viewController, animated: false)
     }
 }
