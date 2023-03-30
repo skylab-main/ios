@@ -14,18 +14,20 @@ class FirstPageCoordinator: Coordinator {
     // MARK: Properties
     
     let rootController: UINavigationController
+    let featureToggleProvider:FeatureToggleProvider
 
     
     // MARK: Coordinator
     
-    init(_ rootController: UINavigationController, parentCoordinator: Coordinator) {
+    init(_ rootController: UINavigationController, parentCoordinator: Coordinator, featureToggleProvider:FeatureToggleProvider) {
         self.rootController = rootController
+        self.featureToggleProvider = featureToggleProvider
     }
     
     override func start() {
         
         let viewController = FirstPageViewController.instantiate(coordinator: self)
-        let viewModel = FirstPageViewModel()
+        let viewModel = FirstPageViewModel(featureToggleProvider: featureToggleProvider)
         viewController.viewModel = viewModel
 
         // MARK: - Observe to viewModel and call to func openFirstSubcontroller

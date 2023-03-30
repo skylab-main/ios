@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class FirstPageViewModel {
     
@@ -18,7 +19,11 @@ class FirstPageViewModel {
     let didOpenFirstSubController: Observable<Void>
     let didOpenSecondSubController: Observable<Void>
     
-    init() {
+    let featureToggleProvider:FeatureToggleProvider
+    let toggleLabelIsHidden = BehaviorRelay<Bool>(value:true)
+    
+    init(featureToggleProvider:FeatureToggleProvider) {
+        self.featureToggleProvider = featureToggleProvider
         // Connection between input and output
         let openFirstSubControllerRX = PublishSubject<Void>()
         self.openFirstSubController = openFirstSubControllerRX.asObserver()
@@ -27,7 +32,17 @@ class FirstPageViewModel {
         let openSecondSubControllerRX = PublishSubject<Void>()
         self.openSecondSubController = openSecondSubControllerRX.asObserver()
         self.didOpenSecondSubController = openSecondSubControllerRX.asObservable()
+        
+        setFeatures()
     }
+    func setFeatures() {
+        if featureToggleProvider.isEnabled(.toggleLabel) {
+            toggleLabelIsHidden.accept(false)
+        } else {
+            toggleLabelIsHidden.accept(true)
+        }
+    }
+    
 
 }
 
