@@ -26,7 +26,7 @@ class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
         
         // Here we choose what is going to be open, depending on data we have
-        
+
 //        testScrollableMenuView()
 //        openAuthorization()
         openOnboarding()

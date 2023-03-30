@@ -9,13 +9,5 @@ import Foundation
 
 class SecondPageViewModel {
 
-    var coordinatorDelegate: SecondPageViewModelCoordinatorDelegate?
-
-    func openFirstSubcontroller() {
-        coordinatorDelegate?.openFirstSubControllerDelegate()
-    }
-}
-
-protocol SecondPageViewModelCoordinatorDelegate {
-    func openFirstSubControllerDelegate()
+   
 }
