@@ -26,12 +26,16 @@ class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
         
         // Here we choose what is going to be open, depending on data we have
+        
+        /// Local 'if' executed when the application is launched from the release schema
         #if LOCAL
 //        testScrollableMenuView()
 //        openAuthorization()
           openOnboarding()
 //        openTabBar()
 //        openSwinjectTutorial()
+        
+        /// Dev 'if' executed when the application is launched from the debug schema
         #elseif DEV
         openMainMenu()
         #endif

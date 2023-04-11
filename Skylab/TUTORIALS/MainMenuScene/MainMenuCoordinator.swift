@@ -23,6 +23,7 @@ class MainMenuCoordinatro: Coordinator {
         let viewController = MainMenuViewController.instantiate(coordinator: self)
         rootController.pushViewController(viewController, animated: false)
     }
+    
     override func finish() {
         parentCoordinator.removeChildCoordinator(self)
         parentCoordinator.openTabBar()

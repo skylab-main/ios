@@ -29,7 +29,10 @@ class MainMenuViewController: BaseViewController, Storyboarded {
         switch sender.tag {
             
         case 0:
-            print("Go to Application")
+            let vc = UIStoryboard(name: "ApplicationViewController",
+                                  bundle: nil).instantiateViewController(withIdentifier: "ApplicationViewController")
+            
+            navigationController?.pushViewController(vc, animated: true)
         case 1:
             let vc = UIStoryboard(name: "TutorialViewController",
                                   bundle: nil).instantiateViewController(withIdentifier: "TutorialViewController")

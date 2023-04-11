@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: BaseViewController, Storyboarded {
     
     @IBOutlet weak var tutorialTableView: UITableView!
     
