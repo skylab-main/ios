@@ -26,12 +26,19 @@ class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
         
         // Here we choose what is going to be open, depending on data we have
-
+        
+        /// Local 'if' executed when the application is launched from the 'release' schema
+        #if LOCAL
 //        testScrollableMenuView()
 //        openAuthorization()
-        openOnboarding()
+          openOnboarding()
 //        openTabBar()
 //        openSwinjectTutorial()
+        
+        /// Dev 'if' executed when the application is launched from the 'debug' schema
+        #elseif DEV
+        openMainMenu()
+        #endif
     }
     
     func openOnboarding() {
@@ -64,6 +71,13 @@ class AppCoordinator: Coordinator {
         
     func openSwinjectTutorial() {
         let coordinator = SwinjectTestPageCoordinator(UINavigationController())
+        coordinator.start()
+        window.rootViewController = coordinator.rootController
+        addChildCoordinator(coordinator)
+    }
+    
+    func openMainMenu() {
+        let coordinator = MainMenuCoordinator(UINavigationController(), parentCoordinatoor: self, featureToggleProvider: featureToggleProvider)
         coordinator.start()
         window.rootViewController = coordinator.rootController
         addChildCoordinator(coordinator)
