@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Swinject
 
-class MainMenuCoordinatro: Coordinator {
+class MainMenuCoordinator: Coordinator {
     
     let rootController: UINavigationController
     let featureToggleProvider:FeatureToggleProvider
@@ -21,11 +22,28 @@ class MainMenuCoordinatro: Coordinator {
 
     override func start() {
         let viewController = MainMenuViewController.instantiate(coordinator: self)
+        viewController.viewModel = Container.mainMenu.resolve(MainMenuViewModelProtocol.self)
+        viewController.viewModel?.coordinator = self
         rootController.pushViewController(viewController, animated: false)
     }
     
     override func finish() {
         parentCoordinator.removeChildCoordinator(self)
         parentCoordinator.openTabBar()
+    }
+    
+}
+
+extension MainMenuCoordinator: MainMenuCoordinatorProtocol {
+    
+    func openApplicationViewController() {
+        let viewController = ApplicationViewController.instantiate(coordinator: self)
+        rootController.pushViewController(viewController, animated: true)
+    }
+    
+    func openTutorialViewController() {
+        let viewController = TutorialViewController.instantiate(coordinator: self)
+        viewController.viewModel = Container.mainMenu.resolve(TutorialViewModelProtocol.self)
+        rootController.pushViewController(viewController, animated: true)
     }
 }

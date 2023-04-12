@@ -27,7 +27,7 @@ class AppCoordinator: Coordinator {
         
         // Here we choose what is going to be open, depending on data we have
         
-        /// Local 'if' executed when the application is launched from the release schema
+        /// Local 'if' executed when the application is launched from the 'release' schema
         #if LOCAL
 //        testScrollableMenuView()
 //        openAuthorization()
@@ -35,7 +35,7 @@ class AppCoordinator: Coordinator {
 //        openTabBar()
 //        openSwinjectTutorial()
         
-        /// Dev 'if' executed when the application is launched from the debug schema
+        /// Dev 'if' executed when the application is launched from the 'debug' schema
         #elseif DEV
         openMainMenu()
         #endif
@@ -77,7 +77,7 @@ class AppCoordinator: Coordinator {
     }
     
     func openMainMenu() {
-        let coordinator = MainMenuCoordinatro(UINavigationController(), parentCoordinatoor: self, featureToggleProvider: featureToggleProvider)
+        let coordinator = MainMenuCoordinator(UINavigationController(), parentCoordinatoor: self, featureToggleProvider: featureToggleProvider)
         coordinator.start()
         window.rootViewController = coordinator.rootController
         addChildCoordinator(coordinator)

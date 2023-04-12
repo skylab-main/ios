@@ -11,7 +11,7 @@ class TutorialViewController: BaseViewController, Storyboarded {
     
     @IBOutlet weak var tutorialTableView: UITableView!
     
-    private let tutorialTopicsArray = ["RxSwift", "Swinject", "Coordinators"]
+    var viewModel: TutorialViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +29,15 @@ class TutorialViewController: BaseViewController, Storyboarded {
 extension TutorialViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tutorialTopicsArray.count
+        viewModel?.data.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TutorialTableViewCell", for: indexPath) as? TutorialTableViewCell else { return UITableViewCell() }
         
-        cell.updateCell(data: tutorialTopicsArray[indexPath.row])
+        cell.updateCell(data: viewModel?.data[indexPath.row] ?? "No data")
         
         return cell
     }
-    
-    
-    
 }
