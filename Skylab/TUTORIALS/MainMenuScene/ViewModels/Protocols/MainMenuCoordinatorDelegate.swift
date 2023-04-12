@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MainMenuCoordinatorProtocol: AnyObject {
+protocol MainMenuCoordinatorDelegate: AnyObject {
     
     func openApplicationViewController()
     func openTutorialViewController()

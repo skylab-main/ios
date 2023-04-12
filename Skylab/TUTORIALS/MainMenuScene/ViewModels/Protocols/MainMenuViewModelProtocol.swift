@@ -9,7 +9,7 @@ import Foundation
 
 protocol MainMenuViewModelProtocol: AnyObject {
     
-    var coordinator: MainMenuCoordinatorProtocol? { get set }
+    var coordinatorDelegate: MainMenuCoordinatorDelegate? { get set }
     
     func openViewController(tag: Int)
 }

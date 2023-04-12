@@ -9,19 +9,15 @@ import Foundation
 
 class MainMenuViewModel: MainMenuViewModelProtocol {
     
-    weak var coordinator: MainMenuCoordinatorProtocol?
-    
-    init(coordinator: MainMenuCoordinatorProtocol? = nil) {
-        self.coordinator = coordinator
-    }
+    weak var coordinatorDelegate: MainMenuCoordinatorDelegate?
     
     func openViewController(tag: Int) {
         
         switch tag {
         case 0:
-            coordinator?.openApplicationViewController()
+            coordinatorDelegate?.openApplicationViewController()
         case 1:
-            coordinator?.openTutorialViewController()
+            coordinatorDelegate?.openTutorialViewController()
         default: return
         }
     }

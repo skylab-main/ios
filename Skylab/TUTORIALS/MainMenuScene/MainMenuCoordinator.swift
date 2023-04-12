@@ -23,7 +23,7 @@ class MainMenuCoordinator: Coordinator {
     override func start() {
         let viewController = MainMenuViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.mainMenu.resolve(MainMenuViewModelProtocol.self)
-        viewController.viewModel?.coordinator = self
+        viewController.viewModel?.coordinatorDelegate = self
         rootController.pushViewController(viewController, animated: false)
     }
     
@@ -34,7 +34,7 @@ class MainMenuCoordinator: Coordinator {
     
 }
 
-extension MainMenuCoordinator: MainMenuCoordinatorProtocol {
+extension MainMenuCoordinator: MainMenuCoordinatorDelegate {
     
     func openApplicationViewController() {
         let viewController = ApplicationViewController.instantiate(coordinator: self)
