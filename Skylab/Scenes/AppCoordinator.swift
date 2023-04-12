@@ -31,14 +31,22 @@ class AppCoordinator: Coordinator {
         #if LOCAL
 //        testScrollableMenuView()
 //        openAuthorization()
-          openOnboarding()
-//        openTabBar()
+//          openOnboarding()
+        openMainTabBar()
 //        openSwinjectTutorial()
         
         /// Dev 'if' executed when the application is launched from the 'debug' schema
         #elseif DEV
         openMainMenu()
+//        openTabBar()
         #endif
+    }
+    
+    func openMainTabBar() {
+        let tabBarCoordinator = MainTabBarCoordinator(MainTabBarViewController())
+        window.rootViewController = tabBarCoordinator.rootTabBarController
+        tabBarCoordinator.start()
+        addChildCoordinator(tabBarCoordinator)
     }
     
     func openOnboarding() {
@@ -56,7 +64,7 @@ class AppCoordinator: Coordinator {
     }
     
     func openTabBar() {
-        let tabBarCoordinator = MainTabBarCoordinator(MainTabBarController(), featureToggleProvider: featureToggleProvider)
+        let tabBarCoordinator = TabBarCoordinator(TabBarController(), featureToggleProvider: featureToggleProvider)
         window.rootViewController = tabBarCoordinator.rootTabBarController
         tabBarCoordinator.start()
         addChildCoordinator(tabBarCoordinator)

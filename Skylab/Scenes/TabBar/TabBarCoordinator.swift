@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarCoordinator: Coordinator {
+class TabBarCoordinator: Coordinator {
 
     // MARK: - Properties
 
