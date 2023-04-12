@@ -1,0 +1,11 @@
+//
+//  Debug.xcconfig
+//  Skylab
+//
+//  Created by Aleksey Kotsevych on 11/04/2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+endpoint_url = www.debug.com
