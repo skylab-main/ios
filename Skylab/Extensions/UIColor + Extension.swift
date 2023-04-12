@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIColor {
-    static var darkBlue = UIColor(red: 0.063, green: 0.267, blue: 0.6, alpha: 1)
+    static var primary = UIColor(red: 0.063, green: 0.267, blue: 0.6, alpha: 1)
+    static var dark = UIColor(red: 0.167, green: 0.167, blue: 0.167, alpha: 1)
 }
 

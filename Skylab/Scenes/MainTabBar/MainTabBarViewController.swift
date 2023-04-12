@@ -17,8 +17,8 @@ class MainTabBarViewController: UITabBarController {
     private func setupTabBar() {
         self.viewControllers = [UIViewController()]
         self.viewControllers = []
-        tabBar.tintColor = .black
-        tabBar.unselectedItemTintColor = .black
+        tabBar.tintColor = .dark
+        tabBar.unselectedItemTintColor = .dark
     }
 }
 
