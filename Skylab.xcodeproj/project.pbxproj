@@ -86,7 +86,7 @@
 		F48CE07E29E6A45C008A47F5 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE07D29E6A45C008A47F5 /* TutorialViewModel.swift */; };
 		F48CE08229E6A758008A47F5 /* TutorialViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE08129E6A758008A47F5 /* TutorialViewModelProtocol.swift */; };
 		F48CE08629E6A97C008A47F5 /* MainMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE08529E6A97C008A47F5 /* MainMenuViewModelProtocol.swift */; };
-		F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE08729E6AC47008A47F5 /* MainMenuCoordinatorProtocol.swift */; };
+		F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE08729E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift */; };
 		F48CE08B29E6C63F008A47F5 /* ContainerMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE08A29E6C63F008A47F5 /* ContainerMainMenu.swift */; };
 		F4B1314729E445A2005760B6 /* MainMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1314629E445A2005760B6 /* MainMenuViewController.storyboard */; };
 		F4B1314929E445E2005760B6 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1314829E445E2005760B6 /* MainMenuViewController.swift */; };
@@ -192,7 +192,7 @@
 		F48CE07D29E6A45C008A47F5 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		F48CE08129E6A758008A47F5 /* TutorialViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModelProtocol.swift; sourceTree = "<group>"; };
 		F48CE08529E6A97C008A47F5 /* MainMenuViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModelProtocol.swift; sourceTree = "<group>"; };
-		F48CE08729E6AC47008A47F5 /* MainMenuCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		F48CE08729E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		F48CE08A29E6C63F008A47F5 /* ContainerMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerMainMenu.swift; sourceTree = "<group>"; };
 		F4B1314629E445A2005760B6 /* MainMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenuViewController.storyboard; sourceTree = "<group>"; };
 		F4B1314829E445E2005760B6 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -720,7 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				F48CE08529E6A97C008A47F5 /* MainMenuViewModelProtocol.swift */,
-				F48CE08729E6AC47008A47F5 /* MainMenuCoordinatorProtocol.swift */,
+				F48CE08729E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -984,7 +984,7 @@
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
 				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
 				045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */,
-				F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorProtocol.swift in Sources */,
+				F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift in Sources */,
 				F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */,
 				1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */,
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
