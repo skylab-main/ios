@@ -1,0 +1,32 @@
+//
+//  AboutCoordinator.swift
+//  Skylab
+//
+//  Created by Artem Tkachenko on 12.04.2023.
+//
+
+import UIKit
+
+class AboutCoordinator: Coordinator {
+    
+    let rootController: UINavigationController
+    
+    init(_ rootController: UINavigationController) {
+        self.rootController = rootController
+    }
+    
+    override func start() {
+        openAboutController()
+    }
+    
+    private func openAboutController() {
+        let viewController = AboutViewController.instantiate(coordinator: self)
+        let viewModel = AboutViewModel()
+        viewController.viewModel = viewModel
+        rootController.tabBarItem = UITabBarItem(title: TabBarItems.about.rawValue,
+                                                 image: TabBarItems.about.image,
+                                                 selectedImage: TabBarItems.about.selectedImage)
+        rootController.tabBarItem.setTitleText(fontName: "AnonymousPro-Bold", size: 10)
+        rootController.setViewControllers([viewController], animated: true)
+    }
+}
