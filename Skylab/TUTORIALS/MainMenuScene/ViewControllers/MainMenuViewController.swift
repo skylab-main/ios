@@ -22,8 +22,11 @@ class MainMenuViewController: BaseViewController, Storyboarded {
     
     private func configureUI() {
         
+        title = "Main Menu"
+        
         applicationButton.layer.cornerRadius = 15
         tutorialButton.layer.cornerRadius = 15
+        
     }
     
     @IBAction func mainMenuButtonsAction(_ sender: UIButton) {

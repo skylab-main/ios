@@ -15,9 +15,9 @@ class MainMenuViewModel: MainMenuViewModelProtocol {
         
         switch tag {
         case 0:
-            coordinatorDelegate?.openApplicationViewController()
+            coordinatorDelegate?.openApplicationViewControllerDelegate()
         case 1:
-            coordinatorDelegate?.openTutorialViewController()
+            coordinatorDelegate?.openTutorialViewControllerDelegate()
         default: return
         }
     }
