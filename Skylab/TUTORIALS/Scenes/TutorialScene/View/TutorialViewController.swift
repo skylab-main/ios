@@ -44,11 +44,7 @@ class TutorialViewController: BaseViewController, Storyboarded {
             NSAttributedString.Key.foregroundColor: UIColor.black,
         ]
         
-        let backButtonImage = UIImage(systemName: "arrow.backward")
-        navBar.backIndicatorImage = backButtonImage
-        navBar.backIndicatorTransitionMaskImage = backButtonImage
         navBar.tintColor = .black
-        navBar.barStyle = .black
         navigationItem.backButtonTitle = ""
     }
     

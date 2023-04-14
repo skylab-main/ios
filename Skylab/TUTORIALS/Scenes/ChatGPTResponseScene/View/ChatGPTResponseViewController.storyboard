@@ -31,11 +31,11 @@
                                 <rect key="frame" x="0.0" y="113" width="393" height="739"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e72-Ga-Vrq">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="21.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-1o-kjN">
-                                                <rect key="frame" x="10" y="0.0" width="373" height="21.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="10" y="0.0" width="373" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -49,6 +49,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="e72-Ga-Vrq" firstAttribute="leading" secondItem="PGH-Wg-Cd9" secondAttribute="leading" id="098-lL-iRx"/>
                                     <constraint firstAttribute="bottom" secondItem="e72-Ga-Vrq" secondAttribute="bottom" id="36q-vo-t4s"/>

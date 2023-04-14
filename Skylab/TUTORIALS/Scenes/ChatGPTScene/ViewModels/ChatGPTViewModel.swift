@@ -13,6 +13,9 @@ class ChatGPTViewModel: ChatGPTViewModelProtocol {
     var topicsArray: [String] = ["Classes", "Protocols", "Optionals", "Generics", "Enums", "OOP", "POP", "Structures"]
     
     func openChatGPTResponseViewController(with request: (String, String)) {
+        
+        APICaller.shared.setup()
+        
         coordinatorDelegate?.openChatGPTResponseViewControllerDelegate(with: request)
     }
 }

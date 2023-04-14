@@ -31,6 +31,7 @@ class ChatGPTViewController: BaseViewController, Storyboarded {
         topicsCollectionView.delegate = self
         
         view.backgroundColor = UIColor.primary
+        
         chooseDifficultyLabel.textColor = .systemGray3
         chooseDifficultyLabel.font = UIFont(name: "AnonymousPro-Bold", size: 16)
         topicsLabel.textColor = .white
@@ -51,11 +52,7 @@ class ChatGPTViewController: BaseViewController, Storyboarded {
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ]
         
-        let backButtonImage = UIImage(systemName: "arrow.backward")
-        navBar.backIndicatorImage = backButtonImage
-        navBar.backIndicatorTransitionMaskImage = backButtonImage
         navBar.tintColor = .white
-        navBar.barStyle = .black
         navigationItem.backButtonTitle = ""
         
     }
@@ -85,7 +82,7 @@ extension ChatGPTViewController: UICollectionViewDataSource, UICollectionViewDel
         let item = viewModel?.topicsArray[indexPath.row]
         let difficulty = complexitySegmentedControl.titleForSegment(at: complexitySegmentedControl.selectedSegmentIndex)
         
-        viewModel?.openChatGPTResponseViewController(with: (item ?? "", difficulty ?? ""))
+        viewModel?.openChatGPTResponseViewController(with: (difficulty ?? "", item ?? ""))
     }
     
 }

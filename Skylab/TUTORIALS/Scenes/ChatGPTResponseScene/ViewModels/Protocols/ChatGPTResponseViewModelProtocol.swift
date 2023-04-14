@@ -10,4 +10,6 @@ import Foundation
 protocol ChatGPTResponseViewModelProtocol: AnyObject {
     
     var requestDetails: (String, String)? { get set }
+    
+    func sendRequest(completion: @escaping (String) -> Void)
 }
