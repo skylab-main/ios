@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>AnonymousPro-Bold.ttf</string>
+		<string>AnonymousPro-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

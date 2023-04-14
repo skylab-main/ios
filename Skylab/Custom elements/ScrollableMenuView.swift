@@ -16,14 +16,13 @@ final class ScrollableMenuView: UIView {
     
     weak var delegate: ScrollableMenuViewDelegate?
     
-    var items = [UIColor]()
+    var items = [String]()
 
     let layout = SrollableMenuLayout()
     
     private lazy var collectionView: UICollectionView = {
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 300, height: 80)
-        layout.minimumInteritemSpacing = 16
+        layout.itemSize = CGSize(width: 277, height: 60)
         layout.minimumLineSpacing = 16
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -65,11 +64,12 @@ final class ScrollableMenuView: UIView {
             collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 100),
+            collectionView.heightAnchor.constraint(equalToConstant: 82),
             
-            pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 4),
+            pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10),
             pageControl.leadingAnchor.constraint(equalTo: leadingAnchor),
-            pageControl.trailingAnchor.constraint(equalTo: trailingAnchor)
+            pageControl.trailingAnchor.constraint(equalTo: trailingAnchor),
+            pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14)
         ])
     }
 }
@@ -82,7 +82,7 @@ extension ScrollableMenuView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCell.identifier, for: indexPath) as? MenuCell else { return
             UICollectionViewCell() }
-        cell.titleLabel.text = items[indexPath.row].accessibilityName.capitalized
+        cell.titleLabel.text = items[indexPath.row]
         return cell
     }
     

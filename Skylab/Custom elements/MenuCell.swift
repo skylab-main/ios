@@ -14,14 +14,14 @@ class MenuCell: UICollectionViewCell {
     lazy var baseBackgroundView: BaseBackgroundView = {
         let view = BaseBackgroundView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.borderColor = .black
+        view.borderColor = .white
         return view
     }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Title"
+        label.font = UIFont(name: "AnonymousPro-Bold", size: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         return label

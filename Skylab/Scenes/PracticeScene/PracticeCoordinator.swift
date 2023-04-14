@@ -26,7 +26,7 @@ class PracticeCoordinator: Coordinator {
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.practice.rawValue,
                                                  image: TabBarItems.practice.image,
                                                  selectedImage: TabBarItems.practice.selectedImage)
-        rootController.tabBarItem.setTitleText(fontName: "AnonymousPro-Bold", size: 10)
+        rootController.tabBarItem.setTitleText(font: AnonymousPro.bold(size: 10).font())
         rootController.setViewControllers([viewController], animated: true)
     }
 }

@@ -25,7 +25,7 @@ class QuizCoordinator: Coordinator {
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.quiz.rawValue,
                                                  image: TabBarItems.quiz.image,
                                                  selectedImage: TabBarItems.quiz.selectedImage)
-        rootController.tabBarItem.setTitleText(fontName: "AnonymousPro-Bold", size: 10)
+        rootController.tabBarItem.setTitleText(font: AnonymousPro.bold(size: 10).font())
         rootController.pushViewController(viewController, animated: true)
     }
 }
