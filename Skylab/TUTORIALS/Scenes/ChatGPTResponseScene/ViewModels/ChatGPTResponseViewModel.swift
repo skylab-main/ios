@@ -28,6 +28,6 @@ class ChatGPTResponseViewModel: ChatGPTResponseViewModelProtocol {
         
         guard let requestDetails else { return "" }
         
-        return "Generate fifteen \(requestDetails.0) tasks on the topic \(requestDetails.1) in Swift"
+        return "Generate five \(requestDetails.0) tasks on the topic \(requestDetails.1) in Swift"
     }
 }
