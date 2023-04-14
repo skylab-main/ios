@@ -13,6 +13,7 @@ class ChatGPTResponseViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tasksLabel: UILabel!
     @IBOutlet weak var responseLabel: UILabel!
+    @IBOutlet weak var responseView: UIView!
     
     var viewModel: ChatGPTResponseViewModelProtocol?
     
@@ -32,6 +33,9 @@ class ChatGPTResponseViewController: BaseViewController, Storyboarded {
         tasksLabel.textColor = .white
         tasksLabel.font = UIFont(name: "AnonymousPro-Bold", size: 20)
         view.backgroundColor = .primary
+        
+        responseView.layer.cornerRadius = 15
+        responseView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
   

@@ -78,6 +78,7 @@
                         <outlet property="activityIndicator" destination="73q-H9-pa0" id="26H-5n-Ahf"/>
                         <outlet property="responseLabel" destination="LTo-1o-kjN" id="fwj-3Y-MwB"/>
                         <outlet property="responseScrollView" destination="PGH-Wg-Cd9" id="BeL-om-aaw"/>
+                        <outlet property="responseView" destination="e72-Ga-Vrq" id="pC3-eS-fDu"/>
                         <outlet property="tasksLabel" destination="5QV-Ei-yuD" id="Dq4-vP-f9c"/>
                     </connections>
                 </viewController>

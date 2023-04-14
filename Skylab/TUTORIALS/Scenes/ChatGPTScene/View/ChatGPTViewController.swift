@@ -35,6 +35,9 @@ class ChatGPTViewController: BaseViewController, Storyboarded {
         chooseDifficultyLabel.font = UIFont(name: "AnonymousPro-Bold", size: 16)
         topicsLabel.textColor = .white
         topicsLabel.font = UIFont(name: "AnonymousPro-Bold", size: 22)
+        
+        topicsCollectionView.layer.cornerRadius = 15
+        topicsCollectionView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     private func configureNavBarTitle() {
