@@ -123,6 +123,11 @@
 		F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F11629E817D500D6FDD1 /* ChatGPTCoordinator.swift */; };
 		F4E7F11929E8187200D6FDD1 /* TutorialCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F11829E8187200D6FDD1 /* TutorialCoordinatorDelegate.swift */; };
 		F4E7F11C29E8207C00D6FDD1 /* ContainerChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F11B29E8207C00D6FDD1 /* ContainerChatGPT.swift */; };
+		F4E7F12229E83A5300D6FDD1 /* ChatGPTResponseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E7F12129E83A5200D6FDD1 /* ChatGPTResponseViewController.storyboard */; };
+		F4E7F12429E83A5900D6FDD1 /* ChatGPTResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F12329E83A5900D6FDD1 /* ChatGPTResponseViewController.swift */; };
+		F4E7F12629E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F12529E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift */; };
+		F4E7F12929E83AAF00D6FDD1 /* ChatGPTResponseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F12829E83AAF00D6FDD1 /* ChatGPTResponseViewModelProtocol.swift */; };
+		F4E7F12B29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F12A29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +263,11 @@
 		F4E7F11629E817D500D6FDD1 /* ChatGPTCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTCoordinator.swift; sourceTree = "<group>"; };
 		F4E7F11829E8187200D6FDD1 /* TutorialCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		F4E7F11B29E8207C00D6FDD1 /* ContainerChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerChatGPT.swift; sourceTree = "<group>"; };
+		F4E7F12129E83A5200D6FDD1 /* ChatGPTResponseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatGPTResponseViewController.storyboard; sourceTree = "<group>"; };
+		F4E7F12329E83A5900D6FDD1 /* ChatGPTResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTResponseViewController.swift; sourceTree = "<group>"; };
+		F4E7F12529E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTResponseViewModel.swift; sourceTree = "<group>"; };
+		F4E7F12829E83AAF00D6FDD1 /* ChatGPTResponseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTResponseViewModelProtocol.swift; sourceTree = "<group>"; };
+		F4E7F12A29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTCoordinatorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -734,6 +744,7 @@
 		DF4D3E222966004600070D79 /* TUTORIALS */ = {
 			isa = PBXGroup;
 			children = (
+				F4E7F11D29E839DE00D6FDD1 /* ChatGPTResponseScene */,
 				F4E7F10129E804DF00D6FDD1 /* ChatGPTScene */,
 				F4B1314429E44567005760B6 /* ApplicationScene */,
 				F4B1314529E4457C005760B6 /* TutorialScene */,
@@ -923,7 +934,7 @@
 				F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */,
 				F48CE08929E6C610008A47F5 /* DI */,
 				F48CE07A29E6A342008A47F5 /* ViewModels */,
-				F4B1314A29E4460E005760B6 /* ViewControllers */,
+				F4B1314A29E4460E005760B6 /* View */,
 			);
 			path = MainMenuScene;
 			sourceTree = "<group>";
@@ -932,7 +943,7 @@
 			isa = PBXGroup;
 			children = (
 				F48CE08329E6A80D008A47F5 /* ViewModels */,
-				F4B1314B29E44633005760B6 /* ViewControllers */,
+				F4B1314B29E44633005760B6 /* View */,
 			);
 			path = ApplicationScene;
 			sourceTree = "<group>";
@@ -943,36 +954,36 @@
 				F4E7F11429E815BD00D6FDD1 /* TutorialCoordinator.swift */,
 				F4881E1329E5954E00F83E44 /* Cell */,
 				F48CE07F29E6A46B008A47F5 /* ViewModels */,
-				F4B1315029E4466C005760B6 /* ViewControllers */,
+				F4B1315029E4466C005760B6 /* View */,
 			);
 			path = TutorialScene;
 			sourceTree = "<group>";
 		};
-		F4B1314A29E4460E005760B6 /* ViewControllers */ = {
+		F4B1314A29E4460E005760B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F4B1314829E445E2005760B6 /* MainMenuViewController.swift */,
 				F4B1314629E445A2005760B6 /* MainMenuViewController.storyboard */,
 			);
-			path = ViewControllers;
+			path = View;
 			sourceTree = "<group>";
 		};
-		F4B1314B29E44633005760B6 /* ViewControllers */ = {
+		F4B1314B29E44633005760B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F4B1314C29E4464F005760B6 /* ApplicationViewController.swift */,
 				F4B1314E29E4465A005760B6 /* ApplicationViewController.storyboard */,
 			);
-			path = ViewControllers;
+			path = View;
 			sourceTree = "<group>";
 		};
-		F4B1315029E4466C005760B6 /* ViewControllers */ = {
+		F4B1315029E4466C005760B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F4B1315129E4468C005760B6 /* TutorialViewController.swift */,
 				F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */,
 			);
-			path = ViewControllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		F4E7F10129E804DF00D6FDD1 /* ChatGPTScene */ = {
@@ -982,18 +993,18 @@
 				F4E7F11A29E8206600D6FDD1 /* DI */,
 				F4E7F10A29E807ED00D6FDD1 /* Cell */,
 				F4E7F10329E804F600D6FDD1 /* ViewModels */,
-				F4E7F10229E804E900D6FDD1 /* ViewControllers */,
+				F4E7F10229E804E900D6FDD1 /* View */,
 			);
 			path = ChatGPTScene;
 			sourceTree = "<group>";
 		};
-		F4E7F10229E804E900D6FDD1 /* ViewControllers */ = {
+		F4E7F10229E804E900D6FDD1 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F4E7F10429E8052700D6FDD1 /* ChatGPTViewController.swift */,
 				F4E7F10629E8053A00D6FDD1 /* ChatGPTViewController.storyboard */,
 			);
-			path = ViewControllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		F4E7F10329E804F600D6FDD1 /* ViewModels */ = {
@@ -1017,6 +1028,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E7F11029E80DB600D6FDD1 /* ChatGPTViewModelProtocol.swift */,
+				F4E7F12A29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1027,6 +1039,41 @@
 				F4E7F11B29E8207C00D6FDD1 /* ContainerChatGPT.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		F4E7F11D29E839DE00D6FDD1 /* ChatGPTResponseScene */ = {
+			isa = PBXGroup;
+			children = (
+				F4E7F11E29E839ED00D6FDD1 /* ViewModels */,
+				F4E7F11F29E839F400D6FDD1 /* View */,
+			);
+			path = ChatGPTResponseScene;
+			sourceTree = "<group>";
+		};
+		F4E7F11E29E839ED00D6FDD1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F4E7F12729E83A9E00D6FDD1 /* Protocols */,
+				F4E7F12529E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F4E7F11F29E839F400D6FDD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4E7F12329E83A5900D6FDD1 /* ChatGPTResponseViewController.swift */,
+				F4E7F12129E83A5200D6FDD1 /* ChatGPTResponseViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4E7F12729E83A9E00D6FDD1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F4E7F12829E83AAF00D6FDD1 /* ChatGPTResponseViewModelProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1155,6 +1202,7 @@
 				08E66EEC29BFC5500013B80A /* AnonymousPro-Bold.ttf in Resources */,
 				047D39EE29E742E0000D8D8C /* AboutViewController.storyboard in Resources */,
 				DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */,
+				F4E7F12229E83A5300D6FDD1 /* ChatGPTResponseViewController.storyboard in Resources */,
 				047D39D529E73CA9000D8D8C /* QuizViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
@@ -1217,6 +1265,7 @@
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
 				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
 				047D39CE29E738F6000D8D8C /* QuizViewController.swift in Sources */,
+				F4E7F12429E83A5900D6FDD1 /* ChatGPTResponseViewController.swift in Sources */,
 				F4B1315229E4468C005760B6 /* TutorialViewController.swift in Sources */,
 				8625B5AA29BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift in Sources */,
 				DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */,
@@ -1245,12 +1294,14 @@
 				F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */,
 				047D39D129E73912000D8D8C /* QuizViewModel.swift in Sources */,
 				047D39E229E7404F000D8D8C /* LessonsViewController.swift in Sources */,
+				F4E7F12B29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift in Sources */,
 				1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */,
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */,
 				089F803929D2D3B900748D24 /* SecondPageSwiftUIView.swift in Sources */,
 				047D39A829E72CBD000D8D8C /* MainTabBarCoordinator.swift in Sources */,
+				F4E7F12929E83AAF00D6FDD1 /* ChatGPTResponseViewModelProtocol.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
 				1544EC7329846C8D0080C429 /* SwinjectTestPageViewController.swift in Sources */,
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
@@ -1262,6 +1313,7 @@
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
+				F4E7F12629E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift in Sources */,
 				F48CE08629E6A97C008A47F5 /* MainMenuViewModelProtocol.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,

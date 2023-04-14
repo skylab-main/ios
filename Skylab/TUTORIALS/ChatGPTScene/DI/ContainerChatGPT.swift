@@ -17,6 +17,10 @@ extension Container {
         container.register(ChatGPTViewModelProtocol.self) { _ in
             ChatGPTViewModel()
         }
+        
+        container.register(ChatGPTResponseViewModelProtocol.self) { _ in
+            ChatGPTResponseViewModel()
+        }
 
         return container
     }()

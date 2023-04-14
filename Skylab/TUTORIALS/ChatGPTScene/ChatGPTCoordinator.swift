@@ -20,10 +20,31 @@ class ChatGPTCoordinator: Coordinator {
         
         let viewController = ChatGPTViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.chatGPT.resolve(ChatGPTViewModelProtocol.self)
+        viewController.viewModel?.coordinatorDelegate = self
         rootController.pushViewController(viewController, animated: true)
     }
     
     override func finish() {
         
     }
+    
+    //MARK: - Child controller
+    
+    func openChatGPTResponseViewController(with request: (String, String)) {
+        
+        let viewController = ChatGPTResponseViewController.instantiate(coordinator: self)
+        viewController.viewModel = Container.chatGPT.resolve(ChatGPTResponseViewModelProtocol.self)
+        viewController.viewModel?.requestDetails = request
+        rootController.pushViewController(viewController, animated: true)
+    }
+}
+
+//MARK: - Extensions
+
+extension ChatGPTCoordinator: ChatGPTCoordinatorDelegate {
+    
+    func openChatGPTResponseViewControllerDelegate(with request: (String, String)) {
+        openChatGPTResponseViewController(with: request)
+    }
+    
 }

@@ -20,34 +20,48 @@ class ChatGPTViewController: BaseViewController, Storyboarded {
         super.viewDidLoad()
         
         configureUI()
+        configureNavBarTitle()
     }
 
     //MARK: - UI Configurations
     
     private func configureUI() {
         
-        title = "Chat GPT Topics"
-        
         topicsCollectionView.dataSource = self
+        topicsCollectionView.delegate = self
         
         view.backgroundColor = UIColor.primary
         chooseDifficultyLabel.textColor = .systemGray3
+        chooseDifficultyLabel.font = UIFont(name: "AnonymousPro-Bold", size: 16)
         topicsLabel.textColor = .white
-        
-        setupNavBar()
+        topicsLabel.font = UIFont(name: "AnonymousPro-Bold", size: 22)
     }
     
-    private func setupNavBar() {
+    private func configureNavBarTitle() {
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.tintColor = UIColor.white
+        guard let navBar = navigationController?.navigationBar else { return }
+        
+        navigationItem.title = "Chat GPT"
+        
+        navBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+        ]
+        
+        let backButtonImage = UIImage(systemName: "arrow.backward")
+        navBar.backIndicatorImage = backButtonImage
+        navBar.backIndicatorTransitionMaskImage = backButtonImage
+        navBar.tintColor = .white
+        navBar.barStyle = .black
+        navigationItem.backButtonTitle = ""
+        
     }
-
+    
 }
 
 //MARK: - Extensions
 
-extension ChatGPTViewController: UICollectionViewDataSource {
+extension ChatGPTViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel?.topicsArray.count ?? 0
@@ -61,6 +75,14 @@ extension ChatGPTViewController: UICollectionViewDataSource {
         cell.updateCell(data: viewModel?.topicsArray[indexPath.row] ?? "Error")
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let item = viewModel?.topicsArray[indexPath.row]
+        let difficulty = complexitySegmentedControl.titleForSegment(at: complexitySegmentedControl.selectedSegmentIndex)
+        
+        viewModel?.openChatGPTResponseViewController(with: (item ?? "", difficulty ?? ""))
     }
     
 }

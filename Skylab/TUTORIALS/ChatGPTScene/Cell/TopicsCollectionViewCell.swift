@@ -10,16 +10,13 @@ import UIKit
 class TopicsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var topicTitleLabel: UILabel!
-    @IBOutlet weak var topicView: UIView!
+    @IBOutlet weak var topicsView: BaseBackgroundView!
     
     func updateCell(data: String) {
         
         topicTitleLabel.text = data
         topicTitleLabel.textColor = .primary
-        
-        topicView.layer.cornerRadius = 15
-        topicView.backgroundColor = .white
-        
+        topicTitleLabel.font = UIFont(name: "AnonymousPro-Bold", size: 20)
     }
     
 }

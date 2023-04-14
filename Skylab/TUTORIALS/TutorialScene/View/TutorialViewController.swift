@@ -22,24 +22,34 @@ class TutorialViewController: BaseViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setupNavBar()
+        configureNavBarTitle()
     }
     
     //MARK: - UI Configuration
     
     private func configureUI() {
-        
-        title = "Tutorials"
-        
+
         tutorialTableView.dataSource = self
         tutorialTableView.delegate = self
     }
     
-    private func setupNavBar() {
+    private func configureNavBarTitle() {
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        guard let navBar = navigationController?.navigationBar else { return }
         
-        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationItem.title = "Tutorials"
+        
+        navBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+        ]
+        
+        let backButtonImage = UIImage(systemName: "arrow.backward")
+        navBar.backIndicatorImage = backButtonImage
+        navBar.backIndicatorTransitionMaskImage = backButtonImage
+        navBar.tintColor = .black
+        navBar.barStyle = .black
+        navigationItem.backButtonTitle = ""
     }
     
 }

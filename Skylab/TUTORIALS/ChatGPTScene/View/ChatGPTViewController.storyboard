@@ -41,32 +41,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfm-VQ-cWe" customClass="BaseBackgroundView" customModule="Skylab" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fir-jm-dJp" customClass="BaseBackgroundView" customModule="Skylab" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="164" height="134"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMB-xf-N6H">
-                                                            <rect key="frame" x="57.666666666666671" y="55" width="49" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ3-4i-P97">
+                                                            <rect key="frame" x="57" y="55" width="50" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="LMB-xf-N6H" firstAttribute="centerX" secondItem="jfm-VQ-cWe" secondAttribute="centerX" id="2nI-E8-Kmc"/>
-                                                        <constraint firstItem="LMB-xf-N6H" firstAttribute="centerY" secondItem="jfm-VQ-cWe" secondAttribute="centerY" id="Eir-Za-6r1"/>
+                                                        <constraint firstItem="IQ3-4i-P97" firstAttribute="centerY" secondItem="fir-jm-dJp" secondAttribute="centerY" id="2dE-Cc-J71"/>
+                                                        <constraint firstItem="IQ3-4i-P97" firstAttribute="centerX" secondItem="fir-jm-dJp" secondAttribute="centerX" id="FM5-cP-zfa"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jfm-VQ-cWe" firstAttribute="top" secondItem="EYA-0u-gJ8" secondAttribute="top" constant="8" id="AL4-UQ-HGg"/>
-                                                <constraint firstAttribute="bottom" secondItem="jfm-VQ-cWe" secondAttribute="bottom" constant="8" id="Yc1-oX-TGb"/>
-                                                <constraint firstAttribute="trailing" secondItem="jfm-VQ-cWe" secondAttribute="trailing" constant="8" id="sIO-zK-aCX"/>
-                                                <constraint firstItem="jfm-VQ-cWe" firstAttribute="leading" secondItem="EYA-0u-gJ8" secondAttribute="leading" constant="8" id="zDu-Eq-2TN"/>
+                                                <constraint firstItem="fir-jm-dJp" firstAttribute="leading" secondItem="EYA-0u-gJ8" secondAttribute="leading" constant="8" id="1od-GO-37E"/>
+                                                <constraint firstAttribute="trailing" secondItem="fir-jm-dJp" secondAttribute="trailing" constant="8" id="S4t-CK-mi8"/>
+                                                <constraint firstItem="fir-jm-dJp" firstAttribute="top" secondItem="EYA-0u-gJ8" secondAttribute="top" constant="8" id="ZEz-kr-AcC"/>
+                                                <constraint firstAttribute="bottom" secondItem="fir-jm-dJp" secondAttribute="bottom" constant="8" id="jZN-Nh-K4r"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="topicTitleLabel" destination="LMB-xf-N6H" id="LdQ-Y5-HvR"/>
-                                            <outlet property="topicView" destination="jfm-VQ-cWe" id="368-Fd-edw"/>
+                                            <outlet property="topicTitleLabel" destination="IQ3-4i-P97" id="9Xf-fq-dr9"/>
+                                            <outlet property="topicsView" destination="fir-jm-dJp" id="P3X-Yl-2a7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -74,8 +75,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8aa-JA-TM8" userLabel="Difficulty Stack View">
                                 <rect key="frame" x="16" y="73" width="361" height="62.666666666666657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBS-Wi-upD">
-                                        <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="21.666666666666668"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose task difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBS-Wi-upD">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="21.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

@@ -33,6 +33,8 @@ class MainMenuCoordinator: Coordinator {
         parentCoordinator.removeChildCoordinator(self)
     }
     
+    //MARK: - Child controller
+    
     func openApplicationViewController() {
         
         let viewController = ApplicationViewController.instantiate(coordinator: self)
@@ -46,6 +48,8 @@ class MainMenuCoordinator: Coordinator {
     }
     
 }
+
+//MARK: - Extensions
 
 extension MainMenuCoordinator: MainMenuCoordinatorDelegate {
     

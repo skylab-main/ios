@@ -28,6 +28,8 @@ class TutorialCoordinator: Coordinator {
         
     }
     
+    //MARK: - Child controller
+    
     func openChatGPTViewController() {
         
         let coordinator = ChatGPTCoordinator(rootController)
