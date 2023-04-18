@@ -21,6 +21,7 @@ class MainMenuCoordinator: Coordinator {
     }
 
     override func start() {
+        
         let viewController = MainMenuViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.mainMenu.resolve(MainMenuViewModelProtocol.self)
         viewController.viewModel?.coordinatorDelegate = self
@@ -28,22 +29,35 @@ class MainMenuCoordinator: Coordinator {
     }
     
     override func finish() {
+        
         parentCoordinator.removeChildCoordinator(self)
-        parentCoordinator.openTabBar()
     }
     
-}
-
-extension MainMenuCoordinator: MainMenuCoordinatorDelegate {
+    //MARK: - Child controller
     
     func openApplicationViewController() {
+        
         let viewController = ApplicationViewController.instantiate(coordinator: self)
         rootController.pushViewController(viewController, animated: true)
     }
     
     func openTutorialViewController() {
-        let viewController = TutorialViewController.instantiate(coordinator: self)
-        viewController.viewModel = Container.mainMenu.resolve(TutorialViewModelProtocol.self)
-        rootController.pushViewController(viewController, animated: true)
+        
+        let coordinator = TutorialCoordinator(rootController)
+        coordinator.start()
+    }
+    
+}
+
+//MARK: - Extensions
+
+extension MainMenuCoordinator: MainMenuCoordinatorDelegate {
+    
+    func openApplicationViewControllerDelegate() {
+        openApplicationViewController()
+    }
+    
+    func openTutorialViewControllerDelegate() {
+        openTutorialViewController()
     }
 }

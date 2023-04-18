@@ -9,6 +9,6 @@ import Foundation
 
 protocol MainMenuCoordinatorDelegate: AnyObject {
     
-    func openApplicationViewController()
-    func openTutorialViewController()
+    func openApplicationViewControllerDelegate()
+    func openTutorialViewControllerDelegate()
 }
