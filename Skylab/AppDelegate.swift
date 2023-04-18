@@ -5,8 +5,10 @@
 //  Created by Oleksandr Slobodianiuk on 27.11.2022.
 //
 
+
 import UIKit
 import FirebaseCore
+import CrowdinSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,11 +20,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                       didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
          FirebaseApp.configure()
+         setupCrowdin()
          window = UIWindow(frame: UIScreen.main.bounds)
          appCoordinator = AppCoordinator(window: window)
          appCoordinator.start()
          return true
      }
+    
+    //   Added for localisation
+    func setupCrowdin() {
+            let crowdinProvider = CrowdinProviderConfig(hashString: "adc8f4c0cc6d758f50881f9eh8h", sourceLanguage: "ua")
+            let config = CrowdinSDKConfig.config().with(crowdinProviderConfig: crowdinProvider)
+            
+            CrowdinSDK.startWithConfig(config) {
+                print("helloWorld".cw_localized)
+            }
+        }
+    
 }
 
 // MARK: Authors
