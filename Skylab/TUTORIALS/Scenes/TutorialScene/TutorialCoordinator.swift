@@ -35,11 +35,20 @@ class TutorialCoordinator: Coordinator {
         let coordinator = ChatGPTCoordinator(rootController)
         coordinator.start()
     }
+    
 }
 
 extension TutorialCoordinator: TutorialCoordinatorDelegate {
     
+    func openTRLDataListViewController() {
+        let coordinator = TRLDataListCoordinator(rootController: rootController, parentCoordinator: self)
+        coordinator.start()
+        self.addChildCoordinator(coordinator)
+    }
+    
+    
     func openChatGPTViewControllerDelegate() {
         openChatGPTViewController()
     }
+    
 }

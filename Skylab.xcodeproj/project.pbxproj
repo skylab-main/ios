@@ -58,6 +58,13 @@
 		1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */; };
 		1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689C29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift */; };
 		1550689F29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550689E29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift */; };
+		6E8B3F3729EED4220066C7B7 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B3F3629EED4220066C7B7 /* DataList.swift */; };
+		6E8B3F3B29EED47A0066C7B7 /* DataList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B3F3A29EED47A0066C7B7 /* DataList.xib */; };
+		6E8B3F3E29EED8000066C7B7 /* DataListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B3F3C29EED8000066C7B7 /* DataListCollectionViewCell.swift */; };
+		6E8B3F4329F00AC70066C7B7 /* TRLDataListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B3F4229F00AC70066C7B7 /* TRLDataListViewController.swift */; };
+		6E8B3F4529F00CAA0066C7B7 /* TRLDataListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B3F4429F00CAA0066C7B7 /* TRLDataListViewController.storyboard */; };
+		6E8B3F4729F00CC20066C7B7 /* TRLDataListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B3F4629F00CC20066C7B7 /* TRLDataListViewModel.swift */; };
+		6E8B3F4929F00CDF0066C7B7 /* TRLDataListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B3F4829F00CDF0066C7B7 /* TRLDataListCoordinator.swift */; };
 		6E9A2D5E29CBAC1500D1E78B /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 6E9A2D5D29CBAC1500D1E78B /* FirebaseRemoteConfig */; };
 		6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA0BEC929C0DD2C0066B9BC /* GoogleService-Info.plist */; };
 		6EA0BED729C2F23D0066B9BC /* FeatureToggleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0BED629C2F23D0066B9BC /* FeatureToggleProvider.swift */; };
@@ -196,6 +203,13 @@
 		1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerSwinjectTutorialProtocol.swift; sourceTree = "<group>"; };
 		1550689C29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextLoggerSwinjectTutorial.swift; sourceTree = "<group>"; };
 		1550689E29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoggerSwinjectTutorial.swift; sourceTree = "<group>"; };
+		6E8B3F3629EED4220066C7B7 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
+		6E8B3F3A29EED47A0066C7B7 /* DataList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataList.xib; sourceTree = "<group>"; };
+		6E8B3F3C29EED8000066C7B7 /* DataListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E8B3F4229F00AC70066C7B7 /* TRLDataListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLDataListViewController.swift; sourceTree = "<group>"; };
+		6E8B3F4429F00CAA0066C7B7 /* TRLDataListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TRLDataListViewController.storyboard; sourceTree = "<group>"; };
+		6E8B3F4629F00CC20066C7B7 /* TRLDataListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLDataListViewModel.swift; sourceTree = "<group>"; };
+		6E8B3F4829F00CDF0066C7B7 /* TRLDataListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLDataListCoordinator.swift; sourceTree = "<group>"; };
 		6EA0BEC929C0DD2C0066B9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EA0BED629C2F23D0066B9BC /* FeatureToggleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureToggleProvider.swift; sourceTree = "<group>"; };
 		6EC3856B29C87CCF00114D03 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
@@ -455,6 +469,7 @@
 		04D51F0829A6C97F0006676B /* Custom elements */ = {
 			isa = PBXGroup;
 			children = (
+				6E8B3F3829EED42B0066C7B7 /* DataList */,
 				0419071029C5EC990037F8FC /* ScrollableMenuView */,
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
 			);
@@ -566,6 +581,51 @@
 				1550689A29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6E8B3F3829EED42B0066C7B7 /* DataList */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B3F3629EED4220066C7B7 /* DataList.swift */,
+				6E8B3F3A29EED47A0066C7B7 /* DataList.xib */,
+				6E8B3F5929F2E66D0066C7B7 /* DataListCell */,
+			);
+			path = DataList;
+			sourceTree = "<group>";
+		};
+		6E8B3F4129F0093A0066C7B7 /* TRLDataListScene */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B3F4829F00CDF0066C7B7 /* TRLDataListCoordinator.swift */,
+				6E8B3F5029F177650066C7B7 /* View */,
+				6E8B3F4F29F1772F0066C7B7 /* ViewModel */,
+			);
+			path = TRLDataListScene;
+			sourceTree = "<group>";
+		};
+		6E8B3F4F29F1772F0066C7B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B3F4629F00CC20066C7B7 /* TRLDataListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6E8B3F5029F177650066C7B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B3F4229F00AC70066C7B7 /* TRLDataListViewController.swift */,
+				6E8B3F4429F00CAA0066C7B7 /* TRLDataListViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E8B3F5929F2E66D0066C7B7 /* DataListCell */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B3F3C29EED8000066C7B7 /* DataListCollectionViewCell.swift */,
+			);
+			path = DataListCell;
 			sourceTree = "<group>";
 		};
 		6EA0822929C374930087F7E0 /* FeatureToggle */ = {
@@ -1080,6 +1140,7 @@
 		F4E7F12D29E9757300D6FDD1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6E8B3F4129F0093A0066C7B7 /* TRLDataListScene */,
 				F4E7F11D29E839DE00D6FDD1 /* ChatGPTResponseScene */,
 				F4E7F10129E804DF00D6FDD1 /* ChatGPTScene */,
 				F4B1314429E44567005760B6 /* ApplicationScene */,
@@ -1239,7 +1300,9 @@
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
+				6E8B3F3B29EED47A0066C7B7 /* DataList.xib in Resources */,
 				F4B1314729E445A2005760B6 /* MainMenuViewController.storyboard in Resources */,
+				6E8B3F4529F00CAA0066C7B7 /* TRLDataListViewController.storyboard in Resources */,
 				152E04CB2984718B00ABCEA2 /* SwinjectTestPageSubViewController.storyboard in Resources */,
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
@@ -1314,12 +1377,15 @@
 				047D39D329E73972000D8D8C /* QuizCoordinator.swift in Sources */,
 				047D39EC29E742CC000D8D8C /* AboutViewController.swift in Sources */,
 				089F803B29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift in Sources */,
+				6E8B3F4729F00CC20066C7B7 /* TRLDataListViewModel.swift in Sources */,
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				F4E7F10529E8052700D6FDD1 /* ChatGPTViewController.swift in Sources */,
+				6E8B3F3E29EED8000066C7B7 /* DataListCollectionViewCell.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
 				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
 				045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */,
+				6E8B3F4929F00CDF0066C7B7 /* TRLDataListCoordinator.swift in Sources */,
 				047D39E929E7416F000D8D8C /* LessonsCoordinator.swift in Sources */,
 				F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift in Sources */,
 				F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */,
@@ -1335,6 +1401,7 @@
 				F4E7F12929E83AAF00D6FDD1 /* ChatGPTResponseViewModelProtocol.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
 				1544EC7329846C8D0080C429 /* SwinjectTestPageViewController.swift in Sources */,
+				6E8B3F4329F00AC70066C7B7 /* TRLDataListViewController.swift in Sources */,
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
 				F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */,
 				F4E7F10E29E808B400D6FDD1 /* TopicsCollectionViewCell.swift in Sources */,
@@ -1350,6 +1417,7 @@
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
 				045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */,
+				6E8B3F3729EED4220066C7B7 /* DataList.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				047D39DF29E73DB9000D8D8C /* PracticeViewModel.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,

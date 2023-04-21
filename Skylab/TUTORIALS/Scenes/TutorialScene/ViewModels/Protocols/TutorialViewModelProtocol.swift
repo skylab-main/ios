@@ -12,5 +12,5 @@ protocol TutorialViewModelProtocol: AnyObject {
     var coordinatorDelegate: TutorialCoordinatorDelegate? { get set }
     var topicsArray: [String] { get set }
     
-    func openChatGPTViewController(_ topic: String)
+    func openTopicViewController(_ topic: String)
 }

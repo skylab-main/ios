@@ -71,7 +71,7 @@ extension TutorialViewController: UITableViewDataSource, UITableViewDelegate {
         
         let item = viewModel?.topicsArray[indexPath.row]
         
-        viewModel?.openChatGPTViewController(item ?? "")
+        viewModel?.openTopicViewController(item ?? "")
         
     }
 }
