@@ -114,6 +114,12 @@
 		F4B1314F29E4465A005760B6 /* ApplicationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1314E29E4465A005760B6 /* ApplicationViewController.storyboard */; };
 		F4B1315229E4468C005760B6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1315129E4468C005760B6 /* TutorialViewController.swift */; };
 		F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */; };
+		F4BAFDB129F28D6300C6C17A /* TRLMenuComponentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BAFDB029F28D6300C6C17A /* TRLMenuComponentViewController.storyboard */; };
+		F4BAFDB329F28D7100C6C17A /* TRLMenuComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAFDB229F28D7100C6C17A /* TRLMenuComponentViewController.swift */; };
+		F4BAFDBC29F28FE600C6C17A /* TRLMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAFDBB29F28FE600C6C17A /* TRLMenuCustomCell.swift */; };
+		F4BAFDBE29F28FF600C6C17A /* TRLMenuCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BAFDBD29F28FF600C6C17A /* TRLMenuCustomCell.xib */; };
+		F4BAFDC129F2936700C6C17A /* TRLMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAFDC029F2936700C6C17A /* TRLMenuModel.swift */; };
+		F4BAFDC329F29C5800C6C17A /* TRLMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAFDC229F29C5800C6C17A /* TRLMenuViewModel.swift */; };
 		F4E7F10529E8052700D6FDD1 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F10429E8052700D6FDD1 /* ChatGPTViewController.swift */; };
 		F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F10829E8056A00D6FDD1 /* ChatGPTViewModel.swift */; };
 		F4E7F10E29E808B400D6FDD1 /* TopicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F10D29E808B400D6FDD1 /* TopicsCollectionViewCell.swift */; };
@@ -256,6 +262,12 @@
 		F4B1314E29E4465A005760B6 /* ApplicationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationViewController.storyboard; sourceTree = "<group>"; };
 		F4B1315129E4468C005760B6 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
+		F4BAFDB029F28D6300C6C17A /* TRLMenuComponentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TRLMenuComponentViewController.storyboard; sourceTree = "<group>"; };
+		F4BAFDB229F28D7100C6C17A /* TRLMenuComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLMenuComponentViewController.swift; sourceTree = "<group>"; };
+		F4BAFDBB29F28FE600C6C17A /* TRLMenuCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLMenuCustomCell.swift; sourceTree = "<group>"; };
+		F4BAFDBD29F28FF600C6C17A /* TRLMenuCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TRLMenuCustomCell.xib; sourceTree = "<group>"; };
+		F4BAFDC029F2936700C6C17A /* TRLMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLMenuModel.swift; sourceTree = "<group>"; };
+		F4BAFDC229F29C5800C6C17A /* TRLMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLMenuViewModel.swift; sourceTree = "<group>"; };
 		F4E7F10429E8052700D6FDD1 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
 		F4E7F10629E8053A00D6FDD1 /* ChatGPTViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatGPTViewController.storyboard; sourceTree = "<group>"; };
 		F4E7F10829E8056A00D6FDD1 /* ChatGPTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewModel.swift; sourceTree = "<group>"; };
@@ -987,6 +999,51 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F4BAFDA929F28B6200C6C17A /* TRLMenuScene */ = {
+			isa = PBXGroup;
+			children = (
+				F4BAFDB429F28E0300C6C17A /* Cell */,
+				F4BAFDBF29F2931E00C6C17A /* Model */,
+				F4BAFDAB29F28C0000C6C17A /* ViewModels */,
+				F4BAFDAA29F28BED00C6C17A /* View */,
+			);
+			path = TRLMenuScene;
+			sourceTree = "<group>";
+		};
+		F4BAFDAA29F28BED00C6C17A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4BAFDB229F28D7100C6C17A /* TRLMenuComponentViewController.swift */,
+				F4BAFDB029F28D6300C6C17A /* TRLMenuComponentViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4BAFDAB29F28C0000C6C17A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F4BAFDC229F29C5800C6C17A /* TRLMenuViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F4BAFDB429F28E0300C6C17A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4BAFDBB29F28FE600C6C17A /* TRLMenuCustomCell.swift */,
+				F4BAFDBD29F28FF600C6C17A /* TRLMenuCustomCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F4BAFDBF29F2931E00C6C17A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4BAFDC029F2936700C6C17A /* TRLMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F4E7F10129E804DF00D6FDD1 /* ChatGPTScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -1080,6 +1137,7 @@
 		F4E7F12D29E9757300D6FDD1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F4BAFDA929F28B6200C6C17A /* TRLMenuScene */,
 				F4E7F11D29E839DE00D6FDD1 /* ChatGPTResponseScene */,
 				F4E7F10129E804DF00D6FDD1 /* ChatGPTScene */,
 				F4B1314429E44567005760B6 /* ApplicationScene */,
@@ -1239,12 +1297,14 @@
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
+				F4BAFDBE29F28FF600C6C17A /* TRLMenuCustomCell.xib in Resources */,
 				F4B1314729E445A2005760B6 /* MainMenuViewController.storyboard in Resources */,
 				152E04CB2984718B00ABCEA2 /* SwinjectTestPageSubViewController.storyboard in Resources */,
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
 				6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */,
+				F4BAFDB129F28D6300C6C17A /* TRLMenuComponentViewController.storyboard in Resources */,
 				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
 				047D39DD29E73D99000D8D8C /* PracticeViewController.storyboard in Resources */,
 				F4E7F13529E98E1700D6FDD1 /* ChatGPTViewController.storyboard in Resources */,
@@ -1323,6 +1383,7 @@
 				047D39E929E7416F000D8D8C /* LessonsCoordinator.swift in Sources */,
 				F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift in Sources */,
 				F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */,
+				F4BAFDB329F28D7100C6C17A /* TRLMenuComponentViewController.swift in Sources */,
 				047D39D129E73912000D8D8C /* QuizViewModel.swift in Sources */,
 				047D39E229E7404F000D8D8C /* LessonsViewController.swift in Sources */,
 				F4E7F12B29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift in Sources */,
@@ -1345,11 +1406,14 @@
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
+				F4BAFDBC29F28FE600C6C17A /* TRLMenuCustomCell.swift in Sources */,
 				F4E7F12629E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift in Sources */,
+				F4BAFDC329F29C5800C6C17A /* TRLMenuViewModel.swift in Sources */,
 				F48CE08629E6A97C008A47F5 /* MainMenuViewModelProtocol.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
 				045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */,
+				F4BAFDC129F2936700C6C17A /* TRLMenuModel.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				047D39DF29E73DB9000D8D8C /* PracticeViewModel.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,

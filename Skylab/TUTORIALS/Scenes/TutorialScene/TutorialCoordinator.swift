@@ -35,11 +35,21 @@ class TutorialCoordinator: Coordinator {
         let coordinator = ChatGPTCoordinator(rootController)
         coordinator.start()
     }
+    
+    func openTRLMenuViewController() {
+        
+        let viewController = TRLMenuComponentViewController.instantiate(coordinator: self)
+        rootController.pushViewController(viewController, animated: true)
+    }
 }
 
 extension TutorialCoordinator: TutorialCoordinatorDelegate {
     
     func openChatGPTViewControllerDelegate() {
         openChatGPTViewController()
+    }
+    
+    func openTRLMenuViewControllerDelegate() {
+        openTRLMenuViewController()
     }
 }

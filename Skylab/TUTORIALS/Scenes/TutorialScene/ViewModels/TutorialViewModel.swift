@@ -10,7 +10,7 @@ import Foundation
 class TutorialViewModel: TutorialViewModelProtocol {
     
     var coordinatorDelegate: TutorialCoordinatorDelegate? 
-    var topicsArray: [String] = ["RxSwift", "Swinject", "Coordinators", "Chat GPT"]
+    var topicsArray: [String] = ["RxSwift", "Swinject", "Coordinators", "Chat GPT", "Tutorial Menu"]
     
     func openChatGPTViewController(_ topic: String) {
         
@@ -24,6 +24,8 @@ class TutorialViewModel: TutorialViewModelProtocol {
             print("Open Coordinators Topic")
         case Topics.chatGPT.rawValue:
             coordinatorDelegate?.openChatGPTViewControllerDelegate()
+        case Topics.trlMenu.rawValue:
+            coordinatorDelegate?.openTRLMenuViewControllerDelegate()
         default: return
         }
         
@@ -35,5 +37,6 @@ class TutorialViewModel: TutorialViewModelProtocol {
         case swinject = "Swinject"
         case coordinators = "Coordinators"
         case chatGPT = "Chat GPT"
+        case trlMenu = "Tutorial Menu"
     }
 }

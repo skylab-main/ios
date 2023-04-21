@@ -10,4 +10,5 @@ import Foundation
 protocol TutorialCoordinatorDelegate: AnyObject {
     
     func openChatGPTViewControllerDelegate()
+    func openTRLMenuViewControllerDelegate()
 }
