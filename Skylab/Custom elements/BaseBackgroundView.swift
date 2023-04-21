@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 final class BaseBackgroundView: UIView {
     // MARK: Inspectable Properties
     

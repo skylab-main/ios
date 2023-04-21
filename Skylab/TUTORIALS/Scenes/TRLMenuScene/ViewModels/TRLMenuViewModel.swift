@@ -20,12 +20,12 @@ class TRLMenuViewModel: TRLMenuViewModelProtocol {
     ]
     
     var tutorialMenuData: [TRLMenuModel] = [
-        TRLMenuModel(isExpanded: true, title: "Learning Swift", data: ["One", "Two", "Three", "Four"]),
-        TRLMenuModel(isExpanded: true, title: "Git", data: ["One", "Two", "Three", "Four"]),
-        TRLMenuModel(isExpanded: true, title: "User Interface (UIKit)", data: ["One", "Two", "Three", "Four"]),
-        TRLMenuModel(isExpanded: true, title: "Data in IOS Applications", data: ["One", "Two", "Three", "Four"]),
-        TRLMenuModel(isExpanded: true, title: "Multitheading", data: ["One", "Two", "Three", "Four"]),
-        TRLMenuModel(isExpanded: true, title: "Code style", data: ["One", "Two", "Three", "Four"]),
-        TRLMenuModel(isExpanded: true, title: "Additional Topics", data: ["One", "Two", "Three", "Four"]),
+        TRLMenuModel(isExpanded: false, title: "Learning Swift", data: ["One", "Two", "Three", "Four"]),
+        TRLMenuModel(isExpanded: false, title: "Git", data: ["One", "Two", "Three", "Four"]),
+        TRLMenuModel(isExpanded: false, title: "User Interface (UIKit)", data: ["One", "Two", "Three", "Four"]),
+        TRLMenuModel(isExpanded: false, title: "Data in IOS Applications", data: ["One", "Two", "Three", "Four"]),
+        TRLMenuModel(isExpanded: false, title: "Multitheading", data: ["One", "Two", "Three", "Four"]),
+        TRLMenuModel(isExpanded: false, title: "Code style", data: ["One", "Two", "Three", "Four"]),
+        TRLMenuModel(isExpanded: false, title: "Additional Topics", data: ["One", "Two", "Three", "Four"]),
     ]
 }

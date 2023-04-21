@@ -16,17 +16,16 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureUI()
     }
     
     private func configureUI() {
 
+        tutorialMenuTableView.register(UINib(nibName: cellId, bundle: nil),
+                                       forCellReuseIdentifier: "TRLMenuCell")
         tutorialMenuTableView.dataSource = self
         tutorialMenuTableView.delegate = self
-        tutorialMenuTableView.register(UINib(nibName: cellId, bundle: nil),
-                                       forHeaderFooterViewReuseIdentifier: cellId)
-        tutorialMenuTableView.tableFooterView = UIView()
     }
     
 }
@@ -39,45 +38,42 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if !(viewModel?.tutorialMenuData[section].isExpanded ?? true) {
-            return 0
-        }
+        guard let section = viewModel?.tutorialMenuData[section] else { return 0 }
         
-        return viewModel?.tutorialMenuData[section].data.count ?? 0
+        if section.isExpanded {
+            return section.data.count + 1
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TRLMenuTableViewCell", for: indexPath)
-        cell.textLabel?.text = viewModel?.tutorialMenuData[indexPath.section].data[indexPath.row]
+        
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TRLMenuCell", for: indexPath) as? TRLMenuCustomCell,
+            let data = viewModel?.tutorialMenuData
+        else { return UITableViewCell() }
+        
+        if indexPath.row == 0 {
+            cell.configureCell(title: data[indexPath.section].title)
+        } else {
+            cell.configureCell(title: "*" + data[indexPath.section].data[indexPath.row - 1])
+        }
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: cellId) as? TRLMenuCustomCell else { return UIView() }
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        header.configure(title: viewModel?.tutorialMenuData[section].title ?? "Error", section: section)
-        header.delegate = self
+        viewModel!.tutorialMenuData[indexPath.section].isExpanded = !viewModel!.tutorialMenuData[indexPath.section].isExpanded
         
-        return header
+        tableView.reloadSections([indexPath.section], with: .none)
     }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        60
-    }
+ 
     
 }
 
-extension TRLMenuComponentViewController: TRLMenuCustomCellDelegate {
-    
-    func expandedSection(button: UIButton) {
-        
-        let section = button.tag
-        
-        let isExpanded = viewModel?.tutorialMenuData[section].isExpanded
-        viewModel?.tutorialMenuData[section].isExpanded = !isExpanded!
-        
-        tutorialMenuTableView.reloadSections(IndexSet(integer: section), with: .automatic)
-    }
-    
-}
+
+
