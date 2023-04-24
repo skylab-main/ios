@@ -15,7 +15,7 @@ class TutorialTableViewCell: UITableViewCell {
     func updateCell(data: String) {
         
         topicNameLabel.text = data
-        
+        topicNameLabel.font = UIFont(name: "AnonymousPro-Bold", size: 20)
         topicView.layer.cornerRadius = 15
     }
     

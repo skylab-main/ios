@@ -9,5 +9,8 @@ import Foundation
 
 protocol TutorialViewModelProtocol: AnyObject {
     
-    var data: [String] { get set }
+    var coordinatorDelegate: TutorialCoordinatorDelegate? { get set }
+    var topicsArray: [String] { get set }
+    
+    func openChatGPTViewController(_ topic: String)
 }
