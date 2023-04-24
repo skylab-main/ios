@@ -26,7 +26,7 @@ class LessonsCordinator: Coordinator {
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.lessons.rawValue,
                                                  image: TabBarItems.lessons.image,
                                                  selectedImage: TabBarItems.lessons.selectedImage)
-        rootController.tabBarItem.setTitleText(fontName: "AnonymousPro-Bold", size: 10)
+        rootController.tabBarItem.setTitleText(font: AnonymousPro.bold(size: 10).font())
         rootController.setViewControllers([viewController], animated: true)
     }
 }

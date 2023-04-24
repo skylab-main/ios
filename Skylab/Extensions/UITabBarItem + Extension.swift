@@ -8,7 +8,7 @@
 import UIKit
 
 extension UITabBarItem {
-    func setTitleText(fontName: String, size: CGFloat) {
-        self.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: fontName, size: size) ?? UIFont.systemFont(ofSize: size)], for: .normal)
+    func setTitleText(font: UIFont) {
+        self.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: font.fontName, size: font.pointSize) ?? UIFont.systemFont(ofSize: font.pointSize)], for: .normal)
     }
 }
