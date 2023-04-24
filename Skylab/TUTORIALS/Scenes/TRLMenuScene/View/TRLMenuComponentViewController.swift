@@ -12,7 +12,7 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var tutorialMenuTableView: UITableView!
     
     var viewModel: TRLMenuViewModelProtocol? = TRLMenuViewModel()
-    private let cellId = String(describing: TRLMenuCustomCell.self)
+    private let cellId = String(describing: TRLMenuCustomTableViewCell.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +21,17 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     }
     
     private func configureUI() {
+        
+        self.view.backgroundColor = .primary
 
         tutorialMenuTableView.register(UINib(nibName: cellId, bundle: nil),
-                                       forCellReuseIdentifier: "TRLMenuCell")
+                                       forHeaderFooterViewReuseIdentifier: cellId)
         tutorialMenuTableView.dataSource = self
         tutorialMenuTableView.delegate = self
+        
+        if #available(iOS 15, *) {
+            tutorialMenuTableView.sectionHeaderTopPadding = 0
+        }
     }
     
 }
@@ -40,40 +46,58 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
         
         guard let section = viewModel?.tutorialMenuData[section] else { return 0 }
         
-        if section.isExpanded {
-            return section.data.count + 1
-        } else {
-            return 1
+        if !section.isExpanded {
+            return 0
         }
+        
+        return section.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TRLMenuCell", for: indexPath) as? TRLMenuCustomCell,
-            let data = viewModel?.tutorialMenuData
-        else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TRLMenuTableViewCell", for: indexPath)
         
-        if indexPath.row == 0 {
-            cell.configureCell(title: data[indexPath.section].title)
-        } else {
-            cell.configureCell(title: "*" + data[indexPath.section].data[indexPath.row - 1])
-        }
+        guard let data = viewModel?.tutorialMenuData else { return UITableViewCell() }
+        
+        cell.textLabel?.text = data[indexPath.section].data[indexPath.row]
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        viewModel!.tutorialMenuData[indexPath.section].isExpanded = !viewModel!.tutorialMenuData[indexPath.section].isExpanded
-        
-        tableView.reloadSections([indexPath.section], with: .none)
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        60
     }
- 
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        guard
+            let header = Bundle.main.loadNibNamed(cellId, owner: nil)?.first as? TRLMenuCustomTableViewCell,
+            let data = viewModel?.tutorialMenuData
+        else { return UIView() }
+        
+        header.configure(title: data[section].title, section: section)
+        header.rotateImage(data[section].isExpanded)
+        header.delegate = self
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        .zero
+    }
 }
 
+extension TRLMenuComponentViewController: TRLMenuCustomCellDelegate {
+    
+    func expandedSection(button: UIButton) {
+        
+        let section = button.tag
+        
+        let isExpanded = viewModel?.tutorialMenuData [section].isExpanded
+        viewModel?.tutorialMenuData[section].isExpanded = !isExpanded!
+        
+        tutorialMenuTableView.reloadSections(IndexSet(integer: section), with: .fade)
+    }
+}
 
 

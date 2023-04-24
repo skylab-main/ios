@@ -58,6 +58,7 @@ final class BaseBackgroundView: UIView {
         bottomView.layer.mask = maskLayer
         // Add the bottom view as a subview of the main view
         self.addSubview(bottomView)
+        self.sendSubviewToBack(bottomView)
     }
 }
 
