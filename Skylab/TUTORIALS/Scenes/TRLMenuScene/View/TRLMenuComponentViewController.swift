@@ -10,6 +10,9 @@ import UIKit
 class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     
     @IBOutlet weak var tutorialMenuTableView: UITableView!
+    @IBOutlet weak var trlMenuBackgroundView: UIView!
+    @IBOutlet weak var applyForACourseView: UIView!
+    @IBOutlet weak var applyForACourseButton: UIButton!
     
     var viewModel: TRLMenuViewModelProtocol? = TRLMenuViewModel()
     
@@ -19,6 +22,7 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         super.viewDidLoad()
 
         configureUI()
+        configureNavBarTitle()
     }
     
     private func configureUI() {
@@ -30,9 +34,42 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         tutorialMenuTableView.dataSource = self
         tutorialMenuTableView.delegate = self
         
+        trlMenuBackgroundView.layer.cornerRadius = 15
+        trlMenuBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        
+        applyForACourseButton.titleLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)
+        applyForACourseButton.tintColor = .primary
+        applyForACourseButton.setTitle("подати заявку на курс" + " \u{2192}", for: .normal)
+        
+        applyForACourseView.addBorders(edges: [.top], color: .systemGray4)
+        
         if #available(iOS 15, *) {
             tutorialMenuTableView.sectionHeaderTopPadding = 0
         }
+    }
+    
+    private func configureNavBarTitle() {
+        
+        guard let navBar = navigationController?.navigationBar else { return }
+        
+        navigationItem.title = "теми курсу"
+        navBar.prefersLargeTitles = true
+        
+        navBar.isTranslucent = true
+        
+        navBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+        ]
+        
+        navBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+        ]
+        
+        navBar.tintColor = .white
+        navigationItem.backButtonTitle = ""
     }
     
 }
@@ -61,9 +98,67 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
             let data = viewModel?.tutorialMenuData
         else { return UITableViewCell() }
         
-        cell.cellBackgroundView.backgroundColor = .clear
-        cell.cellBackgroundView.addBorders(edges: [.right], color: .primary)
+        let numRowsInSection = tableView.numberOfRows(inSection: indexPath.section)
+    
+
+        let rightBorder = CALayer()
+        rightBorder.frame = CGRect(x: cell.frame.size.width - 1, y: 0, width: 1, height: cell.frame.size.height)
+        rightBorder.backgroundColor = UIColor.primary.cgColor
+        cell.layer.addSublayer(rightBorder)
         
+        cell.cellBackgroundView.backgroundColor = .white
+        cell.cellBackgroundView.addBorders(edges: [.right, .left], color: .primary)
+        cell.cellBackgroundViewBottomConstraint.constant = 0
+        
+        cell.secondCellBackgroundView.backgroundColor = .white
+        cell.secondCellBackgroundView.layer.borderWidth = 1
+        cell.secondCellBackgroundView.layer.borderColor = UIColor.primary.cgColor
+        cell.secondCellBackgroundView.layer.cornerRadius = 15
+        cell.secondCellBackgroundView.layer.masksToBounds = true
+        
+        cell.doubleBorderView.backgroundColor = .clear
+        cell.doubleBorderView.layer.borderWidth = 1
+        cell.doubleBorderView.layer.borderColor = UIColor.primary.cgColor
+        cell.doubleBorderView.isHidden = true
+        
+        // Check if this is the last row
+        if indexPath.row == numRowsInSection - 1 {
+            // Add bottom border to cell
+            cell.cellBackgroundView.addBorders(edges: [.bottom], color: .primary)
+            
+            if indexPath.section == tableView.numberOfSections - 1 {
+                // Round bottom corners of cell
+                cell.cellBackgroundView.layer.cornerRadius = 15
+                cell.cellBackgroundView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+                cell.cellBackgroundView.clipsToBounds = true
+                cell.cellBackgroundViewBottomConstraint.constant = 5
+                cell.secondCellViewBottomConstraint.constant = 4.4
+                
+                cell.doubleBorderView.layer.cornerRadius = 15
+                cell.doubleBorderView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+                
+                cell.doubleBorderView.isHidden = false
+            
+                cell.layer.cornerRadius = 15
+                cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+            }
+            
+        } else {
+            // If this is not the last row, remove any previously added bottom border
+            cell.cellBackgroundView.layer.sublayers?.forEach {
+                if $0.frame.size.height == 1 && $0.frame.origin.y == cell.frame.size.height - 1 {
+                    $0.removeFromSuperlayer()
+                }
+            }
+            
+            // Reset corner radius and masked corners
+            cell.cellBackgroundView.layer.cornerRadius = 0
+            cell.cellBackgroundView.layer.maskedCorners = []
+            cell.cellBackgroundView.clipsToBounds = false
+        }
+        
+        cell.textLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)
+        cell.textLabel?.textColor = .primary
         cell.textLabel?.text = "• " + data[indexPath.section].data[indexPath.row]
         
         return cell
@@ -71,6 +166,10 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         60
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        40
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -94,51 +193,7 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
         
         return header
     }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        let numRowsInSection = tableView.numberOfRows(inSection: indexPath.section)
-        
-        // Add left and right borders to cell
-        let leftBorder = CALayer()
-        leftBorder.frame = CGRect(x: 0, y: 0, width: 1, height: cell.frame.size.height)
-        leftBorder.backgroundColor = UIColor.primary.cgColor
-        cell.layer.addSublayer(leftBorder)
-        
-        let rightBorder = CALayer()
-        rightBorder.frame = CGRect(x: cell.frame.size.width - 1, y: 0, width: 1, height: cell.frame.size.height)
-        rightBorder.backgroundColor = UIColor.primary.cgColor
-        cell.layer.addSublayer(rightBorder)
-        
-        // Check if this is the last row
-        if indexPath.row == numRowsInSection - 1 {
-            // Add bottom border to cell
-            let bottomBorder = CALayer()
-            bottomBorder.frame = CGRect(x: 0, y: cell.frame.size.height - 1, width: cell.frame.size.width, height: 1)
-            bottomBorder.backgroundColor = UIColor.primary.cgColor
-            cell.layer.addSublayer(bottomBorder)
-            
-            if indexPath.section == tableView.numberOfSections - 1 {
-                // Round bottom corners of cell
-                cell.layer.cornerRadius = 15
-                cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-                cell.clipsToBounds = true
-            }
-            
-        } else {
-            // If this is not the last row, remove any previously added bottom border
-            cell.layer.sublayers?.forEach {
-                if $0.frame.size.height == 1 && $0.frame.origin.y == cell.frame.size.height - 1 {
-                    $0.removeFromSuperlayer()
-                }
-            }
-            
-            // Reset corner radius and masked corners
-            cell.layer.cornerRadius = 0
-            cell.layer.maskedCorners = []
-            cell.clipsToBounds = false
-        }
-    }
+    f
 }
 
 extension TRLMenuComponentViewController: TRLMenuCustomHeaderDelegate {
