@@ -100,7 +100,6 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
         
         let numRowsInSection = tableView.numberOfRows(inSection: indexPath.section)
     
-
         let rightBorder = CALayer()
         rightBorder.frame = CGRect(x: cell.frame.size.width - 1, y: 0, width: 1, height: cell.frame.size.height)
         rightBorder.backgroundColor = UIColor.primary.cgColor
@@ -193,7 +192,6 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
         
         return header
     }
-    f
 }
 
 extension TRLMenuComponentViewController: TRLMenuCustomHeaderDelegate {

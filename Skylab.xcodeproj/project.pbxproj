@@ -99,6 +99,7 @@
 		DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2364F294F6ED00009AF47 /* Storyboarded.swift */; };
 		DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2365D294F73180009AF47 /* BaseViewController.swift */; };
 		ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */; };
+		F44A742329FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A742229FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift */; };
 		F47BA73929F6AAD4002C8031 /* CustomViewsBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47BA73829F6AAD4002C8031 /* CustomViewsBorder.swift */; };
 		F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */; };
 		F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1129E589F300F83E44 /* EnviromentHelper.swift */; };
@@ -247,6 +248,7 @@
 		DFF2364F294F6ED00009AF47 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		DFF2365D294F73180009AF47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		F44A742229FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLMenuCustomHeaderDelegate.swift; sourceTree = "<group>"; };
 		F47BA73829F6AAD4002C8031 /* CustomViewsBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewsBorder.swift; sourceTree = "<group>"; };
 		F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 		F4881E0E29E588B800F83E44 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -878,6 +880,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		F44A742129FFE2BE00BE51E2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F44A742229FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		F4881E0D29E588A400F83E44 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -948,6 +958,7 @@
 		F49F637429FA6A2C00025ECD /* TableViewHeader */ = {
 			isa = PBXGroup;
 			children = (
+				F44A742129FFE2BE00BE51E2 /* Protocols */,
 				F4B5439C29F676E800EDF241 /* TRLMenuCustomTableViewHeader.swift */,
 				F4B5439E29F676ED00EDF241 /* TRLMenuCustomTableViewHeader.xib */,
 			);
@@ -1419,6 +1430,7 @@
 				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
 				F47BA73929F6AAD4002C8031 /* CustomViewsBorder.swift in Sources */,
 				047D39F529E74BED000D8D8C /* UIColor + Extension.swift in Sources */,
+				F44A742329FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift in Sources */,
 				F4E7F13029E975EF00D6FDD1 /* APICaller.swift in Sources */,
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
