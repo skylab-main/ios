@@ -33,7 +33,7 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
                                        forHeaderFooterViewReuseIdentifier: cellId)
         tutorialMenuTableView.dataSource = self
         tutorialMenuTableView.delegate = self
-        tutorialMenuTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        tutorialMenuTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
         
         trlMenuBackgroundView.layer.cornerRadius = 15
         trlMenuBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -96,24 +96,23 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
             let data = viewModel?.tutorialMenuData
         else { return UITableViewCell() }
         
+        // Get the total number of sections and rows in the table view
+        let numSections = tableView.numberOfSections
         let numRowsInSection = tableView.numberOfRows(inSection: indexPath.section)
-        
+
         cell.cellMainView.backgroundColor = .white
         cell.cellMainView.addBorders(edges: [.right, .left], color: .primary)
         
         cell.doubleBorderView.backgroundColor = .clear
-        cell.doubleBorderView.layer.borderColor = UIColor.primary.cgColor
         cell.doubleBorderView.addBorders(edges: [.right], color: .primary)
         
-        // Check if this is the last row
-        if indexPath.row == numRowsInSection - 1 {
-            
-            cell.cellMainViewBottomConstraint.constant = 3
-            
-            // Check if this is the last row in the last section
-            if indexPath.section == tableView.numberOfSections - 1 {
+        // Check if this is the last cell in the last section
+            if indexPath.section == numSections - 1 && indexPath.row == numRowsInSection - 1 {
+                
+                cell.cellMainViewBottomConstraint.constant = 3
                 
                 // Round bottom corners of cell
+                cell.cellMainView.layer.borderWidth = 0
                 cell.cellMainView.layer.cornerRadius = 15
                 cell.cellMainView.layoutIfNeeded()
                 cell.cellMainView.layer.addBorder(side: .bottom, thickness: 1,
@@ -121,17 +120,29 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
                                                      maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
                 cell.cellMainView.layer.masksToBounds = true
                 cell.cellMainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-   
-                cell.doubleBorderView.layer.borderWidth = 0
+
                 cell.doubleBorderView.layer.cornerRadius = 15
                 cell.doubleBorderView.layoutIfNeeded()
-                cell.doubleBorderView.layer.addBorder(side: .right, thickness: 1, color: UIColor.primary.cgColor)
-                cell.doubleBorderView.layer.addBorder(side: .bottom, thickness: 1, color: UIColor.primary.cgColor, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+                cell.doubleBorderView.layer.addBorder(side: .bottom, thickness: 1,
+                                                      color: UIColor.primary.cgColor,
+                                                      maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
                 cell.doubleBorderView.layer.masksToBounds = true
                 cell.doubleBorderView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+                
+            } else {
+                // If this is not the last cell in the last section
+                
+                cell.cellMainViewBottomConstraint.constant = 0
+                
+                cell.cellMainView.layer.maskedCorners = []
+                cell.doubleBorderView.layer.maskedCorners = []
+                
+                cell.cellMainView.layer.sublayers?.removeAll()
+                cell.doubleBorderView.layer.sublayers?.removeAll()
+                
+                cell.cellMainView.addBorders(edges: [.right, .left], color: .primary)
+                cell.doubleBorderView.addBorders(edges: [.right], color: .primary)
             }
-            
-        }
         
         cell.textLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)
         cell.textLabel?.textColor = .primary

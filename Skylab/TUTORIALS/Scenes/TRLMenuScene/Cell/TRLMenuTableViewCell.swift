@@ -14,5 +14,4 @@ class TRLMenuTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellMainViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var doubleBorderBottomConstraint: NSLayoutConstraint!
-
 }

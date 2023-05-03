@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acF-5w-qt4">
-                    <rect key="frame" x="4" y="4" width="389" height="59"/>
+                    <rect key="frame" x="3" y="3" width="390" height="60"/>
                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whc-ZC-pzc">
@@ -61,9 +61,9 @@
                 <constraint firstAttribute="bottom" secondItem="whc-ZC-pzc" secondAttribute="bottom" constant="-4" id="BKm-Z3-i0d"/>
                 <constraint firstItem="CWO-Ad-Y7C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DaN-ka-HvH"/>
                 <constraint firstAttribute="bottom" secondItem="acF-5w-qt4" secondAttribute="bottom" constant="-3" id="Fb0-8O-6dv"/>
-                <constraint firstItem="acF-5w-qt4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="Hlt-iA-4bz"/>
+                <constraint firstItem="acF-5w-qt4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="Hlt-iA-4bz"/>
                 <constraint firstAttribute="trailing" secondItem="acF-5w-qt4" secondAttribute="trailing" id="Qqe-OJ-zOW"/>
-                <constraint firstItem="acF-5w-qt4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="VEC-Hw-laK"/>
+                <constraint firstItem="acF-5w-qt4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="VEC-Hw-laK"/>
                 <constraint firstAttribute="trailing" secondItem="CWO-Ad-Y7C" secondAttribute="trailing" constant="3" id="b4A-PO-Dyd"/>
                 <constraint firstItem="CWO-Ad-Y7C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fjA-Pf-z8I"/>
                 <constraint firstAttribute="trailing" secondItem="whc-ZC-pzc" secondAttribute="trailing" constant="4" id="gvC-Lf-hJZ"/>
@@ -77,6 +77,7 @@
             <connections>
                 <outlet property="bottomCoverViewConstraint" destination="BKm-Z3-i0d" id="nsR-TR-7iC"/>
                 <outlet property="doubleBorderView" destination="acF-5w-qt4" id="swd-BQ-45L"/>
+                <outlet property="doubleBorderViewTopConstraint" destination="VEC-Hw-laK" id="062-tB-0GZ"/>
                 <outlet property="headerBackgroundView" destination="CWO-Ad-Y7C" id="MMc-HZ-yhc"/>
                 <outlet property="headerButton" destination="1g4-RN-5RH" id="AmL-xN-dCD"/>
                 <outlet property="topicLabel" destination="KyD-kn-KJH" id="Mdq-VK-gpQ"/>
