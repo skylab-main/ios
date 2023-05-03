@@ -44,6 +44,7 @@ class TutorialViewController: BaseViewController, Storyboarded {
             NSAttributedString.Key.foregroundColor: UIColor.black,
         ]
         
+        navBar.prefersLargeTitles = false
         navBar.tintColor = .black
         navigationItem.backButtonTitle = ""
     }

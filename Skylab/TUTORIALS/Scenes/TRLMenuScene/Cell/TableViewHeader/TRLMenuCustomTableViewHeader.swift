@@ -13,8 +13,7 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var headerButton: UIButton!
     @IBOutlet weak var headerBackgroundView: UIView!
     @IBOutlet weak var doubleBorderView: UIView!
-    @IBOutlet weak var topCornersOfHeaderView: UIView!
-    @IBOutlet weak var bottomDoubleBorderViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomCoverViewConstraint: NSLayoutConstraint!
     
     var delegate: TRLMenuCustomHeaderDelegate?
     
@@ -37,11 +36,16 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
             if expanded ?? false {
 
                 headerBackgroundView.layer.cornerRadius = cornerRadius
-                headerBackgroundView.layer.masksToBounds = true
-
-                topCornersOfHeaderView.layer.borderColor = customColor
-                topCornersOfHeaderView.layer.borderWidth = 1
-                topCornersOfHeaderView.layer.cornerRadius = cornerRadius
+                headerBackgroundView.layoutIfNeeded()
+                headerBackgroundView.layer.addBorder(side: .top, thickness: 1,
+                                                     color: UIColor.primary.cgColor,
+                                                     maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+                
+                doubleBorderView.layoutIfNeeded()
+                doubleBorderView.layer.addBorder(side: .top, thickness: 1, color: UIColor.primary.cgColor, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+                doubleBorderView.layer.cornerRadius = cornerRadius
+                doubleBorderView.layer.masksToBounds = true
+                doubleBorderView.layer.maskedCorners = [.layerMaxXMinYCorner]
             }
         }
 
@@ -54,9 +58,12 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
             doubleBorderView.layer.cornerRadius = cornerRadius
             doubleBorderView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
             
+            bottomCoverViewConstraint.constant = 3
+            
             if expanded ?? false {
                 
                 doubleBorderView.layer.maskedCorners = []
+                //bottomCoverViewConstraint.constant = -5
             }
         }
     }
@@ -91,6 +98,13 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
             
             headerBackgroundView.layer.borderWidth = 0
             headerBackgroundView.addBorders(edges: [.top, .left, .right], color: .primary)
+            headerBackgroundView.layer.masksToBounds = true
+            headerBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            
+            doubleBorderView.layer.borderWidth = 0
+            doubleBorderView.addBorders(edges: [.right], color: .primary)
+            doubleBorderView.layer.masksToBounds = true
+            doubleBorderView.layer.maskedCorners = [.layerMaxXMinYCorner]
  
         } else {
             

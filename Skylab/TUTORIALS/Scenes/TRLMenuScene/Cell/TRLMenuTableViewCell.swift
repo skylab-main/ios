@@ -9,16 +9,10 @@ import UIKit
 
 class TRLMenuTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cellBackgroundView: UIView!
-    @IBOutlet weak var secondCellBackgroundView: UIView!
+    @IBOutlet weak var cellMainView: UIView!
     @IBOutlet weak var doubleBorderView: UIView!
     
-    
-    @IBOutlet weak var cellBackgroundViewBottomConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var cellMainViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var doubleBorderBottomConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var secondCellViewBottomConstraint: NSLayoutConstraint!
-    
-    
+
 }

@@ -33,41 +33,31 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIo-3Y-zJo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="35.666666666666664"/>
-                                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                        </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DA0-m4-jks">
-                                                            <rect key="frame" x="3" y="3" width="350" height="37"/>
+                                                            <rect key="frame" x="3" y="0.0" width="350" height="40"/>
                                                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roK-0l-gMx">
-                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="35"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="40"/>
                                                             <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="roK-0l-gMx" firstAttribute="top" secondItem="pPJ-c8-BGk" secondAttribute="top" id="3Tw-oF-6J8"/>
-                                                        <constraint firstAttribute="bottom" secondItem="roK-0l-gMx" secondAttribute="bottom" constant="5" id="AbD-Mo-dLd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="roK-0l-gMx" secondAttribute="bottom" id="AbD-Mo-dLd"/>
                                                         <constraint firstAttribute="trailing" secondItem="DA0-m4-jks" secondAttribute="trailing" id="AjF-25-jeZ"/>
-                                                        <constraint firstItem="DA0-m4-jks" firstAttribute="top" secondItem="pPJ-c8-BGk" secondAttribute="top" constant="3" id="B8U-CO-aqk"/>
+                                                        <constraint firstItem="DA0-m4-jks" firstAttribute="top" secondItem="pPJ-c8-BGk" secondAttribute="top" id="B8U-CO-aqk"/>
                                                         <constraint firstItem="DA0-m4-jks" firstAttribute="leading" secondItem="pPJ-c8-BGk" secondAttribute="leading" constant="3" id="P5x-3G-mPN"/>
-                                                        <constraint firstItem="zIo-3Y-zJo" firstAttribute="top" secondItem="pPJ-c8-BGk" secondAttribute="top" id="Rte-Vs-vhr"/>
-                                                        <constraint firstAttribute="trailing" secondItem="zIo-3Y-zJo" secondAttribute="trailing" constant="3" id="cPE-3E-HgE"/>
                                                         <constraint firstItem="roK-0l-gMx" firstAttribute="leading" secondItem="pPJ-c8-BGk" secondAttribute="leading" id="fP9-3W-WDM"/>
                                                         <constraint firstAttribute="bottom" secondItem="DA0-m4-jks" secondAttribute="bottom" id="hDD-cF-iaG"/>
                                                         <constraint firstAttribute="trailing" secondItem="roK-0l-gMx" secondAttribute="trailing" constant="3" id="mKe-IQ-O1l"/>
-                                                        <constraint firstAttribute="bottom" secondItem="zIo-3Y-zJo" secondAttribute="bottom" constant="4.5" id="tUc-MK-Dcd"/>
-                                                        <constraint firstItem="zIo-3Y-zJo" firstAttribute="leading" secondItem="pPJ-c8-BGk" secondAttribute="leading" id="wwt-u4-5Ad"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="cellBackgroundView" destination="roK-0l-gMx" id="gUN-Vd-vPJ"/>
-                                                    <outlet property="cellBackgroundViewBottomConstraint" destination="AbD-Mo-dLd" id="Ddq-6u-MUr"/>
+                                                    <outlet property="cellMainView" destination="roK-0l-gMx" id="gUN-Vd-vPJ"/>
+                                                    <outlet property="cellMainViewBottomConstraint" destination="AbD-Mo-dLd" id="Ddq-6u-MUr"/>
                                                     <outlet property="doubleBorderBottomConstraint" destination="hDD-cF-iaG" id="XRZ-E5-VsM"/>
                                                     <outlet property="doubleBorderView" destination="DA0-m4-jks" id="kdT-uq-lpU"/>
-                                                    <outlet property="secondCellBackgroundView" destination="zIo-3Y-zJo" id="KeV-Oc-alG"/>
-                                                    <outlet property="secondCellViewBottomConstraint" destination="tUc-MK-Dcd" id="kvY-My-Tuc"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

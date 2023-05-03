@@ -33,10 +33,10 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
                                        forHeaderFooterViewReuseIdentifier: cellId)
         tutorialMenuTableView.dataSource = self
         tutorialMenuTableView.delegate = self
+        tutorialMenuTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         
         trlMenuBackgroundView.layer.cornerRadius = 15
         trlMenuBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
         
         applyForACourseButton.titleLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)
         applyForACourseButton.tintColor = .primary
@@ -55,8 +55,6 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         
         navigationItem.title = "теми курсу"
         navBar.prefersLargeTitles = true
-        
-        navBar.isTranslucent = true
         
         navBar.largeTitleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),
@@ -99,61 +97,40 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
         else { return UITableViewCell() }
         
         let numRowsInSection = tableView.numberOfRows(inSection: indexPath.section)
-    
-        let rightBorder = CALayer()
-        rightBorder.frame = CGRect(x: cell.frame.size.width - 1, y: 0, width: 1, height: cell.frame.size.height)
-        rightBorder.backgroundColor = UIColor.primary.cgColor
-        cell.layer.addSublayer(rightBorder)
         
-        cell.cellBackgroundView.backgroundColor = .white
-        cell.cellBackgroundView.addBorders(edges: [.right, .left], color: .primary)
-        cell.cellBackgroundViewBottomConstraint.constant = 0
-        
-        cell.secondCellBackgroundView.backgroundColor = .white
-        cell.secondCellBackgroundView.layer.borderWidth = 1
-        cell.secondCellBackgroundView.layer.borderColor = UIColor.primary.cgColor
-        cell.secondCellBackgroundView.layer.cornerRadius = 15
-        cell.secondCellBackgroundView.layer.masksToBounds = true
+        cell.cellMainView.backgroundColor = .white
+        cell.cellMainView.addBorders(edges: [.right, .left], color: .primary)
         
         cell.doubleBorderView.backgroundColor = .clear
-        cell.doubleBorderView.layer.borderWidth = 1
         cell.doubleBorderView.layer.borderColor = UIColor.primary.cgColor
-        cell.doubleBorderView.isHidden = true
+        cell.doubleBorderView.addBorders(edges: [.right], color: .primary)
         
         // Check if this is the last row
         if indexPath.row == numRowsInSection - 1 {
-            // Add bottom border to cell
-            cell.cellBackgroundView.addBorders(edges: [.bottom], color: .primary)
             
+            cell.cellMainViewBottomConstraint.constant = 3
+            
+            // Check if this is the last row in the last section
             if indexPath.section == tableView.numberOfSections - 1 {
+                
                 // Round bottom corners of cell
-                cell.cellBackgroundView.layer.cornerRadius = 15
-                cell.cellBackgroundView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-                cell.cellBackgroundView.clipsToBounds = true
-                cell.cellBackgroundViewBottomConstraint.constant = 5
-                cell.secondCellViewBottomConstraint.constant = 4.4
-                
+                cell.cellMainView.layer.cornerRadius = 15
+                cell.cellMainView.layoutIfNeeded()
+                cell.cellMainView.layer.addBorder(side: .bottom, thickness: 1,
+                                                     color: UIColor.primary.cgColor,
+                                                     maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+                cell.cellMainView.layer.masksToBounds = true
+                cell.cellMainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+   
+                cell.doubleBorderView.layer.borderWidth = 0
                 cell.doubleBorderView.layer.cornerRadius = 15
-                cell.doubleBorderView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-                
-                cell.doubleBorderView.isHidden = false
-            
-                cell.layer.cornerRadius = 15
-                cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+                cell.doubleBorderView.layoutIfNeeded()
+                cell.doubleBorderView.layer.addBorder(side: .right, thickness: 1, color: UIColor.primary.cgColor)
+                cell.doubleBorderView.layer.addBorder(side: .bottom, thickness: 1, color: UIColor.primary.cgColor, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+                cell.doubleBorderView.layer.masksToBounds = true
+                cell.doubleBorderView.layer.maskedCorners = [.layerMaxXMaxYCorner]
             }
             
-        } else {
-            // If this is not the last row, remove any previously added bottom border
-            cell.cellBackgroundView.layer.sublayers?.forEach {
-                if $0.frame.size.height == 1 && $0.frame.origin.y == cell.frame.size.height - 1 {
-                    $0.removeFromSuperlayer()
-                }
-            }
-            
-            // Reset corner radius and masked corners
-            cell.cellBackgroundView.layer.cornerRadius = 0
-            cell.cellBackgroundView.layer.maskedCorners = []
-            cell.cellBackgroundView.clipsToBounds = false
         }
         
         cell.textLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)
