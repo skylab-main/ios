@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0422F18F29F727F800068A58 /* AnonymousPro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422F18E29F727F800068A58 /* AnonymousPro.swift */; };
 		045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */; };
 		045D3FD629BE7D0100456DEC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FD529BE7D0100456DEC /* MenuCell.swift */; };
 		045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3FDF29BE808600456DEC /* TestMenuViewController.swift */; };
@@ -35,6 +36,10 @@
 		047D39F729E755DC000D8D8C /* UITabBarItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D39F629E755DC000D8D8C /* UITabBarItem + Extension.swift */; };
 		04C60CFD29A6B22A00BACDC0 /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */; };
 		04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */; };
+		04DEDBEE29E9EBD500486A42 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEDBED29E9EBD500486A42 /* BaseButton.swift */; };
+		04DEDBF029E9ECB500486A42 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEDBEF29E9ECB500486A42 /* PersonCell.swift */; };
+		04DEDBF229E9EDA700486A42 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEDBF129E9EDA700486A42 /* CircularImageView.swift */; };
+		04DEDBF429E9EE6300486A42 /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DEDBF329E9EE5F00486A42 /* AnonymousPro-Regular.ttf */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
 		08697119298430B600E4CA00 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08697118298430B600E4CA00 /* RxRelay */; };
 		0869711B298430B600E4CA00 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711A298430B600E4CA00 /* RxSwift */; };
@@ -157,6 +162,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0422F18E29F727F800068A58 /* AnonymousPro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousPro.swift; sourceTree = "<group>"; };
 		045D3FD029BE785F00456DEC /* ScrollableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollableMenuView.swift; path = "Skylab/Custom elements/ScrollableMenuView.swift"; sourceTree = SOURCE_ROOT; };
 		045D3FD529BE7D0100456DEC /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuCell.swift; path = ../MenuCell.swift; sourceTree = "<group>"; };
 		045D3FDF29BE808600456DEC /* TestMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +191,10 @@
 		047D39F629E755DC000D8D8C /* UITabBarItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITabBarItem + Extension.swift"; path = "Skylab/Extensions/UITabBarItem + Extension.swift"; sourceTree = SOURCE_ROOT; };
 		04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		04D44CEE299E9C1D003EADBD /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		04DEDBED29E9EBD500486A42 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		04DEDBEF29E9ECB500486A42 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		04DEDBF129E9EDA700486A42 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		04DEDBF329E9EE5F00486A42 /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
 		089F803829D2D3B900748D24 /* SecondPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIView.swift; sourceTree = "<group>"; };
 		089F803A29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -445,6 +455,7 @@
 			children = (
 				047D39EB29E742CC000D8D8C /* AboutViewController.swift */,
 				047D39ED29E742E0000D8D8C /* AboutViewController.storyboard */,
+				04DEDBF529E9F3EF00486A42 /* CustomVies */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,8 +483,18 @@
 				6E8B3F3829EED42B0066C7B7 /* DataList */,
 				0419071029C5EC990037F8FC /* ScrollableMenuView */,
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
+				04DEDBED29E9EBD500486A42 /* BaseButton.swift */,
+				04DEDBF129E9EDA700486A42 /* CircularImageView.swift */,
 			);
 			path = "Custom elements";
+			sourceTree = "<group>";
+		};
+		04DEDBF529E9F3EF00486A42 /* CustomVies */ = {
+			isa = PBXGroup;
+			children = (
+				04DEDBEF29E9ECB500486A42 /* PersonCell.swift */,
+			);
+			path = CustomVies;
 			sourceTree = "<group>";
 		};
 		0869711E2986D8E200E4CA00 /* Frameworks */ = {
@@ -494,7 +515,9 @@
 		08E66EEA29BFC3A00013B80A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0422F18E29F727F800068A58 /* AnonymousPro.swift */,
 				08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */,
+				04DEDBF329E9EE5F00486A42 /* AnonymousPro-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -1303,6 +1326,7 @@
 				6E8B3F3B29EED47A0066C7B7 /* DataList.xib in Resources */,
 				F4B1314729E445A2005760B6 /* MainMenuViewController.storyboard in Resources */,
 				6E8B3F4529F00CAA0066C7B7 /* TRLDataListViewController.storyboard in Resources */,
+				04DEDBF429E9EE6300486A42 /* AnonymousPro-Regular.ttf in Resources */,
 				152E04CB2984718B00ABCEA2 /* SwinjectTestPageSubViewController.storyboard in Resources */,
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
@@ -1362,6 +1386,7 @@
 				F4E7F12429E83A5900D6FDD1 /* ChatGPTResponseViewController.swift in Sources */,
 				F4B1315229E4468C005760B6 /* TutorialViewController.swift in Sources */,
 				8625B5AA29BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift in Sources */,
+				04DEDBF229E9EDA700486A42 /* CircularImageView.swift in Sources */,
 				DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */,
 				04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */,
 				047D39F729E755DC000D8D8C /* UITabBarItem + Extension.swift in Sources */,
@@ -1384,6 +1409,7 @@
 				6E8B3F3E29EED8000066C7B7 /* DataListCollectionViewCell.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
 				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
+				04DEDBEE29E9EBD500486A42 /* BaseButton.swift in Sources */,
 				045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */,
 				6E8B3F4929F00CDF0066C7B7 /* TRLDataListCoordinator.swift in Sources */,
 				047D39E929E7416F000D8D8C /* LessonsCoordinator.swift in Sources */,
@@ -1421,9 +1447,11 @@
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				047D39DF29E73DB9000D8D8C /* PracticeViewModel.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
+				04DEDBF029E9ECB500486A42 /* PersonCell.swift in Sources */,
 				F4B1314D29E4464F005760B6 /* ApplicationViewController.swift in Sources */,
 				F48CE07E29E6A45C008A47F5 /* TutorialViewModel.swift in Sources */,
 				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,
+				0422F18F29F727F800068A58 /* AnonymousPro.swift in Sources */,
 				F4B1314929E445E2005760B6 /* MainMenuViewController.swift in Sources */,
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
 				047D39F329E74390000D8D8C /* AboutCoordinator.swift in Sources */,
