@@ -34,6 +34,8 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
             doubleBorderView.layer.cornerRadius = cornerRadius
             doubleBorderView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
             
+            doubleBorderViewTopConstraint.constant = 3
+            
             if expanded ?? false {
 
                 headerBackgroundView.layer.cornerRadius = cornerRadius
@@ -43,7 +45,9 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
                                                      maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
                 
                 doubleBorderView.layoutIfNeeded()
-                doubleBorderView.layer.addBorder(side: .top, thickness: 1, color: customColor, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+                doubleBorderView.layer.addBorder(side: .top, thickness: 1,
+                                                 color: customColor,
+                                                 maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
                 doubleBorderView.layer.cornerRadius = cornerRadius
                 doubleBorderView.layer.masksToBounds = true
                 doubleBorderView.layer.maskedCorners = [.layerMaxXMinYCorner]
@@ -71,7 +75,7 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
     
     //MARK: - View configurations
 
-    func configure(title: String, section: Int) {
+    func configureHeader(title: String, section: Int) {
         
         topicLabel.text = title
         topicLabel.font = UIFont(name: "AnonymousPro-Bold", size: 16)
@@ -87,6 +91,8 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
         doubleBorderView.backgroundColor = .clear
         doubleBorderView.layer.borderWidth = 1
         doubleBorderView.layer.borderColor = customColor
+        
+        doubleBorderViewTopConstraint.constant = 0
     }
     
     func rotateImage(_ expanded: Bool) {
@@ -110,7 +116,6 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
         } else {
             
             headerButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-            
         }
     }
     

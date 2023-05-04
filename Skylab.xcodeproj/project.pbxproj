@@ -100,6 +100,7 @@
 		DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2365D294F73180009AF47 /* BaseViewController.swift */; };
 		ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */; };
 		F44A742329FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A742229FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift */; };
+		F47A7EFF2A039F6A00FFDD16 /* TRLMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7EFE2A039F6A00FFDD16 /* TRLMenuViewModelProtocol.swift */; };
 		F47BA73929F6AAD4002C8031 /* CustomViewsBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47BA73829F6AAD4002C8031 /* CustomViewsBorder.swift */; };
 		F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */; };
 		F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1129E589F300F83E44 /* EnviromentHelper.swift */; };
@@ -249,6 +250,7 @@
 		DFF2365D294F73180009AF47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F44A742229FFE2D800BE51E2 /* TRLMenuCustomHeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLMenuCustomHeaderDelegate.swift; sourceTree = "<group>"; };
+		F47A7EFE2A039F6A00FFDD16 /* TRLMenuViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRLMenuViewModelProtocol.swift; sourceTree = "<group>"; };
 		F47BA73829F6AAD4002C8031 /* CustomViewsBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewsBorder.swift; sourceTree = "<group>"; };
 		F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 		F4881E0E29E588B800F83E44 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -888,6 +890,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		F47A7EFD2A039F5600FFDD16 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F47A7EFE2A039F6A00FFDD16 /* TRLMenuViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		F4881E0D29E588A400F83E44 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1047,6 +1057,7 @@
 		F4BAFDAB29F28C0000C6C17A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F47A7EFD2A039F5600FFDD16 /* Protocols */,
 				F4BAFDC229F29C5800C6C17A /* TRLMenuViewModel.swift */,
 			);
 			path = ViewModels;
@@ -1370,6 +1381,7 @@
 				045D3FD629BE7D0100456DEC /* MenuCell.swift in Sources */,
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */,
+				F47A7EFF2A039F6A00FFDD16 /* TRLMenuViewModelProtocol.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */,
 				6EC3856C29C87CCF00114D03 /* Feature.swift in Sources */,

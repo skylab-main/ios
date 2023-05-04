@@ -56,7 +56,6 @@
                                                 <connections>
                                                     <outlet property="cellMainView" destination="roK-0l-gMx" id="gUN-Vd-vPJ"/>
                                                     <outlet property="cellMainViewBottomConstraint" destination="AbD-Mo-dLd" id="Ddq-6u-MUr"/>
-                                                    <outlet property="doubleBorderBottomConstraint" destination="hDD-cF-iaG" id="XRZ-E5-VsM"/>
                                                     <outlet property="doubleBorderView" destination="DA0-m4-jks" id="kdT-uq-lpU"/>
                                                 </connections>
                                             </tableViewCell>
