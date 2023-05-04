@@ -9,33 +9,40 @@ import UIKit
 
 class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     
-    @IBOutlet weak var tutorialMenuTableView: UITableView!
+    @IBOutlet weak var trlMenuTableView: UITableView!
     @IBOutlet weak var trlMenuBackgroundView: UIView!
     @IBOutlet weak var applyForACourseView: UIView!
     @IBOutlet weak var applyForACourseButton: UIButton!
+    @IBOutlet weak var myScrollView: UIScrollView!
+    @IBOutlet weak var trlMenuViewHeightConstraint: NSLayoutConstraint!
+    
     
     var viewModel: TRLMenuViewModelProtocol? = TRLMenuViewModel()
     
     private let cellId = String(describing: TRLMenuCustomTableViewHeader.self)
+    private var defaulttrlMenuTableViewHeight: CGFloat = 196
+    private var defaultBgMenuHeight: CGFloat?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
         configureNavBarTitle()
+        
+        myScrollView.isScrollEnabled = false
     }
-    
+
     //MARK: - UI Configurations
     
     private func configureUI() {
         
         self.view.backgroundColor = .primary
         
-        tutorialMenuTableView.register(UINib(nibName: cellId, bundle: nil),
+        trlMenuTableView.register(UINib(nibName: cellId, bundle: nil),
                                        forHeaderFooterViewReuseIdentifier: cellId)
-        tutorialMenuTableView.dataSource = self
-        tutorialMenuTableView.delegate = self
-        tutorialMenuTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        trlMenuTableView.dataSource = self
+        trlMenuTableView.delegate = self
         
         trlMenuBackgroundView.layer.cornerRadius = 15
         trlMenuBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -47,7 +54,7 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         applyForACourseView.addBorders(edges: [.top], color: .systemGray4)
         
         if #available(iOS 15, *) {
-            tutorialMenuTableView.sectionHeaderTopPadding = 0
+            trlMenuTableView.sectionHeaderTopPadding = 0
         }
     }
     
@@ -165,10 +172,25 @@ extension TRLMenuComponentViewController: TRLMenuCustomHeaderDelegate {
         
         let section = button.tag
         
-        let isExpanded = viewModel?.tutorialMenuData [section].isExpanded
-        viewModel?.tutorialMenuData[section].isExpanded = !isExpanded!
+        guard let isExpanded = viewModel?.tutorialMenuData [section].isExpanded else { return }
+        viewModel?.tutorialMenuData[section].isExpanded = !isExpanded
         
-        self.tutorialMenuTableView.reloadSections(IndexSet(integer: section), with: .automatic)
+        self.trlMenuTableView.reloadSections(IndexSet(integer: section), with: .automatic)
+        
+        if defaulttrlMenuTableViewHeight == trlMenuTableView.contentSize.height {
+            
+            myScrollView.isScrollEnabled = false
+            
+            // Assume scrollView is the UIScrollView instance that you want to reset
+            myScrollView.setContentOffset(CGPoint.zero, animated: true)
+            
+            // Reset the content size of the scroll view
+            myScrollView.contentSize = CGSize(width: myScrollView.frame.width, height: 0.0)
+            
+        } else {
+            myScrollView.isScrollEnabled = true
+            trlMenuViewHeightConstraint.constant = trlMenuTableView.contentSize.height - 200
+        }
     }
 }
 
