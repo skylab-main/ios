@@ -16,14 +16,12 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var myScrollView: UIScrollView!
     @IBOutlet weak var trlMenuViewHeightConstraint: NSLayoutConstraint!
     
-    
     var viewModel: TRLMenuViewModelProtocol? = TRLMenuViewModel()
     
     private let cellId = String(describing: TRLMenuCustomTableViewHeader.self)
     private var defaulttrlMenuTableViewHeight: CGFloat = 196
     private var defaultBgMenuHeight: CGFloat?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,12 +61,6 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         guard let navBar = navigationController?.navigationBar else { return }
         
         navigationItem.title = "теми курсу"
-        navBar.prefersLargeTitles = true
-        
-        navBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-        ]
         
         navBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),
@@ -179,7 +171,8 @@ extension TRLMenuComponentViewController: TRLMenuCustomHeaderDelegate {
         
         if defaulttrlMenuTableViewHeight == trlMenuTableView.contentSize.height {
             
-            myScrollView.isScrollEnabled = false
+            //myScrollView.isScrollEnabled = false
+            navigationController?.hidesBarsOnSwipe = false
             
             // Assume scrollView is the UIScrollView instance that you want to reset
             myScrollView.setContentOffset(CGPoint.zero, animated: true)
@@ -189,9 +182,10 @@ extension TRLMenuComponentViewController: TRLMenuCustomHeaderDelegate {
             
         } else {
             myScrollView.isScrollEnabled = true
-            trlMenuViewHeightConstraint.constant = trlMenuTableView.contentSize.height - 200
+            //navigationController?.hidesBarsOnSwipe = true
+            trlMenuViewHeightConstraint.constant = trlMenuTableView.contentSize.height - 300
+            
         }
     }
 }
-
 
