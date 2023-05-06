@@ -7,53 +7,9 @@
 
 import UIKit
 
-extension UIView {
-    
-    @discardableResult
-    func addBorders(edges: UIRectEdge,
-                    color: UIColor,
-                    inset: CGFloat = 0.0,
-                    thickness: CGFloat = 1.0) -> [UIView] {
-        
-        var borders = [UIView]()
-        
-        @discardableResult
-        func addBorder(formats: String...) -> UIView {
-            let border = UIView(frame: .zero)
-            border.backgroundColor = color
-            border.translatesAutoresizingMaskIntoConstraints = false
-            addSubview(border)
-            addConstraints(formats.flatMap {
-                NSLayoutConstraint.constraints(withVisualFormat: $0,
-                                               options: [],
-                                               metrics: ["inset": inset, "thickness": thickness],
-                                               views: ["border": border]) })
-            borders.append(border)
-            
-            return border
-        }
-        
-        if edges.contains(.top) || edges.contains(.all) {
-            addBorder(formats: "V:|-0-[border(==thickness)]", "H:|-inset-[border]-inset-|")
-        }
-        
-        if edges.contains(.bottom) || edges.contains(.all) {
-            addBorder(formats: "V:[border(==thickness)]-0-|", "H:|-inset-[border]-inset-|")
-        }
-        
-        if edges.contains(.left) || edges.contains(.all) {
-            addBorder(formats: "V:|-inset-[border]-inset-|", "H:|-0-[border(==thickness)]")
-        }
-        
-        if edges.contains(.right) || edges.contains(.all) {
-            addBorder(formats: "V:|-inset-[border]-inset-|", "H:[border(==thickness)]-0-|")
-        }
-        
-        return borders
-    }
-    
-}
-
+/// Adds boards to views of any thickness and size. Added the ability to round the corners of selected positions.
+/// Don't forgot to add ' l.layoutIfNeeded() ' right before calling 'addborder'.
+/// Usage example: 'myView.layer.addBorder(side: .leftAndRight, thickness: 1, color: UIColor.red.cgColor)'
 extension CALayer {
     
     enum BorderSide {
@@ -61,8 +17,7 @@ extension CALayer {
         case right
         case bottom
         case left
-        case notRight
-        case notLeft
+        case leftAndRight
         case topAndBottom
         case all
     }
@@ -138,22 +93,16 @@ extension CALayer {
             
         case .left:
             addLine(x: 0, y: leftYOffset, width: thickness, height: leftHeight, color: color)
-
-        // Multiple Sides
-        case .notRight:
-            addLine(x: topXOffset, y: 0, width: topWidth, height: thickness, color: color)
-            addLine(x: 0, y: leftYOffset, width: thickness, height: leftHeight, color: color)
-            addLine(x: bottomXOffset, y: frame.size.height - thickness, width: bottomWidth, height: thickness, color: color)
-
-        case .notLeft:
-            addLine(x: topXOffset, y: 0, width: topWidth, height: thickness, color: color)
+            
+            // Multiple Sides
+        case .leftAndRight:
             addLine(x: frame.size.width - thickness, y: rightYOffset, width: thickness, height: rightHeight, color: color)
-            addLine(x: bottomXOffset, y: frame.size.height - thickness, width: bottomWidth, height: thickness, color: color)
-
+            addLine(x: 0, y: leftYOffset, width: thickness, height: leftHeight, color: color)
+            
         case .topAndBottom:
             addLine(x: topXOffset, y: 0, width: topWidth, height: thickness, color: color)
             addLine(x: bottomXOffset, y: frame.size.height - thickness, width: bottomWidth, height: thickness, color: color)
-
+            
         case .all:
             addLine(x: topXOffset, y: 0, width: topWidth, height: thickness, color: color)
             addLine(x: frame.size.width - thickness, y: rightYOffset, width: thickness, height: rightHeight, color: color)
@@ -198,7 +147,7 @@ extension CALayer {
                                       startAngle: startAngle,
                                       endAngle: endAngle,
                                       clockwise: true)
-
+        
         let cornerShape = CAShapeLayer()
         cornerShape.path = cornerPath.cgPath
         cornerShape.lineWidth = thickness

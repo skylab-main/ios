@@ -9,6 +9,7 @@ import Foundation
 
 class TRLMenuViewModel: TRLMenuViewModelProtocol {
     
+    //Temporary data for the menu 
     var tutorialMenuData: [TRLMenuModel] = [
         TRLMenuModel(isExpanded: false, title: "Learning Swift", data: ["One", "Two", "Three", "Four"]),
         TRLMenuModel(isExpanded: false, title: "Git", data: ["One", "Two", "Three", "Four"]),

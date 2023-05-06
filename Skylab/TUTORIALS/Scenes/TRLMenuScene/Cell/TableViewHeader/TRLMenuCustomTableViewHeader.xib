@@ -4,8 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,30 +13,21 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acF-5w-qt4">
-                    <rect key="frame" x="3" y="3" width="390" height="60"/>
-                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whc-ZC-pzc">
-                    <rect key="frame" x="3" y="10" width="386" height="54"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWO-Ad-Y7C">
-                    <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyD-kn-KJH">
-                            <rect key="frame" x="10" y="0.0" width="380" height="60"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyD-kn-KJH">
+                            <rect key="frame" x="18" y="0.0" width="375" height="60"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g4-RN-5RH">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <imageReference key="image" image="chevron.down" catalog="system" symbolScale="large"/>
-                                <color key="baseForegroundColor" red="0.20392158630000001" green="0.2588235438" blue="0.61128702030000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </buttonConfiguration>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="chevronDown">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                            </state>
                             <connections>
                                 <action selector="tapHeaderWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="ou5-ms-QRD"/>
                             </connections>
@@ -52,32 +41,21 @@
                         <constraint firstAttribute="bottom" secondItem="1g4-RN-5RH" secondAttribute="bottom" id="X9n-aI-5qe"/>
                         <constraint firstItem="1g4-RN-5RH" firstAttribute="top" secondItem="CWO-Ad-Y7C" secondAttribute="top" id="eBG-Ge-uAL"/>
                         <constraint firstAttribute="trailing" secondItem="1g4-RN-5RH" secondAttribute="trailing" id="hBW-n1-1lx"/>
-                        <constraint firstItem="KyD-kn-KJH" firstAttribute="leading" secondItem="CWO-Ad-Y7C" secondAttribute="leading" constant="10" id="lMp-Bm-DM1"/>
+                        <constraint firstItem="KyD-kn-KJH" firstAttribute="leading" secondItem="CWO-Ad-Y7C" secondAttribute="leading" constant="18" id="lMp-Bm-DM1"/>
                         <constraint firstAttribute="trailing" secondItem="KyD-kn-KJH" secondAttribute="trailing" id="rGe-Cu-J0I"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="whc-ZC-pzc" secondAttribute="bottom" constant="-4" id="BKm-Z3-i0d"/>
                 <constraint firstItem="CWO-Ad-Y7C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DaN-ka-HvH"/>
-                <constraint firstAttribute="bottom" secondItem="acF-5w-qt4" secondAttribute="bottom" constant="-3" id="Fb0-8O-6dv"/>
-                <constraint firstItem="acF-5w-qt4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="Hlt-iA-4bz"/>
-                <constraint firstAttribute="trailing" secondItem="acF-5w-qt4" secondAttribute="trailing" id="Qqe-OJ-zOW"/>
-                <constraint firstItem="acF-5w-qt4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="VEC-Hw-laK"/>
-                <constraint firstAttribute="trailing" secondItem="CWO-Ad-Y7C" secondAttribute="trailing" constant="3" id="b4A-PO-Dyd"/>
+                <constraint firstAttribute="trailing" secondItem="CWO-Ad-Y7C" secondAttribute="trailing" id="b4A-PO-Dyd"/>
                 <constraint firstItem="CWO-Ad-Y7C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fjA-Pf-z8I"/>
-                <constraint firstAttribute="trailing" secondItem="whc-ZC-pzc" secondAttribute="trailing" constant="4" id="gvC-Lf-hJZ"/>
                 <constraint firstAttribute="bottom" secondItem="CWO-Ad-Y7C" secondAttribute="bottom" id="p98-Ls-Mmw"/>
-                <constraint firstItem="whc-ZC-pzc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="qh0-sK-G96"/>
-                <constraint firstItem="whc-ZC-pzc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="sBP-iE-s4l"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="bottomCoverViewConstraint" destination="BKm-Z3-i0d" id="nsR-TR-7iC"/>
-                <outlet property="doubleBorderView" destination="acF-5w-qt4" id="swd-BQ-45L"/>
-                <outlet property="doubleBorderViewTopConstraint" destination="VEC-Hw-laK" id="062-tB-0GZ"/>
                 <outlet property="headerBackgroundView" destination="CWO-Ad-Y7C" id="MMc-HZ-yhc"/>
                 <outlet property="headerButton" destination="1g4-RN-5RH" id="AmL-xN-dCD"/>
                 <outlet property="topicLabel" destination="KyD-kn-KJH" id="Mdq-VK-gpQ"/>
@@ -86,12 +64,6 @@
         </view>
     </objects>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="70"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="chevronDown" width="11" height="8"/>
     </resources>
 </document>

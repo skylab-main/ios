@@ -19,18 +19,15 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     var viewModel: TRLMenuViewModelProtocol? = TRLMenuViewModel()
     
     private let cellId = String(describing: TRLMenuCustomTableViewHeader.self)
-    private var defaulttrlMenuTableViewHeight: CGFloat = 196
-    private var defaultBgMenuHeight: CGFloat?
+    private var defaultTrlMenuTableViewHeight: CGFloat? = 196.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
         configureNavBarTitle()
-        
-        myScrollView.isScrollEnabled = false
     }
-
+    
     //MARK: - UI Configurations
     
     private func configureUI() {
@@ -42,15 +39,19 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         trlMenuTableView.dataSource = self
         trlMenuTableView.delegate = self
         
+        myScrollView.isScrollEnabled = false
+        myScrollView.delegate = self
+        
         trlMenuBackgroundView.layer.cornerRadius = 15
         trlMenuBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         applyForACourseButton.titleLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)
         applyForACourseButton.tintColor = .primary
         applyForACourseButton.setTitle("подати заявку на курс" + " \u{2192}", for: .normal)
+    
+        applyForACourseView.layer.addBorder(side: .top, thickness: 1, color: UIColor.systemGray4.cgColor)
         
-        applyForACourseView.addBorders(edges: [.top], color: .systemGray4)
-        
+        // Removes the gap between the headers in the trlMenuTableView
         if #available(iOS 15, *) {
             trlMenuTableView.sectionHeaderTopPadding = 0
         }
@@ -104,7 +105,7 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
         // Get the total number of sections and rows in the table view
         let numSections = tableView.numberOfSections
         let numRowsInSection = tableView.numberOfRows(inSection: indexPath.section)
-
+        
         cell.configureCell()
         
         // Check if this is the last cell in the last section
@@ -131,11 +132,12 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
             let header = Bundle.main.loadNibNamed(cellId, owner: nil)?.first as? TRLMenuCustomTableViewHeader,
             let data = viewModel?.tutorialMenuData
         else { return UIView() }
-        
+    
         header.configureHeader(title: data[section].title, section: section)
         header.rotateImage(data[section].isExpanded)
         header.delegate = self
         
+        // А  ssigns a tag to the header
         if section == 0 {
             header.tag = 1
         } else if section == tableView.numberOfSections - 1 {
@@ -148,11 +150,11 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        60
+        59
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        40
+        33
     }
 }
 
@@ -169,23 +171,34 @@ extension TRLMenuComponentViewController: TRLMenuCustomHeaderDelegate {
         
         self.trlMenuTableView.reloadSections(IndexSet(integer: section), with: .automatic)
         
-        if defaulttrlMenuTableViewHeight == trlMenuTableView.contentSize.height {
+        // Checks if all cells are closed
+        if defaultTrlMenuTableViewHeight == trlMenuTableView.contentSize.height {
             
-            //myScrollView.isScrollEnabled = false
-            navigationController?.hidesBarsOnSwipe = false
+            myScrollView.isScrollEnabled = false
             
-            // Assume scrollView is the UIScrollView instance that you want to reset
-            myScrollView.setContentOffset(CGPoint.zero, animated: true)
-            
-            // Reset the content size of the scroll view
-            myScrollView.contentSize = CGSize(width: myScrollView.frame.width, height: 0.0)
-            
+            // Returns the scrollView to the default position
+            myScrollView.setContentOffset(CGPoint(x: 0, y: -91.0), animated: true)
         } else {
-            myScrollView.isScrollEnabled = true
-            //navigationController?.hidesBarsOnSwipe = true
-            trlMenuViewHeightConstraint.constant = trlMenuTableView.contentSize.height - 300
             
+            myScrollView.isScrollEnabled = true
+            trlMenuViewHeightConstraint.constant = trlMenuTableView.contentSize.height - 300
         }
     }
 }
 
+//MARK: UIScrollViewDelegate
+
+extension TRLMenuComponentViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let contentOffset = scrollView.contentOffset.y
+        
+        // When scrolling it hides or shows the navBar
+        if contentOffset > -91.0 {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        } else {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+}

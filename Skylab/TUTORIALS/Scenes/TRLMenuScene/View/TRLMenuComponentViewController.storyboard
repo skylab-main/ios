@@ -23,7 +23,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHi-FR-beD">
                                         <rect key="frame" x="0.0" y="20" width="393" height="773"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" directionalLockEnabled="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rt3-ga-Twc">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" directionalLockEnabled="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rt3-ga-Twc">
                                                 <rect key="frame" x="20" y="20" width="353" height="717"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <viewLayoutGuide key="contentLayoutGuide" id="BgI-Aw-Sjs"/>
@@ -36,30 +36,20 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DA0-m4-jks">
-                                                                    <rect key="frame" x="3" y="0.0" width="350" height="40"/>
-                                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                                </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roK-0l-gMx">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
                                                                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                                 </view>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="roK-0l-gMx" firstAttribute="top" secondItem="pPJ-c8-BGk" secondAttribute="top" id="3Tw-oF-6J8"/>
                                                                 <constraint firstAttribute="bottom" secondItem="roK-0l-gMx" secondAttribute="bottom" id="AbD-Mo-dLd"/>
-                                                                <constraint firstAttribute="trailing" secondItem="DA0-m4-jks" secondAttribute="trailing" id="AjF-25-jeZ"/>
-                                                                <constraint firstItem="DA0-m4-jks" firstAttribute="top" secondItem="pPJ-c8-BGk" secondAttribute="top" id="B8U-CO-aqk"/>
-                                                                <constraint firstItem="DA0-m4-jks" firstAttribute="leading" secondItem="pPJ-c8-BGk" secondAttribute="leading" constant="3" id="P5x-3G-mPN"/>
                                                                 <constraint firstItem="roK-0l-gMx" firstAttribute="leading" secondItem="pPJ-c8-BGk" secondAttribute="leading" id="fP9-3W-WDM"/>
-                                                                <constraint firstAttribute="bottom" secondItem="DA0-m4-jks" secondAttribute="bottom" id="hDD-cF-iaG"/>
-                                                                <constraint firstAttribute="trailing" secondItem="roK-0l-gMx" secondAttribute="trailing" constant="3" id="mKe-IQ-O1l"/>
+                                                                <constraint firstAttribute="trailing" secondItem="roK-0l-gMx" secondAttribute="trailing" id="mKe-IQ-O1l"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
                                                             <outlet property="cellMainView" destination="roK-0l-gMx" id="gUN-Vd-vPJ"/>
-                                                            <outlet property="cellMainViewBottomConstraint" destination="AbD-Mo-dLd" id="Ddq-6u-MUr"/>
-                                                            <outlet property="doubleBorderView" destination="DA0-m4-jks" id="kdT-uq-lpU"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -148,9 +138,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
