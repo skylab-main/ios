@@ -23,6 +23,26 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        roundHeaderCornersAndSetBorders(tag)
+    }
+    
+    //MARK: - View configurations
+    
+    func configureHeader(title: String, section: Int) {
+        
+        topicLabel.text = title
+        topicLabel.font = UIFont(name: "AnonymousPro-Bold", size: 14)
+        topicLabel.textColor = .primary
+        
+        headerButton.tag = section
+        headerButton.setTitle("", for: .normal)
+        headerButton.imageEdgeInsets.right = 23
+        
+        headerBackgroundView.backgroundColor = .white
+    }
+    
+    private func roundHeaderCornersAndSetBorders(_ tag: Int) {
+        
         switch tag {
             
         case 1: // This is the first header view
@@ -64,21 +84,6 @@ class TRLMenuCustomTableViewHeader: UITableViewHeaderFooterView {
             headerBackgroundView.layer.addBorder(side: .leftAndRight, thickness: borderThickness, color: customColor)
             headerBackgroundView.layer.addBorder(side: .top, thickness: borderThickness, color: customColor)
         }
-    }
-    
-    //MARK: - View configurations
-    
-    func configureHeader(title: String, section: Int) {
-        
-        topicLabel.text = title
-        topicLabel.font = UIFont(name: "AnonymousPro-Bold", size: 14)
-        topicLabel.textColor = .primary
-        
-        headerButton.tag = section
-        headerButton.setTitle("", for: .normal)
-        headerButton.imageEdgeInsets.right = 23
-        
-        headerBackgroundView.backgroundColor = .white
     }
     
     func rotateImage(_ expanded: Bool) {

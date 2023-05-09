@@ -30,6 +30,7 @@ extension CALayer {
     }
     
     func addBorder(side: BorderSide, thickness: CGFloat, color: CGColor, maskedCorners: CACornerMask? = nil) {
+        
         var topWidth = frame.size.width; var bottomWidth = topWidth
         var leftHeight = frame.size.height; var rightHeight = leftHeight
         
@@ -38,17 +39,18 @@ extension CALayer {
         
         // Draw the corners and set side offsets
         switch maskedCorners {
+            
         case [.layerMinXMinYCorner, .layerMaxXMinYCorner]: // Top only
             addCorner(.topLeft, thickness: thickness, color: color)
             addCorner(.topRight, thickness: thickness, color: color)
-            topWidth -= cornerRadius*2
+            topWidth -= cornerRadius * 2
             leftHeight -= cornerRadius; rightHeight -= cornerRadius
             topXOffset = cornerRadius; leftYOffset = cornerRadius; rightYOffset = cornerRadius
             
         case [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]: // Bottom only
             addCorner(.bottomLeft, thickness: thickness, color: color)
             addCorner(.bottomRight, thickness: thickness, color: color)
-            bottomWidth -= cornerRadius*2
+            bottomWidth -= cornerRadius * 2
             leftHeight -= cornerRadius; rightHeight -= cornerRadius
             bottomXOffset = cornerRadius
             
@@ -56,14 +58,14 @@ extension CALayer {
             addCorner(.topLeft, thickness: thickness, color: color)
             addCorner(.bottomLeft, thickness: thickness, color: color)
             topWidth -= cornerRadius; bottomWidth -= cornerRadius
-            leftHeight -= cornerRadius*2
+            leftHeight -= cornerRadius * 2
             leftYOffset = cornerRadius; topXOffset = cornerRadius; bottomXOffset = cornerRadius;
             
         case [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]: // Right only
             addCorner(.topRight, thickness: thickness, color: color)
             addCorner(.bottomRight, thickness: thickness, color: color)
             topWidth -= cornerRadius; bottomWidth -= cornerRadius
-            rightHeight -= cornerRadius*2
+            rightHeight -= cornerRadius * 2
             rightYOffset = cornerRadius
             
         case [.layerMaxXMinYCorner, .layerMaxXMaxYCorner,  // All
@@ -72,9 +74,9 @@ extension CALayer {
             addCorner(.topRight, thickness: thickness, color: color)
             addCorner(.bottomLeft, thickness: thickness, color: color)
             addCorner(.bottomRight, thickness: thickness, color: color)
-            topWidth -= cornerRadius*2; bottomWidth -= cornerRadius*2
+            topWidth -= cornerRadius * 2; bottomWidth -= cornerRadius * 2
             topXOffset = cornerRadius; bottomXOffset = cornerRadius
-            leftHeight -= cornerRadius*2; rightHeight -= cornerRadius*2
+            leftHeight -= cornerRadius * 2; rightHeight -= cornerRadius * 2
             leftYOffset = cornerRadius; rightYOffset = cornerRadius
             
         default: break
@@ -123,21 +125,21 @@ extension CALayer {
         let width = frame.size.width; let height = frame.size.height
         var x = cornerRadius
         var y = cornerRadius
-        var startAngle: CGFloat = .pi; var endAngle: CGFloat = .pi*3/2
+        var startAngle: CGFloat = .pi; var endAngle: CGFloat = .pi * 3 / 2
         
         switch corner {
         case .bottomLeft:
             y = height - cornerRadius
-            startAngle = .pi/2; endAngle = .pi
+            startAngle = .pi / 2; endAngle = .pi
             
         case .bottomRight:
             x = width - cornerRadius
             y = height - cornerRadius
-            startAngle = 0; endAngle = .pi/2
+            startAngle = 0; endAngle = .pi / 2
             
         case .topRight:
             x = width - cornerRadius
-            startAngle = .pi*3/2; endAngle = 0
+            startAngle = .pi * 3 / 2; endAngle = 0
             
         default: break
         }

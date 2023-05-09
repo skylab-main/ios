@@ -76,7 +76,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXc-Xa-YK3">
                                 <rect key="frame" x="0.0" y="737" width="393" height="115"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-PA-UKz" customClass="BaseBackgroundView" customModule="Skylab" customModuleProvider="target">
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghb-np-W0S">
+                                        <rect key="frame" x="23" y="38" width="353" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-PA-UKz">
                                         <rect key="frame" x="20" y="35" width="353" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wu-Wn-hu7">
@@ -85,6 +89,7 @@
                                                 <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                         <constraints>
                                             <constraint firstItem="8Wu-Wn-hu7" firstAttribute="leading" secondItem="HWf-PA-UKz" secondAttribute="leading" id="5R5-8y-P8G"/>
                                             <constraint firstItem="8Wu-Wn-hu7" firstAttribute="top" secondItem="HWf-PA-UKz" secondAttribute="top" id="QaU-hD-qDF"/>
@@ -96,10 +101,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HWf-PA-UKz" secondAttribute="trailing" constant="20" id="2lg-DC-smZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ghb-np-W0S" secondAttribute="trailing" constant="17" id="5Lg-cR-A5K"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ghb-np-W0S" secondAttribute="bottom" constant="37" id="6tC-oh-FTf"/>
                                     <constraint firstAttribute="height" constant="115" id="cAd-Hx-x5U"/>
                                     <constraint firstItem="HWf-PA-UKz" firstAttribute="leading" secondItem="tXc-Xa-YK3" secondAttribute="leading" constant="20" id="g1b-Q5-iuG"/>
                                     <constraint firstItem="HWf-PA-UKz" firstAttribute="top" secondItem="tXc-Xa-YK3" secondAttribute="top" constant="35" id="i3f-3d-82t"/>
                                     <constraint firstAttribute="bottom" secondItem="HWf-PA-UKz" secondAttribute="bottom" constant="40" id="lEG-ZJ-1hX"/>
+                                    <constraint firstItem="Ghb-np-W0S" firstAttribute="leading" secondItem="tXc-Xa-YK3" secondAttribute="leading" constant="23" id="syT-hW-91C"/>
+                                    <constraint firstItem="Ghb-np-W0S" firstAttribute="top" secondItem="tXc-Xa-YK3" secondAttribute="top" constant="38" id="t8d-cf-I3n"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -121,10 +130,12 @@
                     <connections>
                         <outlet property="applyForACourseButton" destination="8Wu-Wn-hu7" id="P5S-Gr-zNF"/>
                         <outlet property="applyForACourseView" destination="tXc-Xa-YK3" id="Y8A-oC-uP1"/>
-                        <outlet property="myScrollView" destination="Xu5-uC-HTR" id="WYx-qN-IsU"/>
                         <outlet property="trlMenuBackgroundView" destination="lHi-FR-beD" id="Oni-uO-7ZH"/>
+                        <outlet property="trlMenuScrollView" destination="Xu5-uC-HTR" id="WYx-qN-IsU"/>
                         <outlet property="trlMenuTableView" destination="Rt3-ga-Twc" id="XjQ-lZ-TDb"/>
                         <outlet property="trlMenuViewHeightConstraint" destination="mXb-xX-3B0" id="yme-LE-XuR"/>
+                        <outletCollection property="applyForACourseButtonViews" destination="HWf-PA-UKz" collectionClass="NSMutableArray" id="8d4-Rs-2Hu"/>
+                        <outletCollection property="applyForACourseButtonViews" destination="Ghb-np-W0S" collectionClass="NSMutableArray" id="9EJ-BP-DFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -133,11 +144,17 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

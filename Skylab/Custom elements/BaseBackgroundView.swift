@@ -20,7 +20,7 @@ final class BaseBackgroundView: UIView {
         didSet { self.layer.cornerRadius = cornerRadius }
     }
     
-    @IBInspectable var distance: CGFloat = 3
+    @IBInspectable var distance: CGFloat = 6
     
     @IBInspectable var borderColor: UIColor = UIColor(red: 16/255, green: 68/255, blue: 153/255, alpha: 1) {
         didSet { self.layer.borderColor = borderColor.cgColor }
@@ -45,7 +45,6 @@ final class BaseBackgroundView: UIView {
     private func addDoubleBorder() {
         // Create a new subview to hold the bottom border
         let bottomView = UIView(frame: CGRect(x: distance, y: distance, width: self.frame.width, height: self.frame.height))
-        bottomView.backgroundColor = .primary
         bottomView.layer.borderWidth = borderWidth
         bottomView.layer.borderColor = borderColor.cgColor
         bottomView.layer.cornerRadius = cornerRadius

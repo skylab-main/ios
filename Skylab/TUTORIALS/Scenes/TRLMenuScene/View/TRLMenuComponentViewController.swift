@@ -13,21 +13,27 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var trlMenuBackgroundView: UIView!
     @IBOutlet weak var applyForACourseView: UIView!
     @IBOutlet weak var applyForACourseButton: UIButton!
-    @IBOutlet weak var myScrollView: UIScrollView!
+    @IBOutlet weak var trlMenuScrollView: UIScrollView!
     @IBOutlet weak var trlMenuViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var applyForACourseButtonViews: [UIView]!
     
     var viewModel: TRLMenuViewModelProtocol? = TRLMenuViewModel()
     
     private let cellId = String(describing: TRLMenuCustomTableViewHeader.self)
     private var defaultTrlMenuTableViewHeight: CGFloat? = 196.0
+    private var defaultScrollViewContentOffsetY: CGFloat?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
-        configureNavBarTitle()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        defaultScrollViewContentOffsetY = trlMenuScrollView.contentOffset.y
+    }
+
     //MARK: - UI Configurations
     
     private func configureUI() {
@@ -39,8 +45,8 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         trlMenuTableView.dataSource = self
         trlMenuTableView.delegate = self
         
-        myScrollView.isScrollEnabled = false
-        myScrollView.delegate = self
+        trlMenuScrollView.isScrollEnabled = false
+        trlMenuScrollView.delegate = self
         
         trlMenuBackgroundView.layer.cornerRadius = 15
         trlMenuBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -55,6 +61,9 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         if #available(iOS 15, *) {
             trlMenuTableView.sectionHeaderTopPadding = 0
         }
+        
+        configureNavBarTitle()
+        configureApplyForACourseButtonView()
     }
     
     private func configureNavBarTitle() {
@@ -69,7 +78,24 @@ class TRLMenuComponentViewController: BaseViewController, Storyboarded {
         ]
         
         navBar.tintColor = .white
+        navBar.barTintColor = .primary
         navigationItem.backButtonTitle = ""
+    }
+    
+    private func configureApplyForACourseButtonView() {
+        
+        for view in applyForACourseButtonViews {
+            
+            view.layer.borderWidth = 1
+            view.layer.borderColor = UIColor.primary.cgColor
+            view.layer.cornerRadius = 10
+       
+            if view.tag == 0 {
+                view.backgroundColor = .white
+            } else {
+                view.backgroundColor = .primary
+            }
+        }
     }
     
 }
@@ -137,7 +163,7 @@ extension TRLMenuComponentViewController: UITableViewDelegate, UITableViewDataSo
         header.rotateImage(data[section].isExpanded)
         header.delegate = self
         
-        // А  ssigns a tag to the header
+        // А ssigns a tag to the header
         if section == 0 {
             header.tag = 1
         } else if section == tableView.numberOfSections - 1 {
@@ -174,13 +200,13 @@ extension TRLMenuComponentViewController: TRLMenuCustomHeaderDelegate {
         // Checks if all cells are closed
         if defaultTrlMenuTableViewHeight == trlMenuTableView.contentSize.height {
             
-            myScrollView.isScrollEnabled = false
+            trlMenuScrollView.isScrollEnabled = false
             
             // Returns the scrollView to the default position
-            myScrollView.setContentOffset(CGPoint(x: 0, y: -91.0), animated: true)
+            trlMenuScrollView.setContentOffset(CGPoint(x: 0, y: defaultScrollViewContentOffsetY ?? 0), animated: true)
         } else {
             
-            myScrollView.isScrollEnabled = true
+            trlMenuScrollView.isScrollEnabled = true
             trlMenuViewHeightConstraint.constant = trlMenuTableView.contentSize.height - 300
         }
     }
@@ -195,7 +221,7 @@ extension TRLMenuComponentViewController: UIScrollViewDelegate {
         let contentOffset = scrollView.contentOffset.y
         
         // When scrolling it hides or shows the navBar
-        if contentOffset > -91.0 {
+        if contentOffset > defaultScrollViewContentOffsetY ?? 0 {
             navigationController?.setNavigationBarHidden(true, animated: true)
         } else {
             navigationController?.setNavigationBarHidden(false, animated: true)
