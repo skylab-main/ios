@@ -24,6 +24,7 @@ class CourseDescriptionCoordinator: Coordinator {
         //let viewModel = AboutViewModel()
         //viewController.viewModel = viewModel
         rootController.tabBarController?.tabBar.isHidden = true
+
         rootController.pushViewController(viewController, animated: true)
     }
 

@@ -105,13 +105,14 @@
 		DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2365D294F73180009AF47 /* BaseViewController.swift */; };
 		ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */; };
 		F450D7202A1CD78700AF8768 /* CourseDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D71F2A1CD78700AF8768 /* CourseDescriptionViewController.swift */; };
-		F450D7222A1CD79200AF8768 /* CourseDescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450D7212A1CD79200AF8768 /* CourseDescriptionViewController.storyboard */; };
 		F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7232A1CD89800AF8768 /* CourseDescriptionCoordinator.swift */; };
 		F450D7262A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7252A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift */; };
-		F450D72E2A1CDC7C00AF8768 /* CustomAboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F450D72C2A1CDC7C00AF8768 /* CustomAboutView.xib */; };
+		F450D72E2A1CDC7C00AF8768 /* CustomApplyForCourseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F450D72C2A1CDC7C00AF8768 /* CustomApplyForCourseView.xib */; };
 		F450D7322A1CE90500AF8768 /* BaseUIViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7312A1CE90500AF8768 /* BaseUIViewComponent.swift */; };
-		F450D7342A1CE92900AF8768 /* CustomAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7332A1CE92900AF8768 /* CustomAboutView.swift */; };
 		F450D7362A1CF00F00AF8768 /* CustomViewsBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7352A1CF00F00AF8768 /* CustomViewsBorder.swift */; };
+		F450D7382A1D16C300AF8768 /* CourseDescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450D7372A1D16C300AF8768 /* CourseDescriptionViewController.storyboard */; };
+		F450D73A2A1D194100AF8768 /* CustomApplyForCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */; };
+		F450D7422A1D20F500AF8768 /* DoubleBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7412A1D20F500AF8768 /* DoubleBorderView.swift */; };
 		F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */; };
 		F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1129E589F300F83E44 /* EnviromentHelper.swift */; };
 		F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1429E5956B00F83E44 /* TutorialTableViewCell.swift */; };
@@ -258,13 +259,14 @@
 		DFF2365D294F73180009AF47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F450D71F2A1CD78700AF8768 /* CourseDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewController.swift; sourceTree = "<group>"; };
-		F450D7212A1CD79200AF8768 /* CourseDescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseDescriptionViewController.storyboard; sourceTree = "<group>"; };
 		F450D7232A1CD89800AF8768 /* CourseDescriptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionCoordinator.swift; sourceTree = "<group>"; };
 		F450D7252A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinatorDelegate.swift; sourceTree = "<group>"; };
-		F450D72C2A1CDC7C00AF8768 /* CustomAboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAboutView.xib; sourceTree = "<group>"; };
+		F450D72C2A1CDC7C00AF8768 /* CustomApplyForCourseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomApplyForCourseView.xib; sourceTree = "<group>"; };
 		F450D7312A1CE90500AF8768 /* BaseUIViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewComponent.swift; sourceTree = "<group>"; };
-		F450D7332A1CE92900AF8768 /* CustomAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAboutView.swift; sourceTree = "<group>"; };
 		F450D7352A1CF00F00AF8768 /* CustomViewsBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewsBorder.swift; sourceTree = "<group>"; };
+		F450D7372A1D16C300AF8768 /* CourseDescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseDescriptionViewController.storyboard; sourceTree = "<group>"; };
+		F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApplyForCourseView.swift; sourceTree = "<group>"; };
+		F450D7412A1D20F500AF8768 /* DoubleBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBorderView.swift; sourceTree = "<group>"; };
 		F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 		F4881E0E29E588B800F83E44 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F4881E0F29E5895800F83E44 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
@@ -927,7 +929,7 @@
 			children = (
 				F450D72A2A1CDC3D00AF8768 /* CustomViews */,
 				F450D71F2A1CD78700AF8768 /* CourseDescriptionViewController.swift */,
-				F450D7212A1CD79200AF8768 /* CourseDescriptionViewController.storyboard */,
+				F450D7372A1D16C300AF8768 /* CourseDescriptionViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -935,10 +937,27 @@
 		F450D72A2A1CDC3D00AF8768 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				F450D7332A1CE92900AF8768 /* CustomAboutView.swift */,
-				F450D72C2A1CDC7C00AF8768 /* CustomAboutView.xib */,
+				F450D73B2A1D208300AF8768 /* ApplyForCourseView */,
+				F450D73C2A1D209B00AF8768 /* DoubleBordersView */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F450D73B2A1D208300AF8768 /* ApplyForCourseView */ = {
+			isa = PBXGroup;
+			children = (
+				F450D72C2A1CDC7C00AF8768 /* CustomApplyForCourseView.xib */,
+				F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */,
+			);
+			path = ApplyForCourseView;
+			sourceTree = "<group>";
+		};
+		F450D73C2A1D209B00AF8768 /* DoubleBordersView */ = {
+			isa = PBXGroup;
+			children = (
+				F450D7412A1D20F500AF8768 /* DoubleBorderView.swift */,
+			);
+			path = DoubleBordersView;
 			sourceTree = "<group>";
 		};
 		F4881E0D29E588A400F83E44 /* Configurations */ = {
@@ -1316,6 +1335,7 @@
 				047D39D529E73CA9000D8D8C /* QuizViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
+				F450D7382A1D16C300AF8768 /* CourseDescriptionViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
 				F4B1314729E445A2005760B6 /* MainMenuViewController.storyboard in Resources */,
@@ -1324,9 +1344,8 @@
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
-				F450D7222A1CD79200AF8768 /* CourseDescriptionViewController.storyboard in Resources */,
 				6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */,
-				F450D72E2A1CDC7C00AF8768 /* CustomAboutView.xib in Resources */,
+				F450D72E2A1CDC7C00AF8768 /* CustomApplyForCourseView.xib in Resources */,
 				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
 				047D39DD29E73D99000D8D8C /* PracticeViewController.storyboard in Resources */,
 				F4E7F13529E98E1700D6FDD1 /* ChatGPTViewController.storyboard in Resources */,
@@ -1410,6 +1429,7 @@
 				047D39E929E7416F000D8D8C /* LessonsCoordinator.swift in Sources */,
 				F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift in Sources */,
 				F450D7322A1CE90500AF8768 /* BaseUIViewComponent.swift in Sources */,
+				F450D7422A1D20F500AF8768 /* DoubleBorderView.swift in Sources */,
 				F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */,
 				047D39D129E73912000D8D8C /* QuizViewModel.swift in Sources */,
 				047D39E229E7404F000D8D8C /* LessonsViewController.swift in Sources */,
@@ -1418,6 +1438,7 @@
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */,
+				F450D73A2A1D194100AF8768 /* CustomApplyForCourseView.swift in Sources */,
 				045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */,
 				089F803929D2D3B900748D24 /* SecondPageSwiftUIView.swift in Sources */,
 				047D39A829E72CBD000D8D8C /* MainTabBarCoordinator.swift in Sources */,
@@ -1451,7 +1472,6 @@
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
 				047D39F329E74390000D8D8C /* AboutCoordinator.swift in Sources */,
 				152E04CF298471FD00ABCEA2 /* SwinjectTestPageSubViewControllerViewModel.swift in Sources */,
-				F450D7342A1CE92900AF8768 /* CustomAboutView.swift in Sources */,
 				1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */,
 				F48CE08B29E6C63F008A47F5 /* ContainerMainMenu.swift in Sources */,
 				047D39E729E7410E000D8D8C /* LessonsViewModel.swift in Sources */,
