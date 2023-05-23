@@ -151,7 +151,9 @@ class AboutViewController: BaseViewController, Storyboarded {
     }
     
     @objc private func showCourseDescription() {
+        
         print("showCourseDescription")
+        viewModel?.openCourseDescriptionViewController()
     }
     
     private func setupConstraints() {

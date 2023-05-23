@@ -29,7 +29,7 @@ class AppCoordinator: Coordinator {
         
         /// Local 'if' executed when the application is launched from the 'release' schema
         #if LOCAL
-//        testScrollableMenuView()
+        testScrollableMenuView()
 //        openAuthorization()
 //          openOnboarding()
         openMainTabBar()

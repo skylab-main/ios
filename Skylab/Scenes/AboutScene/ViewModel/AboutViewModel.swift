@@ -9,4 +9,10 @@ import Foundation
 
 class AboutViewModel {
     
+    weak var coordinatorDelegate: AboutCoordinatorDelegate?
+    
+    func openCourseDescriptionViewController() {
+        
+        coordinatorDelegate?.openCourseDescriptionViewControllerDelegate()
+    }
 }

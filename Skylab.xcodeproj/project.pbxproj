@@ -104,6 +104,14 @@
 		DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2364F294F6ED00009AF47 /* Storyboarded.swift */; };
 		DFF2365E294F73180009AF47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2365D294F73180009AF47 /* BaseViewController.swift */; };
 		ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */; };
+		F450D7202A1CD78700AF8768 /* CourseDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D71F2A1CD78700AF8768 /* CourseDescriptionViewController.swift */; };
+		F450D7222A1CD79200AF8768 /* CourseDescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450D7212A1CD79200AF8768 /* CourseDescriptionViewController.storyboard */; };
+		F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7232A1CD89800AF8768 /* CourseDescriptionCoordinator.swift */; };
+		F450D7262A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7252A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift */; };
+		F450D72E2A1CDC7C00AF8768 /* CustomAboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F450D72C2A1CDC7C00AF8768 /* CustomAboutView.xib */; };
+		F450D7322A1CE90500AF8768 /* BaseUIViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7312A1CE90500AF8768 /* BaseUIViewComponent.swift */; };
+		F450D7342A1CE92900AF8768 /* CustomAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7332A1CE92900AF8768 /* CustomAboutView.swift */; };
+		F450D7362A1CF00F00AF8768 /* CustomViewsBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7352A1CF00F00AF8768 /* CustomViewsBorder.swift */; };
 		F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */; };
 		F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1129E589F300F83E44 /* EnviromentHelper.swift */; };
 		F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1429E5956B00F83E44 /* TutorialTableViewCell.swift */; };
@@ -249,6 +257,14 @@
 		DFF2364F294F6ED00009AF47 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		DFF2365D294F73180009AF47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		F450D71F2A1CD78700AF8768 /* CourseDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewController.swift; sourceTree = "<group>"; };
+		F450D7212A1CD79200AF8768 /* CourseDescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseDescriptionViewController.storyboard; sourceTree = "<group>"; };
+		F450D7232A1CD89800AF8768 /* CourseDescriptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionCoordinator.swift; sourceTree = "<group>"; };
+		F450D7252A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		F450D72C2A1CDC7C00AF8768 /* CustomAboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAboutView.xib; sourceTree = "<group>"; };
+		F450D7312A1CE90500AF8768 /* BaseUIViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewComponent.swift; sourceTree = "<group>"; };
+		F450D7332A1CE92900AF8768 /* CustomAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAboutView.swift; sourceTree = "<group>"; };
+		F450D7352A1CF00F00AF8768 /* CustomViewsBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewsBorder.swift; sourceTree = "<group>"; };
 		F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 		F4881E0E29E588B800F83E44 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F4881E0F29E5895800F83E44 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
@@ -369,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				047D39F229E74390000D8D8C /* AboutCoordinator.swift */,
+				F450D7252A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift */,
 				047D39EF29E742FB000D8D8C /* ViewModel */,
 				047D39EA29E7427C000D8D8C /* View */,
 			);
@@ -470,6 +487,7 @@
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
 				04DEDBED29E9EBD500486A42 /* BaseButton.swift */,
 				04DEDBF129E9EDA700486A42 /* CircularImageView.swift */,
+				F450D7352A1CF00F00AF8768 /* CustomViewsBorder.swift */,
 			);
 			path = "Custom elements";
 			sourceTree = "<group>";
@@ -784,6 +802,7 @@
 			isa = PBXGroup;
 			children = (
 				DFF2365D294F73180009AF47 /* BaseViewController.swift */,
+				F450D7312A1CE90500AF8768 /* BaseUIViewComponent.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -867,6 +886,7 @@
 				047D39C629E737C5000D8D8C /* LessonsScene */,
 				047D39C729E737E3000D8D8C /* PracticeScene */,
 				047D39C829E73888000D8D8C /* AboutScene */,
+				F450D71A2A1CD6E400AF8768 /* CourseDescription */,
 				DF3E2E8E296A0E4900810694 /* TabBar */,
 				DF3D3C282969F62A00CFCE49 /* OnboardingScene */,
 				DF3D3C252969F59A00CFCE49 /* AuthorizationScene */,
@@ -883,6 +903,42 @@
 				ED0BAF98299ED1DD00B76AF3 /* OnboardingViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F450D71A2A1CD6E400AF8768 /* CourseDescription */ = {
+			isa = PBXGroup;
+			children = (
+				F450D7232A1CD89800AF8768 /* CourseDescriptionCoordinator.swift */,
+				F450D71B2A1CD73500AF8768 /* ViewModel */,
+				F450D71C2A1CD73B00AF8768 /* View */,
+			);
+			path = CourseDescription;
+			sourceTree = "<group>";
+		};
+		F450D71B2A1CD73500AF8768 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F450D71C2A1CD73B00AF8768 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F450D72A2A1CDC3D00AF8768 /* CustomViews */,
+				F450D71F2A1CD78700AF8768 /* CourseDescriptionViewController.swift */,
+				F450D7212A1CD79200AF8768 /* CourseDescriptionViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F450D72A2A1CDC3D00AF8768 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F450D7332A1CE92900AF8768 /* CustomAboutView.swift */,
+				F450D72C2A1CDC7C00AF8768 /* CustomAboutView.xib */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		F4881E0D29E588A400F83E44 /* Configurations */ = {
@@ -1268,7 +1324,9 @@
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
+				F450D7222A1CD79200AF8768 /* CourseDescriptionViewController.storyboard in Resources */,
 				6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */,
+				F450D72E2A1CDC7C00AF8768 /* CustomAboutView.xib in Resources */,
 				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
 				047D39DD29E73D99000D8D8C /* PracticeViewController.storyboard in Resources */,
 				F4E7F13529E98E1700D6FDD1 /* ChatGPTViewController.storyboard in Resources */,
@@ -1311,12 +1369,15 @@
 				F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */,
+				F450D7202A1CD78700AF8768 /* CourseDescriptionViewController.swift in Sources */,
+				F450D7362A1CF00F00AF8768 /* CustomViewsBorder.swift in Sources */,
 				6EC3856C29C87CCF00114D03 /* Feature.swift in Sources */,
 				0466127A29C5E9FB002CAC3E /* ScrollableMenuLayout.swift in Sources */,
 				F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */,
 				152E04CD298471BD00ABCEA2 /* SwinjectPageViewModel.swift in Sources */,
 				047D39D929E73D72000D8D8C /* PracticeCoordinator.swift in Sources */,
 				F4E7F11529E815BD00D6FDD1 /* TutorialCoordinator.swift in Sources */,
+				F450D7262A1CD9D100AF8768 /* AboutCoordinatorDelegate.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
 				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
 				047D39CE29E738F6000D8D8C /* QuizViewController.swift in Sources */,
@@ -1348,6 +1409,7 @@
 				045D3FD129BE785F00456DEC /* ScrollableMenuView.swift in Sources */,
 				047D39E929E7416F000D8D8C /* LessonsCoordinator.swift in Sources */,
 				F48CE08829E6AC47008A47F5 /* MainMenuCoordinatorDelegate.swift in Sources */,
+				F450D7322A1CE90500AF8768 /* BaseUIViewComponent.swift in Sources */,
 				F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */,
 				047D39D129E73912000D8D8C /* QuizViewModel.swift in Sources */,
 				047D39E229E7404F000D8D8C /* LessonsViewController.swift in Sources */,
@@ -1355,6 +1417,7 @@
 				1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */,
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
+				F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */,
 				045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */,
 				089F803929D2D3B900748D24 /* SecondPageSwiftUIView.swift in Sources */,
 				047D39A829E72CBD000D8D8C /* MainTabBarCoordinator.swift in Sources */,
@@ -1388,6 +1451,7 @@
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
 				047D39F329E74390000D8D8C /* AboutCoordinator.swift in Sources */,
 				152E04CF298471FD00ABCEA2 /* SwinjectTestPageSubViewControllerViewModel.swift in Sources */,
+				F450D7342A1CE92900AF8768 /* CustomAboutView.swift in Sources */,
 				1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */,
 				F48CE08B29E6C63F008A47F5 /* ContainerMainMenu.swift in Sources */,
 				047D39E729E7410E000D8D8C /* LessonsViewModel.swift in Sources */,
