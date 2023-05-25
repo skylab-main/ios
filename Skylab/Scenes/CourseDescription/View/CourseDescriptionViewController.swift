@@ -14,6 +14,8 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var courseDescriptionLabel: UILabel!
     @IBOutlet weak var topicListButton: UIButton!
     @IBOutlet var figureViews: [UIView]!
+    @IBOutlet weak var reviewsLabel: UILabel!
+    @IBOutlet weak var reviewsCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,30 +39,26 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         topicListButton.titleLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)
         topicListButton.tintColor = .primary
         
+        reviewsLabel.text = "відгуки студентів"
+        reviewsLabel = ServiceManager.shared.configureCustom(reviewsLabel,
+                                                             font: .anonymousProBold,
+                                                             fontSize: 28,
+                                                             textColor: .primary, nil)
+        
+        courseDescriptionLabel.text = "Наш навчальний курс ми створювали, керуючись досвідом реальних проектів. Завдання побудовані таким чином, щоб студенти рухалися від простого до більш складного поступово. Якщо студенту не дається якесь завдання, ментор допоможе впоратися з ним."
+        courseDescriptionLabel = ServiceManager.shared.configureCustom(courseDescriptionLabel,
+                                                                       font: .anonymousProBold,
+                                                                       fontSize: 14,
+                                                                       textColor: .primary, 8)
+        
         for figure in figureViews {
             figure.backgroundColor = .primary
         }
         
-        configureDescriprionLabel()
+        reviewsCollectionView.dataSource = self
+    
         customView.configureUI()
         configureNavBarTitle()
-    }
-    
-    private func configureDescriprionLabel() {
-        
-        let text = "Наш навчальний курс ми створювали, керуючись досвідом реальних проектів. Завдання побудовані таким чином, щоб студенти рухалися від простого до більш складного поступово. Якщо студенту не дається якесь завдання, ментор допоможе впоратися з ним."
-        let attributedString = NSMutableAttributedString(string: text)
-        // Create a paragraph style
-        let paragraphStyle = NSMutableParagraphStyle()
-        // Set the line spacing (line height)
-        paragraphStyle.lineSpacing = 8.0
-        // Apply the paragraph style to the attributed string
-        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attributedString.length))
-
-        // Set the attributed and configure text on the label
-        courseDescriptionLabel.font = UIFont(name: "AnonymousPro-Bold", size: 14)
-        courseDescriptionLabel.textColor = .primary
-        courseDescriptionLabel.attributedText = attributedString
     }
     
     private func configureNavBarTitle() {
@@ -82,4 +80,30 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         navBar.topItem?.backButtonDisplayMode = .minimal
     }
 
+}
+
+extension CourseDescriptionViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        1
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewsCollectionViewCell",
+                                                          for: indexPath) as? ReviewsCollectionViewCell
+        else { return UICollectionViewCell() }
+        
+        cell.configureCell()
+        
+        return cell
+    }
+    
+    
+    
 }

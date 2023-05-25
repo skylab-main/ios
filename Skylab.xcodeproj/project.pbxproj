@@ -113,6 +113,7 @@
 		F450D7382A1D16C300AF8768 /* CourseDescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450D7372A1D16C300AF8768 /* CourseDescriptionViewController.storyboard */; };
 		F450D73A2A1D194100AF8768 /* CustomApplyForCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */; };
 		F450D7422A1D20F500AF8768 /* DoubleBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7412A1D20F500AF8768 /* DoubleBorderView.swift */; };
+		F45F646C2A1E322D006E185C /* ReviewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45F646B2A1E322D006E185C /* ReviewsCollectionViewCell.swift */; };
 		F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */; };
 		F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1129E589F300F83E44 /* EnviromentHelper.swift */; };
 		F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1429E5956B00F83E44 /* TutorialTableViewCell.swift */; };
@@ -128,6 +129,9 @@
 		F4B1314F29E4465A005760B6 /* ApplicationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1314E29E4465A005760B6 /* ApplicationViewController.storyboard */; };
 		F4B1315229E4468C005760B6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1315129E4468C005760B6 /* TutorialViewController.swift */; };
 		F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */; };
+		F4CC4CC42A1F940800A2EC42 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC32A1F940800A2EC42 /* ServiceManager.swift */; };
+		F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */; };
+		F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */; };
 		F4E7F10529E8052700D6FDD1 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F10429E8052700D6FDD1 /* ChatGPTViewController.swift */; };
 		F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F10829E8056A00D6FDD1 /* ChatGPTViewModel.swift */; };
 		F4E7F10E29E808B400D6FDD1 /* TopicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F10D29E808B400D6FDD1 /* TopicsCollectionViewCell.swift */; };
@@ -267,6 +271,7 @@
 		F450D7372A1D16C300AF8768 /* CourseDescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseDescriptionViewController.storyboard; sourceTree = "<group>"; };
 		F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApplyForCourseView.swift; sourceTree = "<group>"; };
 		F450D7412A1D20F500AF8768 /* DoubleBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBorderView.swift; sourceTree = "<group>"; };
+		F45F646B2A1E322D006E185C /* ReviewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 		F4881E0E29E588B800F83E44 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F4881E0F29E5895800F83E44 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
@@ -284,6 +289,9 @@
 		F4B1314E29E4465A005760B6 /* ApplicationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationViewController.storyboard; sourceTree = "<group>"; };
 		F4B1315129E4468C005760B6 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
+		F4CC4CC32A1F940800A2EC42 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModel.swift; sourceTree = "<group>"; };
+		F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModelProtocol.swift; sourceTree = "<group>"; };
 		F4E7F10429E8052700D6FDD1 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
 		F4E7F10629E8053A00D6FDD1 /* ChatGPTViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatGPTViewController.storyboard; sourceTree = "<group>"; };
 		F4E7F10829E8056A00D6FDD1 /* ChatGPTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewModel.swift; sourceTree = "<group>"; };
@@ -841,6 +849,7 @@
 				DF4D3E24296600A000070D79 /* Base */,
 				DFF23643294F6A4C0009AF47 /* Common */,
 				08E66EEA29BFC3A00013B80A /* Fonts */,
+				F4CC4CC22A1F93F600A2EC42 /* Services */,
 				DF75E44429341212005B249E /* AppDelegate.swift */,
 				DF75E44D29341214005B249E /* Assets.xcassets */,
 				DF75E45229341214005B249E /* Info.plist */,
@@ -911,6 +920,7 @@
 			isa = PBXGroup;
 			children = (
 				F450D7232A1CD89800AF8768 /* CourseDescriptionCoordinator.swift */,
+				F45F646A2A1E320D006E185C /* Cell */,
 				F450D71B2A1CD73500AF8768 /* ViewModel */,
 				F450D71C2A1CD73B00AF8768 /* View */,
 			);
@@ -920,6 +930,8 @@
 		F450D71B2A1CD73500AF8768 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC4CC72A1FA96400A2EC42 /* Protocol  */,
+				F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -958,6 +970,14 @@
 				F450D7412A1D20F500AF8768 /* DoubleBorderView.swift */,
 			);
 			path = DoubleBordersView;
+			sourceTree = "<group>";
+		};
+		F45F646A2A1E320D006E185C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F45F646B2A1E322D006E185C /* ReviewsCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F4881E0D29E588A400F83E44 /* Configurations */ = {
@@ -1083,6 +1103,22 @@
 				F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4CC4CC22A1F93F600A2EC42 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC4CC32A1F940800A2EC42 /* ServiceManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F4CC4CC72A1FA96400A2EC42 /* Protocol  */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */,
+			);
+			path = "Protocol ";
 			sourceTree = "<group>";
 		};
 		F4E7F10129E804DF00D6FDD1 /* ChatGPTScene */ = {
@@ -1387,6 +1423,7 @@
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
+				F45F646C2A1E322D006E185C /* ReviewsCollectionViewCell.swift in Sources */,
 				1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */,
 				F450D7202A1CD78700AF8768 /* CourseDescriptionViewController.swift in Sources */,
 				F450D7362A1CF00F00AF8768 /* CustomViewsBorder.swift in Sources */,
@@ -1420,6 +1457,7 @@
 				047D39EC29E742CC000D8D8C /* AboutViewController.swift in Sources */,
 				089F803B29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift in Sources */,
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
+				F4CC4CC42A1F940800A2EC42 /* ServiceManager.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				F4E7F10529E8052700D6FDD1 /* ChatGPTViewController.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
@@ -1436,6 +1474,7 @@
 				F4E7F12B29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift in Sources */,
 				1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */,
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
+				F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */,
 				F450D73A2A1D194100AF8768 /* CustomApplyForCourseView.swift in Sources */,
@@ -1455,6 +1494,7 @@
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
+				F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */,
 				F4E7F12629E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift in Sources */,
 				F48CE08629E6A97C008A47F5 /* MainMenuViewModelProtocol.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
