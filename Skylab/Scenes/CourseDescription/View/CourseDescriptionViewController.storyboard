@@ -192,13 +192,6 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-Qf-9zm" customClass="CustomApplyForCourseView" customModule="Skylab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="574" width="375" height="106"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="106" id="VCp-b4-bIJ"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -212,7 +205,6 @@
                                     <constraint firstItem="33A-zn-LxG" firstAttribute="leading" secondItem="Aaz-no-zvb" secondAttribute="leading" constant="20" id="Mxw-cB-nSv"/>
                                     <constraint firstItem="wBG-s3-iZr" firstAttribute="leading" secondItem="Aaz-no-zvb" secondAttribute="leading" constant="20" id="NAb-MB-cb4"/>
                                     <constraint firstItem="Ri7-Jd-Kvs" firstAttribute="top" secondItem="Aaz-no-zvb" secondAttribute="top" constant="240" id="Qeh-HC-ufk"/>
-                                    <constraint firstAttribute="bottom" secondItem="tZd-Qf-9zm" secondAttribute="bottom" constant="20" id="Sus-gw-FtV"/>
                                     <constraint firstAttribute="trailing" secondItem="33A-zn-LxG" secondAttribute="trailing" constant="20" id="U64-gd-TuL"/>
                                     <constraint firstAttribute="trailing" secondItem="BES-cB-v1i" secondAttribute="trailing" constant="-13" id="aMd-L5-pdN"/>
                                     <constraint firstItem="BES-cB-v1i" firstAttribute="leading" secondItem="alY-vw-Ptk" secondAttribute="trailing" id="hBk-8A-tSO"/>
@@ -221,10 +213,15 @@
                                     <constraint firstAttribute="trailing" secondItem="wBG-s3-iZr" secondAttribute="trailing" id="kSr-1u-mWb"/>
                                     <constraint firstItem="33A-zn-LxG" firstAttribute="top" secondItem="Aaz-no-zvb" secondAttribute="top" constant="40" id="nhf-s4-yUl"/>
                                     <constraint firstItem="Y55-hG-WdT" firstAttribute="top" secondItem="Aaz-no-zvb" secondAttribute="top" constant="274" id="rZw-NB-vDy"/>
-                                    <constraint firstAttribute="trailing" secondItem="tZd-Qf-9zm" secondAttribute="trailing" id="rlK-xl-Ddt"/>
                                     <constraint firstItem="ci4-ZS-ouK" firstAttribute="top" secondItem="Aaz-no-zvb" secondAttribute="top" constant="312" id="sHc-pj-fHD"/>
-                                    <constraint firstItem="tZd-Qf-9zm" firstAttribute="leading" secondItem="Aaz-no-zvb" secondAttribute="leading" id="uto-Uu-YcM"/>
                                     <constraint firstItem="BES-cB-v1i" firstAttribute="top" secondItem="Ri7-Jd-Kvs" secondAttribute="bottom" constant="10" id="vcb-Mp-Uga"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-Qf-9zm" customClass="CustomApplyForCourseView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="686" width="375" height="106"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="VCp-b4-bIJ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -234,6 +231,9 @@
                             <constraint firstAttribute="bottom" secondItem="Aaz-no-zvb" secondAttribute="bottom" id="5CC-N0-gsD"/>
                             <constraint firstItem="Aaz-no-zvb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dEW-Y6-HwG"/>
                             <constraint firstItem="Aaz-no-zvb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="112" id="fj7-Fh-4vZ"/>
+                            <constraint firstAttribute="bottom" secondItem="tZd-Qf-9zm" secondAttribute="bottom" constant="20" id="j4p-VB-oSN"/>
+                            <constraint firstItem="tZd-Qf-9zm" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ljh-pi-clT"/>
+                            <constraint firstItem="tZd-Qf-9zm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yIf-PO-S6C"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Aaz-no-zvb" secondAttribute="trailing" id="zOo-Tv-WSS"/>
                         </constraints>
                     </view>
