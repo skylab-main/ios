@@ -16,11 +16,18 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
     @IBOutlet var figureViews: [UIView]!
     @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var mainScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,10 +37,12 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
     }
     
     private func configureUI () {
-        view.backgroundColor = .primary
+        
+        mainScrollView.backgroundColor = .primary
         
         backgroundView.layer.masksToBounds = true
         backgroundView.layer.cornerRadius = 12
+        backgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         topicListButton.setTitle("повний список тем курсу", for: .normal)
         topicListButton.titleLabel?.font = UIFont(name: "AnonymousPro-Bold", size: 14)

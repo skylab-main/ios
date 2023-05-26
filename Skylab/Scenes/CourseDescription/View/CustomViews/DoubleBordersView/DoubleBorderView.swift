@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 final class DoubleBorderView: UIView {
     // MARK: Inspectable Properties
     
