@@ -17,7 +17,10 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
     
     private let customFont = UIFont(name: "AnonymousPro-Bold", size: 14)
     
-    func configureCell() {
+    func configureCell(model: ReviewModel) {
+        
+        reviewLabel.text = model.review
+        reviewerNameLabel.text = model.reviewer
         
         reviewsView.backgroundColor = .white
         reviewsView.layer.masksToBounds = true

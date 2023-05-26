@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class CourseDescriptionCoordinator: Coordinator {
     
@@ -21,8 +22,7 @@ class CourseDescriptionCoordinator: Coordinator {
     
     private func openCourseDescriptionViewController() {
         let viewController = CourseDescriptionViewController.instantiate(coordinator: self)
-        //let viewModel = AboutViewModel()
-        //viewController.viewModel = viewModel
+        viewController.viewModel = Container.courseDescription.resolve(CourseDescriptionViewModelProtocol.self)
         rootController.tabBarController?.tabBar.isHidden = true
 
         rootController.pushViewController(viewController, animated: true)

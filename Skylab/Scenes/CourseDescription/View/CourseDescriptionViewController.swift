@@ -18,16 +18,12 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
+    var viewModel: CourseDescriptionViewModelProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -35,6 +31,8 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         
         tabBarController?.tabBar.isHidden = false
     }
+    
+    //MARK: - UI Configurations
     
     private func configureUI () {
         
@@ -88,31 +86,33 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         navBar.barStyle = .default
         navBar.topItem?.backButtonDisplayMode = .minimal
     }
-
+    
+    //MARK: - IBActions
+    
+    @IBAction func topicListButtonTapped(_ sender: UIButton) {
+        
+    }
+    
 }
+
+//MARK: - Extensions
 
 extension CourseDescriptionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        3
+        viewModel?.reviewsArray.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard
+            let model = viewModel,
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewsCollectionViewCell",
                                                           for: indexPath) as? ReviewsCollectionViewCell
         else { return UICollectionViewCell() }
         
-        cell.configureCell()
+        cell.configureCell(model: model.reviewsArray[indexPath.row])
         
         return cell
     }
-    
-    
-    
 }

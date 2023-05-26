@@ -9,4 +9,5 @@ import Foundation
 
 protocol CourseDescriptionViewModelProtocol: AnyObject {
     
+    var reviewsArray: [ReviewModel] { get set }
 }
