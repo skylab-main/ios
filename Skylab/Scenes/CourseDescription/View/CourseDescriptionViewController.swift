@@ -38,8 +38,9 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         
         mainScrollView.backgroundColor = .primary
         
-        backgroundView.layer.masksToBounds = true
-        backgroundView.layer.cornerRadius = 12
+        backgroundView.layer.configureViewLayer(cornerRadius: 12,
+                                                borderWidth: nil,
+                                                borderColor: nil, nil)
         backgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         topicListButton.setTitle("повний список тем курсу", for: .normal)
@@ -47,16 +48,14 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         topicListButton.tintColor = .primary
         
         reviewsLabel.text = "відгуки студентів"
-        reviewsLabel = ServiceManager.shared.configureCustom(reviewsLabel,
-                                                             font: .anonymousProBold,
-                                                             fontSize: 28,
-                                                             textColor: .primary, nil)
+        reviewsLabel.configureCustomLabel(font: .anonymousProBold,
+                                            fontSize: 28,
+                                            textColor: .primary, nil)
         
         courseDescriptionLabel.text = "Наш навчальний курс ми створювали, керуючись досвідом реальних проектів. Завдання побудовані таким чином, щоб студенти рухалися від простого до більш складного поступово. Якщо студенту не дається якесь завдання, ментор допоможе впоратися з ним."
-        courseDescriptionLabel = ServiceManager.shared.configureCustom(courseDescriptionLabel,
-                                                                       font: .anonymousProBold,
-                                                                       fontSize: 14,
-                                                                       textColor: .primary, 8)
+        courseDescriptionLabel.configureCustomLabel(font: .anonymousProBold,
+                                                    fontSize: 14,
+                                                    textColor: .primary, 8)
         
         for figure in figureViews {
             figure.backgroundColor = .primary

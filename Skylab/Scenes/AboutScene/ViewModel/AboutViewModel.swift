@@ -6,13 +6,10 @@
 //
 
 import Foundation
+import RxSwift
 
-class AboutViewModel {
+class AboutViewModel: AboutViewModelProtocol {
     
-    weak var coordinatorDelegate: AboutCoordinatorDelegate?
-    
-    func openCourseDescriptionViewController() {
-        
-        coordinatorDelegate?.openCourseDescriptionViewControllerDelegate()
-    }
+    var openCourseDescriptionController = PublishSubject<Void>()
+
 }

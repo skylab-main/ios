@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DoubleBorderView: UIView {
+final class DoubleBorderForView: UIView {
     // MARK: Inspectable Properties
     
     // These are inspectable properties that can be set in Interface Builder

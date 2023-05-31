@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class AboutViewController: BaseViewController, Storyboarded {
     
     private let contactImages = [UIImage(named: "email"), UIImage(named: "telegram"), UIImage(named: "linkedin"), UIImage(named: "facebook")]
     
-    var viewModel: AboutViewModel?
+    var viewModel: AboutViewModelProtocol? 
     
     private let button: BaseButton = {
         let view = BaseButton(text: "опис курсу")
@@ -153,7 +154,7 @@ class AboutViewController: BaseViewController, Storyboarded {
     @objc private func showCourseDescription() {
         
         print("showCourseDescription")
-        viewModel?.openCourseDescriptionViewController()
+        viewModel?.openCourseDescriptionController.onNext(())
     }
     
     private func setupConstraints() {

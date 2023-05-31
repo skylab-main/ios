@@ -1,8 +1,8 @@
 //
-//  CustomViewsBorder.swift
+//  CALayer + Extension.swift
 //  Skylab
 //
-//  Created by Aleksey Kotsevych on 23/05/2023.
+//  Created by Aleksey Kotsevych on 30/05/2023.
 //
 
 import UIKit
@@ -156,5 +156,16 @@ extension CALayer {
         cornerShape.strokeColor = color
         cornerShape.fillColor = nil
         addSublayer(cornerShape)
+    }
+}
+
+extension CALayer {
+    
+    func configureViewLayer(cornerRadius: CGFloat, borderWidth: CGFloat?, borderColor: UIColor?, _ masksToBounds: Bool?) {
+        
+        self.masksToBounds = masksToBounds ?? true
+        self.cornerRadius = cornerRadius
+        self.borderWidth = borderWidth ?? 0
+        self.borderColor = borderColor?.cgColor ?? UIColor.clear.cgColor
     }
 }
