@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import RxSwift
 
-class AboutViewModel {
+class AboutViewModel: AboutViewModelProtocol {
     
+    var openCourseDescriptionController = PublishSubject<Void>()
+
 }

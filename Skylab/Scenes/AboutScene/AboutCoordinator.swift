@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import Swinject
 
 class AboutCoordinator: Coordinator {
     
@@ -21,12 +23,23 @@ class AboutCoordinator: Coordinator {
     
     private func openAboutController() {
         let viewController = AboutViewController.instantiate(coordinator: self)
-        let viewModel = AboutViewModel()
-        viewController.viewModel = viewModel
+        viewController.viewModel = Container.about.resolve(AboutViewModelProtocol.self)
+        viewController.viewModel?.openCourseDescriptionController.asObserver()
+            .subscribe(onNext: { [weak self] in self?.openCourseDescriptionViewController() })
+            .disposed(by: bag)
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.about.rawValue,
                                                  image: TabBarItems.about.image,
                                                  selectedImage: TabBarItems.about.selectedImage)
         rootController.tabBarItem.setTitleText(font: AnonymousPro.bold(size: 10).font())
         rootController.setViewControllers([viewController], animated: true)
     }
+    
+    fileprivate func openCourseDescriptionViewController() {
+        
+        let coordinator = CourseDescriptionCoordinator(rootController)
+        coordinator.start()
+    }
+
 }
+
+
