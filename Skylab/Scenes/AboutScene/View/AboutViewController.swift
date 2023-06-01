@@ -108,6 +108,11 @@ class AboutViewController: BaseViewController, Storyboarded {
         setupCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        tabBarController?.tabBar.isHidden = false
+    }
+
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setupConstraints()
