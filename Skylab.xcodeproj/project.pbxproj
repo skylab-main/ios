@@ -131,6 +131,17 @@
 		F4B1314F29E4465A005760B6 /* ApplicationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1314E29E4465A005760B6 /* ApplicationViewController.storyboard */; };
 		F4B1315229E4468C005760B6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1315129E4468C005760B6 /* TutorialViewController.swift */; };
 		F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */; };
+		F4BD544D2A28C99200E5039B /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD544C2A28C99200E5039B /* CourseDetailsViewController.swift */; };
+		F4BD544F2A28C99A00E5039B /* CourseDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BD544E2A28C99A00E5039B /* CourseDetailsViewController.storyboard */; };
+		F4BD54522A28CAA400E5039B /* CourseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD54512A28CAA400E5039B /* CourseDetailsViewModel.swift */; };
+		F4BD54542A28CAAA00E5039B /* CourseDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD54532A28CAAA00E5039B /* CourseDetailsViewModelProtocol.swift */; };
+		F4BD54562A28CAF100E5039B /* CourseDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD54552A28CAF100E5039B /* CourseDetailsModel.swift */; };
+		F4BD54582A28CB4400E5039B /* CourseDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD54572A28CB4400E5039B /* CourseDetailsTableViewCell.swift */; };
+		F4BD545C2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD545B2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift */; };
+		F4BD545E2A28CBF400E5039B /* CourseDetailsTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BD545D2A28CBF400E5039B /* CourseDetailsTableViewHeader.xib */; };
+		F4BD54602A28CC5600E5039B /* CourseDetailsHeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD545F2A28CC5600E5039B /* CourseDetailsHeaderDelegate.swift */; };
+		F4BD54652A28CFBA00E5039B /* CourseDetailsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD54642A28CFBA00E5039B /* CourseDetailsContainer.swift */; };
+		F4BD54672A28D03300E5039B /* CourseDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD54662A28D03300E5039B /* CourseDetailsCoordinator.swift */; };
 		F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */; };
 		F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */; };
 		F4E7F10529E8052700D6FDD1 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F10429E8052700D6FDD1 /* ChatGPTViewController.swift */; };
@@ -294,6 +305,17 @@
 		F4B1314E29E4465A005760B6 /* ApplicationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationViewController.storyboard; sourceTree = "<group>"; };
 		F4B1315129E4468C005760B6 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
+		F4BD544C2A28C99200E5039B /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		F4BD544E2A28C99A00E5039B /* CourseDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseDetailsViewController.storyboard; sourceTree = "<group>"; };
+		F4BD54512A28CAA400E5039B /* CourseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewModel.swift; sourceTree = "<group>"; };
+		F4BD54532A28CAAA00E5039B /* CourseDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
+		F4BD54552A28CAF100E5039B /* CourseDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsModel.swift; sourceTree = "<group>"; };
+		F4BD54572A28CB4400E5039B /* CourseDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		F4BD545B2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsTableViewHeader.swift; sourceTree = "<group>"; };
+		F4BD545D2A28CBF400E5039B /* CourseDetailsTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseDetailsTableViewHeader.xib; sourceTree = "<group>"; };
+		F4BD545F2A28CC5600E5039B /* CourseDetailsHeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsHeaderDelegate.swift; sourceTree = "<group>"; };
+		F4BD54642A28CFBA00E5039B /* CourseDetailsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsContainer.swift; sourceTree = "<group>"; };
+		F4BD54662A28D03300E5039B /* CourseDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsCoordinator.swift; sourceTree = "<group>"; };
 		F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModel.swift; sourceTree = "<group>"; };
 		F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModelProtocol.swift; sourceTree = "<group>"; };
 		F4E7F10429E8052700D6FDD1 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
@@ -472,9 +494,9 @@
 		047D39EA29E7427C000D8D8C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04DEDBF529E9F3EF00486A42 /* CustomVies */,
 				047D39EB29E742CC000D8D8C /* AboutViewController.swift */,
 				047D39ED29E742E0000D8D8C /* AboutViewController.storyboard */,
-				04DEDBF529E9F3EF00486A42 /* CustomVies */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +528,7 @@
 				04C60CFC29A6B22A00BACDC0 /* BaseBackgroundView.swift */,
 				04DEDBED29E9EBD500486A42 /* BaseButton.swift */,
 				04DEDBF129E9EDA700486A42 /* CircularImageView.swift */,
+				F450D7412A1D20F500AF8768 /* DoubleBorderForView.swift */,
 			);
 			path = "Custom elements";
 			sourceTree = "<group>";
@@ -905,6 +928,7 @@
 				047D39C729E737E3000D8D8C /* PracticeScene */,
 				047D39C829E73888000D8D8C /* AboutScene */,
 				F450D71A2A1CD6E400AF8768 /* CourseDescription */,
+				F4BD54472A28C90000E5039B /* CourseDetails */,
 				DF3E2E8E296A0E4900810694 /* TabBar */,
 				DF3D3C282969F62A00CFCE49 /* OnboardingScene */,
 				DF3D3C252969F59A00CFCE49 /* AuthorizationScene */,
@@ -959,7 +983,6 @@
 			isa = PBXGroup;
 			children = (
 				F450D73B2A1D208300AF8768 /* ApplyForCourseView */,
-				F450D73C2A1D209B00AF8768 /* DoubleBordersView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -971,14 +994,6 @@
 				F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */,
 			);
 			path = ApplyForCourseView;
-			sourceTree = "<group>";
-		};
-		F450D73C2A1D209B00AF8768 /* DoubleBordersView */ = {
-			isa = PBXGroup;
-			children = (
-				F450D7412A1D20F500AF8768 /* DoubleBorderForView.swift */,
-			);
-			path = DoubleBordersView;
 			sourceTree = "<group>";
 		};
 		F45F646A2A1E320D006E185C /* Cell */ = {
@@ -1128,6 +1143,88 @@
 				F4B1315329E4469F005760B6 /* TutorialViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4BD54472A28C90000E5039B /* CourseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD54662A28D03300E5039B /* CourseDetailsCoordinator.swift */,
+				F4BD54612A28CF8F00E5039B /* DI */,
+				F4BD54482A28C94C00E5039B /* Model */,
+				F4BD54492A28C95100E5039B /* ViewModel */,
+				F4BD544A2A28C95500E5039B /* View */,
+			);
+			path = CourseDetails;
+			sourceTree = "<group>";
+		};
+		F4BD54482A28C94C00E5039B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD54552A28CAF100E5039B /* CourseDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4BD54492A28C95100E5039B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD54502A28CA8800E5039B /* Protocol */,
+				F4BD54512A28CAA400E5039B /* CourseDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F4BD544A2A28C95500E5039B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD544B2A28C95900E5039B /* Cell */,
+				F4BD544C2A28C99200E5039B /* CourseDetailsViewController.swift */,
+				F4BD544E2A28C99A00E5039B /* CourseDetailsViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4BD544B2A28C95900E5039B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD54572A28CB4400E5039B /* CourseDetailsTableViewCell.swift */,
+				F4BD54592A28CB6500E5039B /* TableViewCustomHeader */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F4BD54502A28CA8800E5039B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD54532A28CAAA00E5039B /* CourseDetailsViewModelProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F4BD54592A28CB6500E5039B /* TableViewCustomHeader */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD545A2A28CB9900E5039B /* Protocol */,
+				F4BD545B2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift */,
+				F4BD545D2A28CBF400E5039B /* CourseDetailsTableViewHeader.xib */,
+			);
+			path = TableViewCustomHeader;
+			sourceTree = "<group>";
+		};
+		F4BD545A2A28CB9900E5039B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD545F2A28CC5600E5039B /* CourseDetailsHeaderDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F4BD54612A28CF8F00E5039B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD54642A28CFBA00E5039B /* CourseDetailsContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		F4CC4CC72A1FA96400A2EC42 /* Protocol  */ = {
@@ -1399,6 +1496,7 @@
 				F4B1314F29E4465A005760B6 /* ApplicationViewController.storyboard in Resources */,
 				08E66EEC29BFC5500013B80A /* AnonymousPro-Bold.ttf in Resources */,
 				047D39EE29E742E0000D8D8C /* AboutViewController.storyboard in Resources */,
+				F4BD545E2A28CBF400E5039B /* CourseDetailsTableViewHeader.xib in Resources */,
 				DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */,
 				F4E7F12229E83A5300D6FDD1 /* ChatGPTResponseViewController.storyboard in Resources */,
 				047D39D529E73CA9000D8D8C /* QuizViewController.storyboard in Resources */,
@@ -1410,6 +1508,7 @@
 				F4B1314729E445A2005760B6 /* MainMenuViewController.storyboard in Resources */,
 				04DEDBF429E9EE6300486A42 /* AnonymousPro-Regular.ttf in Resources */,
 				152E04CB2984718B00ABCEA2 /* SwinjectTestPageSubViewController.storyboard in Resources */,
+				F4BD544F2A28C99A00E5039B /* CourseDetailsViewController.storyboard in Resources */,
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
@@ -1455,6 +1554,7 @@
 				045D3FD629BE7D0100456DEC /* MenuCell.swift in Sources */,
 				DF3E2E96296B237C00810694 /* FirstPageSubViewController.swift in Sources */,
 				F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */,
+				F4BD54582A28CB4400E5039B /* CourseDetailsTableViewCell.swift in Sources */,
 				DF3D3C3C296A036700CFCE49 /* FirstPageViewController.swift in Sources */,
 				F45F646C2A1E322D006E185C /* ReviewsCollectionViewCell.swift in Sources */,
 				1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */,
@@ -1474,12 +1574,14 @@
 				8625B5AA29BFB4AF00F4A78C /* SecondPageSubViewControllerViewModel.swift in Sources */,
 				04DEDBF229E9EDA700486A42 /* CircularImageView.swift in Sources */,
 				DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */,
+				F4BD54562A28CAF100E5039B /* CourseDetailsModel.swift in Sources */,
 				04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */,
 				047D39F729E755DC000D8D8C /* UITabBarItem + Extension.swift in Sources */,
 				DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */,
 				F4E7F11C29E8207C00D6FDD1 /* ContainerChatGPT.swift in Sources */,
 				047D39DB29E73D8F000D8D8C /* PracticeViewController.swift in Sources */,
 				F48CE08229E6A758008A47F5 /* TutorialViewModelProtocol.swift in Sources */,
+				F4BD54522A28CAA400E5039B /* CourseDetailsViewModel.swift in Sources */,
 				F4E957C32A27561F00E1600D /* AboutViewModelProtocol.swift in Sources */,
 				04C60CFD29A6B22A00BACDC0 /* BaseBackgroundView.swift in Sources */,
 				6EA0BED729C2F23D0066B9BC /* FeatureToggleProvider.swift in Sources */,
@@ -1492,6 +1594,7 @@
 				089F803B29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift in Sources */,
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
+				F4BD54542A28CAAA00E5039B /* CourseDetailsViewModelProtocol.swift in Sources */,
 				F4E7F10529E8052700D6FDD1 /* ChatGPTViewController.swift in Sources */,
 				DF3D3C4C296A051400CFCE49 /* ThirdPageViewController.swift in Sources */,
 				DF0C6D1F297D839300DE84AB /* ThirdPageViewModel.swift in Sources */,
@@ -1522,10 +1625,12 @@
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
 				F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */,
 				F4E7F10E29E808B400D6FDD1 /* TopicsCollectionViewCell.swift in Sources */,
+				F4BD54602A28CC5600E5039B /* CourseDetailsHeaderDelegate.swift in Sources */,
 				DF3D3C242969D01300CFCE49 /* TabBarCoordinator.swift in Sources */,
 				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
 				047D39F529E74BED000D8D8C /* UIColor + Extension.swift in Sources */,
 				F4E7F13029E975EF00D6FDD1 /* APICaller.swift in Sources */,
+				F4BD545C2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift in Sources */,
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
@@ -1534,10 +1639,12 @@
 				F48CE08629E6A97C008A47F5 /* MainMenuViewModelProtocol.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
+				F4BD54652A28CFBA00E5039B /* CourseDetailsContainer.swift in Sources */,
 				045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
 				047D39DF29E73DB9000D8D8C /* PracticeViewModel.swift in Sources */,
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
+				F4BD54672A28D03300E5039B /* CourseDetailsCoordinator.swift in Sources */,
 				04DEDBF029E9ECB500486A42 /* PersonCell.swift in Sources */,
 				F4B1314D29E4464F005760B6 /* ApplicationViewController.swift in Sources */,
 				F48CE07E29E6A45C008A47F5 /* TutorialViewModel.swift in Sources */,
@@ -1547,6 +1654,7 @@
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
 				047D39F329E74390000D8D8C /* AboutCoordinator.swift in Sources */,
 				152E04CF298471FD00ABCEA2 /* SwinjectTestPageSubViewControllerViewModel.swift in Sources */,
+				F4BD544D2A28C99200E5039B /* CourseDetailsViewController.swift in Sources */,
 				1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */,
 				F48CE08B29E6C63F008A47F5 /* ContainerMainMenu.swift in Sources */,
 				047D39E729E7410E000D8D8C /* LessonsViewModel.swift in Sources */,

@@ -37,9 +37,6 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="249" height="40"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
-                                                        <connections>
-                                                            <action selector="topicListButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rRj-Zm-6rJ"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -264,7 +261,7 @@
                         <outlet property="mainScrollView" destination="LG7-Yi-7qe" id="cTd-IB-LJI"/>
                         <outlet property="reviewsCollectionView" destination="wBG-s3-iZr" id="WH3-TQ-f0x"/>
                         <outlet property="reviewsLabel" destination="ci4-ZS-ouK" id="Zny-8v-mo8"/>
-                        <outlet property="topicListButton" destination="6Kp-Ig-g2E" id="gAK-V4-RVb"/>
+                        <outlet property="topicListButton" destination="6Kp-Ig-g2E" id="NNa-Tt-fHk"/>
                         <outletCollection property="figureViews" destination="Ri7-Jd-Kvs" collectionClass="NSMutableArray" id="Flo-L9-cFj"/>
                         <outletCollection property="figureViews" destination="Y55-hG-WdT" collectionClass="NSMutableArray" id="w3z-0z-321"/>
                         <outletCollection property="figureViews" destination="vly-5v-xoD" collectionClass="NSMutableArray" id="5fn-Hv-yr3"/>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Course Details View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CourseDetailsViewController" customModule="Skylab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAZ-93-jwS">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kn1-4z-wIf">
+                                        <rect key="frame" x="0.0" y="20" width="393" height="878"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" directionalLockEnabled="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4DY-Ob-I2P">
+                                                <rect key="frame" x="20" y="20" width="353" height="822"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <viewLayoutGuide key="contentLayoutGuide" id="R2y-1N-U7Y"/>
+                                                <viewLayoutGuide key="frameLayoutGuide" id="lJZ-e0-wbG"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TRLMenuTableViewCell" rowHeight="40" id="eoJ-9M-h8R" customClass="CourseDetailsTableViewCell" customModule="Skylab" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="353" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eoJ-9M-h8R" id="Fqd-FU-XWw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K64-67-tng">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="K64-67-tng" secondAttribute="bottom" id="9TX-XX-H8Z"/>
+                                                                <constraint firstAttribute="trailing" secondItem="K64-67-tng" secondAttribute="trailing" id="lMo-wN-LoB"/>
+                                                                <constraint firstItem="K64-67-tng" firstAttribute="top" secondItem="Fqd-FU-XWw" secondAttribute="top" id="t0h-A4-KyG"/>
+                                                                <constraint firstItem="K64-67-tng" firstAttribute="leading" secondItem="Fqd-FU-XWw" secondAttribute="leading" id="xMu-ej-Ezu"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="cellMainView" destination="K64-67-tng" id="cMA-es-fhT"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4DY-Ob-I2P" secondAttribute="trailing" constant="20" symbolic="YES" id="Ggg-Bm-qje"/>
+                                            <constraint firstItem="4DY-Ob-I2P" firstAttribute="leading" secondItem="kn1-4z-wIf" secondAttribute="leading" constant="20" symbolic="YES" id="Qok-U4-SE2"/>
+                                            <constraint firstAttribute="bottom" secondItem="4DY-Ob-I2P" secondAttribute="bottom" constant="36" id="Rkh-rD-mvb"/>
+                                            <constraint firstItem="4DY-Ob-I2P" firstAttribute="top" secondItem="kn1-4z-wIf" secondAttribute="top" constant="20" id="jg3-p6-rhE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kn1-4z-wIf" firstAttribute="width" secondItem="mAZ-93-jwS" secondAttribute="width" id="2GU-GZ-rCB"/>
+                                    <constraint firstAttribute="bottom" secondItem="kn1-4z-wIf" secondAttribute="bottom" constant="-36" id="HSh-vA-mIU"/>
+                                    <constraint firstItem="kn1-4z-wIf" firstAttribute="height" secondItem="mAZ-93-jwS" secondAttribute="height" constant="36" id="LzC-y6-HsR"/>
+                                    <constraint firstAttribute="trailing" secondItem="kn1-4z-wIf" secondAttribute="trailing" id="NqE-sb-Xsq"/>
+                                    <constraint firstItem="kn1-4z-wIf" firstAttribute="top" secondItem="mAZ-93-jwS" secondAttribute="top" constant="20" id="rSM-T3-kIP"/>
+                                    <constraint firstItem="kn1-4z-wIf" firstAttribute="leading" secondItem="mAZ-93-jwS" secondAttribute="leading" id="sCG-Hs-43n"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4M-xG-PLB" customClass="CustomApplyForCourseView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="736" width="393" height="106"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="oLL-kN-rCc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mAZ-93-jwS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="0sC-2y-s7L"/>
+                            <constraint firstItem="mAZ-93-jwS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BZ8-dq-C8d"/>
+                            <constraint firstAttribute="bottom" secondItem="mAZ-93-jwS" secondAttribute="bottom" constant="10" id="GeP-dx-ACh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F4M-xG-PLB" secondAttribute="trailing" id="OxK-nT-EWL"/>
+                            <constraint firstItem="F4M-xG-PLB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kFh-Bb-5Fq"/>
+                            <constraint firstAttribute="bottom" secondItem="F4M-xG-PLB" secondAttribute="bottom" constant="10" id="o1a-6K-XD4"/>
+                            <constraint firstItem="mAZ-93-jwS" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="pJq-fw-dYi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomCustomView" destination="F4M-xG-PLB" id="wbW-wN-YGu"/>
+                        <outlet property="courseDetailsBackgroundView" destination="kn1-4z-wIf" id="uUq-nU-tjV"/>
+                        <outlet property="courseDetailsScrollView" destination="mAZ-93-jwS" id="Zlc-QD-ZYb"/>
+                        <outlet property="courseDetailsTableView" destination="4DY-Ob-I2P" id="AeI-uW-Yf5"/>
+                        <outlet property="courseDetailsViewHeightConstraint" destination="LzC-y6-HsR" id="MQZ-zu-sNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

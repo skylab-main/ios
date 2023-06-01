@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import RxSwift
 
 class CourseDescriptionViewModel: CourseDescriptionViewModelProtocol {
+
+    var openCourseDetailsController = PublishSubject<Void>()
     
     var reviewsArray: [ReviewModel] = [ReviewModel(reviewer: "Karen Yue",
                                                    review: "“We were able to get a published, working version of the entire website live in less than two weeks. And we didn’t have to compromise on our original designs.”"),

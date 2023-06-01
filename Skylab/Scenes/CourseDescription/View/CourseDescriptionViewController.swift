@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CourseDescriptionViewController: BaseViewController, Storyboarded {
     
@@ -24,12 +26,7 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         super.viewDidLoad()
 
         configureUI()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        tabBarController?.tabBar.isHidden = false
+        bindTopicListButton()
     }
     
     //MARK: - UI Configurations
@@ -86,12 +83,17 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         navBar.topItem?.backButtonDisplayMode = .minimal
     }
     
-    //MARK: - IBActions
+    //MARK: - RxSwift Bindings
     
-    @IBAction func topicListButtonTapped(_ sender: UIButton) {
-        
+    func bindTopicListButton() {
+                
+        guard let viewModel else { return }
+        topicListButton
+            .rx
+            .tap
+            .bind(to: viewModel.openCourseDetailsController)
+            .disposed(by: bag)
     }
-    
 }
 
 //MARK: - Extensions
