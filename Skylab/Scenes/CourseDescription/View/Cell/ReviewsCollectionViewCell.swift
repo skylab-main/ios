@@ -19,6 +19,7 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
         
         reviewLabel.text = model.review
         reviewerNameLabel.text = model.reviewer
+        reviewerImageView.image = UIImage(named: "random")
         
         reviewsView.backgroundColor = .white
         reviewsView.layer.configureViewLayer(cornerRadius: 12,
