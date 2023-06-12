@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol QuizViewModelProtocol {
+    
+    var quizTopicsArray: [QuizTopicsModel] { get set }
+}

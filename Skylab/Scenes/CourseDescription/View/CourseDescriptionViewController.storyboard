@@ -229,7 +229,7 @@
                                     <constraint firstItem="Aaz-no-zvb" firstAttribute="top" secondItem="LG7-Yi-7qe" secondAttribute="top" constant="20" id="UW3-2c-VoK"/>
                                     <constraint firstAttribute="bottom" secondItem="Aaz-no-zvb" secondAttribute="bottom" constant="10" id="a1b-LS-bi7"/>
                                     <constraint firstItem="Aaz-no-zvb" firstAttribute="leading" secondItem="LG7-Yi-7qe" secondAttribute="leading" id="gCx-7P-d65"/>
-                                    <constraint firstItem="Aaz-no-zvb" firstAttribute="width" relation="lessThanOrEqual" secondItem="LG7-Yi-7qe" secondAttribute="width" id="kau-Qy-v2h"/>
+                                    <constraint firstItem="Aaz-no-zvb" firstAttribute="width" secondItem="LG7-Yi-7qe" secondAttribute="width" id="kau-Qy-v2h"/>
                                     <constraint firstAttribute="trailing" secondItem="Aaz-no-zvb" secondAttribute="trailing" id="mZO-gm-Pr6"/>
                                 </constraints>
                             </scrollView>

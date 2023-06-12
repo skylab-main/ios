@@ -13,7 +13,7 @@ class QuizViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var helpfulResourcesButton: UIButton!
     @IBOutlet weak var quizTopicsTableView: UITableView!
     
-    var viewModel: QuizViewModel?
+    var viewModel: QuizViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,12 +72,12 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard
+            let data = viewModel?.quizTopicsArray[indexPath.row],
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuizViewController", for: indexPath) as? QuizTopicsTableViewCell
         else { return UITableViewCell() }
         
-        let data = viewModel?.quizTopicsArray[indexPath.row]
-        
-        cell.configureCell(data: data ?? QuizTopicsModel(topic: "", progress: 0))
+        cell.selectionStyle = .none
+        cell.configureCell(data: data)
         
         return cell
     }
@@ -85,7 +85,7 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let data = viewModel?.quizTopicsArray[indexPath.row].topic else { return }
