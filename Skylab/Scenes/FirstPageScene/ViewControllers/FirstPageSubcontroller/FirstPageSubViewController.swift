@@ -15,8 +15,8 @@ class FirstPageSubViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavBarTitle()
-        setupUI()
+        //configureNavBarTitle()
+        //setupUI()
     }
 
     private func configureNavBarTitle() {

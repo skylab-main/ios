@@ -21,9 +21,80 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFC-tA-fjV">
                                 <rect key="frame" x="0.0" y="70" width="375" height="708"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-b4-8UX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="633"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-b4-8UX">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="623"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuizViewController" rowHeight="95" id="njA-rt-rvl" customClass="QuizTopicsTableViewCell" customModule="Skylab" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="375" height="95"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="njA-rt-rvl" id="aGj-Dw-fmD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="th7-Ne-cbt" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                                                            <rect key="frame" x="20" y="10" width="335" height="75"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle" translatesAutoresizingMaskIntoConstraints="NO" id="euc-xy-fSe">
+                                                                    <rect key="frame" x="16" y="19" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="18" id="Bcg-5I-mVW"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="u5k-Fw-KaA"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Interface (UIKit) " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0U-Td-ueS">
+                                                                    <rect key="frame" x="51" y="18" width="172" height="13"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="FsX-GV-fvo"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2E-QV-0jD">
+                                                                    <rect key="frame" x="287" y="21" width="32" height="14"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="14" id="eyn-nS-QRn"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="v0k-ma-GGu"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DIF-2X-248">
+                                                                    <rect key="frame" x="16" y="51" width="303" height="0.0"/>
+                                                                </progressView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="DIF-2X-248" secondAttribute="trailing" constant="16" id="4b8-0b-Pzy"/>
+                                                                <constraint firstItem="DIF-2X-248" firstAttribute="top" secondItem="E0U-Td-ueS" secondAttribute="bottom" constant="20" id="6He-cM-CrR"/>
+                                                                <constraint firstItem="E0U-Td-ueS" firstAttribute="leading" secondItem="euc-xy-fSe" secondAttribute="trailing" constant="17" id="CMK-S3-aSy"/>
+                                                                <constraint firstAttribute="bottom" secondItem="DIF-2X-248" secondAttribute="bottom" constant="24" id="Vkc-iu-tfO"/>
+                                                                <constraint firstItem="euc-xy-fSe" firstAttribute="top" secondItem="th7-Ne-cbt" secondAttribute="top" constant="19" id="bvb-Ff-xqS"/>
+                                                                <constraint firstItem="euc-xy-fSe" firstAttribute="leading" secondItem="th7-Ne-cbt" secondAttribute="leading" constant="16" id="cVr-NC-D4i"/>
+                                                                <constraint firstAttribute="trailing" secondItem="E0U-Td-ueS" secondAttribute="trailing" constant="112" id="hgh-ty-5zk"/>
+                                                                <constraint firstItem="K2E-QV-0jD" firstAttribute="top" secondItem="th7-Ne-cbt" secondAttribute="top" constant="21" id="jNR-NN-g3X"/>
+                                                                <constraint firstItem="E0U-Td-ueS" firstAttribute="top" secondItem="th7-Ne-cbt" secondAttribute="top" constant="18" id="kv6-zB-afF"/>
+                                                                <constraint firstItem="DIF-2X-248" firstAttribute="leading" secondItem="th7-Ne-cbt" secondAttribute="leading" constant="16" id="qqV-dg-1e1"/>
+                                                                <constraint firstAttribute="trailing" secondItem="K2E-QV-0jD" secondAttribute="trailing" constant="16" id="qvU-bc-ryc"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="th7-Ne-cbt" secondAttribute="bottom" constant="10" id="HDg-V0-Gfw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="th7-Ne-cbt" secondAttribute="trailing" constant="20" symbolic="YES" id="NjP-V7-Nh1"/>
+                                                        <constraint firstItem="th7-Ne-cbt" firstAttribute="top" secondItem="aGj-Dw-fmD" secondAttribute="top" constant="10" id="Rcp-I4-1mu"/>
+                                                        <constraint firstItem="th7-Ne-cbt" firstAttribute="leading" secondItem="aGj-Dw-fmD" secondAttribute="leading" constant="20" symbolic="YES" id="b5V-Xw-33a"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="progressBar" destination="DIF-2X-248" id="suf-NJ-ibW"/>
+                                                    <outlet property="progressPercentLabel" destination="K2E-QV-0jD" id="Dcb-rk-j7J"/>
+                                                    <outlet property="quizTopicLabel" destination="E0U-Td-ueS" id="Uxc-yr-ReW"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubW-Vq-91G">
                                         <rect key="frame" x="62.666666666666657" y="673" width="249.99999999999997" height="15"/>
@@ -37,8 +108,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="7Rc-b4-8UX" firstAttribute="top" secondItem="UFC-tA-fjV" secondAttribute="top" id="YAd-Up-bsv"/>
-                                    <constraint firstItem="ubW-Vq-91G" firstAttribute="top" secondItem="7Rc-b4-8UX" secondAttribute="bottom" constant="40" id="YNc-Bg-BCw"/>
+                                    <constraint firstItem="7Rc-b4-8UX" firstAttribute="top" secondItem="UFC-tA-fjV" secondAttribute="top" constant="20" id="YAd-Up-bsv"/>
+                                    <constraint firstItem="ubW-Vq-91G" firstAttribute="top" secondItem="7Rc-b4-8UX" secondAttribute="bottom" constant="30" id="YNc-Bg-BCw"/>
                                     <constraint firstItem="ubW-Vq-91G" firstAttribute="centerX" secondItem="UFC-tA-fjV" secondAttribute="centerX" id="btl-qT-CYQ"/>
                                     <constraint firstAttribute="bottom" secondItem="ubW-Vq-91G" secondAttribute="bottom" constant="20" id="lO3-Hj-fVL"/>
                                     <constraint firstItem="7Rc-b4-8UX" firstAttribute="leading" secondItem="UFC-tA-fjV" secondAttribute="leading" id="ohZ-Oh-FbT"/>
@@ -59,6 +130,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="UFC-tA-fjV" id="GK6-Z0-EBg"/>
                         <outlet property="helpfulResourcesButton" destination="ubW-Vq-91G" id="PFJ-S2-b2j"/>
+                        <outlet property="quizTopicsTableView" destination="7Rc-b4-8UX" id="PPS-Gh-2Qg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,6 +139,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="puzzle" width="20" height="20"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
