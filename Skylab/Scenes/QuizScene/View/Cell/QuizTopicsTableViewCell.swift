@@ -12,6 +12,8 @@ class QuizTopicsTableViewCell: UITableViewCell {
     @IBOutlet weak var quizTopicLabel: UILabel!
     @IBOutlet weak var progressPercentLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var doubleBorderView: UIView!
+    @IBOutlet weak var cellBackgroundView: UIView!
     
     func configureCell(data: QuizTopicsModel) {
         
@@ -25,6 +27,11 @@ class QuizTopicsTableViewCell: UITableViewCell {
         progressBar.trackTintColor = .systemGray4
         progressBar.progress = data.progress / 100
         
+        cellBackgroundView.layer.configureViewLayer(cornerRadius: 12, borderWidth: 1, borderColor: .primary, true)
+        cellBackgroundView.backgroundColor = .white
+        
+        doubleBorderView.layer.configureViewLayer(cornerRadius: 12, borderWidth: 1, borderColor: .primary, true)
+        doubleBorderView.backgroundColor = .primary
+        
     }
-    
 }

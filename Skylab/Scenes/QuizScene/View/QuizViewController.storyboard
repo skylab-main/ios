@@ -32,7 +32,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="th7-Ne-cbt" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaj-w2-KUc">
+                                                            <rect key="frame" x="24" y="14" width="335" height="75"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="th7-Ne-cbt">
                                                             <rect key="frame" x="20" y="10" width="335" height="75"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle" translatesAutoresizingMaskIntoConstraints="NO" id="euc-xy-fSe">
@@ -65,7 +68,6 @@
                                                                     <rect key="frame" x="16" y="51" width="303" height="0.0"/>
                                                                 </progressView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="DIF-2X-248" secondAttribute="trailing" constant="16" id="4b8-0b-Pzy"/>
                                                                 <constraint firstItem="DIF-2X-248" firstAttribute="top" secondItem="E0U-Td-ueS" secondAttribute="bottom" constant="20" id="6He-cM-CrR"/>
@@ -82,13 +84,19 @@
                                                         </view>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="kaj-w2-KUc" secondAttribute="trailing" constant="16" id="CwK-0c-eOX"/>
                                                         <constraint firstAttribute="bottom" secondItem="th7-Ne-cbt" secondAttribute="bottom" constant="10" id="HDg-V0-Gfw"/>
+                                                        <constraint firstItem="kaj-w2-KUc" firstAttribute="leading" secondItem="aGj-Dw-fmD" secondAttribute="leading" constant="24" id="N10-KG-nQO"/>
                                                         <constraint firstAttribute="trailing" secondItem="th7-Ne-cbt" secondAttribute="trailing" constant="20" symbolic="YES" id="NjP-V7-Nh1"/>
                                                         <constraint firstItem="th7-Ne-cbt" firstAttribute="top" secondItem="aGj-Dw-fmD" secondAttribute="top" constant="10" id="Rcp-I4-1mu"/>
+                                                        <constraint firstItem="kaj-w2-KUc" firstAttribute="top" secondItem="aGj-Dw-fmD" secondAttribute="top" constant="14" id="SBO-3X-KBc"/>
                                                         <constraint firstItem="th7-Ne-cbt" firstAttribute="leading" secondItem="aGj-Dw-fmD" secondAttribute="leading" constant="20" symbolic="YES" id="b5V-Xw-33a"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kaj-w2-KUc" secondAttribute="bottom" constant="6" id="weS-Jf-g8Q"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="cellBackgroundView" destination="th7-Ne-cbt" id="Rdn-0T-Umd"/>
+                                                    <outlet property="doubleBorderView" destination="kaj-w2-KUc" id="8Ti-wJ-spN"/>
                                                     <outlet property="progressBar" destination="DIF-2X-248" id="suf-NJ-ibW"/>
                                                     <outlet property="progressPercentLabel" destination="K2E-QV-0jD" id="Dcb-rk-j7J"/>
                                                     <outlet property="quizTopicLabel" destination="E0U-Td-ueS" id="Uxc-yr-ReW"/>
