@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Lessons View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="LessonsViewController" id="Y6W-OH-hqX" customClass="LessonsViewController" customModule="Skylab" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LessonsViewController" customModule="Skylab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="84" width="393" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LessonTableViewCell" rowHeight="149" id="GgK-I3-a12" customClass="LessonTableViewCell" customModule="Skylab">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="149" id="GgK-I3-a12">
                                         <rect key="frame" x="0.0" y="50" width="393" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GgK-I3-a12" id="BsE-YI-Xio">
@@ -83,12 +83,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="2pE-VY-GdX" secondAttribute="trailing" constant="20" id="jHD-0k-pRi"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="lessonNameLabel" destination="jeJ-7S-ljX" id="KJz-2t-vSc"/>
-                                            <outlet property="lessonPercentLabel" destination="QkG-y6-bVZ" id="tIP-Ak-LkR"/>
-                                            <outlet property="lessonProgressView" destination="2qY-2f-eca" id="Y61-Gf-Y9r"/>
-                                            <outlet property="lessonView" destination="2pE-VY-GdX" id="2B9-56-YeF"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -102,9 +96,6 @@
                             <constraint firstAttribute="bottom" secondItem="fOz-0A-J7C" secondAttribute="bottom" id="s72-aD-UH2"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lessonsTableView" destination="fOz-0A-J7C" id="CYM-bJ-AGC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
