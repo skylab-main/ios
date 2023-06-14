@@ -31,9 +31,9 @@ class AppCoordinator: Coordinator {
         #if LOCAL
 //        testScrollableMenuView()
 //        openAuthorization()
-//          openOnboarding()
+//        openOnboarding()
         openMainTabBar()
-        //operMyNew()
+//        operMyNew()
 //        openSwinjectTutorial()
         
         /// Dev 'if' executed when the application is launched from the 'debug' schema

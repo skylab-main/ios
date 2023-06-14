@@ -33,36 +33,10 @@ class CustomApplyForCourseView: BaseUIViewComponent {
         buttonView.layer.masksToBounds = true
         buttonView.layer.cornerRadius = 12
         
-        configureButtonTitle()
-    }
-    
-    private func configureButtonTitle() {
-        
-        /// Create attributed string with title and image. Create font attributes
-        let title = "подати заявку на курс"
-        let image = UIImage(named: "rightArrow")
-        let titleFont = UIFont(name: "AnonymousPro-Bold", size: 14)
-
-        // Create attributed string with title
-        let titleAttributes: [NSAttributedString.Key: Any] = [.font: titleFont ?? .boldSystemFont(ofSize: 14)]
-        let attributedString = NSMutableAttributedString(string: title, attributes: titleAttributes)
-
-        // Add spacing between title and image
-        let spaceString = NSAttributedString(string: "  ") // Use any desired spacing string
-        attributedString.append(spaceString)
-        
-        // Create image attachment
-        let imageAttachment = NSTextAttachment()
-        imageAttachment.image = image
-        
-        // Create attributed string with image
-        let imageString = NSAttributedString(attachment: imageAttachment)
-
-        // Append the image to the attributed string
-        attributedString.append(imageString)
-
-        // Set attributed title to the button
-        applyForCourseButton.tintColor = .primary
-        applyForCourseButton.setAttributedTitle(attributedString, for: .normal)
+        applyForCourseButton.configureButton(title: "подати заявку на курс",
+                                             imageName:  "rightArrow",
+                                             fontName: "AnonymousPro-Bold",
+                                             fontSize: 14,
+                                             tintColor: .primary)
     }
 }

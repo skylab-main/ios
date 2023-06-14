@@ -31,7 +31,7 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
     
     //MARK: - UI Configurations
     
-    private func configureUI () {
+    private func configureUI() {
         
         mainScrollView.backgroundColor = .primary
         

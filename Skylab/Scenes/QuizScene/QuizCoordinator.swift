@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Swinject
 
 class QuizCoordinator: Coordinator {
+    
     let rootController: UINavigationController
     
     init(_ rootController: UINavigationController) {
@@ -20,8 +22,7 @@ class QuizCoordinator: Coordinator {
     
     private func openQuizController() {
         let viewController = QuizViewController.instantiate(coordinator: self)
-        let viewModel = QuizViewModel()
-        viewController.viewModel = viewModel
+        viewController.viewModel = Container.quizTopics.resolve(QuizViewModelProtocol.self)
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.quiz.rawValue,
                                                  image: TabBarItems.quiz.image,
                                                  selectedImage: TabBarItems.quiz.selectedImage)
