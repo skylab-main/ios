@@ -22,6 +22,13 @@ class QuizViewController: BaseViewController, Storyboarded {
         configureNavBarTitle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureNavBarTitle()
+        navigationController?.tabBarController?.tabBar.isHidden = false
+    }
+    
     private func configureUI() {
         
         self.view.backgroundColor = .primary

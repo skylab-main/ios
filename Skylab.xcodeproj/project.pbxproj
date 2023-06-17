@@ -126,6 +126,7 @@
 		F48BD5202A3DDBE6003D3202 /* QuizQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD51F2A3DDBE6003D3202 /* QuizQuestionsViewModel.swift */; };
 		F48BD5232A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD5222A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift */; };
 		F48BD5252A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD5242A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift */; };
+		F48BD5272A3DF036003D3202 /* UINavigatorController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD5262A3DF036003D3202 /* UINavigatorController + Extension.swift */; };
 		F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE07B29E6A358008A47F5 /* MainMenuViewModel.swift */; };
 		F48CE07E29E6A45C008A47F5 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE07D29E6A45C008A47F5 /* TutorialViewModel.swift */; };
 		F48CE08229E6A758008A47F5 /* TutorialViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE08129E6A758008A47F5 /* TutorialViewModelProtocol.swift */; };
@@ -310,6 +311,7 @@
 		F48BD51F2A3DDBE6003D3202 /* QuizQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionsViewModel.swift; sourceTree = "<group>"; };
 		F48BD5222A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionsViewModelProtocol.swift; sourceTree = "<group>"; };
 		F48BD5242A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuizQuestionsCoordinator .swift"; sourceTree = "<group>"; };
+		F48BD5262A3DF036003D3202 /* UINavigatorController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigatorController + Extension.swift"; sourceTree = "<group>"; };
 		F48CE07B29E6A358008A47F5 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		F48CE07D29E6A45C008A47F5 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		F48CE08129E6A758008A47F5 /* TutorialViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 				F47BA3A22A263ABD00DF056D /* UILabel + Extension.swift */,
 				F47BA3A42A263D8100DF056D /* CALayer + Extension.swift */,
 				F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */,
+				F48BD5262A3DF036003D3202 /* UINavigatorController + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1278,8 +1281,8 @@
 		F4BD544B2A28C95900E5039B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F4BD54572A28CB4400E5039B /* CourseDetailsTableViewCell.swift */,
 				F4BD54592A28CB6500E5039B /* TableViewCustomHeader */,
+				F4BD54572A28CB4400E5039B /* CourseDetailsTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1714,6 +1717,7 @@
 				F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */,
 				F4E957C02A27521500E1600D /* AboutContainer .swift in Sources */,
 				047D39D129E73912000D8D8C /* QuizViewModel.swift in Sources */,
+				F48BD5272A3DF036003D3202 /* UINavigatorController + Extension.swift in Sources */,
 				047D39E229E7404F000D8D8C /* LessonsViewController.swift in Sources */,
 				F4E7F12B29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift in Sources */,
 				F48BD51A2A3DD23A003D3202 /* QuizQuestionsViewController.swift in Sources */,
