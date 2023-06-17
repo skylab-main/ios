@@ -85,7 +85,7 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
     
     //MARK: - RxSwift Bindings
     
-    func bindTopicListButton() {
+    private func bindTopicListButton() {
                 
         guard let viewModel else { return }
         topicListButton

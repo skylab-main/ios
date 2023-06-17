@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import RxSwift
 
 class QuizViewModel: QuizViewModelProtocol {
+    
+    var openQuizQuestionsController = PublishSubject<QuizTopicsModel>()
     
     var quizTopicsArray: [QuizTopicsModel] = [ QuizTopicsModel(topic: "User Interface (UIKit)", progress: 80),
                                                QuizTopicsModel(topic: "Data layer in  iOS Applications", progress: 45),

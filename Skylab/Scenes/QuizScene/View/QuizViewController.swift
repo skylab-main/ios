@@ -61,6 +61,23 @@ class QuizViewController: BaseViewController, Storyboarded {
         navBar.tintColor = .white
         navBar.barTintColor = .primary
     }
+    
+    private func bindTopicButton() {
+        
+        quizTopicsTableView.rx
+            .itemSelected
+            .map { [weak self] indexPath in
+                guard let viewModel = self?.viewModel else { return }
+                
+                return viewModel.quizTopicsArray[indexPath.row]
+            }
+            .subscribe(onNext: { model in
+                
+                print(model)
+                
+            }).disposed(by: bag)
+            
+    }
 }
 
 extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
@@ -87,10 +104,13 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        guard let data = viewModel?.quizTopicsArray[indexPath.row].topic else { return }
-        
-        print(data)
+
+        guard
+            let goTo = viewModel?.openQuizQuestionsController,
+            let topicData = viewModel?.quizTopicsArray[indexPath.row]
+        else { return }
+
+        goTo.onNext(topicData)
     }
     
 }

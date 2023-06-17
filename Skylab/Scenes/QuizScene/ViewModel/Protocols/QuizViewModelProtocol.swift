@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol QuizViewModelProtocol {
     
+    var openQuizQuestionsController: PublishSubject<QuizTopicsModel> { get set }
     var quizTopicsArray: [QuizTopicsModel] { get set }
 }

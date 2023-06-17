@@ -121,6 +121,11 @@
 		F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E0B29E582F400F83E44 /* MainMenuCoordinator.swift */; };
 		F4881E1229E589F300F83E44 /* EnviromentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1129E589F300F83E44 /* EnviromentHelper.swift */; };
 		F4881E1529E5956B00F83E44 /* TutorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4881E1429E5956B00F83E44 /* TutorialTableViewCell.swift */; };
+		F48BD51A2A3DD23A003D3202 /* QuizQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD5192A3DD23A003D3202 /* QuizQuestionsViewController.swift */; };
+		F48BD51C2A3DD246003D3202 /* QuizQuestionsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48BD51B2A3DD246003D3202 /* QuizQuestionsViewController.storyboard */; };
+		F48BD5202A3DDBE6003D3202 /* QuizQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD51F2A3DDBE6003D3202 /* QuizQuestionsViewModel.swift */; };
+		F48BD5232A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD5222A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift */; };
+		F48BD5252A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BD5242A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift */; };
 		F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE07B29E6A358008A47F5 /* MainMenuViewModel.swift */; };
 		F48CE07E29E6A45C008A47F5 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE07D29E6A45C008A47F5 /* TutorialViewModel.swift */; };
 		F48CE08229E6A758008A47F5 /* TutorialViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CE08129E6A758008A47F5 /* TutorialViewModelProtocol.swift */; };
@@ -300,6 +305,11 @@
 		F4881E0F29E5895800F83E44 /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		F4881E1129E589F300F83E44 /* EnviromentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentHelper.swift; sourceTree = "<group>"; };
 		F4881E1429E5956B00F83E44 /* TutorialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTableViewCell.swift; sourceTree = "<group>"; };
+		F48BD5192A3DD23A003D3202 /* QuizQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionsViewController.swift; sourceTree = "<group>"; };
+		F48BD51B2A3DD246003D3202 /* QuizQuestionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizQuestionsViewController.storyboard; sourceTree = "<group>"; };
+		F48BD51F2A3DDBE6003D3202 /* QuizQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionsViewModel.swift; sourceTree = "<group>"; };
+		F48BD5222A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionsViewModelProtocol.swift; sourceTree = "<group>"; };
+		F48BD5242A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuizQuestionsCoordinator .swift"; sourceTree = "<group>"; };
 		F48CE07B29E6A358008A47F5 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		F48CE07D29E6A45C008A47F5 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		F48CE08129E6A758008A47F5 /* TutorialViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -939,6 +949,7 @@
 				DF4D3E2C29660FEB00070D79 /* AppCoordinator.swift */,
 				047D39A529E72C76000D8D8C /* MainTabBar */,
 				047D39C929E7389E000D8D8C /* QuizScene */,
+				F4EDF83D2A3A046E0056D1D8 /* QuizQuestionsScene */,
 				047D39C629E737C5000D8D8C /* LessonsScene */,
 				047D39C729E737E3000D8D8C /* PracticeScene */,
 				047D39C829E73888000D8D8C /* AboutScene */,
@@ -1065,6 +1076,39 @@
 				F4881E1429E5956B00F83E44 /* TutorialTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F48BD5162A3DD1A7003D3202 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F48BD5172A3DD1AB003D3202 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F48BD5212A3DDBF7003D3202 /* Protocols */,
+				F48BD51F2A3DDBE6003D3202 /* QuizQuestionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F48BD5182A3DD1BA003D3202 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F48BD5192A3DD23A003D3202 /* QuizQuestionsViewController.swift */,
+				F48BD51B2A3DD246003D3202 /* QuizQuestionsViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F48BD5212A3DDBF7003D3202 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F48BD5222A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F48CE07A29E6A342008A47F5 /* ViewModels */ = {
@@ -1416,6 +1460,17 @@
 			path = "Protocol ";
 			sourceTree = "<group>";
 		};
+		F4EDF83D2A3A046E0056D1D8 /* QuizQuestionsScene */ = {
+			isa = PBXGroup;
+			children = (
+				F48BD5242A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift */,
+				F48BD5162A3DD1A7003D3202 /* Model */,
+				F48BD5172A3DD1AB003D3202 /* ViewModel */,
+				F48BD5182A3DD1BA003D3202 /* View */,
+			);
+			path = QuizQuestionsScene;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1566,6 +1621,7 @@
 				F4E7F13529E98E1700D6FDD1 /* ChatGPTViewController.storyboard in Resources */,
 				DF3D3C4A296A048500CFCE49 /* SecondPageViewController.storyboard in Resources */,
 				047D39E429E74056000D8D8C /* LessonsViewController.storyboard in Resources */,
+				F48BD51C2A3DD246003D3202 /* QuizQuestionsViewController.storyboard in Resources */,
 				8625B5AE29BFB5A700F4A78C /* SecondPageSubViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1623,6 +1679,7 @@
 				04DEDBF229E9EDA700486A42 /* CircularImageView.swift in Sources */,
 				DF3D3C46296A042F00CFCE49 /* ThirdPageCoordinator.swift in Sources */,
 				F4BD54562A28CAF100E5039B /* CourseDetailsModel.swift in Sources */,
+				F48BD5252A3DE8B2003D3202 /* QuizQuestionsCoordinator .swift in Sources */,
 				04D44CEF299E9C1D003EADBD /* AuthorizationViewModel.swift in Sources */,
 				047D39F729E755DC000D8D8C /* UITabBarItem + Extension.swift in Sources */,
 				DF3D3C2A2969FD5F00CFCE49 /* OnboardingViewController.swift in Sources */,
@@ -1642,6 +1699,7 @@
 				047D39EC29E742CC000D8D8C /* AboutViewController.swift in Sources */,
 				089F803B29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift in Sources */,
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
+				F48BD5202A3DDBE6003D3202 /* QuizQuestionsViewModel.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				F4BD54542A28CAAA00E5039B /* CourseDetailsViewModelProtocol.swift in Sources */,
 				F4E7F10529E8052700D6FDD1 /* ChatGPTViewController.swift in Sources */,
@@ -1658,6 +1716,7 @@
 				047D39D129E73912000D8D8C /* QuizViewModel.swift in Sources */,
 				047D39E229E7404F000D8D8C /* LessonsViewController.swift in Sources */,
 				F4E7F12B29E944A600D6FDD1 /* ChatGPTCoordinatorDelegate.swift in Sources */,
+				F48BD51A2A3DD23A003D3202 /* QuizQuestionsViewController.swift in Sources */,
 				1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */,
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
 				F422B06E2A375CF000A052EA /* QuizTopicsModel.swift in Sources */,
@@ -1671,6 +1730,7 @@
 				047D39A829E72CBD000D8D8C /* MainTabBarCoordinator.swift in Sources */,
 				F4E7F12929E83AAF00D6FDD1 /* ChatGPTResponseViewModelProtocol.swift in Sources */,
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
+				F48BD5232A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift in Sources */,
 				1544EC7329846C8D0080C429 /* SwinjectTestPageViewController.swift in Sources */,
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
 				F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */,
