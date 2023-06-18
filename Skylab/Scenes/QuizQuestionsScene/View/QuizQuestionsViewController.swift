@@ -25,6 +25,11 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         
         configureUI()
         configureNavBarTitle()
+        updateUI()
+        
+        NetworkManager.getQuiz { quizData in
+            print(quizData)
+        }
     }
     
     private func configureUI() {
@@ -41,10 +46,12 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         quizTopicLabel.text = viewModel.quizData?.topic
         
         numberOfQuestionsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 12, textColor: .primary, nil)
+        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.quiz.count)"
         
         questionLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 28, textColor: .primary, nil)
-        questionLabel.text = "What is a separate Swift command usually called?"
-        
+        questionLabel.adjustsFontSizeToFitWidth = true
+        questionLabel.minimumScaleFactor = 0.5
+     
         progressBar.progressTintColor = .white
         progressBar.trackTintColor = .systemGray2
         progressBar.progress = (viewModel.quizData?.progress ?? 0.0) / 100
@@ -54,25 +61,40 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
                                        fontName: CustomFonts.anonymousProBold.rawValue,
                                        fontSize: 14,
                                        tintColor: .primary)
+    }
+    
+    private func updateUI() {
+        
+        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.quiz.count)"
+        questionLabel.text = viewModel.getQuestionText()
         
         answerButtonsCollection.forEach { button in
+            
+            let answer = viewModel.getAnswers()
             
             button.titleLabel?.font = UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14)
             button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
             button.tintColor = .primary
+            button.backgroundColor = .clear
+            button.layer.cornerRadius = 12
+            button.isEnabled = true
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.titleLabel?.minimumScaleFactor = 0.5
+            button.titleLabel?.numberOfLines = 0
             
             switch button.tag {
             case 0:
-                button.setTitle("a) " + "Statement", for: .normal)
+                button.setTitle("a) " + "\(answer[0])", for: .normal)
             case 1:
-                button.setTitle("b) " + "Nament", for: .normal)
+                button.setTitle("b) " + "\(answer[1])", for: .normal)
             case 2:
-                button.setTitle("c) " + "Kament", for: .normal)
+                button.setTitle("c) " + "\(answer[2])", for: .normal)
             case 3:
-                button.setTitle("d) " + "Atement", for: .normal)
+                button.setTitle("d) " + "\(answer[3])", for: .normal)
             default: return
             }
         }
+        
     }
 
     private func configureNavBarTitle() {
@@ -86,5 +108,29 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         navBar.backIndicatorTransitionMaskImage = backButtonImage
         navBar.topItem?.backButtonDisplayMode = .minimal
     }
-
+    
+    @IBAction func answerButtonTapped(_ sender: UIButton) {
+        
+        guard let userAnswer = sender.currentTitle?.prefix(2) else { return }
+        
+        let userGotItRight = viewModel.checkCorrectAnswer(String(userAnswer))
+        
+        if userGotItRight {
+            
+            sender.backgroundColor = .success
+            answerButtonsCollection.forEach { button in
+                button.isEnabled = false
+            }
+        } else {
+            
+            sender.backgroundColor = .error
+        }
+    }
+    
+    @IBAction func continueButtonTapped(_ sender: UIButton) {
+        
+        viewModel.nextQuestion()
+        updateUI()
+    }
+    
 }
