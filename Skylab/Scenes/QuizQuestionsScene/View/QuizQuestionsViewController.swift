@@ -23,14 +23,13 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.getQuiz()
         configureUI()
         configureNavBarTitle()
         updateUI()
-        
-        NetworkManager.getQuiz { quizData in
-            print(quizData)
-        }
     }
+    
+    //MARK: - UI Configurations
     
     private func configureUI() {
         
@@ -46,7 +45,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         quizTopicLabel.text = viewModel.quizData?.topic
         
         numberOfQuestionsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 12, textColor: .primary, nil)
-        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.quiz.count)"
+        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.getNumberOfQuestions())"
         
         questionLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 28, textColor: .primary, nil)
         questionLabel.adjustsFontSizeToFitWidth = true
@@ -65,15 +64,15 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     private func updateUI() {
         
-        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.quiz.count)"
+        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.getNumberOfQuestions())"
         questionLabel.text = viewModel.getQuestionText()
         
         answerButtonsCollection.forEach { button in
             
             let answer = viewModel.getAnswers()
-            
+        
             button.titleLabel?.font = UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14)
-            button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+            button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
             button.tintColor = .primary
             button.backgroundColor = .clear
             button.layer.cornerRadius = 12
@@ -81,6 +80,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
             button.titleLabel?.adjustsFontSizeToFitWidth = true
             button.titleLabel?.minimumScaleFactor = 0.5
             button.titleLabel?.numberOfLines = 0
+            button.setTitleColor(.primary, for: .disabled)
             
             switch button.tag {
             case 0:
@@ -109,15 +109,18 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         navBar.topItem?.backButtonDisplayMode = .minimal
     }
     
+    //MARK: - IBActions
+    
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         
-        guard let userAnswer = sender.currentTitle?.prefix(2) else { return }
+        let userAnswer = sender.tag
         
-        let userGotItRight = viewModel.checkCorrectAnswer(String(userAnswer))
+        let userGotItRight = viewModel.checkCorrectAnswer(userAnswer)
         
         if userGotItRight {
             
             sender.backgroundColor = .success
+            
             answerButtonsCollection.forEach { button in
                 button.isEnabled = false
             }

@@ -45,6 +45,8 @@ class QuizViewController: BaseViewController, Storyboarded {
         
         quizTopicsTableView.delegate = self
         quizTopicsTableView.dataSource = self
+        
+        viewModel?.getQuizTopics()
     }
     
     private func configureNavBarTitle() {

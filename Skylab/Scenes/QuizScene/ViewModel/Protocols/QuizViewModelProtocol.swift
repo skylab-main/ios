@@ -12,4 +12,6 @@ protocol QuizViewModelProtocol {
     
     var openQuizQuestionsController: PublishSubject<QuizTopicsModel> { get set }
     var quizTopicsArray: [QuizTopicsModel] { get set }
+    
+    func getQuizTopics()
 }

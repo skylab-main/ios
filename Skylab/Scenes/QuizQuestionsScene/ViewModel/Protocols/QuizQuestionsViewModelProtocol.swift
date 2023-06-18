@@ -9,6 +9,6 @@ import Foundation
 
 protocol QuizQuestionsViewModelProtocol {
     
-    var quizData: QuizTopicsModel? { get set }
+    //var quizData: QuizTopicsModel? { get set }
     //var quiz: [QuizQuestionsModel] { get }
 }

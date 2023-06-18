@@ -7,15 +7,17 @@
 
 import Foundation
 
-struct QuizQuestionsTopicModel {
-    
-    let questionTopic: String
-    let questions: [QuizQuestionsModel]
+struct QuizData: Codable {
+    let quiz: [Quiz]
 }
 
-struct QuizQuestionsModel {
-    
+struct Quiz: Codable {
+    let title: String
+    let questions: [Question]
+}
+
+struct Question: Codable {
     let question: String
-    let answer: [String]
-    let correctAnswer: String
+    let options: [String]
+    let answer: Int
 }

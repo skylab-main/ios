@@ -1,7 +1,7 @@
 {
   "quiz": [
     {
-    "title": "User Interface (UIKit) Quiz",
+    "title": "User Interface (UIKit)",
     "questions": [
       {
         "question": "What is the primary framework used for building user interfaces in iOS apps?",
@@ -46,7 +46,7 @@
     ]
   }, 
     {
-    "title": "Data Layer in iOS Applications Quiz",
+    "title": "Data Layer in iOS Applications",
     "questions": [
       {
         "question": "Which framework is commonly used for persistent data storage in iOS apps?",
@@ -91,7 +91,7 @@
     ]
   }, 
     {
-    "title": "Learning Swift Quiz",
+    "title": "Learning Swift",
     "questions": [
       {
         "question": "What is Swift?",
@@ -136,7 +136,7 @@
     ]
   },
     {
-    "title": "Multithreading Quiz",
+    "title": "Multithreading",
     "questions": [
       {
         "question": "What is multithreading?",
