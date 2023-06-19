@@ -9,7 +9,6 @@ import UIKit
 
 class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
-    @IBOutlet weak var quizTopicLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var numberOfQuestionsLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -28,7 +27,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         configureNavBarTitle()
         updateUI()
     }
-    
+
     //MARK: - UI Configurations
     
     private func configureUI() {
@@ -41,9 +40,6 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         questionBackgroundView.layer.configureViewLayer(cornerRadius: 12, borderWidth: nil, borderColor: nil, nil)
         questionBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        quizTopicLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 20, textColor: .white, nil)
-        quizTopicLabel.text = viewModel.quizData?.topic
-        
         numberOfQuestionsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 12, textColor: .primary, nil)
         numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.getNumberOfQuestions())"
         
@@ -52,7 +48,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         questionLabel.minimumScaleFactor = 0.5
      
         progressBar.progressTintColor = .white
-        progressBar.trackTintColor = .systemGray2
+        progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
         progressBar.progress = (viewModel.quizData?.progress ?? 0.0) / 100
         
         continueButton.configureButton(title: "Продовжити",
@@ -101,7 +97,12 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
             
         guard let navBar = navigationController?.navigationBar else { return }
         
-        navBar.prefersLargeTitles = false
+        title = viewModel.quizData?.topic
+        
+        navBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 28),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+        ]
 
         let backButtonImage = UIImage(named: "backArrow")
         navBar.backIndicatorImage = backButtonImage
