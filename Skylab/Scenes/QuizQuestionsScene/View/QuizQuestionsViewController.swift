@@ -16,6 +16,8 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     @IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var questionBackgroundView: UIView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var questionBgViewHeight: NSLayoutConstraint!
     
     var viewModel = QuizQuestionsViewModel()
     
@@ -43,9 +45,11 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         numberOfQuestionsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 12, textColor: .primary, nil)
         numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.getNumberOfQuestions())"
         
-        questionLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 28, textColor: .primary, nil)
+        questionLabel.numberOfLines = 0
         questionLabel.adjustsFontSizeToFitWidth = true
         questionLabel.minimumScaleFactor = 0.5
+        questionLabel.textColor = .primary
+        questionLabel.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 28) ?? UIFont.systemFont(ofSize: 20))
      
         progressBar.progressTintColor = .white
         progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
