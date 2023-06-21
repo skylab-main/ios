@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class QuizQuestionsCoordinator: Coordinator {
     
@@ -24,7 +25,8 @@ class QuizQuestionsCoordinator: Coordinator {
     private func openQuizQuestionsController() {
         
         let viewController = QuizQuestionsViewController.instantiate(coordinator: self)
-        viewController.viewModel.quizData = quizData
+        viewController.viewModel = Container.quizQuestions.resolve(QuizQuestionsViewModelProtocol.self)
+        viewController.viewModel?.quizData = quizData
         rootController.pushViewController(viewController, animated: true)
     }
 }

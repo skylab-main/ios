@@ -16,15 +16,13 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     @IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var questionBackgroundView: UIView!
     @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var questionBgViewHeight: NSLayoutConstraint!
     
-    var viewModel = QuizQuestionsViewModel()
+    var viewModel: QuizQuestionsViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.getQuiz()
+        viewModel?.getQuiz()
         configureUI()
         configureNavBarTitle()
         updateUI()
@@ -42,8 +40,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         questionBackgroundView.layer.configureViewLayer(cornerRadius: 12, borderWidth: nil, borderColor: nil, nil)
         questionBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        numberOfQuestionsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 12, textColor: .primary, nil)
-        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.getNumberOfQuestions())"
+        numberOfQuestionsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
         
         questionLabel.numberOfLines = 0
         questionLabel.adjustsFontSizeToFitWidth = true
@@ -53,7 +50,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
      
         progressBar.progressTintColor = .white
         progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
-        progressBar.progress = (viewModel.quizData?.progress ?? 0.0) / 100
+        progressBar.progress = (viewModel?.quizData?.progress ?? 0.0) / 100
         
         continueButton.configureButton(title: "Продовжити",
                                        imageName: "rightArrow",
@@ -64,12 +61,13 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     private func updateUI() {
         
-        numberOfQuestionsLabel.text = "\(String(viewModel.questionNumber + 1)) of \(viewModel.getNumberOfQuestions())"
-        questionLabel.text = viewModel.getQuestionText()
+        numberOfQuestionsLabel.text = "\(String(viewModel?.currentQuestionNumber() ?? 0)) of \(viewModel?.getNumberOfQuestions() ?? 0)"
+        questionLabel.text = viewModel?.getQuestionText()
         
         answerButtonsCollection.forEach { button in
             
-            let answer = viewModel.getAnswers()
+            let defaultAnswers = [String](repeatElement("Error", count: 4))
+            let answer = viewModel?.getAnswers() ?? defaultAnswers
         
             button.titleLabel?.font = UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14)
             button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
@@ -101,7 +99,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
             
         guard let navBar = navigationController?.navigationBar else { return }
         
-        title = viewModel.quizData?.topic
+        title = viewModel?.quizData?.topic
         
         navBar.largeTitleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 28),
@@ -120,7 +118,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         
         let userAnswer = sender.tag
         
-        let userGotItRight = viewModel.checkCorrectAnswer(userAnswer)
+        let userGotItRight = viewModel?.checkCorrectAnswer(userAnswer) ?? false
         
         if userGotItRight {
             
@@ -137,7 +135,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         
-        viewModel.nextQuestion()
+        viewModel?.nextQuestion()
         updateUI()
     }
     

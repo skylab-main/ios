@@ -11,10 +11,9 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     var quizData: QuizTopicsModel?
 
-    var quiz: [String: [Question]] = [:]
-    
-    var questionNumber = 0
-    var quizScore = 0
+    private var quiz: [String: [Question]] = [:]
+    private var questionNumber = 0
+    private var quizScore = 0
     
     func getQuestionText() -> String {
  
@@ -65,6 +64,11 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
         let value = quiz[quizData?.topic ?? ""]
         
         return value?.count ?? 0
+    }
+    
+    func currentQuestionNumber() -> Int {
+        
+        questionNumber + 1
     }
     
 }
