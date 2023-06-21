@@ -22,7 +22,6 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel?.getQuiz()
         configureUI()
         configureNavBarTitle()
         updateUI()
@@ -33,41 +32,73 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     private func configureUI() {
         
         self.view.backgroundColor = .primary
-        questionBackgroundView.backgroundColor = .white
-        
-        navigationController?.tabBarController?.tabBar.isHidden = true
-        
-        questionBackgroundView.layer.configureViewLayer(cornerRadius: 12, borderWidth: nil, borderColor: nil, nil)
-        questionBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         numberOfQuestionsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
-        
-        questionLabel.numberOfLines = 0
-        questionLabel.adjustsFontSizeToFitWidth = true
-        questionLabel.minimumScaleFactor = 0.5
-        questionLabel.textColor = .primary
-        questionLabel.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 28) ?? UIFont.systemFont(ofSize: 20))
-     
-        progressBar.progressTintColor = .white
-        progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
-        progressBar.progress = (viewModel?.quizData?.progress ?? 0.0) / 100
         
         continueButton.configureButton(title: "Продовжити",
                                        imageName: "rightArrow",
                                        fontName: CustomFonts.anonymousProBold.rawValue,
                                        fontSize: 14,
                                        tintColor: .primary)
+        
+        viewModel?.getQuiz()
+        configureQuestionLabel()
+        configureProgressBar()
+        configureQuestionBackgroundView()
+    }
+    
+    private func configureQuestionLabel() {
+        
+        questionLabel.numberOfLines = 0
+        questionLabel.adjustsFontSizeToFitWidth = true
+        questionLabel.minimumScaleFactor = 0.5
+        questionLabel.textColor = .primary
+        questionLabel.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 28) ?? UIFont.systemFont(ofSize: 20))
+    }
+    
+    private func configureProgressBar() {
+        
+        progressBar.progressTintColor = .white
+        progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
+        progressBar.progress = (viewModel?.quizData?.progress ?? 0.0) / 100
+    }
+    
+    private func configureQuestionBackgroundView() {
+        
+        questionBackgroundView.backgroundColor = .white
+        questionBackgroundView.layer.configureViewLayer(cornerRadius: 12, borderWidth: nil, borderColor: nil, nil)
+        questionBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    private func configureNavBarTitle() {
+            
+        guard let viewModel, let navBar = navigationController?.navigationBar else { return }
+        
+        navigationController?.tabBarController?.tabBar.isHidden = true
+        
+        title = viewModel.quizData?.topic
+        
+        navBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 28),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+        ]
+
+        let backButtonImage = UIImage(named: "backArrow")
+        navBar.backIndicatorImage = backButtonImage
+        navBar.backIndicatorTransitionMaskImage = backButtonImage
+        navBar.topItem?.backButtonDisplayMode = .minimal
     }
     
     private func updateUI() {
         
-        numberOfQuestionsLabel.text = "\(String(viewModel?.currentQuestionNumber() ?? 0)) of \(viewModel?.getNumberOfQuestions() ?? 0)"
-        questionLabel.text = viewModel?.getQuestionText()
+        guard let viewModel else { return }
+        
+        numberOfQuestionsLabel.text = "\(String(viewModel.currentQuestionNumber())) of \(viewModel.getNumberOfQuestions())"
+        questionLabel.text = viewModel.getQuestionText()
         
         answerButtonsCollection.forEach { button in
             
-            let defaultAnswers = [String](repeatElement("Error", count: 4))
-            let answer = viewModel?.getAnswers() ?? defaultAnswers
+            let answer = viewModel.getAnswers()
         
             button.titleLabel?.font = UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14)
             button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
@@ -94,31 +125,16 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         }
         
     }
-
-    private func configureNavBarTitle() {
-            
-        guard let navBar = navigationController?.navigationBar else { return }
-        
-        title = viewModel?.quizData?.topic
-        
-        navBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 28),
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-        ]
-
-        let backButtonImage = UIImage(named: "backArrow")
-        navBar.backIndicatorImage = backButtonImage
-        navBar.backIndicatorTransitionMaskImage = backButtonImage
-        navBar.topItem?.backButtonDisplayMode = .minimal
-    }
     
     //MARK: - IBActions
     
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         
+        guard let viewModel else { return print("The ViewModel doesn't exist!") }
+        
         let userAnswer = sender.tag
         
-        let userGotItRight = viewModel?.checkCorrectAnswer(userAnswer) ?? false
+        let userGotItRight = viewModel.checkCorrectAnswer(userAnswer) 
         
         if userGotItRight {
             
@@ -135,7 +151,9 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         
-        viewModel?.nextQuestion()
+        guard let viewModel else { return print("The ViewModel doesn't exist!") }
+        
+        viewModel.nextQuestion()
         updateUI()
     }
     

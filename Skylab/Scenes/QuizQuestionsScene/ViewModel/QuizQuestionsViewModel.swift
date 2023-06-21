@@ -9,7 +9,7 @@ import Foundation
 
 class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
-    var quizData: QuizTopicsModel?
+    var quizData: QuizTopicsModel? = nil
 
     private var quiz: [String: [Question]] = [:]
     private var questionNumber = 0
@@ -24,11 +24,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func nextQuestion() {
         
-        if questionNumber < (getNumberOfQuestions() - 1) {
-            questionNumber += 1
-        } else {
-            questionNumber = 0
-        }
+        questionNumber = (questionNumber + 1) % getNumberOfQuestions()
     }
     
     func getAnswers() -> [String] {
@@ -68,7 +64,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func currentQuestionNumber() -> Int {
         
-        questionNumber + 1
+        return questionNumber + 1
     }
     
 }
