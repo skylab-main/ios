@@ -42,12 +42,17 @@ final class DoubleBorderForView: UIView {
     }
     // This private method adds the double border to the view
     private func addDoubleBorder() {
+        // Remove previous bottomView if it exists
+        if let previousBottomView = self.viewWithTag(1001) {
+            previousBottomView.removeFromSuperview()
+        }
         // Create a new subview to hold the bottom border
         let bottomView = UIView(frame: CGRect(x: distance, y: distance, width: self.frame.width, height: self.frame.height))
         bottomView.backgroundColor = .primary
         bottomView.layer.borderWidth = borderWidth
         bottomView.layer.borderColor = borderColor.cgColor
         bottomView.layer.cornerRadius = cornerRadius
+        bottomView.tag = 1001 // Set a unique tag to identify the bottomView
         // Create a mask layer to subtract the rounded corners from the bottom view
         let maskLayer = CAShapeLayer()
         let path = UIBezierPath(rect: bottomView.bounds)
