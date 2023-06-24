@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,9 +37,6 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="249" height="40"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
-                                                        <connections>
-                                                            <action selector="topicListButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rRj-Zm-6rJ"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -108,7 +106,6 @@
                                                 <rect key="frame" x="20" y="342.33333333333331" width="355" height="234.99999999999994"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="355" id="Vof-UL-z4T"/>
                                                     <constraint firstAttribute="height" constant="235" id="eTQ-at-zfh"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0o7-c3-Pbc">
@@ -167,7 +164,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVL-dl-GoP">
                                                                     <rect key="frame" x="246" y="0.0" width="40" height="40"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="xVq-AM-haw">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVq-AM-haw">
                                                                             <rect key="frame" x="4" y="4" width="32" height="32"/>
                                                                         </imageView>
                                                                     </subviews>
@@ -229,10 +226,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Aaz-no-zvb" firstAttribute="width" secondItem="LG7-Yi-7qe" secondAttribute="width" id="2P2-BE-JTS"/>
                                     <constraint firstItem="Aaz-no-zvb" firstAttribute="top" secondItem="LG7-Yi-7qe" secondAttribute="top" constant="20" id="UW3-2c-VoK"/>
                                     <constraint firstAttribute="bottom" secondItem="Aaz-no-zvb" secondAttribute="bottom" constant="10" id="a1b-LS-bi7"/>
                                     <constraint firstItem="Aaz-no-zvb" firstAttribute="leading" secondItem="LG7-Yi-7qe" secondAttribute="leading" id="gCx-7P-d65"/>
+                                    <constraint firstItem="Aaz-no-zvb" firstAttribute="width" secondItem="LG7-Yi-7qe" secondAttribute="width" id="kau-Qy-v2h"/>
                                     <constraint firstAttribute="trailing" secondItem="Aaz-no-zvb" secondAttribute="trailing" id="mZO-gm-Pr6"/>
                                 </constraints>
                             </scrollView>
@@ -263,7 +260,7 @@
                         <outlet property="mainScrollView" destination="LG7-Yi-7qe" id="cTd-IB-LJI"/>
                         <outlet property="reviewsCollectionView" destination="wBG-s3-iZr" id="WH3-TQ-f0x"/>
                         <outlet property="reviewsLabel" destination="ci4-ZS-ouK" id="Zny-8v-mo8"/>
-                        <outlet property="topicListButton" destination="6Kp-Ig-g2E" id="gAK-V4-RVb"/>
+                        <outlet property="topicListButton" destination="6Kp-Ig-g2E" id="NNa-Tt-fHk"/>
                         <outletCollection property="figureViews" destination="Ri7-Jd-Kvs" collectionClass="NSMutableArray" id="Flo-L9-cFj"/>
                         <outletCollection property="figureViews" destination="Y55-hG-WdT" collectionClass="NSMutableArray" id="w3z-0z-321"/>
                         <outletCollection property="figureViews" destination="vly-5v-xoD" collectionClass="NSMutableArray" id="5fn-Hv-yr3"/>
@@ -278,7 +275,6 @@
     </scenes>
     <resources>
         <image name="linkedin" width="24" height="24"/>
-        <image name="random" width="5616" height="3744"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -38,3 +38,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // Mikhail. Git: slepom
 // Roman Golub. Git: glbrom
 // Stanislav Burian. Git: 4050
+// Oleksii Kotsevych. Git: Hyper-ON3

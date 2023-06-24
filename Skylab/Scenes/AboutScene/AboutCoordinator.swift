@@ -24,7 +24,8 @@ class AboutCoordinator: Coordinator {
     private func openAboutController() {
         let viewController = AboutViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.about.resolve(AboutViewModelProtocol.self)
-        viewController.viewModel?.openCourseDescriptionController.asObserver()
+        viewController.viewModel?.openCourseDescriptionController
+            .asObserver()
             .subscribe(onNext: { [weak self] in self?.openCourseDescriptionViewController() })
             .disposed(by: bag)
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.about.rawValue,
@@ -34,7 +35,7 @@ class AboutCoordinator: Coordinator {
         rootController.setViewControllers([viewController], animated: true)
     }
     
-    fileprivate func openCourseDescriptionViewController() {
+    private func openCourseDescriptionViewController() {
         
         let coordinator = CourseDescriptionCoordinator(rootController)
         coordinator.start()

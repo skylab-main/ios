@@ -7,13 +7,13 @@
 
 import UIKit
 
-extension UILabel {
+enum CustomFonts: String {
     
-    enum CustomFonts: String {
-        
-        case anonymousProBold = "AnonymousPro-Bold"
-        case anonymousPro = "Anonymous Pro"
-    }
+    case anonymousProBold = "AnonymousPro-Bold"
+    case anonymousPro = "Anonymous Pro"
+}
+
+extension UILabel {
     
     func configureCustomLabel(font: CustomFonts, fontSize: CGFloat, textColor: UIColor, _ lineSpacing: CGFloat?) {
         

@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol CourseDescriptionViewModelProtocol: AnyObject {
     
+    var openCourseDetailsController: PublishSubject<Void> { get set }
     var reviewsArray: [ReviewModel] { get set }
 }

@@ -29,10 +29,11 @@ class AppCoordinator: Coordinator {
         
         /// Local 'if' executed when the application is launched from the 'release' schema
         #if LOCAL
-        testScrollableMenuView()
+//        testScrollableMenuView()
 //        openAuthorization()
-//          openOnboarding()
+//        openOnboarding()
         openMainTabBar()
+//        operMyNew()
 //        openSwinjectTutorial()
         
         /// Dev 'if' executed when the application is launched from the 'debug' schema
@@ -40,6 +41,13 @@ class AppCoordinator: Coordinator {
         openMainMenu()
 //        openTabBar()
         #endif
+    }
+    
+    func operMyNew() {
+        let coordinator = CourseDetailsCoordinator(UINavigationController())
+        coordinator.start()
+        window.rootViewController = coordinator.rootController
+        addChildCoordinator(coordinator)
     }
     
     func openMainTabBar() {
