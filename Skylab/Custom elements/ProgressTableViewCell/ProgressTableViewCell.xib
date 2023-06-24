@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="149" id="jSn-97-0tp" customClass="BaseTableViewCell" customModule="Skylab" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProgressTableViewCell" rowHeight="149" id="jSn-97-0tp" customClass="ProgressTableViewCell" customModule="Skylab" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="149"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jSn-97-0tp" id="ZdS-fd-Qt4">
@@ -19,8 +19,8 @@
                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-Mj-ngb" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
                         <rect key="frame" x="20" y="11" width="353" height="127"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE7-T1-9Kj">
-                                <rect key="frame" x="53.999999999999993" y="15.999999999999998" width="66.333333333333314" height="16.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE7-T1-9Kj">
+                                <rect key="frame" x="54" y="16" width="251" height="79"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.062745098040000002" green="0.2666666667" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -32,16 +32,16 @@
                                     <constraint firstAttribute="width" constant="18" id="Qrb-01-tY4"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress % " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-8o-Pj8">
-                                <rect key="frame" x="259.33333333333331" y="19" width="77.666666666666686" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" text="Progress % " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-8o-Pj8">
+                                <rect key="frame" x="312" y="19" width="25" height="74"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="uaM-i4-UhM"/>
+                                    <constraint firstAttribute="width" constant="25" id="b9I-CO-y2e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.062745098040000002" green="0.2666666667" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J7g-ZB-I1E">
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J7g-ZB-I1E">
                                 <rect key="frame" x="16" y="107" width="321" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="Svg-dV-BgI"/>
@@ -49,6 +49,9 @@
                             </progressView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="wPP-8o-Pj8" firstAttribute="leading" secondItem="OE7-T1-9Kj" secondAttribute="trailing" constant="7" id="9WZ-Ub-3kB"/>
+                            <constraint firstItem="J7g-ZB-I1E" firstAttribute="top" secondItem="wPP-8o-Pj8" secondAttribute="bottom" constant="14" id="Arb-ZW-4IM"/>
+                            <constraint firstItem="J7g-ZB-I1E" firstAttribute="top" secondItem="OE7-T1-9Kj" secondAttribute="bottom" constant="12" id="DgB-SX-tMp"/>
                             <constraint firstAttribute="bottom" secondItem="J7g-ZB-I1E" secondAttribute="bottom" constant="16" id="KPu-XR-ovs"/>
                             <constraint firstAttribute="trailing" secondItem="wPP-8o-Pj8" secondAttribute="trailing" constant="16" id="Or9-vb-0fI"/>
                             <constraint firstItem="OE7-T1-9Kj" firstAttribute="top" secondItem="5hY-Mj-ngb" secondAttribute="top" constant="16" id="cGB-az-xQG"/>

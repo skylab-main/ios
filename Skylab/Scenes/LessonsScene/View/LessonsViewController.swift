@@ -9,35 +9,44 @@ import UIKit
 
 class LessonsViewController: BaseViewController, Storyboarded {
     
-    var lessonsTableView: BaseTableView!
+    @IBOutlet weak var lessonsTableView: UITableView!
     var viewModel: LessonsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = LessonsViewModel()
-        let baseTableViewModel = BaseTableViewModel()
-        baseTableViewModel.itemsArray = viewModel?.lessonsArray ?? []
-
-        lessonsTableView = BaseTableView(frame: view.bounds, viewModel: baseTableViewModel)
-
+        lessonsTableView.dataSource = self
+        lessonsTableView.delegate = self
+       
+        let nib = UINib(nibName: "ProgressTableViewCell", bundle: nil)
+        lessonsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
+        
         configureUI()
+        configureNavBarTitle()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        configureNavBarTitle()
+        viewModel = LessonsViewModel()
+        viewModel?.getLessons { [weak self] in
+            self?.lessonsTableView.reloadData()
+        }
     }
 
     //MARK: - UI Configuration
 
     private func configureUI() {
-        view.addSubview(lessonsTableView)
+
         view.backgroundColor = .primary
         
-        lessonsTableView.layer.cornerRadius = 15
-
+        //lessonsTableView.layer.masksToBounds = true
+        lessonsTableView.layer.cornerRadius = 12
+        lessonsTableView.clipsToBounds = true
+        lessonsTableView.rowHeight = UITableView.automaticDimension
+        lessonsTableView.estimatedRowHeight = 100
+        //lessonsTableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
     }
 
     private func configureNavBarTitle() {
@@ -47,13 +56,44 @@ class LessonsViewController: BaseViewController, Storyboarded {
         title = "Lessons"
         navBar.prefersLargeTitles = true
 
+        navBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.font: AnonymousPro.bold(size: 28).font(),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+        ]
+        
         navBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "AnonymousPro", size: 28) ?? UIFont.systemFont(ofSize: 28),
+            NSAttributedString.Key.font: AnonymousPro.bold(size: 28).font(),
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ]
 
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.tintColor = .white
         navBar.barTintColor = .primary
+    }
+}
+
+extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let viewModel else { return 0 }
+        return viewModel.numberOfRowInSection(for: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProgressTableViewCell", for: indexPath) as? ProgressTableViewCell
+        
+        guard let cell, let viewModel else { return UITableViewCell() }
+        
+        let cellViewModel = viewModel.cellViewModel(for: indexPath)
+        cell.viewModel = cellViewModel
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel else { return }
+        guard let item = viewModel.viewModelForSelectedRow() else { return }
+        print(item)
+        viewModel.openLevelViewController(item)
     }
 }
