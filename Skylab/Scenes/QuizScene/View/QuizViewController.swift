@@ -22,6 +22,13 @@ class QuizViewController: BaseViewController, Storyboarded {
         configureNavBarTitle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureNavBarTitle()
+        navigationController?.tabBarController?.tabBar.isHidden = false
+    }
+    
     private func configureUI() {
         
         self.view.backgroundColor = .primary
@@ -38,6 +45,8 @@ class QuizViewController: BaseViewController, Storyboarded {
         
         quizTopicsTableView.delegate = self
         quizTopicsTableView.dataSource = self
+        
+        viewModel?.getQuizTopics()
     }
     
     private func configureNavBarTitle() {
@@ -60,6 +69,23 @@ class QuizViewController: BaseViewController, Storyboarded {
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.tintColor = .white
         navBar.barTintColor = .primary
+    }
+    
+    private func bindTopicButton() {
+        
+        quizTopicsTableView.rx
+            .itemSelected
+            .map { [weak self] indexPath in
+                guard let viewModel = self?.viewModel else { return }
+                
+                return viewModel.quizTopicsArray[indexPath.row]
+            }
+            .subscribe(onNext: { model in
+                
+                print(model)
+                
+            }).disposed(by: bag)
+            
     }
 }
 
@@ -87,10 +113,13 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        guard let data = viewModel?.quizTopicsArray[indexPath.row].topic else { return }
-        
-        print(data)
+
+        guard
+            let goTo = viewModel?.openQuizQuestionsController,
+            let topicData = viewModel?.quizTopicsArray[indexPath.row]
+        else { return }
+
+        goTo.onNext(topicData)
     }
     
 }

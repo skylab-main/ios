@@ -6,18 +6,21 @@
 //
 
 import Foundation
+import RxSwift
 
 class QuizViewModel: QuizViewModelProtocol {
     
-    var quizTopicsArray: [QuizTopicsModel] = [ QuizTopicsModel(topic: "User Interface (UIKit)", progress: 80),
-                                               QuizTopicsModel(topic: "Data layer in  iOS Applications", progress: 45),
-                                               QuizTopicsModel(topic: "Learning Swift", progress: 31),
-                                               QuizTopicsModel(topic: "Multithreading", progress: 20),
-                                               QuizTopicsModel(topic: "Multithreading", progress: 63),
-                                               QuizTopicsModel(topic: "User Interface (UIKit)", progress: 80),
-                                               QuizTopicsModel(topic: "Data layer in  iOS Applications", progress: 45),
-                                               QuizTopicsModel(topic: "Learning Swift", progress: 31),
-                                               QuizTopicsModel(topic: "Multithreading", progress: 20),
-                                               QuizTopicsModel(topic: "Multithreading", progress: 63),
-    ]
+    var openQuizQuestionsController = PublishSubject<QuizTopicsModel>()
+    
+    var quizTopicsArray: [QuizTopicsModel] = []
+    
+    func getQuizTopics() {
+        
+        NetworkManager.getQuiz { [self] quizData in
+            
+            quizData.forEach { quiz in
+                quizTopicsArray.append(QuizTopicsModel(topic: quiz.title, progress: Float.random(in: 0...100)))
+            }
+        }
+    }
 }
