@@ -25,6 +25,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     }
     
     func nextQuestion() {
+        openQuizResultController.onNext(())
         
         //questionNumber = (questionNumber + 1) % getNumberOfQuestions()
         
