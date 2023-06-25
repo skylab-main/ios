@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol QuizQuestionsViewModelProtocol {
     
     var quizData: QuizTopicsModel? { get set }
+    var openQuizResultController: PublishSubject<Void> { get set }
     
     func getQuestionText() -> String
     func nextQuestion()

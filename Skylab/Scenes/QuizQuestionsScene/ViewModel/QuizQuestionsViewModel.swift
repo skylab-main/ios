@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RxSwift
 
 class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     var quizData: QuizTopicsModel? = nil
+    var openQuizResultController = PublishSubject<Void>()
 
     private var quiz: [String: [Question]] = [:]
     private var questionNumber = 0
@@ -24,7 +26,13 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func nextQuestion() {
         
-        questionNumber = (questionNumber + 1) % getNumberOfQuestions()
+        //questionNumber = (questionNumber + 1) % getNumberOfQuestions()
+        
+        if questionNumber < (getNumberOfQuestions() - 1) {
+                   questionNumber += 1
+               } else {
+                   openQuizResultController.onNext(())
+               }
     }
     
     func getAnswers() -> [String] {
