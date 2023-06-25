@@ -9,7 +9,7 @@ import UIKit
 
 extension UIButton {
     
-    func configureButton(title: String, imageName: String?, fontName: String?, fontSize: CGFloat?, tintColor: UIColor?) {
+    func configureButton(title: String, imageName: String?, fontName: String?, fontSize: CGFloat?, tintColor: UIColor?, titleUnderscore: Bool? = nil) {
         
         /// Create attributed string with title and image. Create font attributes
         let title = title
@@ -35,6 +35,14 @@ extension UIButton {
             
             // Append the image to the attributed string
             attributedString.append(imageString)
+        }
+        
+        if titleUnderscore != nil {
+            
+                
+                // Add underline attribute to the attributed string
+                attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
+     
         }
 
         // Set attributed title to the button
