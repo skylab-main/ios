@@ -10,6 +10,8 @@ import UIKit
 class LessonsViewController: BaseViewController, Storyboarded {
     
     @IBOutlet weak var lessonsTableView: UITableView!
+    @IBOutlet weak var descriptionCurseButton: UIButton!
+    
     var viewModel: LessonsViewModel?
 
     override func viewDidLoad() {
@@ -40,12 +42,16 @@ class LessonsViewController: BaseViewController, Storyboarded {
 
         view.backgroundColor = .primary
         
-        //lessonsTableView.layer.masksToBounds = true
         lessonsTableView.layer.cornerRadius = 12
         lessonsTableView.clipsToBounds = true
         lessonsTableView.rowHeight = UITableView.automaticDimension
         lessonsTableView.estimatedRowHeight = 100
-        //lessonsTableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
+        descriptionCurseButton.configureButton(title: "Опис повного курсу",
+                                               imageName: "rightArrow",
+                                               fontName: "AnonymousPro-Bold",
+                                               fontSize: 14,
+                                               tintColor: .primary)
         
     }
 
