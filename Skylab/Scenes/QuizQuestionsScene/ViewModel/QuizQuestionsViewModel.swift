@@ -15,7 +15,8 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
 
     private var quiz: [String: [Question]] = [:]
     private var questionNumber = 0
-    private var quizScore = 0
+    private var correctAnswers = 0
+    private var wrongOptionChosen: [Int: Bool] = [:]
     
     func getQuestionText() -> String {
  
@@ -25,13 +26,13 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     }
     
     func nextQuestion() {
-        openQuizResultController.onNext(())
         
-        //questionNumber = (questionNumber + 1) % getNumberOfQuestions()
+        //openQuizResultController.onNext(())
         
         if questionNumber < (getNumberOfQuestions() - 1) {
                    questionNumber += 1
                } else {
+                   let quizScoreInPercentage = Double(correctAnswers) / Double(getNumberOfQuestions()) * 100
                    openQuizResultController.onNext(())
                }
     }
@@ -46,11 +47,31 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     func checkCorrectAnswer(_ userAnswer: Int) -> Bool {
         
         let value = quiz[quizData?.topic ?? ""]
+        let currentQuestion = value?[questionNumber]
         
-        if userAnswer == (value?[questionNumber].answer ?? -1) {
+        countAnswers(userAnswer)
+        
+        if userAnswer == (currentQuestion?.answer ?? -1) {
             return true
         } else {
             return false
+        }
+    }
+    
+    private func countAnswers(_ answer: Int) {
+        
+        let value = quiz[quizData?.topic ?? ""]
+        let currentQuestion = value?[questionNumber]
+        
+        if let hasChosenWrongOption = wrongOptionChosen[questionNumber], hasChosenWrongOption {
+            // User has already chosen a wrong option for this question
+            return
+        }
+        
+        if answer == currentQuestion?.answer {
+            correctAnswers += 1
+        } else {
+            wrongOptionChosen[questionNumber] = true
         }
     }
     

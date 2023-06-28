@@ -133,7 +133,6 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         guard let viewModel else { return print("The ViewModel doesn't exist!") }
         
         let userAnswer = sender.tag
-        
         let userGotItRight = viewModel.checkCorrectAnswer(userAnswer) 
         
         if userGotItRight {
