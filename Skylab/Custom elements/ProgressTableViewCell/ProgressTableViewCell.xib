@@ -16,13 +16,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-Mj-ngb" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-Mj-ngb" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
                         <rect key="frame" x="20" y="11" width="353" height="127"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE7-T1-9Kj">
-                                <rect key="frame" x="54" y="16" width="251" height="79"/>
+                                <rect key="frame" x="54" y="18" width="251" height="16.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" red="0.062745098040000002" green="0.2666666667" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vector" translatesAutoresizingMaskIntoConstraints="NO" id="JOd-Ug-jFr">
@@ -33,28 +33,28 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" text="Progress % " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-8o-Pj8">
-                                <rect key="frame" x="312" y="19" width="25" height="74"/>
+                                <rect key="frame" x="312" y="19" width="25" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="b9I-CO-y2e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.062745098040000002" green="0.2666666667" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J7g-ZB-I1E">
-                                <rect key="frame" x="16" y="107" width="321" height="4"/>
+                                <rect key="frame" x="16" y="107" width="321" height="2"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="Svg-dV-BgI"/>
+                                    <constraint firstAttribute="height" constant="2" id="Svg-dV-BgI"/>
                                 </constraints>
                             </progressView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="J7g-ZB-I1E" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JOd-Ug-jFr" secondAttribute="bottom" constant="19" id="8ds-c7-xet"/>
                             <constraint firstItem="wPP-8o-Pj8" firstAttribute="leading" secondItem="OE7-T1-9Kj" secondAttribute="trailing" constant="7" id="9WZ-Ub-3kB"/>
-                            <constraint firstItem="J7g-ZB-I1E" firstAttribute="top" secondItem="wPP-8o-Pj8" secondAttribute="bottom" constant="14" id="Arb-ZW-4IM"/>
-                            <constraint firstItem="J7g-ZB-I1E" firstAttribute="top" secondItem="OE7-T1-9Kj" secondAttribute="bottom" constant="12" id="DgB-SX-tMp"/>
-                            <constraint firstAttribute="bottom" secondItem="J7g-ZB-I1E" secondAttribute="bottom" constant="16" id="KPu-XR-ovs"/>
+                            <constraint firstItem="J7g-ZB-I1E" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OE7-T1-9Kj" secondAttribute="bottom" constant="12" id="DgB-SX-tMp"/>
+                            <constraint firstAttribute="bottom" secondItem="J7g-ZB-I1E" secondAttribute="bottom" constant="18" id="KPu-XR-ovs"/>
                             <constraint firstAttribute="trailing" secondItem="wPP-8o-Pj8" secondAttribute="trailing" constant="16" id="Or9-vb-0fI"/>
-                            <constraint firstItem="OE7-T1-9Kj" firstAttribute="top" secondItem="5hY-Mj-ngb" secondAttribute="top" constant="16" id="cGB-az-xQG"/>
+                            <constraint firstItem="OE7-T1-9Kj" firstAttribute="top" secondItem="5hY-Mj-ngb" secondAttribute="top" constant="18" id="cGB-az-xQG"/>
                             <constraint firstItem="wPP-8o-Pj8" firstAttribute="top" secondItem="5hY-Mj-ngb" secondAttribute="top" constant="19" id="ePP-FN-BOf"/>
                             <constraint firstItem="OE7-T1-9Kj" firstAttribute="leading" secondItem="JOd-Ug-jFr" secondAttribute="trailing" constant="17" id="g9I-F7-e3v"/>
                             <constraint firstItem="JOd-Ug-jFr" firstAttribute="leading" secondItem="5hY-Mj-ngb" secondAttribute="leading" constant="19" id="knq-t8-WQM"/>
