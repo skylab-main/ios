@@ -18,7 +18,14 @@ class QuizCoordinator: Coordinator {
     }
     
     override func start() {
+        
         openQuizController()
+    }
+    
+    override func finish() {
+        
+        removeChildCoordinator(self)
+        rootController.removeFromParent()
     }
     
     private func openQuizController() {
@@ -37,10 +44,11 @@ class QuizCoordinator: Coordinator {
     }
     
     private func openQuizQuestionsController(with data: QuizTopicsModel) {
+       
         let coordinator = QuizQuestionsCoordinator(rootController)
         coordinator.quizData = data
+        addChildCoordinator(coordinator)
         coordinator.start()
     }
-    
     
 }

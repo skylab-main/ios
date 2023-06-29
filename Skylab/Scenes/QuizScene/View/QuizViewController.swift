@@ -29,6 +29,10 @@ class QuizViewController: BaseViewController, Storyboarded {
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
+    deinit {
+        print("DEINIT QuizViewController")
+    }
+    
     private func configureUI() {
         
         self.view.backgroundColor = .primary

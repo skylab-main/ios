@@ -8,16 +8,19 @@
 import Foundation
 import RxSwift
 
-protocol QuizQuestionsViewModelProtocol {
+protocol QuizQuestionsViewModelProtocol: AnyObject {
     
-    var quizData: QuizTopicsModel? { get set }
-    var openQuizResultController: PublishSubject<Void> { get set }
+    var openQuizResultController: PublishSubject<QuizResultModel> { get set }
     
+    func setQuizData(_ data: QuizTopicsModel?)
+    func setToDefault()
     func getQuestionText() -> String
-    func nextQuestion()
     func getAnswers() -> [String]
-    func checkCorrectAnswer(_ userAnswer: Int) -> Bool
     func getQuiz()
     func getNumberOfQuestions() -> Int
+    func getQuizTopicTitle() -> String
+    func getQuizProgress() -> Float
+    func nextQuestion()
     func currentQuestionNumber() -> Int
+    func checkCorrectAnswer(_ userAnswer: Int) -> Bool
 }

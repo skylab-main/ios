@@ -10,13 +10,26 @@ import RxSwift
 
 class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
-    var quizData: QuizTopicsModel? = nil
-    var openQuizResultController = PublishSubject<Void>()
-
+    var openQuizResultController = PublishSubject<QuizResultModel>()
+    
+    private var quizData: QuizTopicsModel?
     private var quiz: [String: [Question]] = [:]
     private var questionNumber = 0
     private var correctAnswers = 0
     private var wrongOptionChosen: [Int: Bool] = [:]
+    
+    func setQuizData(_ data: QuizTopicsModel?) {
+        
+        quizData = data
+    }
+    
+    func setToDefault() {
+        
+        quiz = [:]
+        questionNumber = 0
+        correctAnswers = 0
+        wrongOptionChosen = [:]
+    }
     
     func getQuestionText() -> String {
  
@@ -33,7 +46,11 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
                    questionNumber += 1
                } else {
                    let quizScoreInPercentage = Double(correctAnswers) / Double(getNumberOfQuestions()) * 100
-                   openQuizResultController.onNext(())
+                   openQuizResultController.onNext((QuizResultModel(numberOfCorrectAnswers: correctAnswers,
+                                                                    percentageOfCorrectAnswers: Int(quizScoreInPercentage),
+                                                                    progress: (quizData?.progress ?? 0.0),
+                                                                    topicTitle: getQuizTopicTitle(),
+                                                                   numberOfQuestions: getNumberOfQuestions())))
                }
     }
     
@@ -95,6 +112,16 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     func currentQuestionNumber() -> Int {
         
         return questionNumber + 1
+    }
+    
+    func getQuizTopicTitle() -> String {
+        
+        quizData?.topic ?? ""
+    }
+    
+    func getQuizProgress() -> Float {
+        
+        (quizData?.progress ?? 0.0) / 100
     }
     
 }

@@ -24,7 +24,23 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         
         configureUI()
         configureNavBarTitle()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel?.getQuiz()
         updateUI()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        viewModel?.setToDefault()
+    }
+    
+    deinit {
+        print("DEINIT QuizQuestionsViewController")
     }
 
     //MARK: - UI Configurations
@@ -58,9 +74,11 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     private func configureProgressBar() {
         
+        guard let viewModel else { return }
+        
         progressBar.progressTintColor = .white
         progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
-        progressBar.progress = (viewModel?.quizData?.progress ?? 0.0) / 100
+        progressBar.progress = viewModel.getQuizProgress()
     }
     
     private func configureQuestionBackgroundView() {
@@ -76,7 +94,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         
         navigationController?.tabBarController?.tabBar.isHidden = true
         
-        title = viewModel.quizData?.topic
+        title = viewModel.getQuizTopicTitle()
         
         navBar.largeTitleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 28),

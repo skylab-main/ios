@@ -23,20 +23,29 @@ class QuizQuestionsCoordinator: Coordinator {
         openQuizQuestionsController()
     }
     
+    override func finish() {
+        
+        removeChildCoordinator(self)
+        rootController.popViewController(animated: false)
+    }
+    
     private func openQuizQuestionsController() {
         
         let viewController = QuizQuestionsViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.quizQuestions.resolve(QuizQuestionsViewModelProtocol.self)
-        viewController.viewModel?.quizData = quizData
+        viewController.viewModel?.setQuizData(quizData)
         viewController.viewModel?.openQuizResultController.asObserver()
-            .subscribe(onNext: { self.openQuizResultController() })
+            .subscribe(onNext: { data in self.openQuizResultController(with: data) })
             .disposed(by: bag)
         rootController.pushViewController(viewController, animated: true)
     }
     
-    private func openQuizResultController() {
+    private func openQuizResultController(with data: QuizResultModel) {
         
         let coordinator = QuizResultCoordinator(rootController)
+        coordinator.parentCoordinator = self
+        coordinator.resultData = data
+        addChildCoordinator(coordinator)
         coordinator.start()
     }
 }

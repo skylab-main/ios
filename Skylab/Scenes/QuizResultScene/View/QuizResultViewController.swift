@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class QuizResultViewController: BaseViewController, Storyboarded {
     
@@ -20,16 +22,23 @@ class QuizResultViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var nextQuizButton: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    var viewModel: QuizResultViewModelProtocol? = QuizResultViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
+        bindButtons()
+    }
+    
+    deinit {
+        print("DEINIT QuizResultViewController")
     }
     
     private func configureUI() {
         
         self.view.backgroundColor = .primary
-        title = "User Interface (UIKit)"
+        title = viewModel?.getTopicTitle()
         
         mainBackgroundView.backgroundColor = .white
         mainBackgroundView.layer.configureViewLayer(cornerRadius: 12, borderWidth: nil, borderColor: nil, nil)
@@ -43,15 +52,22 @@ class QuizResultViewController: BaseViewController, Storyboarded {
     
     private func configureLabels() {
         
+        guard let viewModel else { return }
+        
+        let correctAnswers = viewModel.getNumberOfCorrectAnswers()
+        let numberOfQuestions = viewModel.getNumberOfQuestions()
+        
         congratsLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 28, textColor: .primary, nil)
         congratsLabel.text = "Congrats!"
         
         numberOfCorrectAnswersLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
-        numberOfCorrectAnswersLabel.text = "You’ve answered 10 of 12 questions."
+        numberOfCorrectAnswersLabel.text = "You’ve answered \(correctAnswers) of \(numberOfQuestions) questions."
         
     }
     
     private func configurePercentageView() {
+        
+        guard let viewModel else { return }
         
         percentageResultBackgroundView.backgroundColor = .white
         
@@ -61,7 +77,7 @@ class QuizResultViewController: BaseViewController, Storyboarded {
         
         percentageResultLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 50, textColor: .white, nil)
         percentageResultLabel.textAlignment = .center
-        percentageResultLabel.text = "83%"
+        percentageResultLabel.text = String(viewModel.getPercentageOfCorrectAnswers()) + "%"
         
     }
     
@@ -91,6 +107,19 @@ class QuizResultViewController: BaseViewController, Storyboarded {
         progressBar.progressTintColor = .white
         progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
         progressBar.progress = (Float.random(in: 0...100)) / 100
+    }
+    
+    private func bindButtons() {
+        
+        guard let viewModel else { return }
+        
+        repeatButton.rx.tap
+            .bind(to: viewModel.repeatCurrentQuiz)
+            .disposed(by: bag)
+        
+        allQuizzesButton.rx.tap
+            .bind(to: viewModel.openAllQuizzes)
+            .disposed(by: bag)
     }
 
 }
