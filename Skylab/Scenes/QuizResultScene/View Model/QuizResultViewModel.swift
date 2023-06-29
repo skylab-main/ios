@@ -20,6 +20,8 @@ class QuizResultViewModel: QuizResultViewModelProtocol {
         resultData = data
     }
     
+    //MARK: - Data retrieval methods
+    
     func getPercentageOfCorrectAnswers() -> Int {
         
         guard let resultData else { return 0 }
@@ -55,6 +57,8 @@ class QuizResultViewModel: QuizResultViewModelProtocol {
         return resultData.numberOfQuestions
     }
     
+    //MARK: - Transition methods
+    
     func repeatQuiz() {
         
         repeatCurrentQuiz.onNext(())
@@ -63,9 +67,5 @@ class QuizResultViewModel: QuizResultViewModelProtocol {
     func goToAllQuizzes() {
         
         openAllQuizzes.onNext(())
-    }
-    
-    func goToNextQuiz() {
-        
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 struct QuizTopicsModel {
     
     let allData: [Quiz]
-    let chosenTopicTitle: String
+    var chosenTopicTitle: String
     let progress: Float
-    let numberOfTopics: Int
     let numberOFCurrentTopic: Int
 }
+

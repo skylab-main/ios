@@ -14,6 +14,8 @@ class QuizViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var quizTopicsTableView: UITableView!
     
     var viewModel: QuizViewModelProtocol?
+    
+    //MARK: - View life cycle methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,8 @@ class QuizViewController: BaseViewController, Storyboarded {
         configureNavBarTitle()
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
+    
+    //MARK: - UI Configurations
     
     private func configureUI() {
         
@@ -71,6 +75,8 @@ class QuizViewController: BaseViewController, Storyboarded {
         navBar.barTintColor = .primary
     }
 }
+
+//MARK: - Extensions
 
 extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     

@@ -25,9 +25,7 @@ class QuizViewModel: QuizViewModelProtocol {
                 quizTopicsArray.append(QuizTopicsModel(allData: quizData,
                                                        chosenTopicTitle: quiz.title,
                                                        progress: Float.random(in: 0...100),
-                                                       numberOfTopics: quizData.count,
                                                        numberOFCurrentTopic: counter))
-                
                 counter += 1
             }
         }

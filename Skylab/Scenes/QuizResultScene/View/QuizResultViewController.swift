@@ -35,6 +35,8 @@ class QuizResultViewController: BaseViewController, Storyboarded {
         print("DEINIT QuizResultViewController")
     }
     
+    //MARK: - UI Configurations
+    
     private func configureUI() {
         
         self.view.backgroundColor = .primary
@@ -109,6 +111,8 @@ class QuizResultViewController: BaseViewController, Storyboarded {
         progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
         progressBar.progress = (Float.random(in: 0...100)) / 100
     }
+    
+    //MARK: - Bindings 
     
     private func bindButtons() {
         

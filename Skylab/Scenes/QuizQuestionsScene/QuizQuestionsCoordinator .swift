@@ -35,11 +35,12 @@ class QuizQuestionsCoordinator: Coordinator {
         let viewController = QuizQuestionsViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.quizQuestions.resolve(QuizQuestionsViewModelProtocol.self)
         viewController.viewModel?.setQuizData(quizData)
+        moveToNextQuiz = viewController.viewModel?.goToNextQuiz
+        
         viewController.viewModel?.openQuizResultController.asObserver()
             .subscribe(onNext: { data in self.openQuizResultController(with: data) })
             .disposed(by: bag)
-        moveToNextQuiz = viewController.viewModel?.goToNextQuiz
-
+        
         rootController.pushViewController(viewController, animated: true)
     }
     

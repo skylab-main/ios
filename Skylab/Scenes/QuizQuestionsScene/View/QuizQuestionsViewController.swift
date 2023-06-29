@@ -19,6 +19,8 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     var viewModel: QuizQuestionsViewModelProtocol?
     
+    //MARK: - View life cycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
