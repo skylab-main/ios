@@ -18,8 +18,17 @@ class QuizViewModel: QuizViewModelProtocol {
         
         NetworkManager.getQuiz { [self] quizData in
             
+            var counter = 0
+            
             quizData.forEach { quiz in
-                quizTopicsArray.append(QuizTopicsModel(topic: quiz.title, progress: Float.random(in: 0...100)))
+                
+                quizTopicsArray.append(QuizTopicsModel(allData: quizData,
+                                                       chosenTopicTitle: quiz.title,
+                                                       progress: Float.random(in: 0...100),
+                                                       numberOfTopics: quizData.count,
+                                                       numberOFCurrentTopic: counter))
+                
+                counter += 1
             }
         }
     }

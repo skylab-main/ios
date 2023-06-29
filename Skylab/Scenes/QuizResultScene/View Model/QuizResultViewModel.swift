@@ -67,6 +67,5 @@ class QuizResultViewModel: QuizResultViewModelProtocol {
     
     func goToNextQuiz() {
         
-        
     }
 }

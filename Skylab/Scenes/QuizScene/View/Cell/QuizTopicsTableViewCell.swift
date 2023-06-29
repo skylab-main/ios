@@ -17,7 +17,7 @@ class QuizTopicsTableViewCell: UITableViewCell {
     
     func configureCell(data: QuizTopicsModel) {
         
-        quizTopicLabel.text = data.topic
+        quizTopicLabel.text = data.chosenTopicTitle
         quizTopicLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
         
         progressPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)

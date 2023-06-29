@@ -29,10 +29,6 @@ class QuizViewController: BaseViewController, Storyboarded {
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
-    deinit {
-        print("DEINIT QuizViewController")
-    }
-    
     private func configureUI() {
         
         self.view.backgroundColor = .primary
@@ -73,23 +69,6 @@ class QuizViewController: BaseViewController, Storyboarded {
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.tintColor = .white
         navBar.barTintColor = .primary
-    }
-    
-    private func bindTopicButton() {
-        
-        quizTopicsTableView.rx
-            .itemSelected
-            .map { [weak self] indexPath in
-                guard let viewModel = self?.viewModel else { return }
-                
-                return viewModel.quizTopicsArray[indexPath.row]
-            }
-            .subscribe(onNext: { model in
-                
-                print(model)
-                
-            }).disposed(by: bag)
-            
     }
 }
 

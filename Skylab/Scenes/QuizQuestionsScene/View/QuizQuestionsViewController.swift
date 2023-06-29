@@ -24,6 +24,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         
         configureUI()
         configureNavBarTitle()
+        viewModel?.goToNextQuiz()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +32,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         
         viewModel?.getQuiz()
         updateUI()
+        title = viewModel?.getQuizTopicTitle()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -90,11 +92,9 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     private func configureNavBarTitle() {
             
-        guard let viewModel, let navBar = navigationController?.navigationBar else { return }
+        guard let navBar = navigationController?.navigationBar else { return }
         
         navigationController?.tabBarController?.tabBar.isHidden = true
-        
-        title = viewModel.getQuizTopicTitle()
         
         navBar.largeTitleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 28),

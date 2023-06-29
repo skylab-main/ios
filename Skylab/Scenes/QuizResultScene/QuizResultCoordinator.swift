@@ -13,7 +13,7 @@ class QuizResultCoordinator: Coordinator {
     
     let rootController: UINavigationController
     var resultData: QuizResultModel?
-    var parentCoordinator: Coordinator?
+    weak var parentCoordinator: QuizQuestionsCoordinator?
     private var isAnimate: Bool = false
     
     init(_ rootController: UINavigationController) {
@@ -44,7 +44,7 @@ class QuizResultCoordinator: Coordinator {
             .subscribe(onNext: { self.openAllQuizzes() })
             .disposed(by: bag)
         viewController.viewModel?.goToNextQuizz.asObserver()
-            .subscribe(onNext: { })
+            .subscribe(onNext: { self.goToNextQuiz() })
             .disposed(by: bag)
         
         rootController.pushViewController(viewController, animated: true)
@@ -64,6 +64,11 @@ class QuizResultCoordinator: Coordinator {
     
     private func goToNextQuiz() {
         
+        guard let moveToNextQuiz = parentCoordinator?.moveToNextQuiz?() else { return }
         
+        isAnimate = true
+        finish()
+
+        moveToNextQuiz
     }
 }

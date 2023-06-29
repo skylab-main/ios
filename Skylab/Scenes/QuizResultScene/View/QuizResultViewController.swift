@@ -38,6 +38,7 @@ class QuizResultViewController: BaseViewController, Storyboarded {
     private func configureUI() {
         
         self.view.backgroundColor = .primary
+        navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
         title = viewModel?.getTopicTitle()
         
         mainBackgroundView.backgroundColor = .white
@@ -119,6 +120,10 @@ class QuizResultViewController: BaseViewController, Storyboarded {
         
         allQuizzesButton.rx.tap
             .bind(to: viewModel.openAllQuizzes)
+            .disposed(by: bag)
+        
+        nextQuizButton.rx.tap
+            .bind(to: viewModel.goToNextQuizz)
             .disposed(by: bag)
     }
 

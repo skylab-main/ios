@@ -23,4 +23,5 @@ protocol QuizQuestionsViewModelProtocol: AnyObject {
     func nextQuestion()
     func currentQuestionNumber() -> Int
     func checkCorrectAnswer(_ userAnswer: Int) -> Bool
+    func goToNextQuiz() 
 }

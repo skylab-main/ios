@@ -13,6 +13,7 @@ class QuizQuestionsCoordinator: Coordinator {
     
     let rootController: UINavigationController
     var quizData: QuizTopicsModel?
+    var moveToNextQuiz: (() -> Void)?
     
     init(_ rootController: UINavigationController) {
         self.rootController = rootController
@@ -37,6 +38,8 @@ class QuizQuestionsCoordinator: Coordinator {
         viewController.viewModel?.openQuizResultController.asObserver()
             .subscribe(onNext: { data in self.openQuizResultController(with: data) })
             .disposed(by: bag)
+        moveToNextQuiz = viewController.viewModel?.goToNextQuiz
+
         rootController.pushViewController(viewController, animated: true)
     }
     

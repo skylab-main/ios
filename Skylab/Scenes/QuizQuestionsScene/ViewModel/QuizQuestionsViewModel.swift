@@ -17,10 +17,14 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     private var questionNumber = 0
     private var correctAnswers = 0
     private var wrongOptionChosen: [Int: Bool] = [:]
+    private var currentQuizTitle = ""
+    private var currentQuiz = 0
     
     func setQuizData(_ data: QuizTopicsModel?) {
         
         quizData = data
+        currentQuiz = quizData?.numberOFCurrentTopic ?? 0
+        currentQuizTitle = quizData?.allData[currentQuiz].title ?? "" 
     }
     
     func setToDefault() {
@@ -33,8 +37,8 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func getQuestionText() -> String {
  
-        let value = quiz[quizData?.topic ?? ""]
-        
+        let value = quiz[currentQuizTitle]
+
         return value?[questionNumber].question ?? ""
     }
     
@@ -56,14 +60,14 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func getAnswers() -> [String] {
         
-        let value = quiz[quizData?.topic ?? ""]
+        let value = quiz[currentQuizTitle]
         
         return value?[questionNumber].options ?? []
     }
     
     func checkCorrectAnswer(_ userAnswer: Int) -> Bool {
         
-        let value = quiz[quizData?.topic ?? ""]
+        let value = quiz[quizData?.chosenTopicTitle ?? ""]
         let currentQuestion = value?[questionNumber]
         
         countAnswers(userAnswer)
@@ -77,7 +81,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     private func countAnswers(_ answer: Int) {
         
-        let value = quiz[quizData?.topic ?? ""]
+        let value = quiz[quizData?.chosenTopicTitle ?? ""]
         let currentQuestion = value?[questionNumber]
         
         if let hasChosenWrongOption = wrongOptionChosen[questionNumber], hasChosenWrongOption {
@@ -104,7 +108,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func getNumberOfQuestions() -> Int {
         
-        let value = quiz[quizData?.topic ?? ""]
+        let value = quiz[quizData?.chosenTopicTitle ?? ""]
         
         return value?.count ?? 0
     }
@@ -115,13 +119,31 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     }
     
     func getQuizTopicTitle() -> String {
-        
-        quizData?.topic ?? ""
+       
+        currentQuizTitle
     }
     
     func getQuizProgress() -> Float {
         
         (quizData?.progress ?? 0.0) / 100
+    }
+    
+    func goToNextQuiz() {
+        
+        guard let quizData else { return }
+        
+        let numberOfQuizzes = quizData.numberOfTopics
+        
+        if currentQuiz < numberOfQuizzes {
+            
+            currentQuizTitle = quizData.allData[currentQuiz].title
+        } else {
+            
+            currentQuiz = 0
+            currentQuizTitle = quizData.allData[currentQuiz].title
+        }
+        
+        currentQuiz += 1
     }
     
 }
