@@ -36,7 +36,7 @@ class QuizQuestionsCoordinator: Coordinator {
         viewController.viewModel = Container.quizQuestions.resolve(QuizQuestionsViewModelProtocol.self)
         viewController.viewModel?.setQuizData(quizData)
         
-        // Assigning a method to the closure so that it can be called in the 'QuizResultCoordinator' coordinator
+        /// Assigning a method to the closure so that it can be called in the 'QuizResultCoordinator' coordinator
         moveToNextQuiz = viewController.viewModel?.goToNextQuiz
         
         viewController.viewModel?.openQuizResultController.asObserver()

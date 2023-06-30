@@ -2,7 +2,7 @@
 //  QuizViewController.swift
 //  Skylab
 //
-//  Created by Artem Tkachenko on 12.04.2023.
+//  Created by Aleksey Kotsevych on 12.04.2023.
 //
 
 import UIKit
@@ -27,8 +27,8 @@ class QuizViewController: BaseViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        configureNavBarTitle()
         navigationController?.tabBarController?.tabBar.isHidden = false
+        configureNavBarTitle()
         viewModel?.updateTopicData()
         quizTopicsTableView.reloadData()
     }
@@ -106,11 +106,11 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         guard
-            let goTo = viewModel?.openQuizQuestionsController,
+            let goToQuizQuestions = viewModel?.openQuizQuestionsController,
             let topicData = viewModel?.getQuizTopicData()[indexPath.row]
         else { return }
 
-        goTo.onNext(topicData)
+        goToQuizQuestions.onNext(topicData)
     }
     
 }

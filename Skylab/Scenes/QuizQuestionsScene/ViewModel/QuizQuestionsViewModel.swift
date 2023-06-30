@@ -15,10 +15,10 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     private var quizData: QuizTopicsModel?
     private var quiz: [String: [Question]] = [:]
     private var wrongOptionChosen: [Int: Bool] = [:]
+    private var currentQuizTitle = ""
     private var questionNumber = 0
     private var correctAnswers = 0
     private var currentQuiz = 0
-    private var currentQuizTitle = ""
     private var numberOfTopics = 0
     
     //MARK: - Setup methods
