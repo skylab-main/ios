@@ -12,6 +12,7 @@ class QuizViewModel: QuizViewModelProtocol {
     
     var openQuizQuestionsController = PublishSubject<QuizTopicsModel>()
     private var quizTopicsArray: [QuizTopicsModel] = []
+    private let userDefaults = UserDefaults.standard
     
     func getQuizTopics() {
         
@@ -21,9 +22,11 @@ class QuizViewModel: QuizViewModelProtocol {
             
             quizData.forEach { quiz in
                 
+                let userProgress = userDefaults.float(forKey: quiz.title)
+                
                 quizTopicsArray.append(QuizTopicsModel(allData: quizData,
                                                        chosenTopicTitle: quiz.title,
-                                                       progress: Float.random(in: 0...100),
+                                                       progress: userProgress,
                                                        numberOFCurrentTopic: counter))
                 counter += 1
             }
@@ -38,5 +41,11 @@ class QuizViewModel: QuizViewModelProtocol {
     func getNumberOfRowsInSection() -> Int {
         
         return quizTopicsArray.count
+    }
+    
+    func updateTopicData() {
+        
+        quizTopicsArray = []
+        getQuizTopics()
     }
 }

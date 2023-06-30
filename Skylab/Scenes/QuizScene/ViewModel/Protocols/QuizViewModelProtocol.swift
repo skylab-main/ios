@@ -15,4 +15,5 @@ protocol QuizViewModelProtocol: AnyObject {
     func getQuizTopics()
     func getQuizTopicData() -> [QuizTopicsModel]
     func getNumberOfRowsInSection() -> Int
+    func updateTopicData()
 }

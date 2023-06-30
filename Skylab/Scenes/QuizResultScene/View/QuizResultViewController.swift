@@ -109,7 +109,7 @@ class QuizResultViewController: BaseViewController, Storyboarded {
         
         progressBar.progressTintColor = .white
         progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
-        progressBar.progress = (Float.random(in: 0...100)) / 100
+        progressBar.progress = (viewModel?.getProgress() ?? 0.0)
     }
     
     //MARK: - Bindings 

@@ -10,14 +10,26 @@ import RxSwift
 
 class QuizResultViewModel: QuizResultViewModelProtocol {
     
-    private var resultData: QuizResultModel?
     var repeatCurrentQuiz = PublishSubject<Void>()
     var openAllQuizzes = PublishSubject<Void>()
     var goToNextQuizz = PublishSubject<Void>()
     
+    private var resultData: QuizResultModel?
+    private let userDefaults = UserDefaults.standard
+    
     func setResultData(_ data: QuizResultModel?) {
         
+        guard let data else { return }
+        
         resultData = data
+        
+        let previousResult = userDefaults.float(forKey: data.topicTitle)
+        
+        if data.progress > previousResult || previousResult == 0.0 {
+            
+            // Save data in UserDefaults
+            userDefaults.set(data.progress, forKey: data.topicTitle)
+        }
     }
     
     //MARK: - Data retrieval methods

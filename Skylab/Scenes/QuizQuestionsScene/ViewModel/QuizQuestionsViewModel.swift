@@ -77,7 +77,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func getQuizProgress() -> Float {
         
-        (quizData?.progress ?? 0.0) / 100
+        UserDefaults.standard.float(forKey: currentQuizTitle)
     }
     
     //MARK: - Quiz display processing methods
@@ -95,7 +95,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
             let quizScoreInPercentage = Double(correctAnswers) / Double(getNumberOfQuestions()) * 100
             openQuizResultController.onNext((QuizResultModel(numberOfCorrectAnswers: correctAnswers,
                                                              percentageOfCorrectAnswers: Int(quizScoreInPercentage),
-                                                             progress: (quizData?.progress ?? 0.0),
+                                                             progress: Float(quizScoreInPercentage / 100),
                                                              topicTitle: getQuizTopicTitle(),
                                                              numberOfQuestions: getNumberOfQuestions())))
         }

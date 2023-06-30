@@ -29,6 +29,8 @@ class QuizViewController: BaseViewController, Storyboarded {
         
         configureNavBarTitle()
         navigationController?.tabBarController?.tabBar.isHidden = false
+        viewModel?.updateTopicData()
+        quizTopicsTableView.reloadData()
     }
     
     //MARK: - UI Configurations
@@ -43,7 +45,7 @@ class QuizViewController: BaseViewController, Storyboarded {
         
         helpfulResourcesButton.configureButton(title: "Корисні ресурси",
                                                imageName: "rightArrow",
-                                               fontName: "AnonymousPro-Bold",
+                                               fontName: CustomFonts.anonymousProBold.rawValue,
                                                fontSize: 14,
                                                tintColor: .primary)
         
@@ -61,12 +63,12 @@ class QuizViewController: BaseViewController, Storyboarded {
         navBar.prefersLargeTitles = true
  
         navBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 28) ?? UIFont.systemFont(ofSize: 28),
+            NSAttributedString.Key.font: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 28) ?? UIFont.systemFont(ofSize: 28),
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ]
         
         navBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 28) ?? UIFont.systemFont(ofSize: 28),
+            NSAttributedString.Key.font: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 28) ?? UIFont.systemFont(ofSize: 28),
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ]
         

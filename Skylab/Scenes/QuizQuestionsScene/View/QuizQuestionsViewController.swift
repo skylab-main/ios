@@ -34,6 +34,7 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         
         viewModel?.getQuiz()
         updateUI()
+        configureProgressBar()
         title = viewModel?.getQuizTopicTitle()
     }
     
