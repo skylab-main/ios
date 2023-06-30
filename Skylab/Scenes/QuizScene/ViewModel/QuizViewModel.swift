@@ -11,8 +11,7 @@ import RxSwift
 class QuizViewModel: QuizViewModelProtocol {
     
     var openQuizQuestionsController = PublishSubject<QuizTopicsModel>()
-    
-    var quizTopicsArray: [QuizTopicsModel] = []
+    private var quizTopicsArray: [QuizTopicsModel] = []
     
     func getQuizTopics() {
         
@@ -29,5 +28,15 @@ class QuizViewModel: QuizViewModelProtocol {
                 counter += 1
             }
         }
+    }
+    
+    func getQuizTopicData() -> [QuizTopicsModel] {
+        
+        return quizTopicsArray
+    }
+    
+    func getNumberOfRowsInSection() -> Int {
+        
+        return quizTopicsArray.count
     }
 }

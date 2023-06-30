@@ -81,13 +81,13 @@ class QuizViewController: BaseViewController, Storyboarded {
 extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.quizTopicsArray.count ?? 0
+        viewModel?.getNumberOfRowsInSection() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard
-            let data = viewModel?.quizTopicsArray[indexPath.row],
+            let data = viewModel?.getQuizTopicData()[indexPath.row],
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuizViewController", for: indexPath) as? QuizTopicsTableViewCell
         else { return UITableViewCell() }
         
@@ -105,7 +105,7 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
 
         guard
             let goTo = viewModel?.openQuizQuestionsController,
-            let topicData = viewModel?.quizTopicsArray[indexPath.row]
+            let topicData = viewModel?.getQuizTopicData()[indexPath.row]
         else { return }
 
         goTo.onNext(topicData)

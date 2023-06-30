@@ -11,7 +11,8 @@ import RxSwift
 protocol QuizViewModelProtocol: AnyObject {
     
     var openQuizQuestionsController: PublishSubject<QuizTopicsModel> { get set }
-    var quizTopicsArray: [QuizTopicsModel] { get set }
     
     func getQuizTopics()
+    func getQuizTopicData() -> [QuizTopicsModel]
+    func getNumberOfRowsInSection() -> Int
 }

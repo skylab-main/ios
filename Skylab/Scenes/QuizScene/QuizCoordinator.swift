@@ -32,10 +32,12 @@ class QuizCoordinator: Coordinator {
         
         let viewController = QuizViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.quizTopics.resolve(QuizViewModelProtocol.self)
+        
         viewController.viewModel?.openQuizQuestionsController
             .asObserver()
             .subscribe(onNext: { [weak self] quizData in self?.openQuizQuestionsController(with: quizData) })
             .disposed(by: bag)
+        
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.quiz.rawValue,
                                                  image: TabBarItems.quiz.image,
                                                  selectedImage: TabBarItems.quiz.selectedImage)
