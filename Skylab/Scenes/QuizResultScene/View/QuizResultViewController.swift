@@ -22,7 +22,7 @@ class QuizResultViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var nextQuizButton: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     
-    var viewModel: QuizResultViewModelProtocol? = QuizResultViewModel()
+    var viewModel: QuizResultViewModelProtocol? 
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -34,7 +34,7 @@ class QuizResultCoordinator: Coordinator {
     private func openQuizResultController() {
         
         let viewController = QuizResultViewController.instantiate(coordinator: self)
-        //viewController.viewModel = Container.quizQuestions.resolve(QuizQuestionsViewModelProtocol.self)
+        viewController.viewModel = Container.quizResult.resolve(QuizResultViewModelProtocol.self)
         viewController.viewModel?.setResultData(resultData)
         
         viewController.viewModel?.repeatCurrentQuiz.asObserver()
