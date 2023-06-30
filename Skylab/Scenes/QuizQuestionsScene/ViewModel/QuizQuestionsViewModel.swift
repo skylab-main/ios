@@ -132,6 +132,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
         }
     }
     
+    /// Method for displaying  the next quiz when the "next quiz" button on the 'QuizResult' screen is triggered.
     func goToNextQuiz() {
         
         guard let quizData else { return }
