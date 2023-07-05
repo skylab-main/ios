@@ -11,8 +11,6 @@ protocol LessonsViewModelProtocol: AnyObject {
     
     func getLessons()
     func numberOfRowInSection(for section: Int) -> Int
-    func cellViewModel(for indexPath: IndexPath) -> ProgressItemViewModelProtocol?
-    func viewModelForSelectedRow() -> ProgressItemViewModelProtocol?
-    func selectRow(atIndexPath indexPath: IndexPath)
+    func cellViewModel(for indexPath: IndexPath) -> LessonModel?
     
 }

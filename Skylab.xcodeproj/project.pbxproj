@@ -106,9 +106,7 @@
 		F30A06DF2A28DAE900E187DC /* LessonsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A06DE2A28DAE900E187DC /* LessonsViewModelProtocol.swift */; };
 		F30A06E42A28EC1000E187DC /* ProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A06E32A28EC1000E187DC /* ProgressTableViewCell.swift */; };
 		F30A06E62A2A22FE00E187DC /* LessonsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30A06E52A2A211800E187DC /* LessonsViewController.storyboard */; };
-		F36D06DD2A44AA3B000EE45E /* ProgressItemViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D06DC2A44AA3B000EE45E /* ProgressItemViewModelProtocol.swift */; };
-		F36D06E02A44AC23000EE45E /* ProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D06DF2A44AC23000EE45E /* ProgressModel.swift */; };
-		F36D06E22A44B157000EE45E /* ProgressItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D06E12A44B157000EE45E /* ProgressItemViewModel.swift */; };
+		F36D06E02A44AC23000EE45E /* LessonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D06DF2A44AC23000EE45E /* LessonsModel.swift */; };
 		F3CEEDCF2A360BF20043D950 /* ProgressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */; };
 		F3F881A92A558B5100E741FC /* LessonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F881A82A558B5100E741FC /* LessonsContainer.swift */; };
 		F422B06B2A374FA300A052EA /* QuizTopicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422B06A2A374FA300A052EA /* QuizTopicsTableViewCell.swift */; };
@@ -300,9 +298,7 @@
 		F30A06DE2A28DAE900E187DC /* LessonsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewModelProtocol.swift; sourceTree = "<group>"; };
 		F30A06E32A28EC1000E187DC /* ProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTableViewCell.swift; sourceTree = "<group>"; };
 		F30A06E52A2A211800E187DC /* LessonsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LessonsViewController.storyboard; sourceTree = "<group>"; };
-		F36D06DC2A44AA3B000EE45E /* ProgressItemViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressItemViewModelProtocol.swift; sourceTree = "<group>"; };
-		F36D06DF2A44AC23000EE45E /* ProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressModel.swift; sourceTree = "<group>"; };
-		F36D06E12A44B157000EE45E /* ProgressItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressItemViewModel.swift; sourceTree = "<group>"; };
+		F36D06DF2A44AC23000EE45E /* LessonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsModel.swift; sourceTree = "<group>"; };
 		F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTableViewCell.xib; sourceTree = "<group>"; };
 		F3F881A82A558B5100E741FC /* LessonsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsContainer.swift; sourceTree = "<group>"; };
 		F422B06A2A374FA300A052EA /* QuizTopicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsTableViewCell.swift; sourceTree = "<group>"; };
@@ -448,6 +444,7 @@
 			children = (
 				047D39E829E7416F000D8D8C /* LessonsCoordinator.swift */,
 				F3F881A72A558B2A00E741FC /* DI */,
+				F3F881AA2A55A4D100E741FC /* Model */,
 				047D39E529E740FF000D8D8C /* ViewModel */,
 				047D39E029E73EDA000D8D8C /* View */,
 			);
@@ -1013,9 +1010,6 @@
 		F30A06E22A28EBE800E187DC /* ProgressTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				F36D06DF2A44AC23000EE45E /* ProgressModel.swift */,
-				F36D06E12A44B157000EE45E /* ProgressItemViewModel.swift */,
-				F36D06DC2A44AA3B000EE45E /* ProgressItemViewModelProtocol.swift */,
 				F30A06E32A28EC1000E187DC /* ProgressTableViewCell.swift */,
 				F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */,
 			);
@@ -1028,6 +1022,14 @@
 				F3F881A82A558B5100E741FC /* LessonsContainer.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		F3F881AA2A55A4D100E741FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F36D06DF2A44AC23000EE45E /* LessonsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F422B0692A374F8E00A052EA /* Cell */ = {
@@ -1780,7 +1782,7 @@
 				047D39EC29E742CC000D8D8C /* AboutViewController.swift in Sources */,
 				089F803B29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift in Sources */,
 				DF4D3E2D29660FEB00070D79 /* AppCoordinator.swift in Sources */,
-				F36D06E02A44AC23000EE45E /* ProgressModel.swift in Sources */,
+				F36D06E02A44AC23000EE45E /* LessonsModel.swift in Sources */,
 				F48BD5202A3DDBE6003D3202 /* QuizQuestionsViewModel.swift in Sources */,
 				DF3D3C44296A042000CFCE49 /* SecondPageCoordinator.swift in Sources */,
 				F4BD54542A28CAAA00E5039B /* CourseDetailsViewModelProtocol.swift in Sources */,
@@ -1807,7 +1809,6 @@
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */,
 				F450D73A2A1D194100AF8768 /* CustomApplyForCourseView.swift in Sources */,
-				F36D06E22A44B157000EE45E /* ProgressItemViewModel.swift in Sources */,
 				045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */,
 				F47BA3A52A263D8100DF056D /* CALayer + Extension.swift in Sources */,
 				089F803929D2D3B900748D24 /* SecondPageSwiftUIView.swift in Sources */,
@@ -1830,7 +1831,6 @@
 				F422B0712A37986000A052EA /* QuizContainer.swift in Sources */,
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
-				F36D06DD2A44AA3B000EE45E /* ProgressItemViewModelProtocol.swift in Sources */,
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
 				F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */,
 				F4E7F12629E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift in Sources */,

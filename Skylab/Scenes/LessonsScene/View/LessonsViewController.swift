@@ -90,15 +90,16 @@ extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
         
         guard let cell, let viewModel else { return UITableViewCell() }
         
-        let cellViewModel = viewModel.cellViewModel(for: indexPath)
-        cell.viewModel = cellViewModel
+        guard let item = viewModel.cellViewModel(for: indexPath) else { return UITableViewCell() }
+        
+        cell.configureCell(title: item.title, progress: item.progressPercent)
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewModel else { return }
-        guard let item = viewModel.viewModelForSelectedRow() else { return }
+        guard let item = viewModel.cellViewModel(for: indexPath) else { return }
         print(item)
 
     }

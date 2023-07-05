@@ -13,19 +13,17 @@ class ProgressTableViewCell: UITableViewCell {
     @IBOutlet weak var itemPercentLabel: UILabel!
     @IBOutlet weak var itemProgressView: UIProgressView!
     
-    var viewModel: ProgressItemViewModelProtocol? {
-        willSet(viewModel) {
-            guard let viewModel = viewModel else { return }
-            
-            itemNameLabel.text = viewModel.title
-            itemNameLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
-            
-            itemPercentLabel.text = viewModel.progress
-            itemPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
-            
-            itemProgressView.progressTintColor = .primary
-            itemProgressView.trackTintColor = .systemGray4
-            itemProgressView.progress = viewModel.progressValue
-        }
+    func configureCell(title: String, progress: Float) {
+        
+        itemNameLabel.text = title
+        itemNameLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
+        
+        itemPercentLabel.text = String(format: "%.0f", progress) + "%"
+        itemPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
+        
+        itemProgressView.progressTintColor = .primary
+        itemProgressView.trackTintColor = .systemGray4
+        itemProgressView.progress = progress / 100
+        
     }
 }

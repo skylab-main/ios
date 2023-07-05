@@ -1,5 +1,5 @@
 //
-//  ProgressModel.swift
+//  LessonsModel.swift
 //  Skylab
 //
 //  Created by Леонід Квіт on 22.06.2023.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ProgressModel {
+struct LessonModel {
     let title: String
     let progressPercent: Float
 }
 
-typealias ProgressArrayModel = [ProgressModel]
+typealias LessonsModel = [LessonModel]
