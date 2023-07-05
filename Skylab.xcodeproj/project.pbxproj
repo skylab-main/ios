@@ -40,6 +40,9 @@
 		04DEDBF029E9ECB500486A42 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEDBEF29E9ECB500486A42 /* PersonCell.swift */; };
 		04DEDBF229E9EDA700486A42 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEDBF129E9EDA700486A42 /* CircularImageView.swift */; };
 		04DEDBF429E9EE6300486A42 /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DEDBF329E9EE5F00486A42 /* AnonymousPro-Regular.ttf */; };
+		080505AE2A55B5E20009CCBD /* VideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */; };
+		080505B12A55B7240009CCBD /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505B02A55B7240009CCBD /* VideoViewController.swift */; };
+		080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080505B22A55B73F0009CCBD /* VideoViewController.storyboard */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
 		08697119298430B600E4CA00 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08697118298430B600E4CA00 /* RxRelay */; };
 		0869711B298430B600E4CA00 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711A298430B600E4CA00 /* RxSwift */; };
@@ -237,6 +240,9 @@
 		04DEDBEF29E9ECB500486A42 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		04DEDBF129E9EDA700486A42 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		04DEDBF329E9EE5F00486A42 /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
+		080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoordinator.swift; sourceTree = "<group>"; };
+		080505B02A55B7240009CCBD /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		080505B22A55B73F0009CCBD /* VideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
 		089F803829D2D3B900748D24 /* SecondPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIView.swift; sourceTree = "<group>"; };
 		089F803A29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -589,6 +595,24 @@
 				04DEDBEF29E9ECB500486A42 /* PersonCell.swift */,
 			);
 			path = CustomVies;
+			sourceTree = "<group>";
+		};
+		080505AC2A55B3160009CCBD /* VideoScene */ = {
+			isa = PBXGroup;
+			children = (
+				080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */,
+				080505AF2A55B6AF0009CCBD /* View */,
+			);
+			path = VideoScene;
+			sourceTree = "<group>";
+		};
+		080505AF2A55B6AF0009CCBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				080505B02A55B7240009CCBD /* VideoViewController.swift */,
+				080505B22A55B73F0009CCBD /* VideoViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0869711E2986D8E200E4CA00 /* Frameworks */ = {
@@ -978,6 +1002,7 @@
 				F4EDF83D2A3A046E0056D1D8 /* QuizQuestionsScene */,
 				F4DC1D512A485A950006D868 /* QuizResultScene */,
 				047D39C629E737C5000D8D8C /* LessonsScene */,
+				080505AC2A55B3160009CCBD /* VideoScene */,
 				047D39C729E737E3000D8D8C /* PracticeScene */,
 				047D39C829E73888000D8D8C /* AboutScene */,
 				F450D71A2A1CD6E400AF8768 /* CourseDescription */,
@@ -1705,6 +1730,7 @@
 				047D39D529E73CA9000D8D8C /* QuizViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
+				080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */,
 				F4DC1D572A485AE70006D868 /* QuizResultViewController.storyboard in Resources */,
 				F450D7382A1D16C300AF8768 /* CourseDescriptionViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
@@ -1849,6 +1875,7 @@
 				DF3D3C242969D01300CFCE49 /* TabBarCoordinator.swift in Sources */,
 				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
 				047D39F529E74BED000D8D8C /* UIColor + Extension.swift in Sources */,
+				080505AE2A55B5E20009CCBD /* VideoCoordinator.swift in Sources */,
 				F4DC1D552A485ADC0006D868 /* QuizResultViewController.swift in Sources */,
 				F4E7F13029E975EF00D6FDD1 /* APICaller.swift in Sources */,
 				F4BD545C2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift in Sources */,
@@ -1875,6 +1902,7 @@
 				0422F18F29F727F800068A58 /* AnonymousPro.swift in Sources */,
 				F4B1314929E445E2005760B6 /* MainMenuViewController.swift in Sources */,
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
+				080505B12A55B7240009CCBD /* VideoViewController.swift in Sources */,
 				F422B0762A379B2000A052EA /* QuizViewModelProtocol.swift in Sources */,
 				047D39F329E74390000D8D8C /* AboutCoordinator.swift in Sources */,
 				152E04CF298471FD00ABCEA2 /* SwinjectTestPageSubViewControllerViewModel.swift in Sources */,
