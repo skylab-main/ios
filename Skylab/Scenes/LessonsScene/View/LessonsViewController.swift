@@ -12,17 +12,11 @@ class LessonsViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var lessonsTableView: UITableView!
     @IBOutlet weak var descriptionCurseButton: UIButton!
     
-    var viewModel: LessonsViewModel?
+    var viewModel: LessonsViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        lessonsTableView.dataSource = self
-        lessonsTableView.delegate = self
-       
-        let nib = UINib(nibName: "ProgressTableViewCell", bundle: nil)
-        lessonsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
-        
         configureUI()
         configureNavBarTitle()
     }
@@ -30,10 +24,8 @@ class LessonsViewController: BaseViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        viewModel = LessonsViewModel()
-        viewModel?.getLessons { [weak self] in
-            self?.lessonsTableView.reloadData()
-        }
+        configureNavBarTitle()
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
 
     //MARK: - UI Configuration
@@ -54,6 +46,13 @@ class LessonsViewController: BaseViewController, Storyboarded {
                                                fontSize: 14,
                                                tintColor: .primary)
         
+        lessonsTableView.dataSource = self
+        lessonsTableView.delegate = self
+       
+        let nib = UINib(nibName: "ProgressTableViewCell", bundle: nil)
+        lessonsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
+        
+        viewModel?.getLessons()
     }
 
     private func configureNavBarTitle() {
@@ -101,6 +100,6 @@ extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
         guard let viewModel else { return }
         guard let item = viewModel.viewModelForSelectedRow() else { return }
         print(item)
-        viewModel.openLevelViewController(item)
+
     }
 }

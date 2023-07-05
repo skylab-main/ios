@@ -9,20 +9,16 @@ import Foundation
 
 class LessonsViewModel: LessonsViewModelProtocol {
     
-    var coordinatorDelegate: LessonsCoordinatorDelegate?
-    
     private var selectedIndexPath: IndexPath?
     private var lessons: ProgressArrayModel?
 
-    func getLessons(completion: @escaping () -> ()) {
+    func getLessons() {
         lessons = []
         lessons?.append(ProgressModel(title: "Lvl 1. Basics", progressPercent: 80))
         lessons?.append(ProgressModel(title: "Lvl 2. Introduction to code", progressPercent: 20))
         lessons?.append(ProgressModel(title: "Lvl 3. Something for not beginners", progressPercent: 45))
         lessons?.append(ProgressModel(title: "Lvl 4. Something if you think that you are strong middle developer", progressPercent: 20))
         lessons?.append(ProgressModel(title: "Lvl 5. Something for middle developers", progressPercent: 10))
-        
-        completion()
     }
     
     func numberOfRowInSection(for section: Int) -> Int {
@@ -45,12 +41,6 @@ class LessonsViewModel: LessonsViewModelProtocol {
     
     func selectRow(atIndexPath indexPath: IndexPath) {
         self.selectedIndexPath = indexPath
-    }
-    
-    func openLevelViewController(_ lesson: ProgressItemViewModelProtocol) {
-        
-        coordinatorDelegate?.openLevelViewControllerDelegate()
-        
     }
     
 }

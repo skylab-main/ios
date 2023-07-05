@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Swinject
+import RxSwift
 
 class LessonsCordinator: Coordinator {
     
@@ -21,12 +23,12 @@ class LessonsCordinator: Coordinator {
     
     private func openLessonsController() {
         let viewController = LessonsViewController.instantiate(coordinator: self)
-        let viewModel = LessonsViewModel()
-        viewController.viewModel = viewModel
+        viewController.viewModel = Container.lessons.resolve(LessonsViewModelProtocol.self)
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.lessons.rawValue,
                                                  image: TabBarItems.lessons.image,
                                                  selectedImage: TabBarItems.lessons.selectedImage)
         rootController.tabBarItem.setTitleText(font: AnonymousPro.bold(size: 10).font())
         rootController.setViewControllers([viewController], animated: true)
     }
+    
 }

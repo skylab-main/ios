@@ -9,13 +9,10 @@ import Foundation
 
 protocol LessonsViewModelProtocol: AnyObject {
     
-    var coordinatorDelegate: LessonsCoordinatorDelegate? { get set }
-
-    func openLevelViewController(_ lesson: ProgressItemViewModelProtocol)
-    
-    func getLessons(completion: @escaping() -> ())
+    func getLessons()
     func numberOfRowInSection(for section: Int) -> Int
     func cellViewModel(for indexPath: IndexPath) -> ProgressItemViewModelProtocol?
     func viewModelForSelectedRow() -> ProgressItemViewModelProtocol?
     func selectRow(atIndexPath indexPath: IndexPath)
+    
 }
