@@ -12,12 +12,11 @@ class LessonsViewModel: LessonsViewModelProtocol {
     private var lessons: LessonsModel?
 
     func getLessons() {
-        lessons = []
-        lessons?.append(LessonModel(title: "Lvl 1. Basics", progressPercent: 80))
-        lessons?.append(LessonModel(title: "Lvl 2. Introduction to code", progressPercent: 20))
-        lessons?.append(LessonModel(title: "Lvl 3. Something for not beginners", progressPercent: 45))
-        lessons?.append(LessonModel(title: "Lvl 4. Something if you think that you are strong middle developer", progressPercent: 20))
-        lessons?.append(LessonModel(title: "Lvl 5. Something for middle developers", progressPercent: 10))
+        lessons = [LessonModel(title: "Lvl 1. Basics", progressPercent: 80),
+                   LessonModel(title: "Lvl 2. Introduction to code", progressPercent: 20),
+                   LessonModel(title: "Lvl 3. Something for not beginners", progressPercent: 45),
+                   LessonModel(title: "Lvl 4. Something if you think that you are strong middle developer", progressPercent: 20),
+                   LessonModel(title: "Lvl 5. Something for middle developers", progressPercent: 10)]
     }
     
     func numberOfRowInSection(for section: Int) -> Int {
