@@ -92,6 +92,7 @@ extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
         
         guard let item = viewModel.cellViewModel(for: indexPath) else { return UITableViewCell() }
         
+        cell.selectionStyle = .none
         cell.configureCell(title: item.title, progress: item.progressPercent)
 
         return cell
