@@ -16,7 +16,9 @@ class LessonsViewModel: LessonsViewModelProtocol {
                    LessonModel(title: "Lvl 2. Introduction to code", progressPercent: 20),
                    LessonModel(title: "Lvl 3. Something for not beginners", progressPercent: 45),
                    LessonModel(title: "Lvl 4. Something if you think that you are strong middle developer", progressPercent: 20),
-                   LessonModel(title: "Lvl 5. Something for middle developers", progressPercent: 10)]
+                   LessonModel(title: "Lvl 5. Something for middle developers", progressPercent: 10),
+                   LessonModel(title: "Lvl 6. Something for senior developers", progressPercent: 25),
+                   LessonModel(title: "Lvl 7. Something for lead developers", progressPercent: 25)]
     }
     
     func numberOfRowInSection(for section: Int) -> Int {

@@ -38,7 +38,7 @@ class LessonsViewController: BaseViewController, Storyboarded {
         lessonsTableView.clipsToBounds = true
         lessonsTableView.rowHeight = UITableView.automaticDimension
         lessonsTableView.estimatedRowHeight = 100
-        lessonsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 0, right: 0)
+        lessonsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
 
         descriptionCurseButton.configureButton(title: "Опис повного курсу",
                                                imageName: "rightArrow",
