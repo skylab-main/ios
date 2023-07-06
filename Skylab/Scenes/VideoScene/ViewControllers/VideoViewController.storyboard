@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="VideoViewController" customModule="Skylab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bkt-U8-Oq4" customClass="ScrollableMenuView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="127.66666666666669"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylP-Mm-nie">
+                                <rect key="frame" x="0.0" y="206.66666666666669" width="393" height="645.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ylP-Mm-nie" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3Eo-tl-RWJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ylP-Mm-nie" secondAttribute="trailing" id="TNZ-Dd-Y0B"/>
+                            <constraint firstItem="Bkt-U8-Oq4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Vdb-CP-blP"/>
+                            <constraint firstItem="Bkt-U8-Oq4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YFd-XK-VuY"/>
+                            <constraint firstAttribute="bottom" secondItem="ylP-Mm-nie" secondAttribute="bottom" id="aVe-ZZ-mj9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Bkt-U8-Oq4" secondAttribute="trailing" id="rah-TW-wbp"/>
+                            <constraint firstItem="ylP-Mm-nie" firstAttribute="top" secondItem="Bkt-U8-Oq4" secondAttribute="bottom" constant="20" id="x9h-lV-eis"/>
+                            <constraint firstItem="Bkt-U8-Oq4" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.15" id="zmQ-dh-7X7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="ylP-Mm-nie" id="3Tz-5X-zbu"/>
+                        <outlet property="tabSwitcherView" destination="Bkt-U8-Oq4" id="tr7-8d-Vx5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

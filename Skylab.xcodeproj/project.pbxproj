@@ -43,6 +43,10 @@
 		080505AE2A55B5E20009CCBD /* VideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */; };
 		080505B12A55B7240009CCBD /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505B02A55B7240009CCBD /* VideoViewController.swift */; };
 		080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080505B22A55B73F0009CCBD /* VideoViewController.storyboard */; };
+		080505B72A5727AB0009CCBD /* LessonsVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505B62A5727AB0009CCBD /* LessonsVideoViewController.swift */; };
+		080505B92A5727C70009CCBD /* LessonsVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080505B82A5727C70009CCBD /* LessonsVideoViewController.storyboard */; };
+		080505BB2A572EB70009CCBD /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505BA2A572EB70009CCBD /* TasksViewController.swift */; };
+		080505BD2A572EC30009CCBD /* TasksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080505BC2A572EC30009CCBD /* TasksViewController.storyboard */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
 		08697119298430B600E4CA00 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08697118298430B600E4CA00 /* RxRelay */; };
 		0869711B298430B600E4CA00 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711A298430B600E4CA00 /* RxSwift */; };
@@ -243,6 +247,10 @@
 		080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoordinator.swift; sourceTree = "<group>"; };
 		080505B02A55B7240009CCBD /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		080505B22A55B73F0009CCBD /* VideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
+		080505B62A5727AB0009CCBD /* LessonsVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsVideoViewController.swift; sourceTree = "<group>"; };
+		080505B82A5727C70009CCBD /* LessonsVideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LessonsVideoViewController.storyboard; sourceTree = "<group>"; };
+		080505BA2A572EB70009CCBD /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		080505BC2A572EC30009CCBD /* TasksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TasksViewController.storyboard; sourceTree = "<group>"; };
 		089F803829D2D3B900748D24 /* SecondPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIView.swift; sourceTree = "<group>"; };
 		089F803A29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -601,18 +609,38 @@
 			isa = PBXGroup;
 			children = (
 				080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */,
-				080505AF2A55B6AF0009CCBD /* View */,
+				080505AF2A55B6AF0009CCBD /* ViewControllers */,
 			);
 			path = VideoScene;
 			sourceTree = "<group>";
 		};
-		080505AF2A55B6AF0009CCBD /* View */ = {
+		080505AF2A55B6AF0009CCBD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				080505B52A5727640009CCBD /* TasksController */,
+				080505B42A5727430009CCBD /* LessonsVideoController */,
 				080505B02A55B7240009CCBD /* VideoViewController.swift */,
 				080505B22A55B73F0009CCBD /* VideoViewController.storyboard */,
 			);
-			path = View;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		080505B42A5727430009CCBD /* LessonsVideoController */ = {
+			isa = PBXGroup;
+			children = (
+				080505B62A5727AB0009CCBD /* LessonsVideoViewController.swift */,
+				080505B82A5727C70009CCBD /* LessonsVideoViewController.storyboard */,
+			);
+			path = LessonsVideoController;
+			sourceTree = "<group>";
+		};
+		080505B52A5727640009CCBD /* TasksController */ = {
+			isa = PBXGroup;
+			children = (
+				080505BA2A572EB70009CCBD /* TasksViewController.swift */,
+				080505BC2A572EC30009CCBD /* TasksViewController.storyboard */,
+			);
+			path = TasksController;
 			sourceTree = "<group>";
 		};
 		0869711E2986D8E200E4CA00 /* Frameworks */ = {
@@ -1728,6 +1756,7 @@
 				DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */,
 				F4E7F12229E83A5300D6FDD1 /* ChatGPTResponseViewController.storyboard in Resources */,
 				047D39D529E73CA9000D8D8C /* QuizViewController.storyboard in Resources */,
+				080505B92A5727C70009CCBD /* LessonsVideoViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
 				080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */,
@@ -1742,6 +1771,7 @@
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
+				080505BD2A572EC30009CCBD /* TasksViewController.storyboard in Resources */,
 				6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */,
 				F450D72E2A1CDC7C00AF8768 /* CustomApplyForCourseView.xib in Resources */,
 				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
@@ -1869,6 +1899,7 @@
 				F48BD5232A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift in Sources */,
 				1544EC7329846C8D0080C429 /* SwinjectTestPageViewController.swift in Sources */,
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
+				080505B72A5727AB0009CCBD /* LessonsVideoViewController.swift in Sources */,
 				F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */,
 				F4E7F10E29E808B400D6FDD1 /* TopicsCollectionViewCell.swift in Sources */,
 				F4BD54602A28CC5600E5039B /* CourseDetailsHeaderDelegate.swift in Sources */,
@@ -1889,6 +1920,7 @@
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
 				F4BD54652A28CFBA00E5039B /* CourseDetailsContainer.swift in Sources */,
+				080505BB2A572EB70009CCBD /* TasksViewController.swift in Sources */,
 				F4CBA7F02A4EE00D00A93413 /* QuizResultContainer.swift in Sources */,
 				045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
@@ -2081,7 +2113,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 82JRS96G7R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Skylab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -28,6 +28,10 @@ class VideoCoordinator: Coordinator {
     
     private func openVideoController() {
         let viewController = VideoViewController.instantiate(coordinator: self)
+        let lessonsVC = LessonsVideoViewController.instantiate(coordinator: self)
+        let tasksVC = TasksViewController.instantiate(coordinator: self)
+        viewController.lessonsVC = lessonsVC
+        viewController.tasksVC = tasksVC
         rootController.pushViewController(viewController, animated: true)
     }
     
