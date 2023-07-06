@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,14 +16,77 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple animations: element position, color, size." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-Z6-JMh">
+                                <rect key="frame" x="20" y="23.999999999999996" width="353" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-uw-h53">
+                                <rect key="frame" x="20" y="84.666666666666671" width="353" height="176.66666666666663"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oN9-05-RDb">
+                                        <rect key="frame" x="4" y="4" width="345" height="168.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oN9-05-RDb" secondAttribute="bottom" constant="4" id="3ZB-aZ-oOX"/>
+                                    <constraint firstItem="oN9-05-RDb" firstAttribute="top" secondItem="mBC-uw-h53" secondAttribute="top" constant="4" id="EGE-zi-Nmy"/>
+                                    <constraint firstAttribute="width" secondItem="mBC-uw-h53" secondAttribute="height" multiplier="2:1" id="F9a-bZ-BkB"/>
+                                    <constraint firstAttribute="trailing" secondItem="oN9-05-RDb" secondAttribute="trailing" constant="4" id="Onv-0B-l3u"/>
+                                    <constraint firstItem="oN9-05-RDb" firstAttribute="leading" secondItem="mBC-uw-h53" secondAttribute="leading" constant="4" id="U2L-IR-ouB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk6-dU-U34">
+                                <rect key="frame" x="20" y="294.33333333333331" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Скачати презентацію"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZt-gY-NmZ">
+                                <rect key="frame" x="20" y="362.33333333333331" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Telegram канал з матеріалами "/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pk6-dU-U34" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LHS-ds-bgE"/>
+                            <constraint firstItem="jZt-gY-NmZ" firstAttribute="top" secondItem="Pk6-dU-U34" secondAttribute="bottom" constant="33" id="Llg-9e-lky"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mBC-uw-h53" secondAttribute="trailing" constant="20" id="M36-ap-Hlv"/>
+                            <constraint firstItem="mBC-uw-h53" firstAttribute="top" secondItem="bsi-Z6-JMh" secondAttribute="bottom" constant="20" id="Qq2-GD-Eep"/>
+                            <constraint firstItem="jZt-gY-NmZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Sah-53-O93"/>
+                            <constraint firstItem="bsi-Z6-JMh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="VmL-SU-ecK"/>
+                            <constraint firstItem="Pk6-dU-U34" firstAttribute="top" secondItem="mBC-uw-h53" secondAttribute="bottom" constant="33" id="YhL-M4-TS2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pk6-dU-U34" secondAttribute="trailing" constant="20" id="ZQq-fS-UJy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jZt-gY-NmZ" secondAttribute="trailing" constant="20" id="cvN-vL-4O4"/>
+                            <constraint firstAttribute="trailing" secondItem="bsi-Z6-JMh" secondAttribute="trailing" constant="20" id="jy8-uY-sq9"/>
+                            <constraint firstItem="bsi-Z6-JMh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="24" id="sqK-BL-F89"/>
+                            <constraint firstItem="mBC-uw-h53" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="tFK-F5-t9r"/>
+                        </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="downloadButton" destination="Pk6-dU-U34" id="0DW-7i-ElX"/>
+                        <outlet property="telegramButton" destination="jZt-gY-NmZ" id="loq-nw-u6n"/>
+                        <outlet property="videoContainerView" destination="mBC-uw-h53" id="CyL-cp-Hf0"/>
+                        <outlet property="videoView" destination="oN9-05-RDb" id="OhO-h9-16k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15" y="-2"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

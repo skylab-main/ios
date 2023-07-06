@@ -11,7 +11,7 @@ protocol ScrollableMenuViewDelegate: AnyObject {
     func getIndex(_ index: Int)
 }
 
-@IBDesignable
+//@IBDesignable
 final class ScrollableMenuView: UIView {
     
     weak var delegate: ScrollableMenuViewDelegate?

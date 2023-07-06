@@ -8,6 +8,7 @@
 import UIKit
 
 class VideoViewController: BaseViewController, Storyboarded {
+    
     @IBOutlet weak var tabSwitcherView: ScrollableMenuView! {
         didSet {
             tabSwitcherView.delegate = self
