@@ -40,37 +40,64 @@
                                     <constraint firstItem="oN9-05-RDb" firstAttribute="leading" secondItem="mBC-uw-h53" secondAttribute="leading" constant="4" id="U2L-IR-ouB"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk6-dU-U34">
-                                <rect key="frame" x="20" y="294.33333333333331" width="353" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Скачати презентацію"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZt-gY-NmZ">
-                                <rect key="frame" x="20" y="362.33333333333331" width="353" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Telegram канал з матеріалами "/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-e2-e1o" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="294.33333333333331" width="353" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk6-dU-U34">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="download" imagePlacement="trailing" title="Скачати презентацію" titleAlignment="center"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Pk6-dU-U34" secondAttribute="bottom" id="517-9t-gAN"/>
+                                    <constraint firstItem="Pk6-dU-U34" firstAttribute="leading" secondItem="yIH-e2-e1o" secondAttribute="leading" id="Rpe-Qd-9N1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pk6-dU-U34" secondAttribute="trailing" id="cyx-7N-NCb"/>
+                                    <constraint firstItem="Pk6-dU-U34" firstAttribute="top" secondItem="yIH-e2-e1o" secondAttribute="top" id="i1g-Lw-Yri"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-kk-ffx" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="365.33333333333331" width="353" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZt-gY-NmZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Telegram канал з матеріалами "/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jZt-gY-NmZ" firstAttribute="leading" secondItem="LWX-kk-ffx" secondAttribute="leading" id="6Ok-4Y-b4W"/>
+                                    <constraint firstAttribute="trailing" secondItem="jZt-gY-NmZ" secondAttribute="trailing" id="Ncd-3e-Jvp"/>
+                                    <constraint firstItem="jZt-gY-NmZ" firstAttribute="top" secondItem="LWX-kk-ffx" secondAttribute="top" id="ah1-7N-vSm"/>
+                                    <constraint firstItem="jZt-gY-NmZ" firstAttribute="leading" secondItem="LWX-kk-ffx" secondAttribute="leading" id="uff-eU-aw8"/>
+                                    <constraint firstAttribute="bottom" secondItem="jZt-gY-NmZ" secondAttribute="bottom" id="z1g-h4-UUF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Pk6-dU-U34" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LHS-ds-bgE"/>
-                            <constraint firstItem="jZt-gY-NmZ" firstAttribute="top" secondItem="Pk6-dU-U34" secondAttribute="bottom" constant="33" id="Llg-9e-lky"/>
+                            <constraint firstItem="yIH-e2-e1o" firstAttribute="top" secondItem="mBC-uw-h53" secondAttribute="bottom" constant="33" id="0Xp-wO-uJw"/>
+                            <constraint firstItem="jZt-gY-NmZ" firstAttribute="height" secondItem="Pk6-dU-U34" secondAttribute="height" id="Hhe-mp-mPx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yIH-e2-e1o" secondAttribute="trailing" constant="20" id="Ifj-kB-9ta"/>
+                            <constraint firstItem="LWX-kk-ffx" firstAttribute="top" secondItem="yIH-e2-e1o" secondAttribute="bottom" constant="33" id="Kpi-sH-mIL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mBC-uw-h53" secondAttribute="trailing" constant="20" id="M36-ap-Hlv"/>
                             <constraint firstItem="mBC-uw-h53" firstAttribute="top" secondItem="bsi-Z6-JMh" secondAttribute="bottom" constant="20" id="Qq2-GD-Eep"/>
-                            <constraint firstItem="jZt-gY-NmZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Sah-53-O93"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LWX-kk-ffx" secondAttribute="trailing" constant="20" id="Uno-xF-n82"/>
                             <constraint firstItem="bsi-Z6-JMh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="VmL-SU-ecK"/>
-                            <constraint firstItem="Pk6-dU-U34" firstAttribute="top" secondItem="mBC-uw-h53" secondAttribute="bottom" constant="33" id="YhL-M4-TS2"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pk6-dU-U34" secondAttribute="trailing" constant="20" id="ZQq-fS-UJy"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jZt-gY-NmZ" secondAttribute="trailing" constant="20" id="cvN-vL-4O4"/>
                             <constraint firstAttribute="trailing" secondItem="bsi-Z6-JMh" secondAttribute="trailing" constant="20" id="jy8-uY-sq9"/>
+                            <constraint firstItem="LWX-kk-ffx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="pRJ-Yc-yJ1"/>
                             <constraint firstItem="bsi-Z6-JMh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="24" id="sqK-BL-F89"/>
                             <constraint firstItem="mBC-uw-h53" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="tFK-F5-t9r"/>
+                            <constraint firstItem="yIH-e2-e1o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yBJ-AU-3ai"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="downloadButton" destination="Pk6-dU-U34" id="0DW-7i-ElX"/>
+                        <outlet property="lessonThemeLabel" destination="bsi-Z6-JMh" id="aJg-Ok-Ajw"/>
                         <outlet property="telegramButton" destination="jZt-gY-NmZ" id="loq-nw-u6n"/>
                         <outlet property="videoContainerView" destination="mBC-uw-h53" id="CyL-cp-Hf0"/>
                         <outlet property="videoView" destination="oN9-05-RDb" id="OhO-h9-16k"/>
@@ -82,6 +109,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="download" width="25" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
