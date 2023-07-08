@@ -8,7 +8,13 @@
 import UIKit
 
 class TasksViewController: UIViewController, Storyboarded {
-
+    @IBOutlet weak var taskLabel: UILabel!
+    
+    @IBOutlet weak var codeView: UITextView!
+    
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var markButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
