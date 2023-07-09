@@ -15,14 +15,15 @@ class VideoViewController: BaseViewController, Storyboarded {
         }
     }
     @IBOutlet weak var containerView: UIView!
+    
     var lessonsVC: LessonsVideoViewController!
     var tasksVC: TasksViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    configureUI()
+        configureUI()
         setupContainer()
-
+        
     }
     
     //MARK: - UI Configurations
@@ -46,7 +47,7 @@ class VideoViewController: BaseViewController, Storyboarded {
         
         tasksVC.view.frame = containerView.bounds
         lessonsVC.view.frame = containerView.bounds
-
+        
         
     }
 }

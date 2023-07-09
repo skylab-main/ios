@@ -17,17 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple animations: element position, color, size." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-Z6-JMh">
-                                <rect key="frame" x="20" y="23.999999999999996" width="353" height="40.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-Z6-JMh">
+                                <rect key="frame" x="20" y="24" width="353" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-uw-h53">
-                                <rect key="frame" x="20" y="84.666666666666671" width="353" height="176.66666666666663"/>
+                                <rect key="frame" x="20" y="64.333333333333329" width="353" height="198.66666666666669"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oN9-05-RDb">
-                                        <rect key="frame" x="4" y="4" width="345" height="168.66666666666666"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oN9-05-RDb" customClass="YTPlayerView">
+                                        <rect key="frame" x="4" y="4" width="345" height="190.66666666666666"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </view>
                                 </subviews>
@@ -35,13 +35,13 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="oN9-05-RDb" secondAttribute="bottom" constant="4" id="3ZB-aZ-oOX"/>
                                     <constraint firstItem="oN9-05-RDb" firstAttribute="top" secondItem="mBC-uw-h53" secondAttribute="top" constant="4" id="EGE-zi-Nmy"/>
-                                    <constraint firstAttribute="width" secondItem="mBC-uw-h53" secondAttribute="height" multiplier="2:1" id="F9a-bZ-BkB"/>
+                                    <constraint firstAttribute="width" secondItem="mBC-uw-h53" secondAttribute="height" multiplier="16:9" id="F9a-bZ-BkB"/>
                                     <constraint firstAttribute="trailing" secondItem="oN9-05-RDb" secondAttribute="trailing" constant="4" id="Onv-0B-l3u"/>
                                     <constraint firstItem="oN9-05-RDb" firstAttribute="leading" secondItem="mBC-uw-h53" secondAttribute="leading" constant="4" id="U2L-IR-ouB"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-e2-e1o" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
-                                <rect key="frame" x="20" y="294.33333333333331" width="353" height="38"/>
+                                <rect key="frame" x="20" y="296" width="353" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk6-dU-U34">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-kk-ffx" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
-                                <rect key="frame" x="20" y="365.33333333333331" width="353" height="38"/>
+                                <rect key="frame" x="20" y="367" width="353" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZt-gY-NmZ">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>

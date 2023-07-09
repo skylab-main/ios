@@ -32,6 +32,10 @@ class VideoCoordinator: Coordinator {
         let tasksVC = TasksViewController.instantiate(coordinator: self)
         viewController.lessonsVC = lessonsVC
         viewController.tasksVC = tasksVC
+        
+        lessonsVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
+        tasksVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
+        
         rootController.pushViewController(viewController, animated: true)
     }
     
