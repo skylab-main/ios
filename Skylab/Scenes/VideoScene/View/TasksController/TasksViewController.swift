@@ -6,18 +6,24 @@
 //
 
 import UIKit
+import RxCocoa
 
-class TasksViewController: UIViewController, Storyboarded {
+
+class TasksViewController: BaseViewController, Storyboarded {
+    
     let placeHolderText = "Вставте ваш код сюди..."
+    var viewModel: VideoViewModelProtocol?
+    
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var codeView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var markButton: UIButton!
-    var viewModel: VideoViewModelProtocol?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        bindViewModel()
     }
     
     private func configureUI() {
@@ -50,10 +56,19 @@ class TasksViewController: UIViewController, Storyboarded {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
+    private func bindViewModel() {
+        markButton.rx.tap
+            .subscribe { _ in
+                self.markButton.backgroundColor = .primary
+            }.disposed(by: bag)
+    }
     
     @objc func dismissKeyboard() {
         codeView.resignFirstResponder()
     }
+    
+    
+    
 }
 
 extension TasksViewController: UITextViewDelegate {
@@ -68,4 +83,5 @@ extension TasksViewController: UITextViewDelegate {
             textView.text = placeHolderText
         }
     }
+    
 }

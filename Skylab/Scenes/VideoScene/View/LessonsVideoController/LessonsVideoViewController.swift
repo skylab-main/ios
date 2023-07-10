@@ -6,19 +6,25 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import YouTubeiOSPlayerHelper
 
-class LessonsVideoViewController: UIViewController, Storyboarded, YTPlayerViewDelegate {
+
+class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerViewDelegate {
     @IBOutlet weak var videoContainerView: UIView!
     @IBOutlet weak var videoView: YTPlayerView!
     @IBOutlet weak var downloadButton: UIButton!
     @IBOutlet weak var telegramButton: UIButton!
     @IBOutlet weak var lessonThemeLabel: UILabel!
     var viewModel: VideoViewModelProtocol?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         loadVideo()
+        bindToViewModel()
     }
     
     private func configureUI() {
@@ -46,6 +52,13 @@ class LessonsVideoViewController: UIViewController, Storyboarded, YTPlayerViewDe
             videoView.load(withVideoId: id)
         }
     }
-    
-    
+    private func bindToViewModel() {
+        guard let viewModel else { return }
+        downloadButton.rx.tap
+            .bind(to: viewModel.downloadPresentation)
+            .disposed(by: bag)
+        telegramButton.rx.tap
+            .bind(to: viewModel.joinTelegram)
+            .disposed(by: bag)
+    }
 }

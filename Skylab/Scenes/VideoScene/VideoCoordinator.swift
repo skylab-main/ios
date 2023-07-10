@@ -8,6 +8,7 @@
 import UIKit
 import Swinject
 import RxSwift
+import SafariServices
 
 
 class VideoCoordinator: Coordinator {
@@ -32,11 +33,24 @@ class VideoCoordinator: Coordinator {
         let tasksVC = TasksViewController.instantiate(coordinator: self)
         viewController.lessonsVC = lessonsVC
         viewController.tasksVC = tasksVC
-        
         lessonsVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
         tasksVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
+        guard let viewModel = lessonsVC.viewModel,
+        let downloadLink = viewModel.linkPresentation else { return }
+        viewModel.downloadPresentation.asObservable()
+            .subscribe { _ in self.showWebContent(url: downloadLink) }
+            .disposed(by: bag)
         
+        guard let telegramUrl = viewModel.telegramLink else { return }
+        viewModel.joinTelegram.asObservable()
+            .subscribe { _ in self.showWebContent(url: telegramUrl) }
+            .disposed(by: bag)
         rootController.pushViewController(viewController, animated: true)
     }
+    
+    private func showWebContent(url: URL) {
+         let safariViewController = SFSafariViewController(url: url)
+        rootController.present(safariViewController, animated: true, completion: nil)
+     }
     
 }
