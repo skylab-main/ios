@@ -51,6 +51,7 @@
 		080505C42A5AD0840009CCBD /* VideoViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C32A5AD0840009CCBD /* VideoViewModelProtocol.swift */; };
 		080505C62A5AD1D80009CCBD /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C52A5AD1D80009CCBD /* VideoViewModel.swift */; };
 		080505CA2A5AD3740009CCBD /* VideoLessonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C92A5AD3740009CCBD /* VideoLessonContainer.swift */; };
+		080505CC2A5C868B0009CCBD /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 080505CB2A5C868B0009CCBD /* YouTubeiOSPlayerHelper */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
 		08697119298430B600E4CA00 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08697118298430B600E4CA00 /* RxRelay */; };
 		0869711B298430B600E4CA00 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711A298430B600E4CA00 /* RxSwift */; };
@@ -423,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				086971202986D8E200E4CA00 /* RxCocoa in Frameworks */,
+				080505CC2A5C868B0009CCBD /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1705,6 +1707,7 @@
 			name = SkylabTests;
 			packageProductDependencies = (
 				0869711F2986D8E200E4CA00 /* RxCocoa */,
+				080505CB2A5C868B0009CCBD /* YouTubeiOSPlayerHelper */,
 			);
 			productName = SkylabTests;
 			productReference = DF75E45729341214005B249E /* SkylabTests.xctest */;
@@ -2514,6 +2517,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		080505BF2A59B3B30009CCBD /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080505BE2A59B3B30009CCBD /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+		080505CB2A5C868B0009CCBD /* YouTubeiOSPlayerHelper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 080505BE2A59B3B30009CCBD /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
