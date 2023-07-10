@@ -25,38 +25,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-iq-DXE" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
-                                <rect key="frame" x="20" y="328.66666666666669" width="353" height="34.333333333333314"/>
+                                <rect key="frame" x="20" y="328.66666666666669" width="353" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yl-SU-NLh">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Надіслати на перевірку" titleAlignment="center"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="6yl-SU-NLh" secondAttribute="trailing" id="0WJ-av-MR6"/>
-                                    <constraint firstItem="6yl-SU-NLh" firstAttribute="leading" secondItem="gwe-iq-DXE" secondAttribute="leading" id="63X-fp-F5W"/>
-                                    <constraint firstAttribute="bottom" secondItem="6yl-SU-NLh" secondAttribute="bottom" id="f5e-Py-O6p"/>
-                                    <constraint firstItem="6yl-SU-NLh" firstAttribute="top" secondItem="gwe-iq-DXE" secondAttribute="top" id="tyj-sA-Lmu"/>
+                                    <constraint firstItem="6yl-SU-NLh" firstAttribute="leading" secondItem="gwe-iq-DXE" secondAttribute="leading" id="Qvd-Ew-qUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="6yl-SU-NLh" secondAttribute="trailing" id="Rcs-L1-URU"/>
+                                    <constraint firstItem="6yl-SU-NLh" firstAttribute="top" secondItem="gwe-iq-DXE" secondAttribute="top" id="gft-xK-P3T"/>
+                                    <constraint firstAttribute="bottom" secondItem="6yl-SU-NLh" secondAttribute="bottom" id="hr5-Bh-0on"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKn-YG-hOj" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
-                                <rect key="frame" x="20" y="396" width="353" height="34.333333333333314"/>
+                                <rect key="frame" x="20" y="399.66666666666669" width="353" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAY-HZ-coZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Позначити завдання виконаним"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zAY-HZ-coZ" secondAttribute="bottom" id="JMa-u1-oBE"/>
-                                    <constraint firstItem="zAY-HZ-coZ" firstAttribute="leading" secondItem="NKn-YG-hOj" secondAttribute="leading" id="KLn-l0-HpV"/>
-                                    <constraint firstItem="zAY-HZ-coZ" firstAttribute="leading" secondItem="NKn-YG-hOj" secondAttribute="leading" id="aSW-rU-zKd"/>
-                                    <constraint firstItem="zAY-HZ-coZ" firstAttribute="top" secondItem="NKn-YG-hOj" secondAttribute="top" id="xXk-xU-wKU"/>
-                                    <constraint firstAttribute="trailing" secondItem="zAY-HZ-coZ" secondAttribute="trailing" id="zlu-Jl-6G4"/>
+                                    <constraint firstItem="zAY-HZ-coZ" firstAttribute="top" secondItem="NKn-YG-hOj" secondAttribute="top" id="2Ym-DT-cO1"/>
+                                    <constraint firstItem="zAY-HZ-coZ" firstAttribute="leading" secondItem="NKn-YG-hOj" secondAttribute="leading" id="I8j-pi-t13"/>
+                                    <constraint firstAttribute="height" constant="38" id="a3k-WB-3TH"/>
+                                    <constraint firstAttribute="trailing" secondItem="zAY-HZ-coZ" secondAttribute="trailing" id="dGd-7p-T7P"/>
+                                    <constraint firstAttribute="bottom" secondItem="zAY-HZ-coZ" secondAttribute="bottom" id="zCN-j2-kse"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Вставте ваш код сюди..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4iS-iy-N6n">
@@ -73,24 +73,26 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NKn-YG-hOj" secondAttribute="trailing" constant="20" id="4SP-Nc-geV"/>
                             <constraint firstItem="hlg-cK-Bud" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="7iA-nU-Xjx"/>
-                            <constraint firstItem="NKn-YG-hOj" firstAttribute="top" secondItem="gwe-iq-DXE" secondAttribute="bottom" constant="33" id="HQr-40-ysf"/>
+                            <constraint firstItem="gwe-iq-DXE" firstAttribute="top" secondItem="4iS-iy-N6n" secondAttribute="bottom" constant="33" id="Bl2-Se-fFG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4iS-iy-N6n" secondAttribute="trailing" constant="20" id="QRA-DB-Alr"/>
                             <constraint firstItem="4iS-iy-N6n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="S6X-T8-Rom"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gwe-iq-DXE" secondAttribute="trailing" constant="20" id="XPq-W5-exN"/>
-                            <constraint firstItem="NKn-YG-hOj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ygw-I4-P9U"/>
+                            <constraint firstItem="NKn-YG-hOj" firstAttribute="height" secondItem="gwe-iq-DXE" secondAttribute="height" id="VJ9-qM-86B"/>
                             <constraint firstAttribute="trailing" secondItem="hlg-cK-Bud" secondAttribute="trailing" constant="20" id="Zix-kA-aMU"/>
-                            <constraint firstItem="gwe-iq-DXE" firstAttribute="top" secondItem="4iS-iy-N6n" secondAttribute="bottom" constant="33" id="cyw-VM-miw"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NKn-YG-hOj" secondAttribute="trailing" constant="20" id="hTB-Zt-KFb"/>
+                            <constraint firstItem="gwe-iq-DXE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ejE-Jg-ETK"/>
+                            <constraint firstItem="NKn-YG-hOj" firstAttribute="top" secondItem="gwe-iq-DXE" secondAttribute="bottom" constant="33" id="etH-oJ-K4z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gwe-iq-DXE" secondAttribute="trailing" constant="20" id="giG-XZ-aLm"/>
                             <constraint firstItem="4iS-iy-N6n" firstAttribute="top" secondItem="hlg-cK-Bud" secondAttribute="bottom" constant="20" id="iWC-GL-Np4"/>
-                            <constraint firstItem="gwe-iq-DXE" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="il1-04-483"/>
                             <constraint firstItem="hlg-cK-Bud" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="20" id="kvC-uY-lGK"/>
+                            <constraint firstItem="NKn-YG-hOj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="n5b-M2-LxU"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="codeView" destination="4iS-iy-N6n" id="pM3-tq-1AG"/>
                         <outlet property="markButton" destination="zAY-HZ-coZ" id="bId-ww-U7r"/>
+                        <outlet property="markButtonBorderView" destination="NKn-YG-hOj" id="Ger-p8-4Jh"/>
                         <outlet property="sendButton" destination="6yl-SU-NLh" id="iAk-5v-l5R"/>
                         <outlet property="taskLabel" destination="hlg-cK-Bud" id="RgO-03-7Uw"/>
                     </connections>

@@ -15,6 +15,9 @@ protocol VideoViewModelProtocol: AnyObject {
     var videoID: String { get }
     var linkPresentation: URL? { get }
     var task: String { get }
-    var isTaskDone: Bool { get set }
     var telegramLink: URL? { get }
+    
+    func markTask()
+    
+    func checkTaskIsDone() -> Bool
 }

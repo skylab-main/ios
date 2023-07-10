@@ -18,12 +18,13 @@ class TasksViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var codeView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var markButton: UIButton!
-
+    @IBOutlet weak var markButtonBorderView: DoubleBorderForView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         bindViewModel()
+        updateMarkButton()
     }
     
     private func configureUI() {
@@ -33,10 +34,7 @@ class TasksViewController: BaseViewController, Storyboarded {
                                    fontName: CustomFonts.anonymousProBold.rawValue,
                                    fontSize: 14,
                                    tintColor: .primary)
-        markButton.configureButton(title: "Позначити завдання виконаним", imageName: nil,
-                                   fontName: CustomFonts.anonymousProBold.rawValue,
-                                   fontSize: 14,
-                                   tintColor: .primary)
+        markButtonUINormal()
         editCodeView()
     }
     
@@ -56,11 +54,40 @@ class TasksViewController: BaseViewController, Storyboarded {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
+    
+    private func updateMarkButton() {
+        if let check = viewModel?.checkTaskIsDone(),
+           check
+        {
+            markButtonUIpressed()
+        } else {
+            markButtonUINormal()
+        }
+        
+    }
     private func bindViewModel() {
         markButton.rx.tap
             .subscribe { _ in
-                self.markButton.backgroundColor = .primary
+                self.viewModel?.markTask()
+                self.updateMarkButton()
             }.disposed(by: bag)
+    }
+    
+    private func markButtonUIpressed() {
+        self.markButtonBorderView.backgroundColor = .primary
+        self.markButtonBorderView.borderColor = .white
+        self.markButton.configureButton(title: "Завдання виконане!", imageName: nil,
+                                        fontName: CustomFonts.anonymousProBold.rawValue,
+                                        fontSize: 14,
+                                        tintColor: .white)
+    }
+    private func markButtonUINormal() {
+        self.markButtonBorderView.backgroundColor = .white
+        self.markButtonBorderView.borderColor = .primary
+        markButton.configureButton(title: "Позначити завдання виконаним", imageName: nil,
+                                   fontName: CustomFonts.anonymousProBold.rawValue,
+                                   fontSize: 14,
+                                   tintColor: .primary)
     }
     
     @objc func dismissKeyboard() {

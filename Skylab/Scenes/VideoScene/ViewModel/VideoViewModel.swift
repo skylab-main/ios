@@ -21,13 +21,13 @@ class VideoViewModel: VideoViewModelProtocol {
     var isTaskDone = false
     var telegramLink = URL(string: "https://t.me/skylab_task")
     
-    func markIsDone() {
-        UserDefaults.standard.set(true, forKey: title)
+    func markTask() {
+        isTaskDone.toggle()
+        UserDefaults.standard.set(isTaskDone, forKey: title)
     }
     
     func checkTaskIsDone() -> Bool {
         return UserDefaults.standard.bool(forKey: title)
     }
 }
-// Where we will save it? isTaskDone and what key shoud we use
-// How to check progress ?
+
