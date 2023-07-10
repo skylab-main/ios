@@ -11,8 +11,12 @@ import RxCocoa
 
 class TasksViewController: BaseViewController, Storyboarded {
     
+    // MARK: - let/var
+    
     let placeHolderText = "Вставте ваш код сюди..."
     var viewModel: VideoViewModelProtocol?
+    
+    // MARK: - IBOutlets
     
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var codeView: UITextView!
@@ -20,6 +24,7 @@ class TasksViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var markButton: UIButton!
     @IBOutlet weak var markButtonBorderView: DoubleBorderForView!
     
+    // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -27,6 +32,7 @@ class TasksViewController: BaseViewController, Storyboarded {
         updateMarkButton()
     }
     
+    // MARK: - UI Configurations funcs
     private func configureUI() {
         taskLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
         taskLabel.text = viewModel?.task
@@ -49,30 +55,6 @@ class TasksViewController: BaseViewController, Storyboarded {
         codeView.delegate = self
         endEditing()
     }
-    
-    private func endEditing() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-    private func updateMarkButton() {
-        if let check = viewModel?.checkTaskIsDone(),
-           check
-        {
-            markButtonUIpressed()
-        } else {
-            markButtonUINormal()
-        }
-        
-    }
-    private func bindViewModel() {
-        markButton.rx.tap
-            .subscribe { _ in
-                self.viewModel?.markTask()
-                self.updateMarkButton()
-            }.disposed(by: bag)
-    }
-    
     private func markButtonUIpressed() {
         self.markButtonBorderView.backgroundColor = .primary
         self.markButtonBorderView.borderColor = .white
@@ -90,14 +72,38 @@ class TasksViewController: BaseViewController, Storyboarded {
                                    tintColor: .primary)
     }
     
-    @objc func dismissKeyboard() {
+    // MARK: - Flow funcs
+    private func endEditing() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func updateMarkButton() {
+        if let check = viewModel?.checkTaskIsDone(),
+           check {
+            markButtonUIpressed()
+        } else {
+            markButtonUINormal()
+        }
+    }
+    
+    // MARK: - Binding funcs
+    private func bindViewModel() {
+        markButton.rx.tap
+            .subscribe { _ in
+                self.viewModel?.markTask()
+                self.updateMarkButton()
+            }.disposed(by: bag)
+    }
+    
+    // MARK: - IBActions funcs
+    @IBAction func dismissKeyboard() {
         codeView.resignFirstResponder()
     }
     
-    
-    
 }
 
+// MARK: - Extensions
 extension TasksViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == placeHolderText {

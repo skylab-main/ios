@@ -12,14 +12,19 @@ import YouTubeiOSPlayerHelper
 
 
 class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerViewDelegate {
+   
+    // MARK: - let/var
+    var viewModel: VideoViewModelProtocol?
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var videoContainerView: UIView!
     @IBOutlet weak var videoView: YTPlayerView!
     @IBOutlet weak var downloadButton: UIButton!
     @IBOutlet weak var telegramButton: UIButton!
     @IBOutlet weak var lessonThemeLabel: UILabel!
-    var viewModel: VideoViewModelProtocol?
+
     
-    
+    // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -27,6 +32,7 @@ class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerView
         bindToViewModel()
     }
     
+    // MARK: - UI Configurations funcs
     private func configureUI() {
         videoContainerView.layer.borderWidth = 1
         videoContainerView.layer.borderColor = UIColor.primary.cgColor
@@ -46,12 +52,15 @@ class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerView
                                        tintColor: .primary)
     }
     
+    // MARK: - Flow funcs
     private func loadVideo() {
         videoView.delegate = self
         if let id = viewModel?.videoID {
             videoView.load(withVideoId: id)
         }
     }
+    
+    // MARK: - Binding funcs
     private func bindToViewModel() {
         guard let viewModel else { return }
         downloadButton.rx.tap

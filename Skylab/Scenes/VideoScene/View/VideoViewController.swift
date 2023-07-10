@@ -9,6 +9,11 @@ import UIKit
 
 class VideoViewController: BaseViewController, Storyboarded {
     
+    // MARK: - let/var
+    var lessonsVC: LessonsVideoViewController!
+    var tasksVC: TasksViewController!
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var tabSwitcherView: ScrollableMenuView! {
         didSet {
             tabSwitcherView.delegate = self
@@ -16,18 +21,15 @@ class VideoViewController: BaseViewController, Storyboarded {
     }
     @IBOutlet weak var containerView: UIView!
     
-    var lessonsVC: LessonsVideoViewController!
-    var tasksVC: TasksViewController!
     
+    // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         setupContainer()
-        
     }
     
-    //MARK: - UI Configurations
-    
+    // MARK: - UI Configurations funcs
     private func configureUI() {
         self.view.backgroundColor = .primary
         tabSwitcherView.items = ["Lesson", "Task"]
@@ -47,11 +49,10 @@ class VideoViewController: BaseViewController, Storyboarded {
         
         tasksVC.view.frame = containerView.bounds
         lessonsVC.view.frame = containerView.bounds
-        
-        
     }
 }
 
+// MARK: - Extensions
 extension VideoViewController: ScrollableMenuViewDelegate {
     func getIndex(_ index: Int) {
         tasksVC.view.isHidden = true

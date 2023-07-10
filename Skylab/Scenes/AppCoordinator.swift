@@ -32,10 +32,10 @@ class AppCoordinator: Coordinator {
 //        testScrollableMenuView()
 //        openAuthorization()
 //        openOnboarding()
-//        openMainTabBar()
+        openMainTabBar()
 //        operMyNew()
 //        openSwinjectTutorial()
-          openVideoScreen()
+//          openVideoScreen()
         
         /// Dev 'if' executed when the application is launched from the 'debug' schema
         #elseif DEV
