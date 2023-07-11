@@ -51,6 +51,7 @@
 		080505C62A5AD1D80009CCBD /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C52A5AD1D80009CCBD /* VideoViewModel.swift */; };
 		080505CA2A5AD3740009CCBD /* VideoLessonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C92A5AD3740009CCBD /* VideoLessonContainer.swift */; };
 		080505CC2A5C868B0009CCBD /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 080505CB2A5C868B0009CCBD /* YouTubeiOSPlayerHelper */; };
+		080505D22A5DB90D0009CCBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 080505D42A5DB90D0009CCBD /* Localizable.strings */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
 		08697119298430B600E4CA00 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08697118298430B600E4CA00 /* RxRelay */; };
 		0869711B298430B600E4CA00 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711A298430B600E4CA00 /* RxSwift */; };
@@ -271,6 +272,10 @@
 		080505C32A5AD0840009CCBD /* VideoViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModelProtocol.swift; sourceTree = "<group>"; };
 		080505C52A5AD1D80009CCBD /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		080505C92A5AD3740009CCBD /* VideoLessonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLessonContainer.swift; sourceTree = "<group>"; };
+		080505D02A5DB8C10009CCBD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		080505D12A5DB8CD0009CCBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		080505D32A5DB90D0009CCBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		080505D52A5DB9120009CCBD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		089F803829D2D3B900748D24 /* SecondPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIView.swift; sourceTree = "<group>"; };
 		089F803A29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -1057,6 +1062,7 @@
 				6EA0BEC929C0DD2C0066B9BC /* GoogleService-Info.plist */,
 				F4881E0D29E588A400F83E44 /* Configurations */,
 				F4881E1129E589F300F83E44 /* EnviromentHelper.swift */,
+				080505D42A5DB90D0009CCBD /* Localizable.strings */,
 			);
 			path = Skylab;
 			sourceTree = "<group>";
@@ -1878,8 +1884,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				uk,
+				en,
 			);
 			mainGroup = DF75E43829341212005B249E;
 			packageReferences = (
@@ -1919,6 +1926,7 @@
 				080505B92A5727C70009CCBD /* LessonsVideoViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
+				080505D22A5DB90D0009CCBD /* Localizable.strings in Resources */,
 				080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */,
 				F4DC1D572A485AE70006D868 /* QuizResultViewController.storyboard in Resources */,
 				F450D7382A1D16C300AF8768 /* CourseDescriptionViewController.storyboard in Resources */,
@@ -2155,10 +2163,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		080505D42A5DB90D0009CCBD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				080505D32A5DB90D0009CCBD /* en */,
+				080505D52A5DB9120009CCBD /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DF75E44F29341214005B249E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DF75E45029341214005B249E /* Base */,
+				080505D02A5DB8C10009CCBD /* uk */,
+				080505D12A5DB8CD0009CCBD /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -2170,6 +2189,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -2230,6 +2250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -2425,6 +2446,7 @@
 			baseConfigurationReference = F4881E0E29E588B800F83E44 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
