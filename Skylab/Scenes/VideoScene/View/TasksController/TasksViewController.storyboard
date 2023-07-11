@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tasks View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TasksViewController" customModule="Skylab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test task" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-cK-Bud">
+                                <rect key="frame" x="20" y="20" width="353" height="20.333333333333329"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-iq-DXE" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="328.66666666666669" width="353" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yl-SU-NLh">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Надіслати на перевірку" titleAlignment="center"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6yl-SU-NLh" firstAttribute="leading" secondItem="gwe-iq-DXE" secondAttribute="leading" id="Qvd-Ew-qUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="6yl-SU-NLh" secondAttribute="trailing" id="Rcs-L1-URU"/>
+                                    <constraint firstItem="6yl-SU-NLh" firstAttribute="top" secondItem="gwe-iq-DXE" secondAttribute="top" id="gft-xK-P3T"/>
+                                    <constraint firstAttribute="bottom" secondItem="6yl-SU-NLh" secondAttribute="bottom" id="hr5-Bh-0on"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKn-YG-hOj" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="399.66666666666669" width="353" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAY-HZ-coZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Позначити завдання виконаним"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zAY-HZ-coZ" firstAttribute="top" secondItem="NKn-YG-hOj" secondAttribute="top" id="2Ym-DT-cO1"/>
+                                    <constraint firstItem="zAY-HZ-coZ" firstAttribute="leading" secondItem="NKn-YG-hOj" secondAttribute="leading" id="I8j-pi-t13"/>
+                                    <constraint firstAttribute="height" constant="38" id="a3k-WB-3TH"/>
+                                    <constraint firstAttribute="trailing" secondItem="zAY-HZ-coZ" secondAttribute="trailing" id="dGd-7p-T7P"/>
+                                    <constraint firstAttribute="bottom" secondItem="zAY-HZ-coZ" secondAttribute="bottom" id="zCN-j2-kse"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Вставте ваш код сюди..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4iS-iy-N6n">
+                                <rect key="frame" x="20" y="60.333333333333329" width="353" height="235.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4iS-iy-N6n" secondAttribute="height" multiplier="150:100" id="vVL-ZH-BEc"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NKn-YG-hOj" secondAttribute="trailing" constant="20" id="4SP-Nc-geV"/>
+                            <constraint firstItem="hlg-cK-Bud" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="7iA-nU-Xjx"/>
+                            <constraint firstItem="gwe-iq-DXE" firstAttribute="top" secondItem="4iS-iy-N6n" secondAttribute="bottom" constant="33" id="Bl2-Se-fFG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4iS-iy-N6n" secondAttribute="trailing" constant="20" id="QRA-DB-Alr"/>
+                            <constraint firstItem="4iS-iy-N6n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="S6X-T8-Rom"/>
+                            <constraint firstItem="NKn-YG-hOj" firstAttribute="height" secondItem="gwe-iq-DXE" secondAttribute="height" id="VJ9-qM-86B"/>
+                            <constraint firstAttribute="trailing" secondItem="hlg-cK-Bud" secondAttribute="trailing" constant="20" id="Zix-kA-aMU"/>
+                            <constraint firstItem="gwe-iq-DXE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ejE-Jg-ETK"/>
+                            <constraint firstItem="NKn-YG-hOj" firstAttribute="top" secondItem="gwe-iq-DXE" secondAttribute="bottom" constant="33" id="etH-oJ-K4z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gwe-iq-DXE" secondAttribute="trailing" constant="20" id="giG-XZ-aLm"/>
+                            <constraint firstItem="4iS-iy-N6n" firstAttribute="top" secondItem="hlg-cK-Bud" secondAttribute="bottom" constant="20" id="iWC-GL-Np4"/>
+                            <constraint firstItem="hlg-cK-Bud" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="20" id="kvC-uY-lGK"/>
+                            <constraint firstItem="NKn-YG-hOj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="n5b-M2-LxU"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="codeView" destination="4iS-iy-N6n" id="pM3-tq-1AG"/>
+                        <outlet property="markButton" destination="zAY-HZ-coZ" id="bId-ww-U7r"/>
+                        <outlet property="markButtonBorderView" destination="NKn-YG-hOj" id="Ger-p8-4Jh"/>
+                        <outlet property="sendButton" destination="6yl-SU-NLh" id="iAk-5v-l5R"/>
+                        <outlet property="taskLabel" destination="hlg-cK-Bud" id="RgO-03-7Uw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-85" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

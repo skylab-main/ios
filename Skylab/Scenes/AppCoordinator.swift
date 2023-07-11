@@ -35,6 +35,7 @@ class AppCoordinator: Coordinator {
         openMainTabBar()
 //        operMyNew()
 //        openSwinjectTutorial()
+//          openVideoScreen()
         
         /// Dev 'if' executed when the application is launched from the 'debug' schema
         #elseif DEV
@@ -94,6 +95,13 @@ class AppCoordinator: Coordinator {
     
     func openMainMenu() {
         let coordinator = MainMenuCoordinator(UINavigationController(), parentCoordinatoor: self, featureToggleProvider: featureToggleProvider)
+        coordinator.start()
+        window.rootViewController = coordinator.rootController
+        addChildCoordinator(coordinator)
+    }
+    
+    func openVideoScreen() {
+        let coordinator = VideoCoordinator(UINavigationController())
         coordinator.start()
         window.rootViewController = coordinator.rootController
         addChildCoordinator(coordinator)

@@ -11,10 +11,11 @@ class MenuCell: UICollectionViewCell {
     
     static var identifier = "MenuCell"
     
-    lazy var baseBackgroundView: BaseBackgroundView = {
-        let view = BaseBackgroundView()
+    lazy var baseBackgroundView: DoubleBorderForView = {
+        let view = DoubleBorderForView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.borderColor = .white
+        view.bottomViewBackgroundColor = .white
         return view
     }()
     

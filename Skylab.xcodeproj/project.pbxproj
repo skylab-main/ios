@@ -39,6 +39,18 @@
 		04DEDBF029E9ECB500486A42 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEDBEF29E9ECB500486A42 /* PersonCell.swift */; };
 		04DEDBF229E9EDA700486A42 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEDBF129E9EDA700486A42 /* CircularImageView.swift */; };
 		04DEDBF429E9EE6300486A42 /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DEDBF329E9EE5F00486A42 /* AnonymousPro-Regular.ttf */; };
+		080505AE2A55B5E20009CCBD /* VideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */; };
+		080505B12A55B7240009CCBD /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505B02A55B7240009CCBD /* VideoViewController.swift */; };
+		080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080505B22A55B73F0009CCBD /* VideoViewController.storyboard */; };
+		080505B72A5727AB0009CCBD /* LessonsVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505B62A5727AB0009CCBD /* LessonsVideoViewController.swift */; };
+		080505B92A5727C70009CCBD /* LessonsVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080505B82A5727C70009CCBD /* LessonsVideoViewController.storyboard */; };
+		080505BB2A572EB70009CCBD /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505BA2A572EB70009CCBD /* TasksViewController.swift */; };
+		080505BD2A572EC30009CCBD /* TasksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080505BC2A572EC30009CCBD /* TasksViewController.storyboard */; };
+		080505C02A59B3B30009CCBD /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 080505BF2A59B3B30009CCBD /* YouTubeiOSPlayerHelper */; };
+		080505C42A5AD0840009CCBD /* VideoViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C32A5AD0840009CCBD /* VideoViewModelProtocol.swift */; };
+		080505C62A5AD1D80009CCBD /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C52A5AD1D80009CCBD /* VideoViewModel.swift */; };
+		080505CA2A5AD3740009CCBD /* VideoLessonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080505C92A5AD3740009CCBD /* VideoLessonContainer.swift */; };
+		080505CC2A5C868B0009CCBD /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 080505CB2A5C868B0009CCBD /* YouTubeiOSPlayerHelper */; };
 		08697117298430B600E4CA00 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08697116298430B600E4CA00 /* RxCocoa */; };
 		08697119298430B600E4CA00 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08697118298430B600E4CA00 /* RxRelay */; };
 		0869711B298430B600E4CA00 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0869711A298430B600E4CA00 /* RxSwift */; };
@@ -241,6 +253,16 @@
 		04DEDBEF29E9ECB500486A42 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		04DEDBF129E9EDA700486A42 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		04DEDBF329E9EE5F00486A42 /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
+		080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoordinator.swift; sourceTree = "<group>"; };
+		080505B02A55B7240009CCBD /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		080505B22A55B73F0009CCBD /* VideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
+		080505B62A5727AB0009CCBD /* LessonsVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsVideoViewController.swift; sourceTree = "<group>"; };
+		080505B82A5727C70009CCBD /* LessonsVideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LessonsVideoViewController.storyboard; sourceTree = "<group>"; };
+		080505BA2A572EB70009CCBD /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		080505BC2A572EC30009CCBD /* TasksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TasksViewController.storyboard; sourceTree = "<group>"; };
+		080505C32A5AD0840009CCBD /* VideoViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModelProtocol.swift; sourceTree = "<group>"; };
+		080505C52A5AD1D80009CCBD /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		080505C92A5AD3740009CCBD /* VideoLessonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLessonContainer.swift; sourceTree = "<group>"; };
 		089F803829D2D3B900748D24 /* SecondPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIView.swift; sourceTree = "<group>"; };
 		089F803A29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -399,6 +421,7 @@
 				08697119298430B600E4CA00 /* RxRelay in Frameworks */,
 				08697117298430B600E4CA00 /* RxCocoa in Frameworks */,
 				0869711B298430B600E4CA00 /* RxSwift in Frameworks */,
+				080505C02A59B3B30009CCBD /* YouTubeiOSPlayerHelper in Frameworks */,
 				6E9A2D5E29CBAC1500D1E78B /* FirebaseRemoteConfig in Frameworks */,
 				DF0C6D22297D85E300DE84AB /* Alamofire in Frameworks */,
 				152E04D2298474EC00ABCEA2 /* Swinject in Frameworks */,
@@ -411,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				086971202986D8E200E4CA00 /* RxCocoa in Frameworks */,
+				080505CC2A5C868B0009CCBD /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +627,71 @@
 				04DEDBEF29E9ECB500486A42 /* PersonCell.swift */,
 			);
 			path = CustomVies;
+			sourceTree = "<group>";
+		};
+		080505AC2A55B3160009CCBD /* VideoScene */ = {
+			isa = PBXGroup;
+			children = (
+				080505AD2A55B5E20009CCBD /* VideoCoordinator.swift */,
+				080505C72A5AD30B0009CCBD /* DI */,
+				080505C12A5AD0380009CCBD /* ViewModel */,
+				080505AF2A55B6AF0009CCBD /* View */,
+			);
+			path = VideoScene;
+			sourceTree = "<group>";
+		};
+		080505AF2A55B6AF0009CCBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				080505B52A5727640009CCBD /* TasksController */,
+				080505B42A5727430009CCBD /* LessonsVideoController */,
+				080505B02A55B7240009CCBD /* VideoViewController.swift */,
+				080505B22A55B73F0009CCBD /* VideoViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		080505B42A5727430009CCBD /* LessonsVideoController */ = {
+			isa = PBXGroup;
+			children = (
+				080505B62A5727AB0009CCBD /* LessonsVideoViewController.swift */,
+				080505B82A5727C70009CCBD /* LessonsVideoViewController.storyboard */,
+			);
+			path = LessonsVideoController;
+			sourceTree = "<group>";
+		};
+		080505B52A5727640009CCBD /* TasksController */ = {
+			isa = PBXGroup;
+			children = (
+				080505BA2A572EB70009CCBD /* TasksViewController.swift */,
+				080505BC2A572EC30009CCBD /* TasksViewController.storyboard */,
+			);
+			path = TasksController;
+			sourceTree = "<group>";
+		};
+		080505C12A5AD0380009CCBD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				080505C22A5AD0460009CCBD /* Protocols */,
+				080505C52A5AD1D80009CCBD /* VideoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		080505C22A5AD0460009CCBD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				080505C32A5AD0840009CCBD /* VideoViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		080505C72A5AD30B0009CCBD /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				080505C92A5AD3740009CCBD /* VideoLessonContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		0869711E2986D8E200E4CA00 /* Frameworks */ = {
@@ -992,6 +1081,7 @@
 				F4EDF83D2A3A046E0056D1D8 /* QuizQuestionsScene */,
 				F4DC1D512A485A950006D868 /* QuizResultScene */,
 				047D39C629E737C5000D8D8C /* LessonsScene */,
+				080505AC2A55B3160009CCBD /* VideoScene */,
 				047D39C729E737E3000D8D8C /* PracticeScene */,
 				047D39C829E73888000D8D8C /* AboutScene */,
 				F450D71A2A1CD6E400AF8768 /* CourseDescription */,
@@ -1642,6 +1732,7 @@
 				152E04D1298474EC00ABCEA2 /* Swinject */,
 				6E9A2D5D29CBAC1500D1E78B /* FirebaseRemoteConfig */,
 				F4E7F13229E9768A00D6FDD1 /* OpenAISwift */,
+				080505BF2A59B3B30009CCBD /* YouTubeiOSPlayerHelper */,
 			);
 			productName = Skylab;
 			productReference = DF75E44129341212005B249E /* Skylab.app */;
@@ -1663,6 +1754,7 @@
 			name = SkylabTests;
 			packageProductDependencies = (
 				0869711F2986D8E200E4CA00 /* RxCocoa */,
+				080505CB2A5C868B0009CCBD /* YouTubeiOSPlayerHelper */,
 			);
 			productName = SkylabTests;
 			productReference = DF75E45729341214005B249E /* SkylabTests.xctest */;
@@ -1724,6 +1816,7 @@
 				152E04D0298474EC00ABCEA2 /* XCRemoteSwiftPackageReference "Swinject" */,
 				6E9A2D5C29CBAC1500D1E78B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F4E7F13129E9768A00D6FDD1 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				080505BE2A59B3B30009CCBD /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = DF75E44229341212005B249E /* Products */;
 			projectDirPath = "";
@@ -1751,8 +1844,10 @@
 				DF3D3C2C2969FD8A00CFCE49 /* OnboardingViewController.storyboard in Resources */,
 				F4E7F12229E83A5300D6FDD1 /* ChatGPTResponseViewController.storyboard in Resources */,
 				047D39D529E73CA9000D8D8C /* QuizViewController.storyboard in Resources */,
+				080505B92A5727C70009CCBD /* LessonsVideoViewController.storyboard in Resources */,
 				DF3D3C3E296A036F00CFCE49 /* FirstPageViewController.storyboard in Resources */,
 				045D3FE429BE80EC00456DEC /* TestMenuViewController.storyboard in Resources */,
+				080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */,
 				F4DC1D572A485AE70006D868 /* QuizResultViewController.storyboard in Resources */,
 				F450D7382A1D16C300AF8768 /* CourseDescriptionViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
@@ -1765,6 +1860,7 @@
 				DF3D3C302969FE2B00CFCE49 /* AuthorizationViewController.storyboard in Resources */,
 				F4B1315429E4469F005760B6 /* TutorialViewController.storyboard in Resources */,
 				DF75E44E29341214005B249E /* Assets.xcassets in Resources */,
+				080505BD2A572EC30009CCBD /* TasksViewController.storyboard in Resources */,
 				6EA0BECA29C0DD2D0066B9BC /* GoogleService-Info.plist in Resources */,
 				F450D72E2A1CDC7C00AF8768 /* CustomApplyForCourseView.xib in Resources */,
 				DF3D3C4E296A052000CFCE49 /* ThirdPageViewController.storyboard in Resources */,
@@ -1822,6 +1918,7 @@
 				F4881E0C29E582F400F83E44 /* MainMenuCoordinator.swift in Sources */,
 				152E04CD298471BD00ABCEA2 /* SwinjectPageViewModel.swift in Sources */,
 				047D39D929E73D72000D8D8C /* PracticeCoordinator.swift in Sources */,
+				080505CA2A5AD3740009CCBD /* VideoLessonContainer.swift in Sources */,
 				F4A237542A20CF1E00048663 /* ReviewModel.swift in Sources */,
 				F4E7F11529E815BD00D6FDD1 /* TutorialCoordinator.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
@@ -1894,12 +1991,14 @@
 				F48BD5232A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift in Sources */,
 				1544EC7329846C8D0080C429 /* SwinjectTestPageViewController.swift in Sources */,
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
+				080505B72A5727AB0009CCBD /* LessonsVideoViewController.swift in Sources */,
 				F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */,
 				F4E7F10E29E808B400D6FDD1 /* TopicsCollectionViewCell.swift in Sources */,
 				F4BD54602A28CC5600E5039B /* CourseDetailsHeaderDelegate.swift in Sources */,
 				DF3D3C242969D01300CFCE49 /* TabBarCoordinator.swift in Sources */,
 				DFF23650294F6ED00009AF47 /* Storyboarded.swift in Sources */,
 				047D39F529E74BED000D8D8C /* UIColor + Extension.swift in Sources */,
+				080505AE2A55B5E20009CCBD /* VideoCoordinator.swift in Sources */,
 				F4DC1D552A485ADC0006D868 /* QuizResultViewController.swift in Sources */,
 				F4E7F13029E975EF00D6FDD1 /* APICaller.swift in Sources */,
 				F4BD545C2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift in Sources */,
@@ -1913,6 +2012,8 @@
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
 				F4BD54652A28CFBA00E5039B /* CourseDetailsContainer.swift in Sources */,
+				080505BB2A572EB70009CCBD /* TasksViewController.swift in Sources */,
+				080505C42A5AD0840009CCBD /* VideoViewModelProtocol.swift in Sources */,
 				F4CBA7F02A4EE00D00A93413 /* QuizResultContainer.swift in Sources */,
 				045D3FE029BE808600456DEC /* TestMenuViewController.swift in Sources */,
 				DF3D3C272969F61700CFCE49 /* OnboardingCoordinator.swift in Sources */,
@@ -1920,6 +2021,7 @@
 				DF3E2E9A296B23AF00810694 /* FirstPageSubViewControllerViewModel.swift in Sources */,
 				F4BD54672A28D03300E5039B /* CourseDetailsCoordinator.swift in Sources */,
 				04DEDBF029E9ECB500486A42 /* PersonCell.swift in Sources */,
+				080505C62A5AD1D80009CCBD /* VideoViewModel.swift in Sources */,
 				F4B1314D29E4464F005760B6 /* ApplicationViewController.swift in Sources */,
 				F30A06E42A28EC1000E187DC /* ProgressTableViewCell.swift in Sources */,
 				F48CE07E29E6A45C008A47F5 /* TutorialViewModel.swift in Sources */,
@@ -1927,6 +2029,7 @@
 				0422F18F29F727F800068A58 /* AnonymousPro.swift in Sources */,
 				F4B1314929E445E2005760B6 /* MainMenuViewController.swift in Sources */,
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
+				080505B12A55B7240009CCBD /* VideoViewController.swift in Sources */,
 				F422B0762A379B2000A052EA /* QuizViewModelProtocol.swift in Sources */,
 				047D39F329E74390000D8D8C /* AboutCoordinator.swift in Sources */,
 				152E04CF298471FD00ABCEA2 /* SwinjectTestPageSubViewControllerViewModel.swift in Sources */,
@@ -2105,7 +2208,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 82JRS96G7R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Skylab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2415,6 +2518,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		080505BE2A59B3B30009CCBD /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		08697115298430B600E4CA00 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -2458,6 +2569,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		080505BF2A59B3B30009CCBD /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080505BE2A59B3B30009CCBD /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+		080505CB2A5C868B0009CCBD /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080505BE2A59B3B30009CCBD /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		08697116298430B600E4CA00 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08697115298430B600E4CA00 /* XCRemoteSwiftPackageReference "RxSwift" */;
