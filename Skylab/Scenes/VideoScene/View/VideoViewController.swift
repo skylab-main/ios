@@ -9,10 +9,6 @@ import UIKit
 
 class VideoViewController: BaseViewController, Storyboarded {
     
-    // MARK: - let/var
-    var lessonsVC: LessonsVideoViewController!
-    var tasksVC: TasksViewController!
-    
     // MARK: - IBOutlets
     @IBOutlet weak var tabSwitcherView: ScrollableMenuView! {
         didSet {
@@ -21,6 +17,9 @@ class VideoViewController: BaseViewController, Storyboarded {
     }
     @IBOutlet weak var containerView: UIView!
     
+    // MARK: - let/var
+    var lessonsVC: LessonsVideoViewController!
+    var tasksVC: TasksViewController!
     
     // MARK: - Lifecycle funcs
     override func viewDidLoad() {

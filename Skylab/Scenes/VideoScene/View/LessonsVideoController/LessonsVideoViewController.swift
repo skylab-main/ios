@@ -13,16 +13,15 @@ import YouTubeiOSPlayerHelper
 
 class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerViewDelegate {
    
-    // MARK: - let/var
-    var viewModel: VideoViewModelProtocol?
-    
     // MARK: - IBOutlets
     @IBOutlet weak var videoContainerView: UIView!
     @IBOutlet weak var videoView: YTPlayerView!
     @IBOutlet weak var downloadButton: UIButton!
     @IBOutlet weak var telegramButton: UIButton!
     @IBOutlet weak var lessonThemeLabel: UILabel!
-
+    
+    // MARK: - let/var
+    var viewModel: VideoViewModelProtocol?
     
     // MARK: - Lifecycle funcs
     override func viewDidLoad() {
