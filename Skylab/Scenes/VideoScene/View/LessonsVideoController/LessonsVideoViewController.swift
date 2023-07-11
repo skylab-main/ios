@@ -40,7 +40,7 @@ class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerView
         videoContainerView.clipsToBounds = true
         videoView.layer.cornerRadius = 6
         videoView.clipsToBounds =  true
-        lessonThemeLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
+        lessonThemeLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 18, textColor: .primary, nil)
         lessonThemeLabel.text = viewModel?.title
         downloadButton.configureButton(title: "Скачати презентацію", imageName: nil,
                                        fontName: CustomFonts.anonymousProBold.rawValue,

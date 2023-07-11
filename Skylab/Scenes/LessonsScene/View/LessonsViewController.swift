@@ -20,7 +20,7 @@ class LessonsViewController: BaseViewController, Storyboarded {
         configureUI()
         configureNavBarTitle()
     }
-
+    // MARK: - lifecycle func
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -28,7 +28,7 @@ class LessonsViewController: BaseViewController, Storyboarded {
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
 
-    //MARK: - UI Configuration
+    // MARK: - UI Configuration
 
     private func configureUI() {
 
