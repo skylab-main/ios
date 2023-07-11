@@ -19,12 +19,33 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     var viewModel: QuizQuestionsViewModelProtocol?
     
+    //MARK: - View life cycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
         configureNavBarTitle()
+        viewModel?.goToNextQuiz()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel?.getQuiz()
         updateUI()
+        configureProgressBar()
+        title = viewModel?.getQuizTopicTitle()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        viewModel?.setToDefault()
+    }
+    
+    deinit {
+        print("DEINIT QuizQuestionsViewController")
     }
 
     //MARK: - UI Configurations
@@ -58,9 +79,11 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     private func configureProgressBar() {
         
+        guard let viewModel else { return }
+        
         progressBar.progressTintColor = .white
         progressBar.trackTintColor = UIColor(white: 1, alpha: 0.2)
-        progressBar.progress = (viewModel?.quizData?.progress ?? 0.0) / 100
+        progressBar.progress = viewModel.getQuizProgress()
     }
     
     private func configureQuestionBackgroundView() {
@@ -72,11 +95,9 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
     
     private func configureNavBarTitle() {
             
-        guard let viewModel, let navBar = navigationController?.navigationBar else { return }
+        guard let navBar = navigationController?.navigationBar else { return }
         
         navigationController?.tabBarController?.tabBar.isHidden = true
-        
-        title = viewModel.quizData?.topic
         
         navBar.largeTitleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 28),
@@ -133,7 +154,6 @@ class QuizQuestionsViewController: BaseViewController, Storyboarded {
         guard let viewModel else { return print("The ViewModel doesn't exist!") }
         
         let userAnswer = sender.tag
-        
         let userGotItRight = viewModel.checkCorrectAnswer(userAnswer) 
         
         if userGotItRight {

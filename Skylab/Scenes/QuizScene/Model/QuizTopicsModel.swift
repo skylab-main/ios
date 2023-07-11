@@ -9,6 +9,9 @@ import Foundation
 
 struct QuizTopicsModel {
     
-    let topic: String
+    let allData: [Quiz]
+    var chosenTopicTitle: String
     let progress: Float
+    let numberOFCurrentTopic: Int
 }
+

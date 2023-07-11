@@ -2,7 +2,7 @@
 //  QuizCoordinator.swift
 //  Skylab
 //
-//  Created by Artem Tkachenko on 12.04.2023.
+//  Created by Aleksey Kotsevych on 12.04.2023.
 //
 
 import UIKit
@@ -18,17 +18,26 @@ class QuizCoordinator: Coordinator {
     }
     
     override func start() {
+        
         openQuizController()
+    }
+    
+    override func finish() {
+        
+        removeChildCoordinator(self)
+        rootController.removeFromParent()
     }
     
     private func openQuizController() {
         
         let viewController = QuizViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.quizTopics.resolve(QuizViewModelProtocol.self)
+        
         viewController.viewModel?.openQuizQuestionsController
             .asObserver()
             .subscribe(onNext: { [weak self] quizData in self?.openQuizQuestionsController(with: quizData) })
             .disposed(by: bag)
+        
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.quiz.rawValue,
                                                  image: TabBarItems.quiz.image,
                                                  selectedImage: TabBarItems.quiz.selectedImage)
@@ -37,10 +46,11 @@ class QuizCoordinator: Coordinator {
     }
     
     private func openQuizQuestionsController(with data: QuizTopicsModel) {
+       
         let coordinator = QuizQuestionsCoordinator(rootController)
         coordinator.quizData = data
+        addChildCoordinator(coordinator)
         coordinator.start()
     }
-    
     
 }

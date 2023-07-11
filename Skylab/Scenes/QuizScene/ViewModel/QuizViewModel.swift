@@ -2,7 +2,7 @@
 //  QuizViewModel.swift
 //  Skylab
 //
-//  Created by Artem Tkachenko on 12.04.2023.
+//  Created by Aleksey Kotsevych on 12.04.2023.
 //
 
 import Foundation
@@ -11,16 +11,41 @@ import RxSwift
 class QuizViewModel: QuizViewModelProtocol {
     
     var openQuizQuestionsController = PublishSubject<QuizTopicsModel>()
-    
-    var quizTopicsArray: [QuizTopicsModel] = []
+    private var quizTopicsArray: [QuizTopicsModel] = []
+    private let userDefaults = UserDefaults.standard
     
     func getQuizTopics() {
         
         NetworkManager.getQuiz { [self] quizData in
             
+            var counter = 0
+            
             quizData.forEach { quiz in
-                quizTopicsArray.append(QuizTopicsModel(topic: quiz.title, progress: Float.random(in: 0...100)))
+                
+                let userProgress = userDefaults.float(forKey: quiz.title)
+                
+                quizTopicsArray.append(QuizTopicsModel(allData: quizData,
+                                                       chosenTopicTitle: quiz.title,
+                                                       progress: userProgress,
+                                                       numberOFCurrentTopic: counter))
+                counter += 1
             }
         }
+    }
+    
+    func getQuizTopicData() -> [QuizTopicsModel] {
+        
+        return quizTopicsArray
+    }
+    
+    func getNumberOfRowsInSection() -> Int {
+        
+        return quizTopicsArray.count
+    }
+    
+    func updateTopicData() {
+        
+        quizTopicsArray = []
+        getQuizTopics()
     }
 }

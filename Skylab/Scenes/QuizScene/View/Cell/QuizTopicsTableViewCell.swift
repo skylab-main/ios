@@ -15,22 +15,37 @@ class QuizTopicsTableViewCell: UITableViewCell {
     @IBOutlet weak var doubleBorderView: UIView!
     @IBOutlet weak var cellBackgroundView: UIView!
     
+    private let labelsFontSize: CGFloat = 14
+    private let cornerRadius: CGFloat = 12
+    private let borderWidth: CGFloat = 1
+    
     func configureCell(data: QuizTopicsModel) {
         
-        quizTopicLabel.text = data.topic
-        quizTopicLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
+        if (data.progress * 100) == 0 {
         
-        progressPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
-        progressPercentLabel.text = String(format: "%.0f", data.progress) + "%"
+            progressPercentLabel.isHidden = true
+            progressBar.isHidden = true
+            
+        } else {
+
+            progressPercentLabel.isHidden = false
+            progressBar.isHidden = false
+        }
+        
+        quizTopicLabel.text = data.chosenTopicTitle
+        quizTopicLabel.configureCustomLabel(font: .anonymousProBold, fontSize: labelsFontSize, textColor: .primary, nil)
+        
+        progressPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: labelsFontSize, textColor: .primary, nil)
+        progressPercentLabel.text = String(format: "%.0f", (data.progress * 100)) + "%"
         
         progressBar.progressTintColor = .primary
         progressBar.trackTintColor = .systemGray4
-        progressBar.progress = data.progress / 100
+        progressBar.progress = data.progress
         
-        cellBackgroundView.layer.configureViewLayer(cornerRadius: 12, borderWidth: 1, borderColor: .primary, true)
+        cellBackgroundView.layer.configureViewLayer(cornerRadius: cornerRadius, borderWidth: borderWidth, borderColor: .primary, true)
         cellBackgroundView.backgroundColor = .white
         
-        doubleBorderView.layer.configureViewLayer(cornerRadius: 12, borderWidth: 1, borderColor: .primary, true)
+        doubleBorderView.layer.configureViewLayer(cornerRadius: cornerRadius, borderWidth: borderWidth, borderColor: .primary, true)
         doubleBorderView.backgroundColor = .primary
         
     }
