@@ -22,7 +22,8 @@ final class ScrollableMenuView: UIView {
     
     private lazy var collectionView: UICollectionView = {
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 277, height: 60)
+        let width = UIScreen.main.bounds.size.width * 0.8
+        layout.itemSize = CGSize(width: width, height: 60)
         layout.minimumLineSpacing = 16
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
