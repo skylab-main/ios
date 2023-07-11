@@ -11,18 +11,16 @@ import RxCocoa
 
 class TasksViewController: BaseViewController, Storyboarded {
     
-    // MARK: - let/var
-    
-    let placeHolderText = "Вставте ваш код сюди..."
-    var viewModel: VideoViewModelProtocol?
-    
     // MARK: - IBOutlets
-    
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var codeView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var markButton: UIButton!
     @IBOutlet weak var markButtonBorderView: DoubleBorderForView!
+    
+    // MARK: - let/var
+    let placeHolderText = "Вставте ваш код сюди..."
+    var viewModel: VideoViewModelProtocol?
     
     // MARK: - Lifecycle funcs
     override func viewDidLoad() {
