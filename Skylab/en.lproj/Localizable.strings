@@ -5,3 +5,16 @@
   Created by Сергей Молодец on 11.07.2023.
   
 */
+// MARK: - VideoScene/TasksViewController
+"TasksViewController.sendButton.title" = "Send for checking";
+"TasksViewController.markButton.pressed.title" = "Task is done!";
+"TasksViewController.markButton.nonPressed.title" = "Mark task complete";
+"TasksViewController.codeView.placeHolderText" = "Put your code here...";
+
+// MARK: - VideoScene/LessonsVideoViewController
+"LessonsVideoViewController.downloadButton.title" = "Download presentation";
+"LessonsVideoViewController.telegramButton.title" = "Join Telegram channel with materials";
+
+// MARK: - VideoScene/VideoViewController
+"VideoViewController.tabSwitcherView.items.lesson" = "Lesson";
+"VideoViewController.tabSwitcherView.items.task" = "Task";

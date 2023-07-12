@@ -41,11 +41,11 @@ class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerView
         videoView.clipsToBounds =  true
         lessonThemeLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 18, textColor: .primary, nil)
         lessonThemeLabel.text = viewModel?.title
-        downloadButton.configureButton(title: "Скачати презентацію", imageName: nil,
+        downloadButton.configureButton(title: NSLocalizedString("LessonsVideoViewController.downloadButton.title", comment: "title for downloadButton on the lessons video screen"), imageName: nil,
                                        fontName: CustomFonts.anonymousProBold.rawValue,
                                        fontSize: 14,
                                        tintColor: .primary)
-        telegramButton.configureButton(title: "Telegram канал з матеріалами ", imageName: nil,
+        telegramButton.configureButton(title: NSLocalizedString("LessonsVideoViewController.telegramButton.title", comment: "title for telegram channel button"), imageName: nil,
                                        fontName: CustomFonts.anonymousProBold.rawValue,
                                        fontSize: 14,
                                        tintColor: .primary)
