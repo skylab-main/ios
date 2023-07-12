@@ -31,7 +31,10 @@ class VideoViewController: BaseViewController, Storyboarded {
     // MARK: - UI Configurations funcs
     private func configureUI() {
         self.view.backgroundColor = .primary
-        tabSwitcherView.items = ["Lesson", "Task"]
+        tabSwitcherView.items = [ NSLocalizedString("VideoViewController.tabSwitcherView.items.lesson",
+                                                    comment: "lesson title of tabSwitcherView on the video screen"),
+            NSLocalizedString("VideoViewController.tabSwitcherView.items.task",
+                                                    comment: "task title of tabSwitcherView on the video screen")]
         containerView.backgroundColor = .white
         containerView.layer.cornerRadius = 12
         containerView.clipsToBounds = true
