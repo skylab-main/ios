@@ -1,20 +1,19 @@
 //
-//  LessonsViewController.swift
+//  LessonsLevelViewController.swift
 //  Skylab
 //
-//  Created by Artem Tkachenko on 12.04.2023.
+//  Created by Леонід Квіт on 13.07.2023.
 //
 
 import UIKit
 
-class LessonsViewController: BaseViewController, Storyboarded {
+class LessonsLevelViewController: BaseViewController, Storyboarded {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var lessonsTableView: UITableView!
-    @IBOutlet weak var descriptionCurseButton: UIButton!
+    @IBOutlet weak var levelsTableView: UITableView!
     
     // MARK: - let/var
-    var viewModel: LessonsViewModelProtocol?
+    var viewModel: LessonsLevelViewModelProtocol?
 
     // MARK: - lifecycle func
     override func viewDidLoad() {
@@ -33,28 +32,22 @@ class LessonsViewController: BaseViewController, Storyboarded {
 
     // MARK: - UI Configuration funcs
     private func configureUI() {
-
+        
         view.backgroundColor = .primary
         
-        lessonsTableView.layer.cornerRadius = 12
-        lessonsTableView.clipsToBounds = true
-        lessonsTableView.rowHeight = UITableView.automaticDimension
-        lessonsTableView.estimatedRowHeight = 100
-        lessonsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
-
-        descriptionCurseButton.configureButton(title: "Опис повного курсу",
-                                               imageName: "rightArrow",
-                                               fontName: "AnonymousPro-Bold",
-                                               fontSize: 14,
-                                               tintColor: .primary)
+        levelsTableView.layer.cornerRadius = 12
+        levelsTableView.clipsToBounds = true
+        levelsTableView.rowHeight = UITableView.automaticDimension
+        levelsTableView.estimatedRowHeight = 100
+        levelsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
         
-        lessonsTableView.dataSource = self
-        lessonsTableView.delegate = self
-       
+        levelsTableView.dataSource = self
+        levelsTableView.delegate = self
+        
         let nib = UINib(nibName: "ProgressTableViewCell", bundle: nil)
-        lessonsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
+        levelsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
         
-        viewModel?.getLessons()
+        //viewModel?.setLevels()
     }
 
     private func configureNavBarTitle() {
@@ -81,7 +74,7 @@ class LessonsViewController: BaseViewController, Storyboarded {
 }
 
 // MARK: - Extensions
-extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
+extension LessonsLevelViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let viewModel else { return 0 }
         return viewModel.numberOfRowInSection(for: section)
@@ -96,28 +89,16 @@ extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
         guard let item = viewModel.cellViewModel(for: indexPath) else { return UITableViewCell() }
         
         cell.selectionStyle = .none
-        cell.configureCell(title: item.title, progress: item.progressPercent)
+        cell.configureCell(title: item.title)
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-//        guard
-//            let goToQuizQuestions = viewModel?.openQuizQuestionsController,
-//            let topicData = viewModel?.getQuizTopicData()[indexPath.row]
-//        else { return }
-//
-//        goToQuizQuestions.onNext(topicData)
-        
-//        guard let viewModel, let item = viewModel.cellViewModel(for: indexPath) else { return }
-//        viewModel.se
-        guard
-            let goToLessonsLevel = viewModel?.openLessonsLevelController,
-            let item = viewModel?.cellViewModel(for: indexPath)
-        else { return }
-        
-        goToLessonsLevel.onNext(item)
+        guard let viewModel else { return }
+        guard let item = viewModel.cellViewModel(for: indexPath) else { return }
+        print(item)
+
     }
 }
+

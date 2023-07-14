@@ -118,8 +118,16 @@
 		F30A06DF2A28DAE900E187DC /* LessonsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A06DE2A28DAE900E187DC /* LessonsViewModelProtocol.swift */; };
 		F30A06E42A28EC1000E187DC /* ProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A06E32A28EC1000E187DC /* ProgressTableViewCell.swift */; };
 		F30A06E62A2A22FE00E187DC /* LessonsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30A06E52A2A211800E187DC /* LessonsViewController.storyboard */; };
+		F32E61092A5EA0130004F675 /* Lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = F32E61082A5EA0130004F675 /* Lessons.json */; };
+		F32E610F2A5FC0350004F675 /* LessonsLevelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E610E2A5FC0350004F675 /* LessonsLevelCoordinator.swift */; };
+		F32E61112A5FC0550004F675 /* LessonsLevelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E61102A5FC0550004F675 /* LessonsLevelContainer.swift */; };
+		F32E61132A5FC0840004F675 /* LessonsLevelViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E61122A5FC0840004F675 /* LessonsLevelViewModelProtocol.swift */; };
+		F32E61152A5FC0A20004F675 /* LessonsLevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E61142A5FC0A20004F675 /* LessonsLevelViewModel.swift */; };
+		F32E61172A5FC0C30004F675 /* LessonsLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E61162A5FC0C30004F675 /* LessonsLevelViewController.swift */; };
+		F32E61192A5FC0E60004F675 /* LessonsLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32E61182A5FC0E60004F675 /* LessonsLevelViewController.storyboard */; };
 		F36D06E02A44AC23000EE45E /* LessonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D06DF2A44AC23000EE45E /* LessonsModel.swift */; };
 		F3CEEDCF2A360BF20043D950 /* ProgressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */; };
+		F3D43BFB2A5DB92F007817B3 /* LevelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D43BFA2A5DB92E007817B3 /* LevelsModel.swift */; };
 		F3F881A92A558B5100E741FC /* LessonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F881A82A558B5100E741FC /* LessonsContainer.swift */; };
 		F422B06B2A374FA300A052EA /* QuizTopicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422B06A2A374FA300A052EA /* QuizTopicsTableViewCell.swift */; };
 		F422B06E2A375CF000A052EA /* QuizTopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422B06D2A375CF000A052EA /* QuizTopicsModel.swift */; };
@@ -327,8 +335,16 @@
 		F30A06DE2A28DAE900E187DC /* LessonsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewModelProtocol.swift; sourceTree = "<group>"; };
 		F30A06E32A28EC1000E187DC /* ProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTableViewCell.swift; sourceTree = "<group>"; };
 		F30A06E52A2A211800E187DC /* LessonsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LessonsViewController.storyboard; sourceTree = "<group>"; };
+		F32E61082A5EA0130004F675 /* Lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Lessons.json; sourceTree = "<group>"; };
+		F32E610E2A5FC0350004F675 /* LessonsLevelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsLevelCoordinator.swift; sourceTree = "<group>"; };
+		F32E61102A5FC0550004F675 /* LessonsLevelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsLevelContainer.swift; sourceTree = "<group>"; };
+		F32E61122A5FC0840004F675 /* LessonsLevelViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsLevelViewModelProtocol.swift; sourceTree = "<group>"; };
+		F32E61142A5FC0A20004F675 /* LessonsLevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsLevelViewModel.swift; sourceTree = "<group>"; };
+		F32E61162A5FC0C30004F675 /* LessonsLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsLevelViewController.swift; sourceTree = "<group>"; };
+		F32E61182A5FC0E60004F675 /* LessonsLevelViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LessonsLevelViewController.storyboard; sourceTree = "<group>"; };
 		F36D06DF2A44AC23000EE45E /* LessonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsModel.swift; sourceTree = "<group>"; };
 		F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTableViewCell.xib; sourceTree = "<group>"; };
+		F3D43BFA2A5DB92E007817B3 /* LevelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsModel.swift; sourceTree = "<group>"; };
 		F3F881A82A558B5100E741FC /* LessonsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsContainer.swift; sourceTree = "<group>"; };
 		F422B06A2A374FA300A052EA /* QuizTopicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsTableViewCell.swift; sourceTree = "<group>"; };
 		F422B06D2A375CF000A052EA /* QuizTopicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsModel.swift; sourceTree = "<group>"; };
@@ -1081,6 +1097,7 @@
 				F4EDF83D2A3A046E0056D1D8 /* QuizQuestionsScene */,
 				F4DC1D512A485A950006D868 /* QuizResultScene */,
 				047D39C629E737C5000D8D8C /* LessonsScene */,
+				F3D43BF82A5DB8F2007817B3 /* LevelsScene */,
 				080505AC2A55B3160009CCBD /* VideoScene */,
 				047D39C729E737E3000D8D8C /* PracticeScene */,
 				047D39C829E73888000D8D8C /* AboutScene */,
@@ -1119,6 +1136,60 @@
 				F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */,
 			);
 			path = ProgressTableViewCell;
+			sourceTree = "<group>";
+		};
+		F32E610A2A5FBFED0004F675 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F32E61102A5FC0550004F675 /* LessonsLevelContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F32E610B2A5FBFF70004F675 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F32E610D2A5FC00C0004F675 /* Protocols */,
+				F32E61142A5FC0A20004F675 /* LessonsLevelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F32E610C2A5FC0020004F675 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F32E61162A5FC0C30004F675 /* LessonsLevelViewController.swift */,
+				F32E61182A5FC0E60004F675 /* LessonsLevelViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F32E610D2A5FC00C0004F675 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F32E61122A5FC0840004F675 /* LessonsLevelViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F3D43BF82A5DB8F2007817B3 /* LevelsScene */ = {
+			isa = PBXGroup;
+			children = (
+				F32E610E2A5FC0350004F675 /* LessonsLevelCoordinator.swift */,
+				F32E610A2A5FBFED0004F675 /* DI */,
+				F3D43BF92A5DB917007817B3 /* Model */,
+				F32E610B2A5FBFF70004F675 /* ViewModel */,
+				F32E610C2A5FC0020004F675 /* View */,
+			);
+			path = LevelsScene;
+			sourceTree = "<group>";
+		};
+		F3D43BF92A5DB917007817B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3D43BFA2A5DB92E007817B3 /* LevelsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F3F881A72A558B2A00E741FC /* DI */ = {
@@ -1511,6 +1582,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C5EDB52A3F48C4003E25EE /* Quizz.json */,
+				F32E61082A5EA0130004F675 /* Lessons.json */,
 				F47DB4782A3F6D0C00FBB562 /* NetworkManager.swift */,
 			);
 			path = Network;
@@ -1853,6 +1925,7 @@
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				F3CEEDCF2A360BF20043D950 /* ProgressTableViewCell.xib in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
+				F32E61092A5EA0130004F675 /* Lessons.json in Resources */,
 				F4B1314729E445A2005760B6 /* MainMenuViewController.storyboard in Resources */,
 				04DEDBF429E9EE6300486A42 /* AnonymousPro-Regular.ttf in Resources */,
 				152E04CB2984718B00ABCEA2 /* SwinjectTestPageSubViewController.storyboard in Resources */,
@@ -1868,6 +1941,7 @@
 				F4E7F13529E98E1700D6FDD1 /* ChatGPTViewController.storyboard in Resources */,
 				DF3D3C4A296A048500CFCE49 /* SecondPageViewController.storyboard in Resources */,
 				F48BD51C2A3DD246003D3202 /* QuizQuestionsViewController.storyboard in Resources */,
+				F32E61192A5FC0E60004F675 /* LessonsLevelViewController.storyboard in Resources */,
 				8625B5AE29BFB5A700F4A78C /* SecondPageSubViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1920,6 +1994,7 @@
 				047D39D929E73D72000D8D8C /* PracticeCoordinator.swift in Sources */,
 				080505CA2A5AD3740009CCBD /* VideoLessonContainer.swift in Sources */,
 				F4A237542A20CF1E00048663 /* ReviewModel.swift in Sources */,
+				F32E610F2A5FC0350004F675 /* LessonsLevelCoordinator.swift in Sources */,
 				F4E7F11529E815BD00D6FDD1 /* TutorialCoordinator.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
 				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
@@ -1948,6 +2023,7 @@
 				1544EC6F29846B590080C429 /* SwinjectTestPageCoordinator.swift in Sources */,
 				1550689F29869BC700A81F04 /* JSONLoggerSwinjectTutorial.swift in Sources */,
 				047D39D329E73972000D8D8C /* QuizCoordinator.swift in Sources */,
+				F32E61112A5FC0550004F675 /* LessonsLevelContainer.swift in Sources */,
 				F4426CB22A43293300350FD8 /* QuizQuestionsContainer .swift in Sources */,
 				047D39EC29E742CC000D8D8C /* AboutViewController.swift in Sources */,
 				089F803B29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift in Sources */,
@@ -1976,6 +2052,7 @@
 				1550689D29869AE800A81F04 /* PlainTextLoggerSwinjectTutorial.swift in Sources */,
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
 				F422B06E2A375CF000A052EA /* QuizTopicsModel.swift in Sources */,
+				F32E61132A5FC0840004F675 /* LessonsLevelViewModelProtocol.swift in Sources */,
 				F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */,
@@ -2003,6 +2080,7 @@
 				F4E7F13029E975EF00D6FDD1 /* APICaller.swift in Sources */,
 				F4BD545C2A28CBD000E5039B /* CourseDetailsTableViewHeader.swift in Sources */,
 				F422B0712A37986000A052EA /* QuizContainer.swift in Sources */,
+				F3D43BFB2A5DB92F007817B3 /* LevelsModel.swift in Sources */,
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
@@ -2030,10 +2108,12 @@
 				F4B1314929E445E2005760B6 /* MainMenuViewController.swift in Sources */,
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
 				080505B12A55B7240009CCBD /* VideoViewController.swift in Sources */,
+				F32E61152A5FC0A20004F675 /* LessonsLevelViewModel.swift in Sources */,
 				F422B0762A379B2000A052EA /* QuizViewModelProtocol.swift in Sources */,
 				047D39F329E74390000D8D8C /* AboutCoordinator.swift in Sources */,
 				152E04CF298471FD00ABCEA2 /* SwinjectTestPageSubViewControllerViewModel.swift in Sources */,
 				F4BD544D2A28C99200E5039B /* CourseDetailsViewController.swift in Sources */,
+				F32E61172A5FC0C30004F675 /* LessonsLevelViewController.swift in Sources */,
 				1537A4AE297471A5007402D5 /* SecondPageViewModel.swift in Sources */,
 				F48CE08B29E6C63F008A47F5 /* ContainerMainMenu.swift in Sources */,
 				047D39E729E7410E000D8D8C /* LessonsViewModel.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 import Swinject
 import RxSwift
 
-class LessonsCordinator: Coordinator {
+class LessonsCoordinator: Coordinator {
     
     let rootController: UINavigationController
     
@@ -24,6 +24,12 @@ class LessonsCordinator: Coordinator {
     private func openLessonsController() {
         let viewController = LessonsViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.lessons.resolve(LessonsViewModelProtocol.self)
+        
+        viewController.viewModel?.openLessonsLevelController
+            .asObserver()
+            .subscribe(onNext: { [weak self] lessonData in self?.openLessonsLevelController(with: lessonData.levels) })
+            .disposed(by: bag)
+        
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.lessons.rawValue,
                                                  image: TabBarItems.lessons.image,
                                                  selectedImage: TabBarItems.lessons.selectedImage)
@@ -31,4 +37,11 @@ class LessonsCordinator: Coordinator {
         rootController.setViewControllers([viewController], animated: true)
     }
     
+    private func openLessonsLevelController(with data: LevelsModel) {
+       
+        let coordinator = LessonsLevelCoordinator(rootController)
+        coordinator.levelsData = data
+        addChildCoordinator(coordinator)
+        coordinator.start()
+    }
 }

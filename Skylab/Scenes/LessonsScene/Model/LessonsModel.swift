@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct LessonModel {
+struct LessonModel: Codable {
     let title: String
     let progressPercent: Float
+    let levels: LevelsModel
 }
 
 typealias LessonsModel = [LessonModel]
