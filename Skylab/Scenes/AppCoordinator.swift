@@ -35,7 +35,7 @@ class AppCoordinator: Coordinator {
         openMainTabBar()
 //        operMyNew()
 //        openSwinjectTutorial()
-//          openVideoScreen()
+//        openVideoScreen()
         
         /// Dev 'if' executed when the application is launched from the 'debug' schema
         #elseif DEV

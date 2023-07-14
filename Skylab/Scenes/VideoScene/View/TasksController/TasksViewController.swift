@@ -11,18 +11,16 @@ import RxCocoa
 
 class TasksViewController: BaseViewController, Storyboarded {
     
-    // MARK: - let/var
-    
-    let placeHolderText = "Вставте ваш код сюди..."
-    var viewModel: VideoViewModelProtocol?
-    
     // MARK: - IBOutlets
-    
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var codeView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var markButton: UIButton!
     @IBOutlet weak var markButtonBorderView: DoubleBorderForView!
+    
+    // MARK: - let/var
+    let placeHolderText = NSLocalizedString("TasksViewController.codeView.placeHolderText", comment: "Placeholder text in view for code")
+    var viewModel: VideoViewModelProtocol?
     
     // MARK: - Lifecycle funcs
     override func viewDidLoad() {
@@ -36,7 +34,7 @@ class TasksViewController: BaseViewController, Storyboarded {
     private func configureUI() {
         taskLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
         taskLabel.text = viewModel?.task
-        sendButton.configureButton(title: "Надіслати на перевірку", imageName: nil,
+        sendButton.configureButton(title: NSLocalizedString("TasksViewController.sendButton.title", comment: "title of the send button on tasks screen"), imageName: nil,
                                    fontName: CustomFonts.anonymousProBold.rawValue,
                                    fontSize: 14,
                                    tintColor: .primary)
@@ -58,7 +56,7 @@ class TasksViewController: BaseViewController, Storyboarded {
     private func markButtonUIpressed() {
         self.markButtonBorderView.backgroundColor = .primary
         self.markButtonBorderView.borderColor = .white
-        self.markButton.configureButton(title: "Завдання виконане!", imageName: nil,
+        self.markButton.configureButton(title: NSLocalizedString("TasksViewController.markButton.pressed.title", comment: "title of the markButton to make task is done"), imageName: nil,
                                         fontName: CustomFonts.anonymousProBold.rawValue,
                                         fontSize: 14,
                                         tintColor: .white)
@@ -66,7 +64,7 @@ class TasksViewController: BaseViewController, Storyboarded {
     private func markButtonUINormal() {
         self.markButtonBorderView.backgroundColor = .white
         self.markButtonBorderView.borderColor = .primary
-        markButton.configureButton(title: "Позначити завдання виконаним", imageName: nil,
+        markButton.configureButton(title: NSLocalizedString("TasksViewController.markButton.nonPressed.title", comment: "title for the normal state of markButton"), imageName: nil,
                                    fontName: CustomFonts.anonymousProBold.rawValue,
                                    fontSize: 14,
                                    tintColor: .primary)
