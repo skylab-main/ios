@@ -180,6 +180,7 @@
 		F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */; };
 		F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */; };
 		F4D7C7F92A36232900C07352 /* UIButton + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */; };
+		F4D7FE532A63F85300D3EB4D /* QuizTopicsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7FE522A63F85300D3EB4D /* QuizTopicsModelTests.swift */; };
 		F4DC1D552A485ADC0006D868 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1D542A485ADC0006D868 /* QuizResultViewController.swift */; };
 		F4DC1D572A485AE70006D868 /* QuizResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DC1D562A485AE70006D868 /* QuizResultViewController.storyboard */; };
 		F4DC1D592A485B000006D868 /* QuizResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC1D582A485B000006D868 /* QuizResultViewModel.swift */; };
@@ -395,6 +396,7 @@
 		F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModel.swift; sourceTree = "<group>"; };
 		F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModelProtocol.swift; sourceTree = "<group>"; };
 		F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extensions.swift"; sourceTree = "<group>"; };
+		F4D7FE522A63F85300D3EB4D /* QuizTopicsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsModelTests.swift; sourceTree = "<group>"; };
 		F4DC1D542A485ADC0006D868 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 		F4DC1D562A485AE70006D868 /* QuizResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizResultViewController.storyboard; sourceTree = "<group>"; };
 		F4DC1D582A485B000006D868 /* QuizResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewModel.swift; sourceTree = "<group>"; };
@@ -1054,6 +1056,7 @@
 		DF75E45A29341214005B249E /* SkylabTests */ = {
 			isa = PBXGroup;
 			children = (
+				F4D7FE4E2A63F81800D3EB4D /* QuizSceneTests */,
 				DF75E45B29341214005B249E /* SkylabTests.swift */,
 			);
 			path = SkylabTests;
@@ -1536,6 +1539,38 @@
 				F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */,
 			);
 			path = "Protocol ";
+			sourceTree = "<group>";
+		};
+		F4D7FE4E2A63F81800D3EB4D /* QuizSceneTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4D7FE512A63F83700D3EB4D /* Model */,
+				F4D7FE502A63F83100D3EB4D /* ViewModel */,
+				F4D7FE4F2A63F82500D3EB4D /* View */,
+			);
+			path = QuizSceneTests;
+			sourceTree = "<group>";
+		};
+		F4D7FE4F2A63F82500D3EB4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4D7FE502A63F83100D3EB4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F4D7FE512A63F83700D3EB4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4D7FE522A63F85300D3EB4D /* QuizTopicsModelTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F4DC1D512A485A950006D868 /* QuizResultScene */ = {
@@ -2054,6 +2089,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D7FE532A63F85300D3EB4D /* QuizTopicsModelTests.swift in Sources */,
 				DF75E45C29341214005B249E /* SkylabTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

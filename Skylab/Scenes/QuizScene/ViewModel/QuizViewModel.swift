@@ -24,7 +24,7 @@ class QuizViewModel: QuizViewModelProtocol {
                 
                 let userProgress = userDefaults.float(forKey: quiz.title)
                 
-                quizTopicsArray.append(QuizTopicsModel(allData: quizData,
+                quizTopicsArray.append(QuizTopicsModel(quizzes: quizData,
                                                        chosenTopicTitle: quiz.title,
                                                        progress: userProgress,
                                                        numberOFCurrentTopic: counter))

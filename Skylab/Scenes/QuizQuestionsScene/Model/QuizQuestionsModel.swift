@@ -16,8 +16,21 @@ struct Quiz: Codable {
     let questions: [Question]
 }
 
-struct Question: Codable {
+struct Question: Codable, Equatable {
     let question: String
     let options: [String]
     let answer: Int
 }
+
+extension Quiz: Equatable {
+    
+    static func == (lhs: Quiz, rhs: Quiz) -> Bool {
+        
+        guard
+            lhs.title == rhs.title &&
+                lhs.questions == rhs.questions else { return false }
+        
+        return true
+    }
+}
+
