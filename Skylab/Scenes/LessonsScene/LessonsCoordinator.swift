@@ -27,7 +27,7 @@ class LessonsCoordinator: Coordinator {
         
         viewController.viewModel?.openLessonsLevelController
             .asObserver()
-            .subscribe(onNext: { [weak self] lessonData in self?.openLessonsLevelController(with: lessonData.levels) })
+            .subscribe(onNext: { [weak self] lessonData in self?.openLessonsLevelController(with: lessonData) })
             .disposed(by: bag)
         
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.lessons.rawValue,
@@ -37,10 +37,11 @@ class LessonsCoordinator: Coordinator {
         rootController.setViewControllers([viewController], animated: true)
     }
     
-    private func openLessonsLevelController(with data: LevelsModel) {
+    private func openLessonsLevelController(with data: LessonModel) {
        
         let coordinator = LessonsLevelCoordinator(rootController)
-        coordinator.levelsData = data
+        coordinator.levelsData = data.levels
+        coordinator.levelTitle = data.levelTitle
         addChildCoordinator(coordinator)
         coordinator.start()
     }

@@ -13,6 +13,7 @@ class LessonsLevelCoordinator: Coordinator {
     
     let rootController: UINavigationController
     var levelsData: LevelsModel?
+    var levelTitle: String?
     
     init(_ rootController: UINavigationController) {
         self.rootController = rootController
@@ -26,24 +27,20 @@ class LessonsLevelCoordinator: Coordinator {
         let viewController = LessonsLevelViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.levels.resolve(LessonsLevelViewModelProtocol.self)
         viewController.viewModel?.setLevels(levelsData)
-//        viewController.viewModel?.openLessonsLevelController
-//            .asObserver()
-//            .subscribe(onNext: { [weak self] lessonsData in self?.openLessonsLevelController(with: lessonsData) })
-//            .disposed(by: bag)
+        viewController.viewModel?.setLevelTitle(levelTitle)
+        viewController.viewModel?.openLessonsVideoController
+            .asObserver()
+            .subscribe(onNext: { [weak self] levelData in self?.openVideoViewController(with: levelData) })
+            .disposed(by: bag)
         
-//        rootController.tabBarItem = UITabBarItem(title: TabBarItems.lessons.rawValue,
-//                                                 image: TabBarItems.lessons.image,
-//                                                 selectedImage: TabBarItems.lessons.selectedImage)
-//        rootController.tabBarItem.setTitleText(font: AnonymousPro.bold(size: 10).font())
-        //rootController.setViewControllers([viewController], animated: true)
         rootController.pushViewController(viewController, animated: true)
     }
     
-//    private func openLessonsLevelController(with data: LevelsModel) {
-//       
-//        let coordinator = QuizQuestionsCoordinator(rootController)
-//        coordinator.quizData = data
-//        addChildCoordinator(coordinator)
-//        coordinator.start()
-//    }
+    private func openVideoViewController(with data: LevelModel) {
+       
+        let coordinator = VideoCoordinator(rootController)
+        //coordinator..quizData = data
+        addChildCoordinator(coordinator)
+        coordinator.start()
+    }
 }

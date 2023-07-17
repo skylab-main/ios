@@ -1,5 +1,6 @@
 [
   {
+    "levelTitle": "Lvl 1",
     "title": "Lvl 1. Basics",
     "progressPercent": 80,
     "levels": [
@@ -61,6 +62,7 @@
     ]
   },
   {
+    "levelTitle": "Lvl 2",
     "title": "Lvl 2. Introduction to code",
     "progressPercent": 20,
     "levels": [
@@ -122,6 +124,7 @@
     ]
   },
   {
+    "levelTitle": "Lvl 3",
     "title": "Lvl 3. Something for not beginners",
     "progressPercent": 45,
     "levels": [
@@ -183,6 +186,7 @@
     ]
   },
   {
+    "levelTitle": "Lvl 4",
     "title": "Lvl 4. Something if you think that you are strong middle developer",
     "progressPercent": 20,
     "levels": [
@@ -244,6 +248,7 @@
     ]
   },
   {
+    "levelTitle": "Lvl 5",
     "title": "Lvl 5. Something for middle developers",
     "progressPercent": 10,
     "levels": [
@@ -305,6 +310,7 @@
     ]
   },
   {
+    "levelTitle": "Lvl 6",
     "title": "Lvl 6. Something for senior developers",
     "progressPercent": 5,
     "levels": [
@@ -366,6 +372,7 @@
     ]
   },
   {
+    "levelTitle": "Lvl 7",
     "title": "Lvl 7. Something for lead developers",
     "progressPercent": 2,
     "levels": [

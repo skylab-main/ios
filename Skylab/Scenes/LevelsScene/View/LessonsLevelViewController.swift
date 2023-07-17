@@ -27,7 +27,6 @@ class LessonsLevelViewController: BaseViewController, Storyboarded {
         super.viewWillAppear(animated)
 
         configureNavBarTitle()
-        navigationController?.tabBarController?.tabBar.isHidden = false
     }
 
     // MARK: - UI Configuration funcs
@@ -39,7 +38,7 @@ class LessonsLevelViewController: BaseViewController, Storyboarded {
         levelsTableView.clipsToBounds = true
         levelsTableView.rowHeight = UITableView.automaticDimension
         levelsTableView.estimatedRowHeight = 100
-        levelsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
+        levelsTableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         
         levelsTableView.dataSource = self
         levelsTableView.delegate = self
@@ -47,29 +46,36 @@ class LessonsLevelViewController: BaseViewController, Storyboarded {
         let nib = UINib(nibName: "ProgressTableViewCell", bundle: nil)
         levelsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
         
-        //viewModel?.setLevels()
+        navigationController?.tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
     }
 
     private func configureNavBarTitle() {
 
         guard let navBar = navigationController?.navigationBar else { return }
-
-        title = "Lessons"
-        navBar.prefersLargeTitles = true
-
-        navBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.font: AnonymousPro.bold(size: 28).font(),
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-        ]
         
-        navBar.titleTextAttributes = [
-            NSAttributedString.Key.font: AnonymousPro.bold(size: 28).font(),
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-        ]
+        // Створення мітки
+        let label = UILabel()
+        label.text = viewModel?.titleText()
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = AnonymousPro.bold(size: 20).font()
 
-        navBar.setBackgroundImage(UIImage(), for: .default)
-        navBar.tintColor = .white
-        navBar.barTintColor = .primary
+        // Налаштування розміру мітки
+        let labelSize = label.intrinsicContentSize
+        label.frame = CGRect(x: 0, y: 0, width: labelSize.width, height: labelSize.height)
+
+        // Центрування мітки у navigationBar
+        let titleLabel = UIView(frame: CGRect(x: 0, y: 0, width: labelSize.width, height: labelSize.height))
+        titleLabel.addSubview(label)
+        titleLabel.center = navBar.center
+        navigationItem.titleView = titleLabel
+        
+        let backButtonImage = UIImage(named: "backArrow")
+        navBar.backIndicatorImage = backButtonImage
+        navBar.backIndicatorTransitionMaskImage = backButtonImage
+        navBar.topItem?.backButtonDisplayMode = .minimal
     }
 }
 
@@ -95,10 +101,13 @@ extension LessonsLevelViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let viewModel else { return }
-        guard let item = viewModel.cellViewModel(for: indexPath) else { return }
-        print(item)
 
+        guard
+            let goToLessonsVideo = viewModel?.openLessonsVideoController,
+            let item = viewModel?.cellViewModel(for: indexPath)
+        else { return }
+        
+        goToLessonsVideo.onNext(item)
     }
 }
 

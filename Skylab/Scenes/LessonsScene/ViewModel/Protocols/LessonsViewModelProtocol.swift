@@ -15,5 +15,4 @@ protocol LessonsViewModelProtocol: AnyObject {
     func getLessons()
     func numberOfRowInSection(for section: Int) -> Int
     func cellViewModel(for indexPath: IndexPath) -> LessonModel?
-    
 }

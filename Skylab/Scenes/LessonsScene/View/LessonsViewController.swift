@@ -102,17 +102,9 @@ extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        //viewModel?.selectRow(atIndexPath: indexPath)
         
-        
-//        guard
-//            let goToQuizQuestions = viewModel?.openQuizQuestionsController,
-//            let topicData = viewModel?.getQuizTopicData()[indexPath.row]
-//        else { return }
-//
-//        goToQuizQuestions.onNext(topicData)
-        
-//        guard let viewModel, let item = viewModel.cellViewModel(for: indexPath) else { return }
-//        viewModel.se
         guard
             let goToLessonsLevel = viewModel?.openLessonsLevelController,
             let item = viewModel?.cellViewModel(for: indexPath)

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x3M-Mb-VQI">
-                                <rect key="frame" x="0.0" y="84" width="393" height="734"/>
+                                <rect key="frame" x="0.0" y="84" width="393" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -26,7 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="x3M-Mb-VQI" firstAttribute="top" secondItem="jZ5-a1-ku4" secondAttribute="top" constant="25" id="KkH-oh-bER"/>
-                            <constraint firstItem="jZ5-a1-ku4" firstAttribute="bottom" secondItem="x3M-Mb-VQI" secondAttribute="bottom" id="hm5-ex-YnP"/>
+                            <constraint firstAttribute="bottom" secondItem="x3M-Mb-VQI" secondAttribute="bottom" id="hm5-ex-YnP"/>
                             <constraint firstItem="x3M-Mb-VQI" firstAttribute="leading" secondItem="jZ5-a1-ku4" secondAttribute="leading" id="qyW-XL-H6Q"/>
                             <constraint firstItem="x3M-Mb-VQI" firstAttribute="trailing" secondItem="jZ5-a1-ku4" secondAttribute="trailing" id="urD-8z-fji"/>
                         </constraints>

@@ -14,11 +14,20 @@ class LessonsLevelViewModel: LessonsLevelViewModelProtocol {
     
     private var selectedIndexPath: IndexPath?
     private var levels: LevelsModel?
+    private var levelTitle: String?
     
     //MARK: - Setup methods
     
     func setLevels(_ data: LevelsModel?) {
         levels = data
+    }
+    
+    func setLevelTitle(_ title: String?) {
+        levelTitle = title
+    }
+    
+    func titleText() -> String? {
+        return levelTitle
     }
     
     func numberOfRowInSection(for section: Int) -> Int {
@@ -32,6 +41,9 @@ class LessonsLevelViewModel: LessonsLevelViewModelProtocol {
         return level
     }
     
+    func selectRow(atIndexPath indexPath: IndexPath) {
+            self.selectedIndexPath = indexPath
+        }
 
 }
 

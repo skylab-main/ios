@@ -8,6 +8,7 @@
 import Foundation
 
 struct LessonModel: Codable {
+    let levelTitle: String
     let title: String
     let progressPercent: Float
     let levels: LevelsModel
