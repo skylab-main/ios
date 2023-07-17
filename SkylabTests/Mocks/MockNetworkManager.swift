@@ -8,7 +8,7 @@
 import Foundation
 @testable import Skylab
 
-class NetworkManagerMock: NetworkManagerProtocol {
+class MockNetworkManager: NetworkManagerProtocol {
     
     var getQuizCallCount = 0
     private let questions = Question(question: "Bar", options: ["Baz"], answer: 1)

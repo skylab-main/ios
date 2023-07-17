@@ -83,7 +83,10 @@ class QuizViewController: BaseViewController, Storyboarded {
 extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.getNumberOfRowsInSection() ?? 0
+        
+        guard let viewModel else { return 0 }
+        
+        return viewModel.getNumberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -109,6 +112,9 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
             let goToQuizQuestions = viewModel?.openQuizQuestionsController,
             let topicData = viewModel?.getQuizTopicData()[indexPath.row]
         else { return }
+        
+        let userInfo = ["topicData": topicData]
+        NotificationCenter.default.post(name: Notification.Name("Topic selected"), object: nil, userInfo: userInfo)
 
         goToQuizQuestions.onNext(topicData)
     }

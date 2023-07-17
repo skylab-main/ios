@@ -17,7 +17,7 @@ final class QuizViewModelTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        networkManager = NetworkManagerMock()
+        networkManager = MockNetworkManager()
         sut = QuizViewModel()
         sut.networkManager = networkManager
     }
@@ -33,7 +33,7 @@ final class QuizViewModelTests: XCTestCase {
     func testSetQuizTopics_ShouldSetData() {
         
         // Given
-        let mockData = setupQuizTopicData()
+        let mockData = setUpMockData()
         
         // When
         sut.setQuizTopics(with: mockData)
@@ -61,7 +61,7 @@ final class QuizViewModelTests: XCTestCase {
     func testGetQuizTopicsData_ShouldReturnsQuizTopicsArray() {
         
         // Given
-        let mockData = setupQuizTopicData()
+        let mockData = setUpMockData()
         
         // When
         sut.setQuizTopics(with: mockData)
@@ -75,7 +75,7 @@ final class QuizViewModelTests: XCTestCase {
     func testGetNumberOfRowsInSection_ShouldReturnsCorrectNumberOfRowsInSection() {
         
         // Given
-        let mockData = setupQuizTopicData()
+        let mockData = setUpMockData()
         
         // When
         sut.setQuizTopics(with: mockData)
@@ -96,7 +96,7 @@ final class QuizViewModelTests: XCTestCase {
         // When
         sut.updateTopicData()
         
-        var mockData = setupQuizTopicData()
+        let mockData = setUpMockData()
         
         sut.setQuizTopics(with: mockData)
         
@@ -107,9 +107,11 @@ final class QuizViewModelTests: XCTestCase {
     }
 }
 
+//MARK: - Extensions 
+
 extension QuizViewModelTests {
     
-    func setupQuizTopicData() -> [QuizTopicsModel] {
+    func setUpMockData() -> [QuizTopicsModel] {
         
         let question = Question(question: "Foo", options: ["Baz"], answer: 0)
         let quiz = Quiz(title: "Bar", questions: [question])
