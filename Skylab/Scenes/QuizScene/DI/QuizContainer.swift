@@ -14,8 +14,13 @@ extension Container {
         
         let container = Container()
         
-        container.register(QuizViewModelProtocol.self) { _ in
-            QuizViewModel()
+        container.register(QuizViewModelProtocol.self) { resolver in
+            
+            let networkManager = Container.networkManager.resolve(NetworkManagerProtocol.self)
+            let viewModel = QuizViewModel()
+            viewModel.networkManager = networkManager
+            
+            return viewModel
         }
         
         return container
