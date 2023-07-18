@@ -141,6 +141,7 @@
 		F450D73A2A1D194100AF8768 /* CustomApplyForCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */; };
 		F450D7422A1D20F500AF8768 /* DoubleBorderForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450D7412A1D20F500AF8768 /* DoubleBorderForView.swift */; };
 		F45F646C2A1E322D006E185C /* ReviewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45F646B2A1E322D006E185C /* ReviewsCollectionViewCell.swift */; };
+		F476B38A2A66DE510083A243 /* QuizContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476B3892A66DE510083A243 /* QuizContainerTests.swift */; };
 		F47BA3A32A263ABD00DF056D /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47BA3A22A263ABD00DF056D /* UILabel + Extension.swift */; };
 		F47BA3A52A263D8100DF056D /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47BA3A42A263D8100DF056D /* CALayer + Extension.swift */; };
 		F47DB4792A3F6D0C00FBB562 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DB4782A3F6D0C00FBB562 /* NetworkManager.swift */; };
@@ -364,6 +365,7 @@
 		F450D7392A1D194100AF8768 /* CustomApplyForCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApplyForCourseView.swift; sourceTree = "<group>"; };
 		F450D7412A1D20F500AF8768 /* DoubleBorderForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBorderForView.swift; sourceTree = "<group>"; };
 		F45F646B2A1E322D006E185C /* ReviewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F476B3892A66DE510083A243 /* QuizContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContainerTests.swift; sourceTree = "<group>"; };
 		F47BA3A22A263ABD00DF056D /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		F47BA3A42A263D8100DF056D /* CALayer + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Extension.swift"; sourceTree = "<group>"; };
 		F47DB4782A3F6D0C00FBB562 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -1075,7 +1077,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D7FE562A6431EC00D3EB4D /* Mocks */,
-				F4D7FE4E2A63F81800D3EB4D /* QuizSceneTests */,
+				F476B38B2A66E1130083A243 /* Scenes Tests */,
 				DF75E45B29341214005B249E /* SkylabTests.swift */,
 			);
 			path = SkylabTests;
@@ -1284,6 +1286,22 @@
 				F45F646B2A1E322D006E185C /* ReviewsCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F476B3882A66DDFC0083A243 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F476B3892A66DE510083A243 /* QuizContainerTests.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F476B38B2A66E1130083A243 /* Scenes Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4D7FE4E2A63F81800D3EB4D /* QuizSceneTests */,
+			);
+			path = "Scenes Tests";
 			sourceTree = "<group>";
 		};
 		F4881E0D29E588A400F83E44 /* Configurations */ = {
@@ -1580,11 +1598,12 @@
 		F4D7FE4E2A63F81800D3EB4D /* QuizSceneTests */ = {
 			isa = PBXGroup;
 			children = (
+				F43245642A66A63D00B3E46E /* QuizCoordinatorTests.swift */,
+				F476B3882A66DDFC0083A243 /* DI */,
 				F441F7EF2A65A42600A666DA /* Scene Mocks */,
 				F4D7FE512A63F83700D3EB4D /* Model */,
 				F4D7FE502A63F83100D3EB4D /* ViewModel */,
 				F4D7FE4F2A63F82500D3EB4D /* View */,
-				F43245642A66A63D00B3E46E /* QuizCoordinatorTests.swift */,
 			);
 			path = QuizSceneTests;
 			sourceTree = "<group>";
@@ -2149,6 +2168,7 @@
 				F43245652A66A63D00B3E46E /* QuizCoordinatorTests.swift in Sources */,
 				DF75E45C29341214005B249E /* SkylabTests.swift in Sources */,
 				F4932A652A6561CE0045E7D1 /* QuizViewControllerTests.swift in Sources */,
+				F476B38A2A66DE510083A243 /* QuizContainerTests.swift in Sources */,
 				F43245672A66ACA100B3E46E /* MockCoordinator.swift in Sources */,
 				F48E06792A65866500253C6F /* MockNavigationController.swift in Sources */,
 			);
