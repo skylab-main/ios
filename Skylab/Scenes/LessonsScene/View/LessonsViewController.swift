@@ -11,7 +11,7 @@ class LessonsViewController: BaseViewController, Storyboarded {
     
     // MARK: - IBOutlets
     @IBOutlet weak var lessonsTableView: UITableView!
-    @IBOutlet weak var descriptionCurseButton: UIButton!
+    @IBOutlet weak var descriptionCourseButton: UIButton!
     
     // MARK: - let/var
     var viewModel: LessonsViewModelProtocol?
@@ -42,7 +42,7 @@ class LessonsViewController: BaseViewController, Storyboarded {
         lessonsTableView.estimatedRowHeight = 100
         lessonsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
 
-        descriptionCurseButton.configureButton(title: "Опис повного курсу",
+        descriptionCourseButton.configureButton(title: "Опис повного курсу",
                                                imageName: "rightArrow",
                                                fontName: "AnonymousPro-Bold",
                                                fontSize: 14,
@@ -103,8 +103,6 @@ extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        //viewModel?.selectRow(atIndexPath: indexPath)
-        
         guard
             let goToLessonsLevel = viewModel?.openLessonsLevelController,
             let item = viewModel?.cellViewModel(for: indexPath)
