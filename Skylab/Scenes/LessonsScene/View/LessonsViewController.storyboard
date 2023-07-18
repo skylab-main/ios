@@ -31,9 +31,6 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="descriptionCourseButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yjy-hG-hbE"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

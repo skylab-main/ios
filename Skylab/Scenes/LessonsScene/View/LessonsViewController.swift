@@ -12,9 +12,6 @@ class LessonsViewController: BaseViewController, Storyboarded {
     // MARK: - IBOutlets
     @IBOutlet weak var lessonsTableView: UITableView!
     @IBOutlet weak var descriptionCourseButton: UIButton!
-    @IBAction func descriptionCourseButtonTapped(_ sender: Any) {
-        showCourseDescription()
-    }
     
     // MARK: - let/var
     var viewModel: LessonsViewModelProtocol?
@@ -24,7 +21,8 @@ class LessonsViewController: BaseViewController, Storyboarded {
         super.viewDidLoad()
 
         configureUI()
-        configureNavBarTitle()
+        bindButtons()
+        viewModel?.getLessons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,30 +37,33 @@ class LessonsViewController: BaseViewController, Storyboarded {
 
         view.backgroundColor = .primary
         
+        configureLessonsTableView()
+        
+        descriptionCourseButton.configureButton(title: NSLocalizedString("LessonsViewController.descriptionCourseButton.title",
+                                                                         comment: "title of the button describing the full course on the lessons screen"),
+                                                imageName: "rightArrow",
+                                                fontName: "AnonymousPro-Bold",
+                                                fontSize: 14,
+                                                tintColor: .primary)
+        
+    }
+
+    fileprivate func configureLessonsTableView() {
+        
         lessonsTableView.layer.cornerRadius = 12
         lessonsTableView.clipsToBounds = true
         lessonsTableView.rowHeight = UITableView.automaticDimension
         lessonsTableView.estimatedRowHeight = 100
         lessonsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
-
-        descriptionCourseButton.configureButton(title: NSLocalizedString("LessonsViewController.descriptionCourseButton.title",
-                                                                         comment: "title of the button describing the full course on the lessons screen"),
-                                               imageName: "rightArrow",
-                                               fontName: "AnonymousPro-Bold",
-                                               fontSize: 14,
-                                               tintColor: .primary)
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showCourseDescription))
-//        descriptionCourseButton.addGestureRecognizer(tapGesture)
         
         lessonsTableView.dataSource = self
         lessonsTableView.delegate = self
-       
+        
         let nib = UINib(nibName: "ProgressTableViewCell", bundle: nil)
         lessonsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
         
-        viewModel?.getLessons()
     }
-
+    
     private func configureNavBarTitle() {
 
         guard let navBar = navigationController?.navigationBar else { return }
@@ -85,32 +86,39 @@ class LessonsViewController: BaseViewController, Storyboarded {
         navBar.tintColor = .white
         navBar.barTintColor = .primary
     }
-    
-    private func showCourseDescription() {
+   
+    //MARK: - Bindings
+    private func bindButtons() {
         
-        print("showCourseDescription")
-        viewModel?.openCourseDescriptionController.onNext(())
+        guard let viewModel else { return }
+        
+        descriptionCourseButton.rx.tap
+            .bind(to: viewModel.openCourseDescriptionController)
+            .disposed(by: bag)
     }
 }
 
 // MARK: - Extensions
 extension LessonsViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let viewModel else { return 0 }
         return viewModel.numberOfRowInSection(for: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProgressTableViewCell", for: indexPath) as? ProgressTableViewCell
         
-        guard let cell, let viewModel else { return UITableViewCell() }
-        
-        guard let item = viewModel.cellViewModel(for: indexPath) else { return UITableViewCell() }
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProgressTableViewCell", for: indexPath) as? ProgressTableViewCell,
+            let viewModel,
+            let item = viewModel.cellViewModel(for: indexPath)
+        else {
+            return UITableViewCell()
+        }
         
         cell.selectionStyle = .none
         cell.configureCell(title: item.title, progress: item.progressPercent)
-
+        
         return cell
     }
     
