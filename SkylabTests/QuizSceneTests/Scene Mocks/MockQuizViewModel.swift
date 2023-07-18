@@ -14,8 +14,19 @@ class MockQuizViewModel: QuizViewModelProtocol {
     var openQuizQuestionsController = PublishSubject<QuizTopicsModel>()
     var networkManager: NetworkManagerProtocol?
     var getQuizTopicsCalled = false
+    var openQuizQuestionsControllerCalled = false
     
     private var mockData: [QuizTopicsModel] = []
+    private let disposeBag = DisposeBag()
+    
+    func triggerOpenQuizQuestionsController() {
+        
+        openQuizQuestionsController
+            .subscribe(onNext: { _ in
+                self.openQuizQuestionsControllerCalled = true
+            })
+            .disposed(by: disposeBag)
+    }
     
     func setQuizTopics(with data: [QuizTopicsModel]) {
         

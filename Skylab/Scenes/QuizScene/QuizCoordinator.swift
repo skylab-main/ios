@@ -20,6 +20,7 @@ class QuizCoordinator: Coordinator {
     override func start() {
         
         openQuizController()
+        addChildCoordinator(self)
     }
     
     override func finish() {
