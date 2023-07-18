@@ -18,3 +18,7 @@
 // MARK: - VideoScene/VideoViewController
 "VideoViewController.tabSwitcherView.items.lesson" = "Урок";
 "VideoViewController.tabSwitcherView.items.task" = "Завдання";
+
+// MARK: - LessonsScene/LessonsViewController
+"LessonsViewController.title" = "Уроки";
+"LessonsViewController.descriptionCourseButton.title" = "Опис повного курсу";

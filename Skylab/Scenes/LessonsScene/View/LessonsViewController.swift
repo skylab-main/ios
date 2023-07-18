@@ -42,7 +42,8 @@ class LessonsViewController: BaseViewController, Storyboarded {
         lessonsTableView.estimatedRowHeight = 100
         lessonsTableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
 
-        descriptionCourseButton.configureButton(title: "Опис повного курсу",
+        descriptionCourseButton.configureButton(title: NSLocalizedString("LessonsViewController.descriptionCourseButton.title",
+                                                                         comment: "title of the button describing the full course on the lessons screen"),
                                                imageName: "rightArrow",
                                                fontName: "AnonymousPro-Bold",
                                                fontSize: 14,
@@ -61,7 +62,8 @@ class LessonsViewController: BaseViewController, Storyboarded {
 
         guard let navBar = navigationController?.navigationBar else { return }
 
-        title = "Lessons"
+        title = NSLocalizedString("LessonsViewController.title",
+                                  comment: "title for lessons screen")
         navBar.prefersLargeTitles = true
 
         navBar.largeTitleTextAttributes = [
