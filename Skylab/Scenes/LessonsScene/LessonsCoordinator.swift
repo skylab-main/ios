@@ -30,6 +30,11 @@ class LessonsCoordinator: Coordinator {
             .subscribe(onNext: { [weak self] lessonData in self?.openLessonsLevelController(with: lessonData) })
             .disposed(by: bag)
         
+        viewController.viewModel?.openCourseDescriptionController
+            .asObserver()
+            .subscribe(onNext: { [weak self] in self?.openCourseDescriptionViewController() })
+            .disposed(by: bag)
+        
         rootController.tabBarItem = UITabBarItem(title: TabBarItems.lessons.rawValue,
                                                  image: TabBarItems.lessons.image,
                                                  selectedImage: TabBarItems.lessons.selectedImage)
@@ -43,6 +48,12 @@ class LessonsCoordinator: Coordinator {
         coordinator.levelsData = data.levels
         coordinator.levelTitle = data.levelTitle
         addChildCoordinator(coordinator)
+        coordinator.start()
+    }
+    
+    private func openCourseDescriptionViewController() {
+        
+        let coordinator = CourseDescriptionCoordinator(rootController)
         coordinator.start()
     }
 }

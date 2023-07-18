@@ -11,6 +11,7 @@ import RxSwift
 class LessonsViewModel: LessonsViewModelProtocol {
     
     var openLessonsLevelController = PublishSubject<LessonModel>()
+    var openCourseDescriptionController = PublishSubject<Void>()
     
     private var lessons: LessonsModel?
     

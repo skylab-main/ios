@@ -12,6 +12,9 @@ class LessonsViewController: BaseViewController, Storyboarded {
     // MARK: - IBOutlets
     @IBOutlet weak var lessonsTableView: UITableView!
     @IBOutlet weak var descriptionCourseButton: UIButton!
+    @IBAction func descriptionCourseButtonTapped(_ sender: Any) {
+        showCourseDescription()
+    }
     
     // MARK: - let/var
     var viewModel: LessonsViewModelProtocol?
@@ -48,6 +51,8 @@ class LessonsViewController: BaseViewController, Storyboarded {
                                                fontName: "AnonymousPro-Bold",
                                                fontSize: 14,
                                                tintColor: .primary)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showCourseDescription))
+//        descriptionCourseButton.addGestureRecognizer(tapGesture)
         
         lessonsTableView.dataSource = self
         lessonsTableView.delegate = self
@@ -79,6 +84,12 @@ class LessonsViewController: BaseViewController, Storyboarded {
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.tintColor = .white
         navBar.barTintColor = .primary
+    }
+    
+    private func showCourseDescription() {
+        
+        print("showCourseDescription")
+        viewModel?.openCourseDescriptionController.onNext(())
     }
 }
 
