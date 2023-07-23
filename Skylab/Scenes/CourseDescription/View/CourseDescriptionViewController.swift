@@ -69,6 +69,7 @@ class CourseDescriptionViewController: BaseViewController, Storyboarded {
         guard let navBar = navigationController?.navigationBar else { return }
         
         navigationItem.title = "About"
+        navBar.prefersLargeTitles = false
         
         navBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "AnonymousPro-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20),

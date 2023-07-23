@@ -18,6 +18,8 @@ class LessonsLevelViewController: BaseViewController, Storyboarded {
     // MARK: - lifecycle func
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         configureUI()
         configureNavBarTitle()
@@ -47,7 +49,7 @@ class LessonsLevelViewController: BaseViewController, Storyboarded {
         levelsTableView.register(nib, forCellReuseIdentifier: "ProgressTableViewCell")
         
         navigationController?.tabBarController?.tabBar.isHidden = true
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationItem.largeTitleDisplayMode = .never
         
     }
 
