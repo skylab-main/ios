@@ -130,7 +130,6 @@
 		F3CEEDCF2A360BF20043D950 /* ProgressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */; };
 		F3D43BFB2A5DB92F007817B3 /* LevelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D43BFA2A5DB92E007817B3 /* LevelsModel.swift */; };
 		F3F881A92A558B5100E741FC /* LessonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F881A82A558B5100E741FC /* LessonsContainer.swift */; };
-		F422B06B2A374FA300A052EA /* QuizTopicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422B06A2A374FA300A052EA /* QuizTopicsTableViewCell.swift */; };
 		F422B06E2A375CF000A052EA /* QuizTopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422B06D2A375CF000A052EA /* QuizTopicsModel.swift */; };
 		F422B0712A37986000A052EA /* QuizContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422B0702A37986000A052EA /* QuizContainer.swift */; };
 		F422B0762A379B2000A052EA /* QuizViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422B0752A379B2000A052EA /* QuizViewModelProtocol.swift */; };
@@ -351,7 +350,6 @@
 		F3CEEDCE2A360BF20043D950 /* ProgressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTableViewCell.xib; sourceTree = "<group>"; };
 		F3D43BFA2A5DB92E007817B3 /* LevelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsModel.swift; sourceTree = "<group>"; };
 		F3F881A82A558B5100E741FC /* LessonsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsContainer.swift; sourceTree = "<group>"; };
-		F422B06A2A374FA300A052EA /* QuizTopicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsTableViewCell.swift; sourceTree = "<group>"; };
 		F422B06D2A375CF000A052EA /* QuizTopicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsModel.swift; sourceTree = "<group>"; };
 		F422B0702A37986000A052EA /* QuizContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContainer.swift; sourceTree = "<group>"; };
 		F422B0752A379B2000A052EA /* QuizViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -546,7 +544,6 @@
 		047D39CA29E738B9000D8D8C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F422B0692A374F8E00A052EA /* Cell */,
 				047D39CC29E738F6000D8D8C /* QuizViewController.swift */,
 				047D39D429E73CA9000D8D8C /* QuizViewController.storyboard */,
 			);
@@ -1212,14 +1209,6 @@
 				F36D06DF2A44AC23000EE45E /* LessonsModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F422B0692A374F8E00A052EA /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				F422B06A2A374FA300A052EA /* QuizTopicsTableViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		F422B06C2A375CDC00A052EA /* Model */ = {
@@ -2025,7 +2014,6 @@
 				F4E957C32A27561F00E1600D /* AboutViewModelProtocol.swift in Sources */,
 				04C60CFD29A6B22A00BACDC0 /* BaseBackgroundView.swift in Sources */,
 				6EA0BED729C2F23D0066B9BC /* FeatureToggleProvider.swift in Sources */,
-				F422B06B2A374FA300A052EA /* QuizTopicsTableViewCell.swift in Sources */,
 				15506898298696D600A81F04 /* ContainerSwinjectTutorial.swift in Sources */,
 				F4A237572A20D22500048663 /* CourseDescriptionContainer.swift in Sources */,
 				1544EC6F29846B590080C429 /* SwinjectTestPageCoordinator.swift in Sources */,
