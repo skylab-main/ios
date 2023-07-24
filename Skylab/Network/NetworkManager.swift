@@ -24,4 +24,19 @@ class NetworkManager {
         }
     }
     
+    static func getLessons(competion: @escaping (_ lessonsData: [LessonModel]) -> ()) {
+        
+        guard let url = Bundle.main.url(forResource: "Lessons", withExtension: "json") else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let lessonsData = try decoder.decode([LessonModel].self, from: data)
+            competion(lessonsData)
+        } catch {
+            
+            print(error)
+        }
+    }
+    
 }

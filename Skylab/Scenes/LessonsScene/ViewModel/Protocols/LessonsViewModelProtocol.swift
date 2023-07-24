@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol LessonsViewModelProtocol: AnyObject {
+    
+    var openLessonsLevelController: PublishSubject<LessonModel> { get set }
+    var openCourseDescriptionController: PublishSubject<Void> { get set }
     
     func getLessons()
     func numberOfRowInSection(for section: Int) -> Int
     func cellViewModel(for indexPath: IndexPath) -> LessonModel?
-    
 }

@@ -49,6 +49,7 @@ class LessonsVideoViewController: BaseViewController, Storyboarded, YTPlayerView
                                        fontName: CustomFonts.anonymousProBold.rawValue,
                                        fontSize: 14,
                                        tintColor: .primary)
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     // MARK: - Flow funcs
