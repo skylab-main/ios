@@ -23,6 +23,8 @@ class ProgressTableViewCell: UITableViewCell {
             itemPercentLabel.isHidden = false
             itemProgressView.isHidden = false
             
+            progressViewBottomConstraint.constant = 18
+            
             itemPercentLabel.text = String(format: "%.0f", progressValue) + "%"
             itemPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
             
@@ -33,7 +35,6 @@ class ProgressTableViewCell: UITableViewCell {
             itemPercentLabel.isHidden = true
             itemProgressView.isHidden = true
             progressViewBottomConstraint.constant = 0
-            itemProgressView.transform = CGAffineTransform(scaleX: 1, y: 0)
         }
     }
 }
