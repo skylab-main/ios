@@ -53,6 +53,9 @@ class QuizViewController: BaseViewController, Storyboarded {
         quizTopicsTableView.dataSource = self
         
         viewModel?.getQuizTopics()
+        
+        let nib = UINib(nibName: String(describing: ProgressTableViewCell.self), bundle: nil)
+        quizTopicsTableView.register(nib, forCellReuseIdentifier: String(describing: ProgressTableViewCell.self))
     }
     
     private func configureNavBarTitle() {
@@ -90,11 +93,11 @@ extension QuizViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard
             let data = viewModel?.getQuizTopicData()[indexPath.row],
-            let cell = tableView.dequeueReusableCell(withIdentifier: "QuizViewController", for: indexPath) as? QuizTopicsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProgressTableViewCell.self), for: indexPath) as? ProgressTableViewCell
         else { return UITableViewCell() }
         
         cell.selectionStyle = .none
-        cell.configureCell(data: data)
+        cell.configureCell(title: data.chosenTopicTitle, progress: data.progress)
         
         return cell
     }

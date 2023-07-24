@@ -19,13 +19,16 @@ class ProgressTableViewCell: UITableViewCell {
         itemNameLabel.text = title
         itemNameLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
         
-        if let progress {
-        itemPercentLabel.text = String(format: "%.0f", progress) + "%"
-        itemPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
-        
-        itemProgressView.progressTintColor = .primary
-        itemProgressView.trackTintColor = .systemGray4
-        itemProgressView.progress = progress / 100
+        if let progressValue = progress, progressValue > 0.0 {
+            itemPercentLabel.isHidden = false
+            itemProgressView.isHidden = false
+            
+            itemPercentLabel.text = String(format: "%.0f", progressValue) + "%"
+            itemPercentLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
+            
+            itemProgressView.progressTintColor = .primary
+            itemProgressView.trackTintColor = .systemGray4
+            itemProgressView.progress = progressValue / 100
         } else {
             itemPercentLabel.isHidden = true
             itemProgressView.isHidden = true

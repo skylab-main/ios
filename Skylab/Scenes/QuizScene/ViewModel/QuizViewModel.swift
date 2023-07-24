@@ -26,7 +26,7 @@ class QuizViewModel: QuizViewModelProtocol {
                 
                 quizTopicsArray.append(QuizTopicsModel(allData: quizData,
                                                        chosenTopicTitle: quiz.title,
-                                                       progress: userProgress,
+                                                       progress: userProgress * 100,
                                                        numberOFCurrentTopic: counter))
                 counter += 1
             }
