@@ -37,7 +37,7 @@ class MainTabBarCoordinator: Coordinator {
     }
 
     func addLessonsPage() {
-        let coordinator = LessonsCordinator(UINavigationController())
+        let coordinator = LessonsCoordinator(UINavigationController())
         rootTabBarController.viewControllers?.append(coordinator.rootController)
         addChildCoordinator(coordinator)
         coordinator.start()

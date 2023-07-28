@@ -75,6 +75,7 @@
                 <outlet property="itemNameLabel" destination="OE7-T1-9Kj" id="siW-qy-hMh"/>
                 <outlet property="itemPercentLabel" destination="wPP-8o-Pj8" id="JJn-3O-I0i"/>
                 <outlet property="itemProgressView" destination="J7g-ZB-I1E" id="N6q-lH-kSx"/>
+                <outlet property="progressViewBottomConstraint" destination="KPu-XR-ovs" id="pF2-dk-26e"/>
             </connections>
             <point key="canvasLocation" x="70.229007633587784" y="-59.154929577464792"/>
         </tableViewCell>

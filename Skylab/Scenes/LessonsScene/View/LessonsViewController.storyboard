@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,21 +41,29 @@
                                     <constraint firstItem="uVY-Jh-7Xl" firstAttribute="top" secondItem="DpV-l0-cpm" secondAttribute="top" constant="30" id="kHT-E6-GaL"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FES-4f-Ij1">
+                                <rect key="frame" x="0.0" y="818" width="393" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DpV-l0-cpm" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Dts-o5-4dx"/>
+                            <constraint firstItem="FES-4f-Ij1" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="KkJ-se-0px"/>
+                            <constraint firstAttribute="trailing" secondItem="FES-4f-Ij1" secondAttribute="trailing" id="Lxv-aI-gKA"/>
                             <constraint firstItem="fOz-0A-J7C" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="MEw-uZ-mna"/>
                             <constraint firstItem="fOz-0A-J7C" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="R0J-3R-0OL"/>
                             <constraint firstItem="DpV-l0-cpm" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TLF-xm-tTQ"/>
+                            <constraint firstAttribute="bottom" secondItem="FES-4f-Ij1" secondAttribute="bottom" id="UTT-vN-0g2"/>
                             <constraint firstItem="DpV-l0-cpm" firstAttribute="top" secondItem="fOz-0A-J7C" secondAttribute="bottom" constant="-12" id="XaH-o7-FQT"/>
                             <constraint firstItem="fOz-0A-J7C" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dTc-zH-eVm"/>
                             <constraint firstItem="DpV-l0-cpm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ee6-w0-A6E"/>
+                            <constraint firstItem="FES-4f-Ij1" firstAttribute="top" secondItem="DpV-l0-cpm" secondAttribute="bottom" id="y1f-LP-m9Y"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionCurseButton" destination="uVY-Jh-7Xl" id="D01-gw-7wT"/>
+                        <outlet property="descriptionCourseButton" destination="uVY-Jh-7Xl" id="D01-gw-7wT"/>
                         <outlet property="lessonsTableView" destination="fOz-0A-J7C" id="wEN-sB-o0a"/>
                     </connections>
                 </viewController>
