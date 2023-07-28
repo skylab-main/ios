@@ -7,9 +7,14 @@
 
 import Foundation
 
-class NetworkManager {
+protocol NetworkManagerProtocol {
     
-    static func getQuiz(competion: @escaping (_ quizData: [Quiz]) -> ()) {
+    func getQuiz(completion: @escaping (_ quizData: [Quiz]) -> ())
+}
+
+class NetworkManager: NetworkManagerProtocol {
+    
+    func getQuiz(completion: @escaping (_ quizData: [Quiz]) -> ()) {
         
         guard let url = Bundle.main.url(forResource: "Quizz", withExtension: "json") else { return }
         
@@ -17,7 +22,7 @@ class NetworkManager {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let quizData = try decoder.decode(QuizData.self, from: data)
-            competion(quizData.quiz)
+            completion(quizData.quiz)
         } catch {
             
             print(error)

@@ -27,8 +27,8 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
         
         quizData = data
         currentQuiz = quizData?.numberOFCurrentTopic ?? 0
-        currentQuizTitle = quizData?.allData[currentQuiz].title ?? ""
-        numberOfTopics = quizData?.allData.count ?? 0
+        currentQuizTitle = quizData?.quizzes[currentQuiz].title ?? ""
+        numberOfTopics = quizData?.quizzes.count ?? 0
     }
     
     func setToDefault() {
@@ -57,7 +57,7 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
     
     func getQuiz() {
 
-        quizData?.allData.forEach({ data in
+        quizData?.quizzes.forEach({ data in
             
             self.quiz[data.title] = data.questions
         })
@@ -141,11 +141,11 @@ class QuizQuestionsViewModel: QuizQuestionsViewModelProtocol {
         
         if currentQuiz < numberOfQuizzes {
             
-            currentQuizTitle = quizData.allData[currentQuiz].title
+            currentQuizTitle = quizData.quizzes[currentQuiz].title
         } else {
             
             currentQuiz = 0
-            currentQuizTitle = quizData.allData[currentQuiz].title
+            currentQuizTitle = quizData.quizzes[currentQuiz].title
         }
         
         currentQuiz += 1

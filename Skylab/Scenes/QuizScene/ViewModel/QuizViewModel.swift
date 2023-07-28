@@ -13,21 +13,28 @@ class QuizViewModel: QuizViewModelProtocol {
     var openQuizQuestionsController = PublishSubject<QuizTopicsModel>()
     private var quizTopicsArray: [QuizTopicsModel] = []
     private let userDefaults = UserDefaults.standard
+    var networkManager: NetworkManagerProtocol?
+    
+    func setQuizTopics(with data: [QuizTopicsModel]) {
+        
+        quizTopicsArray += data
+    }
     
     func getQuizTopics() {
         
-        NetworkManager.getQuiz { [self] quizData in
+        networkManager?.getQuiz { [self] quizData in
             
             var counter = 0
             
             quizData.forEach { quiz in
                 
                 let userProgress = userDefaults.float(forKey: quiz.title)
+                let data = QuizTopicsModel(quizzes: quizData,
+                                           chosenTopicTitle: quiz.title,
+                                           progress: userProgress,
+                                           numberOFCurrentTopic: counter)
                 
-                quizTopicsArray.append(QuizTopicsModel(allData: quizData,
-                                                       chosenTopicTitle: quiz.title,
-                                                       progress: userProgress * 100,
-                                                       numberOFCurrentTopic: counter))
+                setQuizTopics(with: [data])
                 counter += 1
             }
         }
