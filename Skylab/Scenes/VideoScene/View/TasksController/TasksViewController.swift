@@ -85,6 +85,18 @@ class TasksViewController: BaseViewController, Storyboarded {
         }
     }
     
+    private func checkCodeView() -> Bool {
+        if codeView.text == placeHolderText || codeView.text.count < 10 {
+            let alertController = UIAlertController(title: "Warning", message: "Put your code into the field", preferredStyle: .alert)
+                 let okAction = UIAlertAction(title: "OK", style: .default)
+                 alertController.addAction(okAction)
+                 present(alertController, animated: true, completion: nil)
+            return false
+        } else {
+            return true
+        }
+    }
+    
     // MARK: - Binding funcs
     private func bindViewModel() {
         markButton.rx.tap
@@ -92,11 +104,14 @@ class TasksViewController: BaseViewController, Storyboarded {
                 self.viewModel?.markTask()
                 self.updateMarkButton()
             }.disposed(by: bag)
-        sendButton.rx.tap
-            .subscribe { _ in
-                self.viewModel?.solution
-                    .onNext(self.codeView.text)
-            }.disposed(by: bag)
+            sendButton.rx.tap
+                .subscribe { _ in
+                    if self.checkCodeView() {
+                        self.viewModel?.solution
+                            .onNext(self.codeView.text)
+                    }
+                }.disposed(by: bag)
+
     }
     
     // MARK: - IBActions funcs

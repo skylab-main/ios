@@ -28,7 +28,6 @@ class ResultCoordinator: Coordinator {
     private func openAuthorizationAPIViewController() {
         let viewController = AuthorizationAPIViewController.instantiate(coordinator: self)
         rootController.pushViewController(viewController, animated: true)
-    print(solutionData)
     }
     
 }
