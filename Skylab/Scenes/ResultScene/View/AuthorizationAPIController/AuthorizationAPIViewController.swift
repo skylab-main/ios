@@ -14,5 +14,13 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
 
     }
  
+    // MARK: - UI Configurations funcs
+    private func configureUI() {
+        self.view.backgroundColor = .primary
+//        containerView.backgroundColor = .white
+//        containerView.layer.cornerRadius = 12
+//        containerView.clipsToBounds = true
+        navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
+    }
 
 }

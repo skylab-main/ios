@@ -87,7 +87,7 @@ class TasksViewController: BaseViewController, Storyboarded {
     
     private func checkCodeView() -> Bool {
         if codeView.text == placeHolderText || codeView.text.count < 10 {
-            let alertController = UIAlertController(title: "Warning", message: "Put your code into the field", preferredStyle: .alert)
+            let alertController = UIAlertController(title: NSLocalizedString("TasksViewController.alertController.title", comment: "Title of the allertview when soultion code isn't putted"), message: NSLocalizedString("TasksViewController.alertController.message", comment: "Message of the allertview when soultion code isn't putted"), preferredStyle: .alert)
                  let okAction = UIAlertAction(title: "OK", style: .default)
                  alertController.addAction(okAction)
                  present(alertController, animated: true, completion: nil)

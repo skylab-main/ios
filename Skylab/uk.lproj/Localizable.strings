@@ -10,6 +10,8 @@
 "TasksViewController.markButton.pressed.title" = "Завдання виконане!";
 "TasksViewController.markButton.nonPressed.title" = "Позначити завдання виконаним";
 "TasksViewController.codeView.placeHolderText" = "Вставте ваш код сюди...";
+"TasksViewController.alertController.title" = "Увага";
+"TasksViewController.alertController.message" = "Вставте ваш код в поле для перевірки";
 
 // MARK: - VideoScene/LessonsVideoViewController
 "LessonsVideoViewController.downloadButton.title" = "Скачати презентацію";

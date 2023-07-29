@@ -10,6 +10,8 @@
 "TasksViewController.markButton.pressed.title" = "Task is done!";
 "TasksViewController.markButton.nonPressed.title" = "Mark task complete";
 "TasksViewController.codeView.placeHolderText" = "Put your code here...";
+"TasksViewController.alertController.title" = "Warning";
+"TasksViewController.alertController.message" = "Put your code into the field for checking";
 
 // MARK: - VideoScene/LessonsVideoViewController
 "LessonsVideoViewController.downloadButton.title" = "Download presentation";
@@ -22,3 +24,4 @@
 // MARK: - LessonsScene/LessonsViewController
 "LessonsViewController.title" = "Lessons";
 "LessonsViewController.descriptionCourseButton.title" = "Full course description";
+
