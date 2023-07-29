@@ -59,6 +59,9 @@
 		089F803929D2D3B900748D24 /* SecondPageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F803829D2D3B900748D24 /* SecondPageSwiftUIView.swift */; };
 		089F803B29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F803A29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift */; };
 		08E66EEC29BFC5500013B80A /* AnonymousPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */; };
+		08E80E162A757A9C00E924AE /* ResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E152A757A9C00E924AE /* ResultCoordinator.swift */; };
+		08E80E1A2A757CA400E924AE /* AuthorizationAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E192A757CA400E924AE /* AuthorizationAPIViewController.swift */; };
+		08E80E1C2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */; };
 		1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2229BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift */; };
 		1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2429BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift */; };
 		1513AF2729BE62B400CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2629BE62B300CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift */; };
@@ -289,6 +292,9 @@
 		089F803829D2D3B900748D24 /* SecondPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIView.swift; sourceTree = "<group>"; };
 		089F803A29D2D48900748D24 /* SecondPageSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		08E66EEB29BFC3C70013B80A /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
+		08E80E152A757A9C00E924AE /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
+		08E80E192A757CA400E924AE /* AuthorizationAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIViewController.swift; sourceTree = "<group>"; };
+		08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationAPIViewController.storyboard; sourceTree = "<group>"; };
 		1513AF2229BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageViewModelProtocol.swift; sourceTree = "<group>"; };
 		1513AF2429BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageSubViewControllerViewModelProtocol.swift; sourceTree = "<group>"; };
 		1513AF2629BE62B300CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
@@ -759,6 +765,32 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		08E80E142A757A5900E924AE /* ResultScene */ = {
+			isa = PBXGroup;
+			children = (
+				08E80E152A757A9C00E924AE /* ResultCoordinator.swift */,
+				08E80E172A757C2400E924AE /* View */,
+			);
+			path = ResultScene;
+			sourceTree = "<group>";
+		};
+		08E80E172A757C2400E924AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08E80E182A757C4A00E924AE /* AuthorizationAPIController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08E80E182A757C4A00E924AE /* AuthorizationAPIController */ = {
+			isa = PBXGroup;
+			children = (
+				08E80E192A757CA400E924AE /* AuthorizationAPIViewController.swift */,
+				08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */,
+			);
+			path = AuthorizationAPIController;
+			sourceTree = "<group>";
+		};
 		1513AF2129BE562F00CD6387 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1126,6 +1158,7 @@
 				047D39C629E737C5000D8D8C /* LessonsScene */,
 				F3D43BF82A5DB8F2007817B3 /* LevelsScene */,
 				080505AC2A55B3160009CCBD /* VideoScene */,
+				08E80E142A757A5900E924AE /* ResultScene */,
 				047D39C729E737E3000D8D8C /* PracticeScene */,
 				047D39C829E73888000D8D8C /* AboutScene */,
 				F450D71A2A1CD6E400AF8768 /* CourseDescription */,
@@ -2024,6 +2057,7 @@
 				080505B32A55B73F0009CCBD /* VideoViewController.storyboard in Resources */,
 				F4DC1D572A485AE70006D868 /* QuizResultViewController.storyboard in Resources */,
 				F450D7382A1D16C300AF8768 /* CourseDescriptionViewController.storyboard in Resources */,
+				08E80E1C2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard in Resources */,
 				DF3E2E98296B238D00810694 /* FirstPageSubViewController.storyboard in Resources */,
 				F3CEEDCF2A360BF20043D950 /* ProgressTableViewCell.xib in Resources */,
 				DF75E45129341214005B249E /* LaunchScreen.storyboard in Resources */,
@@ -2204,9 +2238,11 @@
 				080505C62A5AD1D80009CCBD /* VideoViewModel.swift in Sources */,
 				F4B1314D29E4464F005760B6 /* ApplicationViewController.swift in Sources */,
 				F30A06E42A28EC1000E187DC /* ProgressTableViewCell.swift in Sources */,
+				08E80E1A2A757CA400E924AE /* AuthorizationAPIViewController.swift in Sources */,
 				F48CE07E29E6A45C008A47F5 /* TutorialViewModel.swift in Sources */,
 				DF3D3C322969FF7B00CFCE49 /* AuthorizationCoordinator.swift in Sources */,
 				0422F18F29F727F800068A58 /* AnonymousPro.swift in Sources */,
+				08E80E162A757A9C00E924AE /* ResultCoordinator.swift in Sources */,
 				F4B1314929E445E2005760B6 /* MainMenuViewController.swift in Sources */,
 				F48CE07C29E6A358008A47F5 /* MainMenuViewModel.swift in Sources */,
 				080505B12A55B7240009CCBD /* VideoViewController.swift in Sources */,

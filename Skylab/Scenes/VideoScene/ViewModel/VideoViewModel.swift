@@ -13,6 +13,7 @@ class VideoViewModel: VideoViewModelProtocol {
     
     var downloadPresentation = PublishSubject<Void>()
     var joinTelegram = PublishSubject<Void>()
+    var solution = PublishSubject<String>()
     
     // Sample data
     var title = "Simple animations: element position, color, size."

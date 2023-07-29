@@ -92,6 +92,11 @@ class TasksViewController: BaseViewController, Storyboarded {
                 self.viewModel?.markTask()
                 self.updateMarkButton()
             }.disposed(by: bag)
+        sendButton.rx.tap
+            .subscribe { _ in
+                self.viewModel?.solution
+                    .onNext(self.codeView.text)
+            }.disposed(by: bag)
     }
     
     // MARK: - IBActions funcs
