@@ -14,6 +14,7 @@ import SafariServices
 class VideoCoordinator: Coordinator {
     
     let rootController: UINavigationController
+    var lessonData: LevelModel?
     
     init(_ rootController: UINavigationController) {
         self.rootController = rootController
@@ -34,7 +35,10 @@ class VideoCoordinator: Coordinator {
         viewController.lessonsVC = lessonsVC
         viewController.tasksVC = tasksVC
         lessonsVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
+        guard let lessonData else { return }
+        lessonsVC.viewModel?.setLessonData(lessonData)
         tasksVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
+        tasksVC.viewModel?.setLessonData(lessonData)
         guard let viewModel = lessonsVC.viewModel,
         let downloadLink = viewModel.linkPresentation else { return }
         viewModel.downloadPresentation.asObservable()

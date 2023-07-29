@@ -9,6 +9,7 @@ import RxSwift
 import Foundation
 
 protocol VideoViewModelProtocol: AnyObject {
+
     var downloadPresentation: PublishSubject<Void> { get set }
     var joinTelegram: PublishSubject<Void> { get set }
     var title: String { get }
@@ -18,6 +19,6 @@ protocol VideoViewModelProtocol: AnyObject {
     var telegramLink: URL? { get }
     
     func markTask()
-    
     func checkTaskIsDone() -> Bool
+    func setLessonData(_ data: LevelModel)
 }
