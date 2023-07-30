@@ -62,6 +62,7 @@
 		08E80E162A757A9C00E924AE /* ResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E152A757A9C00E924AE /* ResultCoordinator.swift */; };
 		08E80E1A2A757CA400E924AE /* AuthorizationAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E192A757CA400E924AE /* AuthorizationAPIViewController.swift */; };
 		08E80E1C2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */; };
+		08E80E1E2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E1D2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift */; };
 		1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2229BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift */; };
 		1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2429BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift */; };
 		1513AF2729BE62B400CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2629BE62B300CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift */; };
@@ -295,6 +296,7 @@
 		08E80E152A757A9C00E924AE /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
 		08E80E192A757CA400E924AE /* AuthorizationAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIViewController.swift; sourceTree = "<group>"; };
 		08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationAPIViewController.storyboard; sourceTree = "<group>"; };
+		08E80E1D2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+PrimaryStyleExtension.swift"; sourceTree = "<group>"; };
 		1513AF2229BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageViewModelProtocol.swift; sourceTree = "<group>"; };
 		1513AF2429BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageSubViewControllerViewModelProtocol.swift; sourceTree = "<group>"; };
 		1513AF2629BE62B300CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
@@ -650,6 +652,7 @@
 				F47BA3A42A263D8100DF056D /* CALayer + Extension.swift */,
 				F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */,
 				F48BD5262A3DF036003D3202 /* UINavigatorController + Extension.swift */,
+				08E80E1D2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2133,6 +2136,7 @@
 				F32E610F2A5FC0350004F675 /* LessonsLevelCoordinator.swift in Sources */,
 				F4E7F11529E815BD00D6FDD1 /* TutorialCoordinator.swift in Sources */,
 				DF3E2E93296A15E500810694 /* FirstPageViewModel.swift in Sources */,
+				08E80E1E2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift in Sources */,
 				DF3D3C4F296A058100CFCE49 /* FirstPageCoordinator.swift in Sources */,
 				047D39CE29E738F6000D8D8C /* QuizViewController.swift in Sources */,
 				F4E7F12429E83A5900D6FDD1 /* ChatGPTResponseViewController.swift in Sources */,

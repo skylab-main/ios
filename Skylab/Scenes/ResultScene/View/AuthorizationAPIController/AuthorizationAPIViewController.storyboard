@@ -16,9 +16,64 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxS-JT-WVk">
+                                <rect key="frame" x="0.0" y="79" width="393" height="773"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Увага! Це завдання перевіряє чат GPT, щоб отримати відповідь - авторизуйтесь" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTw-Cc-0cF">
+                                        <rect key="frame" x="20" y="19.999999999999996" width="353" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-qZ-tcK">
+                                        <rect key="frame" x="20" y="93.666666666666657" width="353" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-zn-hSp">
+                                        <rect key="frame" x="20" y="142.66666666666666" width="196" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Як отримати API Key?"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoS-ak-gJp">
+                                        <rect key="frame" x="20" y="290.66666666666669" width="353" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Продовжити"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="vTw-Cc-0cF" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="0nj-y9-Phv"/>
+                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="top" secondItem="gTD-qZ-tcK" secondAttribute="bottom" constant="15" id="DZH-Cq-5WZ"/>
+                                    <constraint firstItem="OoS-ak-gJp" firstAttribute="top" secondItem="RBf-zn-hSp" secondAttribute="bottom" constant="113" id="H07-rO-YGm"/>
+                                    <constraint firstAttribute="trailing" secondItem="gTD-qZ-tcK" secondAttribute="trailing" constant="20" id="aQG-UO-IZS"/>
+                                    <constraint firstAttribute="trailing" secondItem="vTw-Cc-0cF" secondAttribute="trailing" constant="20" id="atV-YG-SLM"/>
+                                    <constraint firstItem="vTw-Cc-0cF" firstAttribute="top" secondItem="RxS-JT-WVk" secondAttribute="top" constant="20" id="fHd-wA-4BD"/>
+                                    <constraint firstItem="gTD-qZ-tcK" firstAttribute="top" secondItem="vTw-Cc-0cF" secondAttribute="bottom" constant="33" id="mji-Ax-rgd"/>
+                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="leading" secondItem="gTD-qZ-tcK" secondAttribute="leading" id="myE-Bu-rqz"/>
+                                    <constraint firstItem="gTD-qZ-tcK" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="p4g-ZY-hhV"/>
+                                    <constraint firstItem="OoS-ak-gJp" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="uTd-Ys-o37"/>
+                                    <constraint firstAttribute="trailing" secondItem="OoS-ak-gJp" secondAttribute="trailing" constant="20" id="zu7-ZY-OHL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RxS-JT-WVk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="01D-LC-2sP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RxS-JT-WVk" secondAttribute="trailing" id="61H-Q5-a9r"/>
+                            <constraint firstAttribute="bottom" secondItem="RxS-JT-WVk" secondAttribute="bottom" id="E9S-t5-p8l"/>
+                            <constraint firstItem="RxS-JT-WVk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="XrQ-Ce-SkB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="RxS-JT-WVk" id="ztr-Pg-fDq"/>
+                        <outlet property="continueButton" destination="OoS-ak-gJp" id="khe-yb-G83"/>
+                        <outlet property="keyTextField" destination="gTD-qZ-tcK" id="qdQ-tJ-0np"/>
+                        <outlet property="manualButton" destination="RBf-zn-hSp" id="AaO-FU-0O5"/>
+                        <outlet property="topLabel" destination="vTw-Cc-0cF" id="Ft9-Hc-d6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

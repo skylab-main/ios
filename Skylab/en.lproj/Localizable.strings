@@ -25,3 +25,8 @@
 "LessonsViewController.title" = "Lessons";
 "LessonsViewController.descriptionCourseButton.title" = "Full course description";
 
+// MARK: - ResultScene/UINavigationBar
+"ResultScene.UINavigationBar.Title" = "Task check";
+
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.topLabel.text" = "Warning! This task checks  chatGPT for getting a response - you should be logged in";

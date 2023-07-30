@@ -24,3 +24,10 @@
 // MARK: - LessonsScene/LessonsViewController
 "LessonsViewController.title" = "Уроки";
 "LessonsViewController.descriptionCourseButton.title" = "Опис повного курсу";
+
+// MARK: - ResultScene/UINavigationBar
+"ResultScene.UINavigationBar.Title" = "Перевірка завдання";
+
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.topLabel.text" = "Увага! Це завдання перевіряє чат GPT, щоб отримати відповідь - авторизуйтесь";
+
