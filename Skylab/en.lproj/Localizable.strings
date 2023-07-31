@@ -30,3 +30,6 @@
 
 // MARK: - ResultScene/AuthorizationAPIViewController
 "AuthorizationAPIViewController.topLabel.text" = "Warning! This task checks  chatGPT for getting a response - you should be logged in";
+"AuthorizationAPIViewController.keyTextField.placeholder.text" = " API key";
+"AuthorizationAPIViewController.continueButton.title" = "Continue";
+"AuthorizationAPIViewController.manualButton.title.text" = "How to get API key?";

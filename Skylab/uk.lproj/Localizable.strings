@@ -30,4 +30,6 @@
 
 // MARK: - ResultScene/AuthorizationAPIViewController
 "AuthorizationAPIViewController.topLabel.text" = "Увага! Це завдання перевіряє чат GPT, щоб отримати відповідь - авторизуйтесь";
-
+"AuthorizationAPIViewController.keyTextField.placeholder.text" = " API ключ";
+"AuthorizationAPIViewController.continueButton.title" = "Продовжити";
+"AuthorizationAPIViewController.manualButton.title.text" = "Як отримати API ключ?";
