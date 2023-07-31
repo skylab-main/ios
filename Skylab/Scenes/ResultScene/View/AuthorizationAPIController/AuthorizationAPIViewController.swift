@@ -15,6 +15,10 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var keyTextField: UITextField!
     @IBOutlet weak var manualButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
+    
+    // MARK: - let/var
+    var viewModel: ResultCheckViewModelProtocol?
+    
     // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +84,11 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
                                    fontName: CustomFonts.anonymousProBold.rawValue,
                                    fontSize: 14,
                                    tintColor: .primary)
+    }
+    
+    // MARK: - Binding funcs
+    private func bindViewModel() {
+        
     }
     
     

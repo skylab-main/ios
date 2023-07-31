@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import Swinject
 
 class ResultCoordinator: Coordinator {
     
     let rootController: UINavigationController
-    var lessonData: LevelModel?
     var solutionData: String?
     
     init(_ rootController: UINavigationController) {
@@ -27,6 +27,7 @@ class ResultCoordinator: Coordinator {
     
     private func openAuthorizationAPIViewController() {
         let viewController = AuthorizationAPIViewController.instantiate(coordinator: self)
+        viewController.viewModel = Container.resultCheck.resolve(ResultCheckViewModelProtocol.self)
         rootController.pushViewController(viewController, animated: true)
     }
     

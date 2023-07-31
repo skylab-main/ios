@@ -63,6 +63,9 @@
 		08E80E1A2A757CA400E924AE /* AuthorizationAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E192A757CA400E924AE /* AuthorizationAPIViewController.swift */; };
 		08E80E1C2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */; };
 		08E80E1E2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E1D2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift */; };
+		08E80E212A77D5C300E924AE /* ResultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E202A77D5C300E924AE /* ResultContainer.swift */; };
+		08E80E252A77D67200E924AE /* ResultCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E242A77D67200E924AE /* ResultCheckViewModel.swift */; };
+		08E80E282A77D6D300E924AE /* ResultCheckViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E80E272A77D6D300E924AE /* ResultCheckViewModelProtocol.swift */; };
 		1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2229BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift */; };
 		1513AF2529BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2429BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift */; };
 		1513AF2729BE62B400CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513AF2629BE62B300CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift */; };
@@ -297,6 +300,9 @@
 		08E80E192A757CA400E924AE /* AuthorizationAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIViewController.swift; sourceTree = "<group>"; };
 		08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationAPIViewController.storyboard; sourceTree = "<group>"; };
 		08E80E1D2A7645F900E924AE /* UINavigationBar+PrimaryStyleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+PrimaryStyleExtension.swift"; sourceTree = "<group>"; };
+		08E80E202A77D5C300E924AE /* ResultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultContainer.swift; sourceTree = "<group>"; };
+		08E80E242A77D67200E924AE /* ResultCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCheckViewModel.swift; sourceTree = "<group>"; };
+		08E80E272A77D6D300E924AE /* ResultCheckViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCheckViewModelProtocol.swift; sourceTree = "<group>"; };
 		1513AF2229BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageViewModelProtocol.swift; sourceTree = "<group>"; };
 		1513AF2429BE57E000CD6387 /* SwinjectTestPageSubViewControllerViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageSubViewControllerViewModelProtocol.swift; sourceTree = "<group>"; };
 		1513AF2629BE62B300CD6387 /* SwinjectTestPageViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectTestPageViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
@@ -772,6 +778,8 @@
 			isa = PBXGroup;
 			children = (
 				08E80E152A757A9C00E924AE /* ResultCoordinator.swift */,
+				08E80E1F2A77D5A000E924AE /* DI */,
+				08E80E222A77D61100E924AE /* ViewModel */,
 				08E80E172A757C2400E924AE /* View */,
 			);
 			path = ResultScene;
@@ -792,6 +800,31 @@
 				08E80E1B2A757CCB00E924AE /* AuthorizationAPIViewController.storyboard */,
 			);
 			path = AuthorizationAPIController;
+			sourceTree = "<group>";
+		};
+		08E80E1F2A77D5A000E924AE /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				08E80E202A77D5C300E924AE /* ResultContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		08E80E222A77D61100E924AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08E80E232A77D63000E924AE /* Protocols */,
+				08E80E242A77D67200E924AE /* ResultCheckViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08E80E232A77D63000E924AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				08E80E272A77D6D300E924AE /* ResultCheckViewModelProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1513AF2129BE562F00CD6387 /* Protocols */ = {
@@ -2192,6 +2225,7 @@
 				1513AF2329BE568900CD6387 /* SwinjectTestPageViewModelProtocol.swift in Sources */,
 				F422B06E2A375CF000A052EA /* QuizTopicsModel.swift in Sources */,
 				F32E61132A5FC0840004F675 /* LessonsLevelViewModelProtocol.swift in Sources */,
+				08E80E282A77D6D300E924AE /* ResultCheckViewModelProtocol.swift in Sources */,
 				F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */,
@@ -2228,7 +2262,9 @@
 				F4E7F12629E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift in Sources */,
 				F48CE08629E6A97C008A47F5 /* MainMenuViewModelProtocol.swift in Sources */,
 				DF3E2E90296A0E7800810694 /* TabBarController.swift in Sources */,
+				08E80E212A77D5C300E924AE /* ResultContainer.swift in Sources */,
 				ED0BAF99299ED1DD00B76AF3 /* OnboardingViewModel.swift in Sources */,
+				08E80E252A77D67200E924AE /* ResultCheckViewModel.swift in Sources */,
 				F4BD54652A28CFBA00E5039B /* CourseDetailsContainer.swift in Sources */,
 				080505BB2A572EB70009CCBD /* TasksViewController.swift in Sources */,
 				080505C42A5AD0840009CCBD /* VideoViewModelProtocol.swift in Sources */,
