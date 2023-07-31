@@ -30,19 +30,21 @@ class ResultCoordinator: Coordinator {
         let viewController = AuthorizationAPIViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.resultCheck.resolve(ResultCheckViewModelProtocol.self)
         viewController.viewModel?.openResultCheckController.asObservable()
-            .subscribe({ _ in
-                self.openCheckResultViewController()
+            .subscribe({ [weak self] key in
+                self?.openResultCheckViewController()
             }).disposed(by: bag)
         viewController.viewModel?.openApiManualDoc.asObservable()
-            .subscribe({ _ in
-                self.showWebChatGptDoc()
+            .subscribe({ [weak self] _ in
+                self?.showWebChatGptDoc()
             }).disposed(by: bag)
-        
+
         rootController.pushViewController(viewController, animated: true)
     }
     
-    private func openCheckResultViewController() {
-
+    private func openResultCheckViewController() {
+        let viewController = ResultCheckViewController.instantiate(coordinator: self)
+        viewController.viewModel = Container.resultCheck.resolve(ResultCheckViewModelProtocol.self)
+        rootController.pushViewController(viewController, animated: true)
     }
     
     private func showWebChatGptDoc() {

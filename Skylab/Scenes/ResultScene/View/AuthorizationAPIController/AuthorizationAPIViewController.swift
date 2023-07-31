@@ -15,6 +15,7 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var keyTextField: UITextField!
     @IBOutlet weak var manualButton: UIButton!
+    @IBOutlet weak var textFieldContainerView: UIView!
     @IBOutlet weak var continueButton: UIButton!
     
     // MARK: - let/var
@@ -55,9 +56,9 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
     }
     private func configureKeyTextField() {
         keyTextField.borderStyle = .none
-        keyTextField.layer.borderWidth = 1
-        keyTextField.layer.borderColor = UIColor.primary.cgColor
-        keyTextField.layer.cornerRadius = 12
+        textFieldContainerView.layer.borderWidth = 1
+        textFieldContainerView.layer.borderColor = UIColor.primary.cgColor
+        textFieldContainerView.layer.cornerRadius = 12
         keyTextField.textColor = .primary
         keyTextField.font = UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14)
         let placeholderText = NSLocalizedString("AuthorizationAPIViewController.keyTextField.placeholder.text", comment: "Placeholder ext for the api key textField on the api key putting screen")
@@ -92,6 +93,7 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
     private func bindViewModel() {
         if let viewModel {
             continueButton.rx.tap
+                .withLatestFrom(keyTextField.rx.text.orEmpty)
                 .bind(to: viewModel.openResultCheckController)
                 .disposed(by: bag)
             manualButton.rx.tap

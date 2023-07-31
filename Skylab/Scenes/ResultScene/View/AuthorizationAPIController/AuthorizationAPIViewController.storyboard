@@ -26,16 +26,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-qZ-tcK">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02p-qq-kOs">
                                         <rect key="frame" x="20" y="93.666666666666657" width="353" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-qZ-tcK">
+                                                <rect key="frame" x="4" y="0.0" width="345" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="mkF-Qn-UYt"/>
+                                            <constraint firstAttribute="bottom" secondItem="gTD-qZ-tcK" secondAttribute="bottom" id="59x-uL-pfd"/>
+                                            <constraint firstItem="gTD-qZ-tcK" firstAttribute="leading" secondItem="02p-qq-kOs" secondAttribute="leading" constant="4" id="AWT-af-xBb"/>
+                                            <constraint firstAttribute="trailing" secondItem="gTD-qZ-tcK" secondAttribute="trailing" constant="4" id="ItO-sG-Cpe"/>
+                                            <constraint firstItem="gTD-qZ-tcK" firstAttribute="top" secondItem="02p-qq-kOs" secondAttribute="top" id="QOq-Kr-s7A"/>
+                                            <constraint firstAttribute="height" constant="44" id="UqH-gX-y6S"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-zn-hSp">
-                                        <rect key="frame" x="10" y="147.66666666666666" width="196" height="35"/>
+                                        <rect key="frame" x="20" y="147.66666666666666" width="196" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Як отримати API Key?"/>
                                     </button>
@@ -58,16 +68,16 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="vTw-Cc-0cF" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="0nj-y9-Phv"/>
-                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="10" id="8m6-hj-RHX"/>
-                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="top" secondItem="gTD-qZ-tcK" secondAttribute="bottom" constant="10" id="DZH-Cq-5WZ"/>
+                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="8m6-hj-RHX"/>
                                     <constraint firstItem="Erj-Ge-rsx" firstAttribute="top" secondItem="RBf-zn-hSp" secondAttribute="bottom" constant="113" id="PsS-5E-7t8"/>
+                                    <constraint firstAttribute="trailing" secondItem="02p-qq-kOs" secondAttribute="trailing" constant="20" id="WHK-Vu-TQg"/>
+                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="top" secondItem="02p-qq-kOs" secondAttribute="bottom" constant="10" id="Xfc-CA-6kv"/>
                                     <constraint firstItem="Erj-Ge-rsx" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="YpO-he-te3"/>
-                                    <constraint firstAttribute="trailing" secondItem="gTD-qZ-tcK" secondAttribute="trailing" constant="20" id="aQG-UO-IZS"/>
                                     <constraint firstAttribute="trailing" secondItem="vTw-Cc-0cF" secondAttribute="trailing" constant="20" id="atV-YG-SLM"/>
                                     <constraint firstItem="vTw-Cc-0cF" firstAttribute="top" secondItem="RxS-JT-WVk" secondAttribute="top" constant="20" id="fHd-wA-4BD"/>
-                                    <constraint firstItem="gTD-qZ-tcK" firstAttribute="top" secondItem="vTw-Cc-0cF" secondAttribute="bottom" constant="33" id="mji-Ax-rgd"/>
+                                    <constraint firstItem="02p-qq-kOs" firstAttribute="top" secondItem="vTw-Cc-0cF" secondAttribute="bottom" constant="33" id="ggR-tu-Jch"/>
                                     <constraint firstAttribute="trailing" secondItem="Erj-Ge-rsx" secondAttribute="trailing" constant="20" id="nJJ-eg-r1F"/>
-                                    <constraint firstItem="gTD-qZ-tcK" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="p4g-ZY-hhV"/>
+                                    <constraint firstItem="02p-qq-kOs" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="zIC-Fi-1aH"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -85,6 +95,7 @@
                         <outlet property="continueButton" destination="OoS-ak-gJp" id="khe-yb-G83"/>
                         <outlet property="keyTextField" destination="gTD-qZ-tcK" id="qdQ-tJ-0np"/>
                         <outlet property="manualButton" destination="RBf-zn-hSp" id="AaO-FU-0O5"/>
+                        <outlet property="textFieldContainerView" destination="02p-qq-kOs" id="A39-Cc-xHB"/>
                         <outlet property="topLabel" destination="vTw-Cc-0cF" id="Ft9-Hc-d6b"/>
                     </connections>
                 </viewController>

@@ -33,3 +33,7 @@
 "AuthorizationAPIViewController.keyTextField.placeholder.text" = " API key";
 "AuthorizationAPIViewController.continueButton.title" = "Continue";
 "AuthorizationAPIViewController.manualButton.title.text" = "How to get API key?";
+
+// MARK: - ResultScene/ResultCheckViewController
+"ResultCheckViewController.repeatButton.title" = "Try again";
+

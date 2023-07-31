@@ -85,12 +85,12 @@ class TasksViewController: BaseViewController, Storyboarded {
         }
     }
     
-    private func checkCodeView() -> Bool {
-        if codeView.text == placeHolderText || codeView.text.count < 10 {
+    private func checkCodeView(_ text: String) -> Bool {
+        if text == placeHolderText || text.count < 10 {
             let alertController = UIAlertController(title: NSLocalizedString("TasksViewController.alertController.title", comment: "Title of the allertview when soultion code isn't putted"), message: NSLocalizedString("TasksViewController.alertController.message", comment: "Message of the allertview when soultion code isn't putted"), preferredStyle: .alert)
-                 let okAction = UIAlertAction(title: "OK", style: .default)
-                 alertController.addAction(okAction)
-                 present(alertController, animated: true, completion: nil)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
             return false
         } else {
             return true
@@ -99,19 +99,17 @@ class TasksViewController: BaseViewController, Storyboarded {
     
     // MARK: - Binding funcs
     private func bindViewModel() {
+        guard let viewModel else { return }
         markButton.rx.tap
-            .subscribe { _ in
-                self.viewModel?.markTask()
-                self.updateMarkButton()
+            .subscribe { [weak self]  _ in
+                self?.viewModel?.markTask()
+                self?.updateMarkButton()
             }.disposed(by: bag)
             sendButton.rx.tap
-                .subscribe { _ in
-                    if self.checkCodeView() {
-                        self.viewModel?.solution
-                            .onNext(self.codeView.text)
-                    }
-                }.disposed(by: bag)
-
+                .withLatestFrom(codeView.rx.text.orEmpty)
+                .filter { self.checkCodeView($0) }
+                .bind(to: viewModel.solution)
+                .disposed(by: bag)
     }
     
     // MARK: - IBActions funcs
