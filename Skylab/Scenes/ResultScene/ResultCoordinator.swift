@@ -7,6 +7,7 @@
 
 import UIKit
 import Swinject
+import SafariServices
 
 class ResultCoordinator: Coordinator {
     
@@ -28,7 +29,25 @@ class ResultCoordinator: Coordinator {
     private func openAuthorizationAPIViewController() {
         let viewController = AuthorizationAPIViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.resultCheck.resolve(ResultCheckViewModelProtocol.self)
+        viewController.viewModel?.openResultCheckController.asObservable()
+            .subscribe({ _ in
+                self.openCheckResultViewController()
+            }).disposed(by: bag)
+        viewController.viewModel?.openApiManualDoc.asObservable()
+            .subscribe({ _ in
+                self.showWebChatGptDoc()
+            }).disposed(by: bag)
+        
         rootController.pushViewController(viewController, animated: true)
     }
     
+    private func openCheckResultViewController() {
+
+    }
+    
+    private func showWebChatGptDoc() {
+        if let url = URL(string: "https://platform.openai.com/docs/api-reference/authentication") {
+            let safariViewController = SFSafariViewController(url: url)
+            rootController.present(safariViewController, animated: true, completion: nil) }
+     }
 }

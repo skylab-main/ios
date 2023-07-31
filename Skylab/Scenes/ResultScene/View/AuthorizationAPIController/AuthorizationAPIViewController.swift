@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class AuthorizationAPIViewController: BaseViewController, Storyboarded {
     
@@ -23,6 +24,7 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        bindViewModel()
     }
     
     // MARK: - UI Configurations funcs
@@ -88,7 +90,14 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
     
     // MARK: - Binding funcs
     private func bindViewModel() {
-        
+        if let viewModel {
+            continueButton.rx.tap
+                .bind(to: viewModel.openResultCheckController)
+                .disposed(by: bag)
+            manualButton.rx.tap
+                .bind(to: viewModel.openApiManualDoc)
+                .disposed(by: bag)
+        }
     }
     
     

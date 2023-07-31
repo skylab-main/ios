@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import RxSwift
 
 class ResultCheckViewModel: ResultCheckViewModelProtocol {
-    
+    var openResultCheckController = PublishSubject<Void>()
+    var openApiManualDoc = PublishSubject<Void>()
 }
