@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class ResultCheckViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var containerView: UIView!
@@ -19,6 +20,7 @@ class ResultCheckViewController: BaseViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        bindViewModel()
     }
     // MARK: - UI Configurations funcs
     private func configureUI() {
@@ -59,5 +61,14 @@ class ResultCheckViewController: BaseViewController, Storyboarded {
                                      fontSize: 14,
                                      tintColor: .primary)
     }
+    
+    // MARK: - Binding funcs
+    private func bindViewModel() {
+        guard let viewModel else { return }
+            repeatButton.rx.tap
+                .bind(to: viewModel.goToVideoScene)
+                .disposed(by: bag)
+    }
+    
     
 }

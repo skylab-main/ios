@@ -30,20 +30,23 @@ class ResultCoordinator: Coordinator {
         let viewController = AuthorizationAPIViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.resultCheck.resolve(ResultCheckViewModelProtocol.self)
         viewController.viewModel?.openResultCheckController.asObservable()
-            .subscribe({ [weak self] key in
+            .subscribe(onNext: { [weak self] key in
                 self?.openResultCheckViewController()
             }).disposed(by: bag)
         viewController.viewModel?.openApiManualDoc.asObservable()
-            .subscribe({ [weak self] _ in
+            .subscribe(onNext: { [weak self] _ in
                 self?.showWebChatGptDoc()
             }).disposed(by: bag)
-
         rootController.pushViewController(viewController, animated: true)
     }
     
     private func openResultCheckViewController() {
         let viewController = ResultCheckViewController.instantiate(coordinator: self)
         viewController.viewModel = Container.resultCheck.resolve(ResultCheckViewModelProtocol.self)
+        viewController.viewModel?.goToVideoScene.asObservable()
+            .subscribe({ [weak self] _ in
+                self?.goToVideoScene()
+            }).disposed(by: bag)
         rootController.pushViewController(viewController, animated: true)
     }
     
@@ -52,4 +55,11 @@ class ResultCoordinator: Coordinator {
             let safariViewController = SFSafariViewController(url: url)
             rootController.present(safariViewController, animated: true, completion: nil) }
      }
+    
+    private func goToVideoScene() {
+        if let targetVC = rootController.viewControllers.first(where: { $0 is VideoViewController }) as? VideoViewController {
+            rootController.popToViewController(targetVC, animated: true)
+            print(childCoordinators.count)
+        }
+    }
 }

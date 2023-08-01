@@ -11,4 +11,5 @@ import RxSwift
 class ResultCheckViewModel: ResultCheckViewModelProtocol {
     var openResultCheckController = PublishSubject<String>()
     var openApiManualDoc = PublishSubject<Void>()
+    var goToVideoScene = PublishSubject<Void>()
 }

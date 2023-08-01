@@ -11,4 +11,5 @@ import RxSwift
 protocol ResultCheckViewModelProtocol {
     var openResultCheckController: PublishSubject<String> { get }
     var openApiManualDoc: PublishSubject<Void> { get }
+    var goToVideoScene: PublishSubject<Void> { get }
 }
