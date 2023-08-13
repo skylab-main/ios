@@ -12,7 +12,7 @@ protocol VideoViewModelProtocol: AnyObject {
 
     var downloadPresentation: PublishSubject<Void> { get set }
     var joinTelegram: PublishSubject<Void> { get set }
-    var solution: PublishSubject<String> { get set }
+    var taskData: PublishSubject<[ String : String ]> { get set }
     var title: String { get }
     var videoID: String { get }
     var linkPresentation: URL? { get }

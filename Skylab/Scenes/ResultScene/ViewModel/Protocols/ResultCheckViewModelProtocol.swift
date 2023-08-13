@@ -12,4 +12,5 @@ protocol ResultCheckViewModelProtocol {
     var openResultCheckController: PublishSubject<String> { get }
     var openApiManualDoc: PublishSubject<Void> { get }
     var goToVideoScene: PublishSubject<Void> { get }
+    var solutionData: [String : String]! { get set }
 }

@@ -94,6 +94,7 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
         if let viewModel {
             continueButton.rx.tap
                 .withLatestFrom(keyTextField.rx.text.orEmpty)
+            // TODO: - add save api key to keychain
                 .bind(to: viewModel.openResultCheckController)
                 .disposed(by: bag)
             manualButton.rx.tap

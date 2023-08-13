@@ -52,7 +52,7 @@ class VideoCoordinator: Coordinator {
             .disposed(by: bag)
         
         guard let taskViewModel = tasksVC.viewModel else { return }
-        taskViewModel.solution.asObservable()
+        taskViewModel.taskData.asObservable()
             .subscribe { solution in
                 self.goToCheckResultScene(with: solution)
             }.disposed(by: bag)
@@ -64,7 +64,7 @@ class VideoCoordinator: Coordinator {
         rootController.present(safariViewController, animated: true, completion: nil)
      }
     
-    private func goToCheckResultScene(with data: String) {
+    private func goToCheckResultScene(with data: [String : String]) {
         let coordinator = ResultCoordinator(rootController)
         addChildCoordinator(coordinator)
         coordinator.solutionData = data

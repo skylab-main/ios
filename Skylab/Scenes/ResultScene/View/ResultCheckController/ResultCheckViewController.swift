@@ -44,7 +44,7 @@ class ResultCheckViewController: BaseViewController, Storyboarded {
     }
     private func configureTopLabel() {
         topLabel.configureCustomLabel(font: .anonymousProBold, fontSize: 14, textColor: .primary, nil)
-        topLabel.text = NSLocalizedString("AuthorizationAPIViewController.topLabel.text", comment: "Text for the top label on the api key putting screen")
+        topLabel.text = viewModel?.solutionData["task"]
     }
     private func configureCodeView() {
         codeView.layer.borderWidth = 1
@@ -54,6 +54,7 @@ class ResultCheckViewController: BaseViewController, Storyboarded {
         codeView.font = UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14)
         codeView.text = "Результат перевiрки:"
         codeView.textContainerInset = UIEdgeInsets(top: 16, left: 20, bottom: 16, right: 20)
+        // TODO: - show result from chatGPT
     }
     private func configureRepeatButton() {
         repeatButton.configureButton(title: NSLocalizedString("ResultCheckViewController.repeatButton.title", comment: "title for the tryy again button on the result screen"), imageName: nil,

@@ -108,7 +108,8 @@ class TasksViewController: BaseViewController, Storyboarded {
             sendButton.rx.tap
                 .withLatestFrom(codeView.rx.text.orEmpty)
                 .filter { self.checkCodeView($0) }
-                .bind(to: viewModel.solution)
+                .map { [ "task" : self.taskLabel.text ?? "", "solution" : $0 ] }
+                .bind(to: viewModel.taskData)
                 .disposed(by: bag)
     }
     
