@@ -36,3 +36,6 @@
 
 // MARK: - ResultScene/ResultCheckViewController
 "ResultCheckViewController.repeatButton.title" = "Спробувати ще";
+
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.alertController.message" = "Введіть ключ";

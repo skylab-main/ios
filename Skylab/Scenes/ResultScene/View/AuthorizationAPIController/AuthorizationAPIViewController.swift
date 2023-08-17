@@ -88,12 +88,24 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
                                    fontSize: 14,
                                    tintColor: .primary)
     }
+    private func checkKey(_ text: String) -> Bool {
+        if text.count < 10 {
+            let alertController = UIAlertController(title: nil, message: NSLocalizedString("AuthorizationAPIViewController.alertController.message", comment: "Message of the allertview when api key isn't putted"), preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            return false
+        } else {
+            return true
+        }
+    }
     
     // MARK: - Binding funcs
     private func bindViewModel() {
         if let viewModel {
             continueButton.rx.tap
                 .withLatestFrom(keyTextField.rx.text.orEmpty)
+                .filter { self.checkKey($0) }
             // TODO: - add save api key to keychain
                 .bind(to: viewModel.openResultCheckController)
                 .disposed(by: bag)

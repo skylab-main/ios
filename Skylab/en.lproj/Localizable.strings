@@ -37,3 +37,5 @@
 // MARK: - ResultScene/ResultCheckViewController
 "ResultCheckViewController.repeatButton.title" = "Try again";
 
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.alertController.message" = "Enter key";
