@@ -47,7 +47,7 @@ class QuizCoordinator: Coordinator {
     }
     
     private func openQuizQuestionsController(with data: QuizTopicsModel) {
-       
+
         let coordinator = QuizQuestionsCoordinator(rootController)
         coordinator.quizData = data
         addChildCoordinator(coordinator)

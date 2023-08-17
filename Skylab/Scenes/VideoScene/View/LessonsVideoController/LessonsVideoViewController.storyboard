@@ -41,13 +41,12 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-e2-e1o" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
-                                <rect key="frame" x="20" y="296" width="353" height="38"/>
+                                <rect key="frame" x="20" y="296" width="353" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk6-dU-U34">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Скачати презентацію" image="download"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="download" imagePlacement="trailing" title="Скачати презентацію" titleAlignment="automatic"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,10 +58,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-kk-ffx" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
-                                <rect key="frame" x="20" y="367" width="353" height="38"/>
+                                <rect key="frame" x="20" y="363.33333333333331" width="353" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZt-gY-NmZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Telegram канал з матеріалами "/>
                                     </button>

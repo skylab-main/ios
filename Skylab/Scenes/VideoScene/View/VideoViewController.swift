@@ -38,7 +38,7 @@ class VideoViewController: BaseViewController, Storyboarded {
         containerView.backgroundColor = .white
         containerView.layer.cornerRadius = 12
         containerView.clipsToBounds = true
-        navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
+        navigationController?.navigationBar.primaryStyle()
     }
     
     private func setupContainer() {

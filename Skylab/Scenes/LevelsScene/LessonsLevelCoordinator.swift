@@ -37,9 +37,8 @@ class LessonsLevelCoordinator: Coordinator {
     }
     
     private func openVideoViewController(with data: LevelModel) {
-       
         let coordinator = VideoCoordinator(rootController)
-        //coordinator..quizData = data
+        coordinator.lessonData = data
         addChildCoordinator(coordinator)
         coordinator.start()
     }

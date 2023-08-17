@@ -14,6 +14,7 @@ import SafariServices
 class VideoCoordinator: Coordinator {
     
     let rootController: UINavigationController
+    var lessonData: LevelModel?
     
     init(_ rootController: UINavigationController) {
         self.rootController = rootController
@@ -34,17 +35,27 @@ class VideoCoordinator: Coordinator {
         viewController.lessonsVC = lessonsVC
         viewController.tasksVC = tasksVC
         lessonsVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
+        guard let lessonData else { return }
+        lessonsVC.viewModel?.setLessonData(lessonData)
         tasksVC.viewModel = Container.videoLessonTask.resolve(VideoViewModelProtocol.self)
-        guard let viewModel = lessonsVC.viewModel,
-        let downloadLink = viewModel.linkPresentation else { return }
-        viewModel.downloadPresentation.asObservable()
+        tasksVC.viewModel?.setLessonData(lessonData)
+        
+        guard let lessonViewModel = lessonsVC.viewModel,
+        let downloadLink = lessonViewModel.linkPresentation else { return }
+        lessonViewModel.downloadPresentation.asObservable()
             .subscribe { _ in self.showWebContent(url: downloadLink) }
             .disposed(by: bag)
         
-        guard let telegramUrl = viewModel.telegramLink else { return }
-        viewModel.joinTelegram.asObservable()
+        guard let telegramUrl = lessonViewModel.telegramLink else { return }
+        lessonViewModel.joinTelegram.asObservable()
             .subscribe { _ in self.showWebContent(url: telegramUrl) }
             .disposed(by: bag)
+        
+        guard let taskViewModel = tasksVC.viewModel else { return }
+        taskViewModel.taskData.asObservable()
+            .subscribe { solution in
+                self.goToCheckResultScene(with: solution)
+            }.disposed(by: bag)
         rootController.pushViewController(viewController, animated: true)
     }
     
@@ -53,4 +64,10 @@ class VideoCoordinator: Coordinator {
         rootController.present(safariViewController, animated: true, completion: nil)
      }
     
+    private func goToCheckResultScene(with data: [String : String]) {
+        let coordinator = ResultCoordinator(rootController)
+        addChildCoordinator(coordinator)
+        coordinator.solutionData = data
+        coordinator.start()
+    }
 }

@@ -10,6 +10,8 @@
 "TasksViewController.markButton.pressed.title" = "Task is done!";
 "TasksViewController.markButton.nonPressed.title" = "Mark task complete";
 "TasksViewController.codeView.placeHolderText" = "Put your code here...";
+"TasksViewController.alertController.title" = "Warning";
+"TasksViewController.alertController.message" = "Put your code into the field for checking";
 
 // MARK: - VideoScene/LessonsVideoViewController
 "LessonsVideoViewController.downloadButton.title" = "Download presentation";
@@ -22,3 +24,18 @@
 // MARK: - LessonsScene/LessonsViewController
 "LessonsViewController.title" = "Lessons";
 "LessonsViewController.descriptionCourseButton.title" = "Full course description";
+
+// MARK: - ResultScene/UINavigationBar
+"ResultScene.UINavigationBar.Title" = "Task check";
+
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.topLabel.text" = "Warning! This task checks  chatGPT for getting a response - you should be logged in";
+"AuthorizationAPIViewController.keyTextField.placeholder.text" = " API key";
+"AuthorizationAPIViewController.continueButton.title" = "Continue";
+"AuthorizationAPIViewController.manualButton.title.text" = "How to get API key?";
+
+// MARK: - ResultScene/ResultCheckViewController
+"ResultCheckViewController.repeatButton.title" = "Try again";
+
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.alertController.message" = "Enter key";

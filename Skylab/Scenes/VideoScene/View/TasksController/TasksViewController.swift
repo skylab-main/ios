@@ -85,13 +85,32 @@ class TasksViewController: BaseViewController, Storyboarded {
         }
     }
     
+    private func checkCodeView(_ text: String) -> Bool {
+        if text == placeHolderText || text.count < 10 {
+            let alertController = UIAlertController(title: NSLocalizedString("TasksViewController.alertController.title", comment: "Title of the allertview when soultion code isn't putted"), message: NSLocalizedString("TasksViewController.alertController.message", comment: "Message of the allertview when soultion code isn't putted"), preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            return false
+        } else {
+            return true
+        }
+    }
+    
     // MARK: - Binding funcs
     private func bindViewModel() {
+        guard let viewModel else { return }
         markButton.rx.tap
-            .subscribe { _ in
-                self.viewModel?.markTask()
-                self.updateMarkButton()
+            .subscribe { [weak self]  _ in
+                self?.viewModel?.markTask()
+                self?.updateMarkButton()
             }.disposed(by: bag)
+            sendButton.rx.tap
+                .withLatestFrom(codeView.rx.text.orEmpty)
+                .filter { self.checkCodeView($0) }
+                .map { [ "task" : self.taskLabel.text ?? "", "solution" : $0 ] }
+                .bind(to: viewModel.taskData)
+                .disposed(by: bag)
     }
     
     // MARK: - IBActions funcs

@@ -10,6 +10,8 @@
 "TasksViewController.markButton.pressed.title" = "Завдання виконане!";
 "TasksViewController.markButton.nonPressed.title" = "Позначити завдання виконаним";
 "TasksViewController.codeView.placeHolderText" = "Вставте ваш код сюди...";
+"TasksViewController.alertController.title" = "Увага";
+"TasksViewController.alertController.message" = "Вставте ваш код в поле для перевірки";
 
 // MARK: - VideoScene/LessonsVideoViewController
 "LessonsVideoViewController.downloadButton.title" = "Скачати презентацію";
@@ -22,3 +24,18 @@
 // MARK: - LessonsScene/LessonsViewController
 "LessonsViewController.title" = "Уроки";
 "LessonsViewController.descriptionCourseButton.title" = "Опис повного курсу";
+
+// MARK: - ResultScene/UINavigationBar
+"ResultScene.UINavigationBar.Title" = "Перевірка завдання";
+
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.topLabel.text" = "Увага! Це завдання перевіряє чат GPT, щоб отримати відповідь - авторизуйтесь";
+"AuthorizationAPIViewController.keyTextField.placeholder.text" = " API ключ";
+"AuthorizationAPIViewController.continueButton.title" = "Продовжити";
+"AuthorizationAPIViewController.manualButton.title.text" = "Як отримати API ключ?";
+
+// MARK: - ResultScene/ResultCheckViewController
+"ResultCheckViewController.repeatButton.title" = "Спробувати ще раз";
+
+// MARK: - ResultScene/AuthorizationAPIViewController
+"AuthorizationAPIViewController.alertController.message" = "Введіть ключ";

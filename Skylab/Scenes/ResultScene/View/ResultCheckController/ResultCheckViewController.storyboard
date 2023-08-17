@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result Check View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ResultCheckViewController" customModule="Skylab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoY-Qh-stL">
+                                <rect key="frame" x="0.0" y="79" width="393" height="773"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test task" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N78-Zd-3dH">
+                                        <rect key="frame" x="20" y="30" width="353" height="20.333333333333329"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Вставте ваш код сюди..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VR7-1P-Ntt">
+                                        <rect key="frame" x="20" y="74.333333333333329" width="353" height="235.33333333333337"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="VR7-1P-Ntt" secondAttribute="height" multiplier="150:100" id="ORu-fr-6Rh"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAo-or-eqI" customClass="DoubleBorderForView" customModule="Skylab" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="356.66666666666669" width="353" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqK-nC-HOB">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Спробувати ще" titleAlignment="center"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pqK-nC-HOB" secondAttribute="bottom" id="5XC-13-f7V"/>
+                                            <constraint firstItem="pqK-nC-HOB" firstAttribute="top" secondItem="lAo-or-eqI" secondAttribute="top" id="DoA-87-FzA"/>
+                                            <constraint firstAttribute="trailing" secondItem="pqK-nC-HOB" secondAttribute="trailing" id="UKo-1W-h1b"/>
+                                            <constraint firstAttribute="height" constant="40" id="hHJ-GD-DlX"/>
+                                            <constraint firstItem="pqK-nC-HOB" firstAttribute="leading" secondItem="lAo-or-eqI" secondAttribute="leading" id="oz3-M2-Y8A"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="VR7-1P-Ntt" firstAttribute="leading" secondItem="KoY-Qh-stL" secondAttribute="leading" constant="20" id="9v1-JZ-Ocr"/>
+                                    <constraint firstItem="N78-Zd-3dH" firstAttribute="top" secondItem="KoY-Qh-stL" secondAttribute="top" constant="30" id="CIc-jk-N52"/>
+                                    <constraint firstItem="N78-Zd-3dH" firstAttribute="leading" secondItem="KoY-Qh-stL" secondAttribute="leading" constant="20" id="P3U-g2-qts"/>
+                                    <constraint firstAttribute="trailing" secondItem="N78-Zd-3dH" secondAttribute="trailing" constant="20" id="POj-LS-JbJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="lAo-or-eqI" secondAttribute="trailing" constant="20" id="Qye-fJ-bEn"/>
+                                    <constraint firstAttribute="trailing" secondItem="VR7-1P-Ntt" secondAttribute="trailing" constant="20" id="T6R-ch-Ieu"/>
+                                    <constraint firstItem="lAo-or-eqI" firstAttribute="top" secondItem="VR7-1P-Ntt" secondAttribute="bottom" constant="47" id="dCW-5E-LTh"/>
+                                    <constraint firstItem="VR7-1P-Ntt" firstAttribute="top" secondItem="N78-Zd-3dH" secondAttribute="bottom" constant="24" id="khc-UC-RWx"/>
+                                    <constraint firstItem="VR7-1P-Ntt" firstAttribute="width" secondItem="VR7-1P-Ntt" secondAttribute="height" multiplier="150:100" id="m38-o6-v7e"/>
+                                    <constraint firstItem="lAo-or-eqI" firstAttribute="leading" secondItem="KoY-Qh-stL" secondAttribute="leading" constant="20" id="yjP-6f-Q0c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KoY-Qh-stL" secondAttribute="bottom" id="HTu-iC-VHr"/>
+                            <constraint firstItem="KoY-Qh-stL" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="TdB-x1-4pW"/>
+                            <constraint firstItem="KoY-Qh-stL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="exl-Nj-RyH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KoY-Qh-stL" secondAttribute="trailing" id="iUV-KI-owJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeView" destination="VR7-1P-Ntt" id="8UA-5U-6pp"/>
+                        <outlet property="containerView" destination="KoY-Qh-stL" id="Ofl-CL-Ic1"/>
+                        <outlet property="repeatButton" destination="pqK-nC-HOB" id="2Cl-XS-Vfz"/>
+                        <outlet property="topLabel" destination="N78-Zd-3dH" id="IYi-85-0nD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
