@@ -35,7 +35,7 @@
 "AuthorizationAPIViewController.manualButton.title.text" = "Як отримати API ключ?";
 
 // MARK: - ResultScene/ResultCheckViewController
-"ResultCheckViewController.repeatButton.title" = "Спробувати ще";
+"ResultCheckViewController.repeatButton.title" = "Спробувати ще раз";
 
 // MARK: - ResultScene/AuthorizationAPIViewController
 "AuthorizationAPIViewController.alertController.message" = "Введіть ключ";

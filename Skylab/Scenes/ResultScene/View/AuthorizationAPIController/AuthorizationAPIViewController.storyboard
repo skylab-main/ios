@@ -45,7 +45,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-zn-hSp">
-                                        <rect key="frame" x="20" y="147.66666666666666" width="196" height="35"/>
+                                        <rect key="frame" x="10" y="147.66666666666666" width="196" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Як отримати API Key?"/>
                                     </button>
@@ -68,7 +68,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="vTw-Cc-0cF" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="0nj-y9-Phv"/>
-                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="20" id="8m6-hj-RHX"/>
+                                    <constraint firstItem="RBf-zn-hSp" firstAttribute="leading" secondItem="RxS-JT-WVk" secondAttribute="leading" constant="10" id="8m6-hj-RHX"/>
                                     <constraint firstItem="Erj-Ge-rsx" firstAttribute="top" secondItem="RBf-zn-hSp" secondAttribute="bottom" constant="113" id="PsS-5E-7t8"/>
                                     <constraint firstAttribute="trailing" secondItem="02p-qq-kOs" secondAttribute="trailing" constant="20" id="WHK-Vu-TQg"/>
                                     <constraint firstItem="RBf-zn-hSp" firstAttribute="top" secondItem="02p-qq-kOs" secondAttribute="bottom" constant="10" id="Xfc-CA-6kv"/>
