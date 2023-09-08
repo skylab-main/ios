@@ -203,6 +203,7 @@
 		F4CBA7F02A4EE00D00A93413 /* QuizResultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBA7EF2A4EE00D00A93413 /* QuizResultContainer.swift */; };
 		F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */; };
 		F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */; };
+		F4D144972AAB43E1005B1C2B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D144962AAB43E1005B1C2B /* KeychainManager.swift */; };
 		F4D7C7F92A36232900C07352 /* UIButton + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */; };
 		F4D7FE532A63F85300D3EB4D /* QuizTopicsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7FE522A63F85300D3EB4D /* QuizTopicsModelTests.swift */; };
 		F4D7FE552A642B1900D3EB4D /* QuizViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7FE542A642B1900D3EB4D /* QuizViewModelTests.swift */; };
@@ -445,6 +446,7 @@
 		F4CBA7EF2A4EE00D00A93413 /* QuizResultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultContainer.swift; sourceTree = "<group>"; };
 		F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModel.swift; sourceTree = "<group>"; };
 		F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModelProtocol.swift; sourceTree = "<group>"; };
+		F4D144962AAB43E1005B1C2B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainManager.swift; path = "../../../../../../.Trash/Services 13.54.15/Keychain/KeychainManager.swift"; sourceTree = "<group>"; };
 		F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extensions.swift"; sourceTree = "<group>"; };
 		F4D7FE522A63F85300D3EB4D /* QuizTopicsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsModelTests.swift; sourceTree = "<group>"; };
 		F4D7FE542A642B1900D3EB4D /* QuizViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelTests.swift; sourceTree = "<group>"; };
@@ -1155,7 +1157,7 @@
 				DF4D3E24296600A000070D79 /* Base */,
 				DFF23643294F6A4C0009AF47 /* Common */,
 				08E66EEA29BFC3A00013B80A /* Fonts */,
-				F4C5EDB82A3F4962003E25EE /* Network */,
+				F4D144942AAB43C6005B1C2B /* Services */,
 				DF75E44429341212005B249E /* AppDelegate.swift */,
 				DF75E44D29341214005B249E /* Assets.xcassets */,
 				DF75E45229341214005B249E /* Info.plist */,
@@ -1739,6 +1741,23 @@
 			path = "Protocol ";
 			sourceTree = "<group>";
 		};
+		F4D144942AAB43C6005B1C2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4D144952AAB43CE005B1C2B /* Keychain */,
+				F4C5EDB82A3F4962003E25EE /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F4D144952AAB43CE005B1C2B /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				F4D144962AAB43E1005B1C2B /* KeychainManager.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		F4D7FE4E2A63F81800D3EB4D /* QuizSceneTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -2273,6 +2292,7 @@
 				DFF23642294F69EE0009AF47 /* Coordinator.swift in Sources */,
 				F4E7F11729E817D500D6FDD1 /* ChatGPTCoordinator.swift in Sources */,
 				1550689B29869A4300A81F04 /* LoggerSwinjectTutorialProtocol.swift in Sources */,
+				F4D144972AAB43E1005B1C2B /* KeychainManager.swift in Sources */,
 				F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */,
 				F4932A632A655CC30045E7D1 /* NetworkManagerContainer.swift in Sources */,
 				F4E7F12629E83A9000D6FDD1 /* ChatGPTResponseViewModel.swift in Sources */,
