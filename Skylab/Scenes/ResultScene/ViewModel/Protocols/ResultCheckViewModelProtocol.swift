@@ -13,4 +13,6 @@ protocol ResultCheckViewModelProtocol {
     var openApiManualDoc: PublishSubject<Void> { get }
     var goToVideoScene: PublishSubject<Void> { get }
     var solutionData: [String : String]! { get set }
+    
+    func saveApi(key: String)
 }

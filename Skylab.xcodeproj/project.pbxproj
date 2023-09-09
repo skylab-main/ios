@@ -204,6 +204,8 @@
 		F4CC4CC62A1FA92100A2EC42 /* CourseDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */; };
 		F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */; };
 		F4D144972AAB43E1005B1C2B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D144962AAB43E1005B1C2B /* KeychainManager.swift */; };
+		F4D144992AAB44A1005B1C2B /* KeychainManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D144982AAB44A1005B1C2B /* KeychainManagerProtocol.swift */; };
+		F4D1449C2AAB461E005B1C2B /* KeychainManagerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1449B2AAB461E005B1C2B /* KeychainManagerContainer.swift */; };
 		F4D7C7F92A36232900C07352 /* UIButton + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */; };
 		F4D7FE532A63F85300D3EB4D /* QuizTopicsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7FE522A63F85300D3EB4D /* QuizTopicsModelTests.swift */; };
 		F4D7FE552A642B1900D3EB4D /* QuizViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7FE542A642B1900D3EB4D /* QuizViewModelTests.swift */; };
@@ -447,6 +449,8 @@
 		F4CC4CC52A1FA92100A2EC42 /* CourseDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModel.swift; sourceTree = "<group>"; };
 		F4CC4CC82A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionViewModelProtocol.swift; sourceTree = "<group>"; };
 		F4D144962AAB43E1005B1C2B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainManager.swift; path = "../../../../../../.Trash/Services 13.54.15/Keychain/KeychainManager.swift"; sourceTree = "<group>"; };
+		F4D144982AAB44A1005B1C2B /* KeychainManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManagerProtocol.swift; sourceTree = "<group>"; };
+		F4D1449B2AAB461E005B1C2B /* KeychainManagerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManagerContainer.swift; sourceTree = "<group>"; };
 		F4D7C7F82A36232900C07352 /* UIButton + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extensions.swift"; sourceTree = "<group>"; };
 		F4D7FE522A63F85300D3EB4D /* QuizTopicsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopicsModelTests.swift; sourceTree = "<group>"; };
 		F4D7FE542A642B1900D3EB4D /* QuizViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelTests.swift; sourceTree = "<group>"; };
@@ -1753,9 +1757,19 @@
 		F4D144952AAB43CE005B1C2B /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
+				F4D1449A2AAB4607005B1C2B /* DI */,
+				F4D144982AAB44A1005B1C2B /* KeychainManagerProtocol.swift */,
 				F4D144962AAB43E1005B1C2B /* KeychainManager.swift */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		F4D1449A2AAB4607005B1C2B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F4D1449B2AAB461E005B1C2B /* KeychainManagerContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		F4D7FE4E2A63F81800D3EB4D /* QuizSceneTests */ = {
@@ -2264,6 +2278,7 @@
 				F4CC4CC92A1FA97700A2EC42 /* CourseDescriptionViewModelProtocol.swift in Sources */,
 				DF75E44529341212005B249E /* AppDelegate.swift in Sources */,
 				F450D7242A1CD89800AF8768 /* CourseDescriptionCoordinator.swift in Sources */,
+				F4D1449C2AAB461E005B1C2B /* KeychainManagerContainer.swift in Sources */,
 				F450D73A2A1D194100AF8768 /* CustomApplyForCourseView.swift in Sources */,
 				045D3FE229BE808700456DEC /* TestMenuViewCoordinator.swift in Sources */,
 				F47BA3A52A263D8100DF056D /* CALayer + Extension.swift in Sources */,
@@ -2275,6 +2290,7 @@
 				DF3E2E91296A0F3400810694 /* SecondPageViewController.swift in Sources */,
 				F48BD5232A3DDC03003D3202 /* QuizQuestionsViewModelProtocol.swift in Sources */,
 				1544EC7329846C8D0080C429 /* SwinjectTestPageViewController.swift in Sources */,
+				F4D144992AAB44A1005B1C2B /* KeychainManagerProtocol.swift in Sources */,
 				152E04C92984717300ABCEA2 /* SwinjectTestPageSubViewController.swift in Sources */,
 				080505B72A5727AB0009CCBD /* LessonsVideoViewController.swift in Sources */,
 				F4E7F10929E8056A00D6FDD1 /* ChatGPTViewModel.swift in Sources */,
