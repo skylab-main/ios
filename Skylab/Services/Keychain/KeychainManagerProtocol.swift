@@ -10,5 +10,6 @@ import Foundation
 protocol KeychainManagerProtocol: AnyObject {
     func save(key: KeychainKey, data: String)
     func get(key: KeychainKey) -> Data?
+    func isKeyExists(key: KeychainKey) -> Bool
     func delete()
 }

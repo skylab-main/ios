@@ -62,31 +62,31 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
         keyTextField.textColor = .primary
         keyTextField.font = UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14)
         let placeholderText = NSLocalizedString("AuthorizationAPIViewController.keyTextField.placeholder.text", comment: "Placeholder ext for the api key textField on the api key putting screen")
-                let attributes: [NSAttributedString.Key: Any] = [
-                    .foregroundColor: UIColor.primary,
-                    .font: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14) ?? UIFont.systemFont(ofSize: 14)
-                ]
-                let attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: attributes)
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.primary,
+            .font: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 14) ?? UIFont.systemFont(ofSize: 14)
+        ]
+        let attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: attributes)
         keyTextField.attributedPlaceholder = attributedPlaceholder
-
+        
     }
     private func configureManualButton() {
         manualButton.tintColor = .primary
         manualButton.alpha = 0.7
         let titleText = NSLocalizedString("AuthorizationAPIViewController.manualButton.title.text", comment: "Manual of getting API key")
-                let attributes: [NSAttributedString.Key: Any] = [
-                    .foregroundColor: UIColor.primary,
-                    .font: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 12) ?? UIFont.systemFont(ofSize: 12)
-                ]
-                let attributedTitle = NSAttributedString(string: titleText, attributes: attributes)
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.primary,
+            .font: UIFont(name: CustomFonts.anonymousProBold.rawValue, size: 12) ?? UIFont.systemFont(ofSize: 12)
+        ]
+        let attributedTitle = NSAttributedString(string: titleText, attributes: attributes)
         manualButton.setAttributedTitle(attributedTitle, for: .normal)
         
     }
     private func configureContinueButton() {
         continueButton.configureButton(title: NSLocalizedString("AuthorizationAPIViewController.continueButton.title", comment: "title for the continueButton"), imageName: nil,
-                                   fontName: CustomFonts.anonymousProBold.rawValue,
-                                   fontSize: 14,
-                                   tintColor: .primary)
+                                       fontName: CustomFonts.anonymousProBold.rawValue,
+                                       fontSize: 14,
+                                       tintColor: .primary)
     }
     private func checkKey(_ text: String) -> Bool {
         if text.count < 5 {
@@ -120,9 +120,11 @@ class AuthorizationAPIViewController: BaseViewController, Storyboarded {
                 .withLatestFrom(keyTextField.rx.text.orEmpty)
                 .filter { self.checkKey($0) }
                 .subscribe(onNext: { [weak self] apiKey in
-                    self?.saveApiKeyAlert(apiKey) { shouldSave in
+                    guard let strongSelf = self else { return }
+                    
+                    strongSelf.saveApiKeyAlert(apiKey) { shouldSave in
                         if shouldSave {
-                            //viewModel.saveApi(key: apiKey)
+                            viewModel.saveApi(key: apiKey)
                         }
                         viewModel.openResultCheckController.onNext("trigger")
                     }

@@ -65,7 +65,7 @@ class VideoCoordinator: Coordinator {
      }
     
     private func goToCheckResultScene(with data: [String : String]) {
-        let coordinator = ResultCoordinator(rootController)
+        let coordinator = ResultCoordinator(rootController, keychainManager: KeychainManager())
         addChildCoordinator(coordinator)
         coordinator.solutionData = data
         coordinator.start()

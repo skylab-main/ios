@@ -14,7 +14,7 @@ class ResultCheckViewModel: ResultCheckViewModelProtocol {
     var goToVideoScene = PublishSubject<Void>()
     var solutionData: [String : String]!
     
-    weak var keychainManager: KeychainManagerProtocol?
+    var keychainManager: KeychainManagerProtocol?
     
     init(keychainManager: KeychainManagerProtocol? = nil) {
         self.keychainManager = keychainManager
