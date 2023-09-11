@@ -38,4 +38,8 @@
 "ResultCheckViewController.repeatButton.title" = "Спробувати ще раз";
 
 // MARK: - ResultScene/AuthorizationAPIViewController
-"AuthorizationAPIViewController.alertController.message" = "Введіть ключ";
+"AuthorizationAPIViewController.alertController.message" = "Введіть правильний ключ. Його довжина повинна бути не менше ніж 50 символів";
+"AuthorizationAPIViewController.alertController.saveApiKeyMessage" = "Зберегти API ключ?";
+"AuthorizationAPIViewController.alertController.saveApiKeyMessageYes" = "Так";
+"AuthorizationAPIViewController.alertController.saveApiKeyMessageNo" = "Ні";
+

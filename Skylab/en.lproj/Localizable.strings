@@ -38,4 +38,7 @@
 "ResultCheckViewController.repeatButton.title" = "Try again";
 
 // MARK: - ResultScene/AuthorizationAPIViewController
-"AuthorizationAPIViewController.alertController.message" = "Enter key";
+"AuthorizationAPIViewController.alertController.message" = "Enter the correct key. It must be at least 50 characters long";
+"AuthorizationAPIViewController.alertController.saveApiKeyMessage" = "Save the API key?";
+"AuthorizationAPIViewController.alertController.saveApiKeyMessageYes" = "Yes";
+"AuthorizationAPIViewController.alertController.saveApiKeyMessageNo" = "No";

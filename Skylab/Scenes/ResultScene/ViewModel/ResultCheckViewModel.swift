@@ -13,4 +13,16 @@ class ResultCheckViewModel: ResultCheckViewModelProtocol {
     var openApiManualDoc = PublishSubject<Void>()
     var goToVideoScene = PublishSubject<Void>()
     var solutionData: [String : String]!
+    
+    var keychainManager: KeychainManagerProtocol?
+    
+    init(keychainManager: KeychainManagerProtocol? = nil) {
+        self.keychainManager = keychainManager
+    }
+    
+    func saveApi(key: String) {
+        guard let keychainManager else { return }
+    
+        keychainManager.save(key: .chatGptApiKey, data: key)
+    }
 }

@@ -15,7 +15,9 @@ extension Container {
         let container = Container()
         
         container.register(ResultCheckViewModelProtocol.self) { _ in
-            ResultCheckViewModel()
+            let keychainManager = Container.keychainManager.resolve(KeychainManagerProtocol.self)
+            
+            return ResultCheckViewModel(keychainManager: keychainManager)
         }
         return container
     }()

@@ -13,17 +13,24 @@ class ResultCoordinator: Coordinator {
     
     let rootController: UINavigationController
     var viewModel: ResultCheckViewModelProtocol!
+    var keychainManager: KeychainManagerProtocol?
     var solutionData: [String : String]?
     
-    init(_ rootController: UINavigationController) {
+    init(_ rootController: UINavigationController, keychainManager: KeychainManagerProtocol? = nil) {
         self.rootController = rootController
+        self.keychainManager = keychainManager
     }
     
     override func start() {
         viewModel = Container.resultCheck.resolve(ResultCheckViewModelProtocol.self)
         viewModel.solutionData = solutionData
-        // TODO: - add saved api key cheking
-        openAuthorizationAPIViewController()
+                
+        if keychainManager?.isKeyExists(key: .chatGptApiKey) ?? false {
+            openResultCheckViewController()
+            // keychainManager?.delete()
+        } else {
+            openAuthorizationAPIViewController()
+        }
     }
     
     override func finish() {
